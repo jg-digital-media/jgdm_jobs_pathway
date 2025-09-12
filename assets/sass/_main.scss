@@ -1,0 +1,102 @@
+
+/* mains.scss */
+
+html {
+
+    body {
+
+        background: $body---bg;
+        color: $text---col--primary;
+        font-family: $font---main;
+
+        header {
+
+            h1, h2 {
+
+                text-align: center;
+            }
+
+            h1 {
+
+                font-size: 32px;
+                text-align: center;
+            }
+
+            h2 {
+
+                font-size: 24px;
+            }
+
+            &.header---login--page {
+
+                background: none;
+                margin: 50px 0 40px 0px;
+
+                h1 {
+
+                    font-size: 12px;
+                    text-align: center;
+                }
+
+                h2 {
+
+                    font-size: 10px;
+                }
+            }
+        }
+
+        .container---element--login {
+
+            form {
+
+                display: block;
+                margin: 2px auto;
+                width: 400px;
+                padding: 5px;
+                border: solid 1px #d3c2c2;
+                border-radius: 4px;
+
+                label {
+
+                    display: inline-block;
+                    width: 249px;
+                    margin: 10px 0;
+                    vertical-align: top;
+                }
+
+                input[type="text"], input[type="email"], textarea {
+
+                    display: inline-block;  
+                    vertical-align: middle;
+                    width: 249px;
+                    margin: 10px 0;
+                }
+
+                .login---input {    
+
+                    border: solid red 1px;
+                    padding: 2px 0;
+                    padding: 5px;
+                    font-family: arial;
+                }
+
+                .button---login {
+
+                    background: none;
+                    padding: 5px;
+                    border-radius: 5px;
+                }
+            }
+        } 
+
+        footer {
+
+            margin: 17px 0 0 0;
+
+            p {
+
+                text-align: center;
+            }
+        }
+    }
+}
