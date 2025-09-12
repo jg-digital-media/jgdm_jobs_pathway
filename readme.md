@@ -1,4 +1,4 @@
-`Last Updated: 12-09-2025 - 09:32 BST`
+`Last Updated: 12-09-2025 - 09:34 BST`
 
 # Jobs Pathway
   + Keep track of your way to your professional life
@@ -19,6 +19,8 @@
   + I came up with this idea a few weeks ago, in the same was as others, while I was on a walk. I've been looking for a reason do do a project with Ruby on Rails for some time. And now I have one. Something that uses the CRUD operations of a dynamic project with the ability to log in and add your unique data.
 
   + I'm inexperieced with Ruby on Rails, I'll say that from the outset. So this project may take some time. In this very first phase of the project, I will be spending a lot of time working on user flows, the UI, wireframes and making decisions about how the app will look. So I'll prototype all of this before bringing Rails into the picture.
+
+  + In this app, users will be able to add details of jobs they have applied for, tick off the different stages of the process and track in real time what stage they are at with each vacancy.
 
 [Back to Top](#development)
 
