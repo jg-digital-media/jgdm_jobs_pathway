@@ -82,13 +82,14 @@
 
         <h3>list.php</h3>
 
+        <a href="index.php">back</a>
         <?php require "assets/template-parts/jobs-list.php"; ?>
 
     </section>
 
     <footer>
 
-        <p>Copyright &copy; 2025 Jonathan Grieve</p>
+        <p>Copyright &copy; 2025 Jonathan Grieve (<span><a href="https://github.com/jg-digital-media/jgdm_jobs_pathway?tab=readme-ov-file#development" target="_blank">v0.0.3</a></span>)</p>
 
     </footer>
     
