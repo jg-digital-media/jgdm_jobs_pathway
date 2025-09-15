@@ -115,6 +115,9 @@ html {
                         a {
 
                             color: $url---col--primary;
+                            font-size: 12px;
+
+                            transition: color 0.3s ease-in-out;
 
                             &:hover {
 
