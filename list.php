@@ -68,9 +68,23 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 
 </head>
-<body>
+<body class="body---list">
 
-    <h1>list.php</h1>
+    <header>
+
+        <h1><?php echo $website_title ?></h1>
+
+        <h2>Keep track of your way to your professional life</h2>
+
+    </header>
+
+    <section>
+
+        <h3>list.php</h3>
+
+        <?php require "assets/template-parts/jobs-list.php"; ?>
+
+    </section>
 
     <footer>
 

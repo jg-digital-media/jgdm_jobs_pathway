@@ -110,5 +110,27 @@ html {
                 }
             }
         }
+
+        &.body---list {
+
+            background: #d3c2c2;
+
+            header {
+
+                margin: 50px 0 40px 0px;
+
+                h1, h2 {
+
+                    text-align: center;
+                }
+
+                h1 {
+
+                    font-size: 32px;
+                    text-align: center;
+                }
+
+            }
+        }
     }
 }
