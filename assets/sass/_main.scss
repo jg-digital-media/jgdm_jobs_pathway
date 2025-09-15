@@ -5,12 +5,9 @@ html {
 
     body {
 
-
         &.body---login {
 
-
             background: $body---bg;
-
             
             /* background: #393838; */
             color: $text---col--primary;
@@ -18,26 +15,15 @@ html {
 
             header {
 
-                h1, h2 {
-
-                    text-align: center;
-                }
-
-                h1 {
-
-                    font-size: 32px;
-                    text-align: center;
-                }
-
-                h2 {
-
-                    font-size: 24px;
-                }
-
                 &.header---login--page {
 
                     background: none;
                     margin: 55pt 0 7px 0px;
+
+                    h1, h2 {
+
+                        text-align: center;
+                    }
 
                     h1 {
 
@@ -62,6 +48,7 @@ html {
                     padding: 5px;
                     border: solid 1px #d3c2c2;
                     border-radius: 4px;
+                    /* background: #585858; */
 
                     label {
 
@@ -91,10 +78,6 @@ html {
 
                     .button {
 
-                        background: none;
-                        padding: 5px;
-                        border-radius: 5px;
-
                         @extend %button-form-main;
                     }
                 }
@@ -107,18 +90,32 @@ html {
                 p {
 
                     text-align: center;
+
+                    span {
+
+                        a {
+
+                            color: $url---col--primary;
+
+                            &:hover {
+
+                                text-decoration: underline;
+                                color: $url---col--primaryhover;
+                            }
+                        }
+                    }
                 }
             }
         }
 
         &.body---list {
 
-            background: #d3c2c2;
+            background: $body---bg--list;
 
             header {
 
-                margin: 50px 0 40px 0px;
-
+                margin: 12px 0 10px 0px;
+                
                 h1, h2 {
 
                     text-align: center;
@@ -130,7 +127,37 @@ html {
                     text-align: center;
                 }
 
+                h2 {
+
+                    font-size: 24px;
+                }
+
+            }
+
+            footer {
+
+                margin: 17px 0 0 0;
+
+                p {
+
+                    text-align: center;
+
+                    span {
+
+                        a {
+
+                            color: black;
+
+                            &:hover {
+
+                                text-decoration: underline;
+                                color: black;
+                            }
+                        }
+                    }
+                }
             }
         }
+
     }
 }
