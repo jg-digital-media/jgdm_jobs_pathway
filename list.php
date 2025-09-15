@@ -6,9 +6,9 @@
     $website_keywords = "Jobs Pathway, Jobs, Pathway, Jobs Tracker, Job Tracker, Job Tracking, Job Tracking System";
 
     // Meta Variables
-    $page_description = "My name is Jonathan and this is my website for my amateur photography. You can view my photos and request some to buy from my store.";
+    $page_description = "Keep track of your way to your professional life.";
     $page_keywords = "";
-    $page_title = "JG Photography | Amateur Photography";
+    $page_title = "Jobs Pathway";
     $page_url = "";
     $page_icon = "";
 
@@ -18,15 +18,15 @@
     // $google_font = "";
 
     // Facebook Variables
-    //$facebook_title = $page_title;
-    //$facebook_description = $page_description;
-    //$facebook_share_img = $page_image;
+    // $facebook_title = $page_title;
+    // $facebook_description = $page_description;
+    // $facebook_share_img = $page_image;
 
     // Twitter Variables
-    //$twitter_title = $page_title;
-    //$twitter_description = $page_description;
-    //$twitter_share_img = $page_image;
-    //$twitter_card = "jonnie_grieve_photography";
+    // $twitter_title = $page_title;
+    // $twitter_description = $page_description;
+    // $twitter_share_img = $page_image;
+    // $twitter_card = "jgdm_jobs_pathway";
 
 ?>
 
@@ -51,10 +51,10 @@
     <meta name="twitter:title" content="<?php echo $page_title; ?> ">
     <meta name="twitter:description" content="<?php echo $page_description; ?>">
     <meta name="twitter:image" content="<?php echo $page_image; ?>">
-    <meta name="twitter:card" content="jonnie_grieve_photography">
+    <meta name="twitter:card" content="jgdm_jobs_pathway">
 
     <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css?family=Merriweather|Odibee+Sans|Quicksand&display=swap" rel="stylesheet">
+    <link href="" rel="stylesheet">
 
     <!-- Canonical Link -->
     <link rel="canonical" href="<?php echo $page_url; ?>">
