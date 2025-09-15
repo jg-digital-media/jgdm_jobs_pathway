@@ -18,7 +18,7 @@ html {
                 &.header---login--page {
 
                     background: none;
-                    margin: 55pt 0 7px 0px;
+                    margin: 65pt 0 7px 0px;
 
                     h1, h2 {
 
@@ -61,11 +61,33 @@ html {
                     input[type="text"], input[type="email"], input[type="password"], textarea {
 
                         display: inline-block;  
+                        /* background: none; */
                         /* vertical-align: middle; */
                         /* width: 249px; */
                         margin: 0px 0px;
                         padding: 7px;
                         border-radius: 6px;
+
+                        transition: background 0.3s ease-in-out;
+
+                        &:hover {
+
+                            background: lightblue;
+                        }
+
+                        &::placeholder {
+
+                            color: grey;
+
+                            transition: color 0.3s ease-in-out;
+
+                            &:hover {
+
+                                color: black;
+                                font-weight: normal;
+                                letter-spacing: 0px;
+                            }
+                        }
                     }
 
                     .login---input { 
