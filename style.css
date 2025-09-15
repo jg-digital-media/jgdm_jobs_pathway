@@ -1,77 +1,123 @@
 /* head.scss */
 /*
 
-Last Updated: 12-09-2025 - 15:44
+Last Updated: 15-09-2025 - 12:14
 */
 * {
   padding: 0;
   margin: 0;
 }
 
+html body.body---login .container---element--login form .button {
+  background: none;
+  padding: 5px;
+  border-radius: 5px;
+  background: beige;
+  background: none;
+  border: solid white 2px;
+  padding: 7px;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+html body.body---login .container---element--login form .login---input {
+  border: solid red 1px;
+  padding: 2px 0;
+  padding: 5px;
+  font-family: arial;
+}
+
 /* config.scss */
 /* mains.scss */
-html body {
-  background: #ffffff;
-  color: #000000;
+html body.body---login {
+  background: #373737;
+  /* background: #393838; */
+  color: #ffffff;
   font-family: "Times New Roman", Times, serif;
 }
-html body header h1, html body header h2 {
-  text-align: center;
-}
-html body header h1 {
-  font-size: 32px;
-  text-align: center;
-}
-html body header h2 {
-  font-size: 24px;
-}
-html body header.header---login--page {
+html body.body---login header.header---login--page {
   background: none;
-  margin: 50px 0 40px 0px;
+  margin: 55pt 0 7px 0px;
 }
-html body header.header---login--page h1 {
+html body.body---login header.header---login--page h1, html body.body---login header.header---login--page h2 {
+  text-align: center;
+}
+html body.body---login header.header---login--page h1 {
   font-size: 12px;
   text-align: center;
 }
-html body header.header---login--page h2 {
+html body.body---login header.header---login--page h2 {
   font-size: 10px;
 }
-html body .container---element--login form {
+html body.body---login .container---element--login form {
   display: block;
   margin: 2px auto;
   width: 400px;
   padding: 5px;
   border: solid 1px #d3c2c2;
   border-radius: 4px;
+  /* background: #585858; */
 }
-html body .container---element--login form label {
+html body.body---login .container---element--login form label {
   display: inline-block;
   width: 249px;
   margin: 10px 0;
   vertical-align: top;
 }
-html body .container---element--login form input[type=text], html body .container---element--login form input[type=email], html body .container---element--login form textarea {
+html body.body---login .container---element--login form input[type=text], html body.body---login .container---element--login form input[type=email], html body.body---login .container---element--login form textarea {
   display: inline-block;
   vertical-align: middle;
   width: 249px;
   margin: 10px 0;
 }
-html body .container---element--login form .login---input {
+html body.body---login .container---element--login form .login---input {
   border: solid red 1px;
   padding: 2px 0;
   padding: 5px;
   font-family: arial;
 }
-html body .container---element--login form .button---login {
-  background: none;
-  padding: 5px;
-  border-radius: 5px;
-}
-html body footer {
+html body.body---login footer {
   margin: 17px 0 0 0;
 }
-html body footer p {
+html body.body---login footer p {
   text-align: center;
+}
+html body.body---login footer p span a {
+  color: gold;
+}
+html body.body---login footer p span a:hover {
+  text-decoration: underline;
+  color: #ffffff;
+}
+html body.body---list {
+  background: #d3c2c2;
+}
+html body.body---list header {
+  margin: 12px 0 10px 0px;
+}
+html body.body---list header h1, html body.body---list header h2 {
+  text-align: center;
+}
+html body.body---list header h1 {
+  font-size: 32px;
+  text-align: center;
+}
+html body.body---list header h2 {
+  font-size: 24px;
+}
+html body.body---list footer {
+  margin: 17px 0 0 0;
+}
+html body.body---list footer p {
+  text-align: center;
+}
+html body.body---list footer p span a {
+  color: black;
+}
+html body.body---list footer p span a:hover {
+  text-decoration: underline;
+  color: black;
 }
 
 /*# sourceMappingURL=style.css.map */
