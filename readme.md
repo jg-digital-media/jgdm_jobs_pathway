@@ -1,4 +1,4 @@
-`Last Updated: 12-09-2025 - 16:35 BST`
+`Last Updated: 15-09-2025 - 11:27`
 
 # Jobs Pathway
   + Keep track of your way to your professional life
@@ -6,9 +6,16 @@
 ## Sections 
 
 [Development](#development) | 
+[TODO](#todo) |
 [Deployment](#deployment) |
 
-## 
+## TODO: 
+
++ `TODO:` - Finish styling the login and register pages
++ `TODO:` - Add a footer and header template part of the project
++ `TODO:` - 
+
+[Back to Top](#sections)
 
 ## Development
 
@@ -21,10 +28,20 @@
   + I'm inexperienced with Ruby on Rails, I'll say that from the outset. So this project may take some time. In this very first phase of the project, I will be spending a lot of time working on user flows, the UI, wireframes and making decisions about how the app will look. So I'll prototype all of this before bringing Rails into the picture.
 
   + In this app, users will be able to add details of jobs they have applied for, tick off the different stages of the process and track in real time what stage they are at with each vacancy.
+  
+[Back to Top](#development)
 
 ### `0.0.2` - `12-09-2025`
 
   + I've added a list page to the app along with other template files. Everything about this app is at its earliest stage, but I have some styling in place on the index.php and initial config sass variables in place
+
+[Back to Top](#development)
+
+### `0.0.3` - `15-09-2025`
+
+  + On the morning of this day, I focused on customising the UI of the login and register pages. Now, at some point, these 2 states will share the same part in the onboarding and outboarding process. So one of the measures I took was to separate these forms and their styling into their own template parts and `@extend` Sass partials. 
+
+  + With this, I can customise different "states" of the app. Be that the login/register page, the main listing page, adding a job and the job details page. There is much more work still to be done, but this gives me a grounding on how the finished app will be structured.
 
 [Back to Top](#development)
 
