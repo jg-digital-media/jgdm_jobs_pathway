@@ -82,13 +82,13 @@ html {
                     @extend %form-input-login;
                 }
 
-                .button---login {
+                .button {
 
                     background: none;
                     padding: 5px;
                     border-radius: 5px;
 
-                    @extend %button-main;
+                    @extend %button-form-main;
                 }
             }
         } 
