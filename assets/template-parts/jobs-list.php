@@ -6,9 +6,9 @@
 
     <ul class="app---navigation">
         <li>
-            <a href="#">Progress Stats</a></li> 
+            <a href="stats-modal.php">Progress Stats</a></li> 
         <li>
-            <a href="#">How to Use!</a>
+            <a href="how-to.php">How to Use!</a>
         </li>
     </ul>
 
