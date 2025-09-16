@@ -1,4 +1,4 @@
-`Last Updated: 16-09-2025 - 16:28`
+`Last Updated: 16-09-2025 - 16:38`
 
 # Jobs Pathway
   + Keep track of your way to your professional life
@@ -54,13 +54,13 @@
 
 [Back to Top](#development)
 
-### `0.0.3` - 
+### `0.0.3` 
 
   + On the morning of this day, I focused on customising the UI of the login and register pages. Now, at some point, these 2 states will share the same part in the onboarding and outboarding process. So one of the measures I took was to separate these forms and their styling into their own template parts and `@extend` Sass partials. 
 
   + With this, I can customise different "states" of the app. Be that the login/register page, the main listing page, adding a job and the job details page. There is much more work still to be done, but this gives me a grounding on how the finished app will be structured. `15-09-2025`
 
-### `0.0.4` -
+### `0.0.4`
 
   + Focused on building the Job listing screen today. This is going to be a challenging project to do, which is partly why I'm looking forward to doing it. I added 6 rows of default data to the markup to test in its various states. That is to say, when a checkbox for a table cell is checked, that table cell's background will turn green.
 
