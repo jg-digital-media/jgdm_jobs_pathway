@@ -6,6 +6,7 @@ html {
     body {
 
         // header styles - TODO: move to header.scss
+        
 
         &.body---login {
 
@@ -135,6 +136,61 @@ html {
 
                                 text-decoration: underline;
                                 color: $url---col--primaryhover;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &.body---add--job,
+        &.body---list,
+        &.body---howto,
+        &.body---job--stats {
+
+            header {
+
+                margin: 12px 0 10px 0px;
+                
+                h1, h2 {
+
+                    text-align: center;
+                }
+
+                h1 {
+
+                    font-size: 32px;
+                    text-align: center;
+                }
+
+                h2 {
+
+                    font-size: 24px;
+                }
+
+
+
+            }
+            
+            footer {
+
+                margin: 17px 0 0 0;
+
+                p {
+
+                    text-align: center;
+
+                    span {
+
+                        a {
+
+                            color: black;  // check
+                            font-size: 12px;
+
+                            &:hover {
+
+                                text-decoration: underline;
+                                color: black; // check
                             }
                         }
                     }
@@ -369,40 +425,31 @@ html {
                         
                     }
                 }
-            }
-
-            footer {
-
-                margin: 17px 0 0 0;
-
-                p {
-
-                    text-align: center;
-
-                    span {
-
-                        a {
-
-                            color: black;  // check
-                            font-size: 12px;
-
-                            &:hover {
-
-                                text-decoration: underline;
-                                color: black; // check
-                            }
-                        }
-                    }
-                }
-            }
+            }            
         }
 
+        // TODO: body---add--job styles
         &.body---add--job {
 
 
         }
 
+        // TODO: body---job--stats
+        &.body---job--stats {
+
+
+        }
+
+        // TODO: style "how to use" page
+        &.body---howto {
+
+
+        }
+
         // footer styles - TODO: move to footer.scss
+
+
+        // modal styles
 
     }
 }
