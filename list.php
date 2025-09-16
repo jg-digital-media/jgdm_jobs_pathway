@@ -78,14 +78,14 @@
 
     </header>
 
-    <section>
+    <main>
 
         <h3>list.php</h3>
 
         <a href="index.php">back</a>
         <?php require "assets/template-parts/jobs-list.php"; ?>
 
-    </section>
+    </main>
 
     <footer>
 
