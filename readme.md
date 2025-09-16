@@ -1,4 +1,4 @@
-`Last Updated: 15-09-2025 - 16:40`
+`Last Updated: 16-09-2025 - 16:28`
 
 # Jobs Pathway
   + Keep track of your way to your professional life
@@ -6,22 +6,36 @@
 ## Sections 
 
 [Development](#development) | 
-[TODO](#todo) |
+[TODOs](#todos) |
 [Deployment](#deployment) |
 
-## TODO: 
+## TODOs: 
 
+### (Completed - `2`)
+
++ `COMPLETED: 16-09-2025` - Wireframe and static interface planning for 'Job's Pathway App'
++ `COMPLETED: 16-09-2025` - Add a footer and header template part of the project
++ `TODO:` - move header styles to `header.scss`
++ `TODO:` - move footer styles to `footer.scss`
++ `TODO:` - Build `stats-modal.php` template file/page
++ `TODO:` - Build `add-job-form.php` template file/page
++ `TODO:` - Custom variable values where required for the different root templates
 + `TODO:` - Finish styling the login and register pages
-+ `TODO:` - Add a footer and header template part of the project
++ `TODO:` - Apply `stage---completed` class to table cells where the containing checkbox is checked
 + `TODO:` - Add some simulated form validation to the login and register pages
++ `TODO:` - Swap out mini logo in `top---banner--container`
   + `TODO:` - Standard border: red  - Validated border: green:  focused border: blue - `border: solid 1px color;`
 + `TODO:` - list.php - build markup for the main list page of jobs
++ `TODO:` - Add responsiveness to Job list table - `list.php`
++ `TODO:` - "How to use" template file/page
++ `TODO:` - style "how to use" page
++ `TODO:` - body---add--job styles
 
 [Back to Top](#sections)
 
 ## Development
 
-[0.0.1](#001) | [0.0.2](#002) | [0.0.3](#003) |
+[0.0.1](#001) | [0.0.2](#002) | [0.0.3](#003) | [0.0.4](#004) |
 
 ### `0.0.1`
   
@@ -45,6 +59,14 @@
   + On the morning of this day, I focused on customising the UI of the login and register pages. Now, at some point, these 2 states will share the same part in the onboarding and outboarding process. So one of the measures I took was to separate these forms and their styling into their own template parts and `@extend` Sass partials. 
 
   + With this, I can customise different "states" of the app. Be that the login/register page, the main listing page, adding a job and the job details page. There is much more work still to be done, but this gives me a grounding on how the finished app will be structured. `15-09-2025`
+
+### `0.0.4` -
+
+  + Focused on building the Job listing screen today. This is going to be a challenging project to do, which is partly why I'm looking forward to doing it. I added 6 rows of default data to the markup to test in its various states. That is to say, when a checkbox for a table cell is checked, that table cell's background will turn green.
+
+  + Elsewhere, I started building the other screen states, like the progress states page and the "how to use" page. I'm still at the back of my mind thinking whether it should be modals or popups. I'm not sure yet. It might be a better UX experience to be modals, but when this app is complete, persistence of data will not be an issue since changes will be saved at the backend.
+
+  + I've tried my best to keep the CSS up with the markup as I go and keep it organised. But there's still a lot of work to do for the Stat and Add Job pages and to keep the SASS files easily maintainable. I'm hopeful that by the end of `17th` (tomorrow) I'll have a solid foundation for the app's look and feel. `15-09-2025`
 
 [Back to Top](#development)
 
