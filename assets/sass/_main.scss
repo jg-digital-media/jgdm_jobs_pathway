@@ -179,7 +179,7 @@ html {
                 a {
 
                     display: inline-block;
-                    color: white;
+                    color: #272626;
                     transition: color 0.3s ease-in-out;
                     width: 100%;
                     text-align: center;
@@ -239,8 +239,8 @@ html {
                     }
 
                     .motivation---message--container {
-
-                       
+                        
+                        background: $banner---bg--list;                       
                     }
 
 
@@ -258,13 +258,114 @@ html {
 
                         display: inline-block;
                         background: white;
-                        color: red;
+                        background: #4486ff;
+                        color: #98cbff;
                         text-align: center;
                         width: 120px;
                         border-radius: 5px;
                         padding: 5px;
+                        text-decoration: none;
+
+                        transition: color 0.3s ease-in-out;
+
+                        &:hover {
+
+                            color: white;
+                        }
+
                     }
-                    
+
+                }
+
+                .section---jobs--list--container {
+
+                    width: 95%;
+                    display: block;
+                    margin: 10px auto;
+                    border-radius: 6px;
+
+                    table {
+
+                        width: 100%;
+                        background: $banner---bg--list;
+                        border: solid 2px darkgray;
+                        border-radius: 6px;
+
+
+
+                        thead {
+                            
+                            border-bottom: solid 1px #8b8b8b;
+                            /* font-size: 17px; */
+
+                            tr {
+
+
+                                th {
+
+                                    /* border-bottom: soid 1px yellow; */
+                                }
+                            }
+                        }
+
+                        tbody {
+
+                            tr {
+
+                                height: 55px;
+
+                                td {
+
+                                    text-align: center;
+                                    transition: background 0.3s ease-in-out;
+
+                                    input.stage---completed--checkbox {
+
+                                        content: "";
+                                        height: 28px;
+                                        width: 28px;
+                                    }
+
+                                    &:hover {
+
+                                        background: lighten($banner---bg--list, 3%);
+                                    }
+
+                                    &.stage---completed {
+
+                                        background: #72ff72;                                   
+                                        border: solid #0ff10f 1px;
+                                    }
+                                }
+
+                                td:nth-child(2) {
+
+                                    a {
+
+                                        text-decoration: none;
+                                        font-size: 12px;
+                                        background: #4486ff;
+                                        color: #98cbff;
+                                        font-weight: bold;
+                                        padding: 4px;
+                                        width: 57px;
+                                        display: block;
+                                        margin: 3px auto;
+                                        border-radius: 8px;transition: .3s ease-in-out;
+
+                                        &:hover {
+
+                                            color: white
+                                        }
+                                    }
+                                }
+                                
+                            }
+
+                            
+                        }
+                        
+                    }
                 }
             }
 
@@ -280,12 +381,13 @@ html {
 
                         a {
 
-                            color: black;
+                            color: black;  // check
+                            font-size: 12px;
 
                             &:hover {
 
                                 text-decoration: underline;
-                                color: black;
+                                color: black; // check
                             }
                         }
                     }
