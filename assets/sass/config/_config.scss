@@ -1,7 +1,7 @@
 
 /* config.scss */
 $body---bg: #373737;
-$body---bg--list: #d3c2c2;
+$body---bg--list: #ffffff;
 
 $banner---bg--list: #d3d3d3;
 
@@ -13,5 +13,11 @@ $url---col--primaryhover: #ffffff;
 
 $font---main: "Times New Roman", Times, serif;
 
+
+// font size - headings - 
 $font---size--h1: 32px;
 $font---size--h2: 24px;
+
+
+// Breakpoints
+$breakpoint---md: 720px;  //680[x
