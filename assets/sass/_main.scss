@@ -5,6 +5,8 @@ html {
 
     body {
 
+        // header styles - TODO: move to header.scss
+
         &.body---login {
 
             background: $body---bg;
@@ -394,6 +396,13 @@ html {
                 }
             }
         }
+
+        &.body---add--job {
+
+
+        }
+
+        // footer styles - TODO: move to footer.scss
 
     }
 }
