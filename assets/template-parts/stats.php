@@ -1,7 +1,9 @@
 
-<!-- Stats Modal Goes Here -->
+<!-- Progress Stats Modal Goes Here -->
  
 <h3>Your Progress</h3>
+
+<a href="list.php">back</a>
 
 <table>
     <thead> 
@@ -13,23 +15,23 @@
     <tbody>
         <tr>
             <td>Applications Sent:</td>
-            <td>1/6 (16.7%)</td>
+            <td><span>1</span>/<span class="jobs---applied" id="js_applications---count">6</span> (<span class="progress---precentage">16.7%</span>)</td>
         </tr>
         <tr>
             <td>CV/Resume Updated</td>
-            <td>1/6 (16.7%)</td>
+            <td><span>1</span>/<span class="jobs---applied" id="js_cv---count">6</span> (<span class="progress---precentage">16.7%</span>)</td>
         </tr>
         <tr>
             <td>Interview Secured</td>
-            <td>1</td>
+            <td><span>1</span>/<span class="jobs---applied" id="js_interview---count">6</span> (<span class="progress---precentage">16.7%</span>)</td>
         </tr>
         <tr>
             <td>Interview Attended</td>
-            <td>1</td>
+            <td><span>1</span>/<span class="jobs---applied" id="js_interview---attended--count">6</span> (<span class="progress---precentage">16.7%</span>)</td>
         </tr>
         <tr>
             <td>References</td>
-            <td>1</td>
+            <td><span>1</span>/<span class="jobs---applied" id="js_references--count">6</span> (<span class="progress---precentage">16.7%</span>)</td>
         </tr>
 
     </tbody>
