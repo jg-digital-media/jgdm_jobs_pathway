@@ -4,10 +4,8 @@
 html {
 
     body {
-
-        // header styles - TODO: move to header.scss
         
-
+        // selectors for login and register pages
         &.body---login {
 
             background: $body---bg;
@@ -143,6 +141,7 @@ html {
             }
         }
 
+        // Selectors for header and footer elements
         &.body---add--job,
         &.body---list,
         &.body---howto,
@@ -171,7 +170,7 @@ html {
 
 
             }
-            
+
             footer {
 
                 margin: 17px 0 0 0;
@@ -198,6 +197,7 @@ html {
             }
         }
 
+        // content and selectors for list page
         &.body---list {
 
             background: $body---bg--list;
@@ -446,10 +446,8 @@ html {
 
         }
 
-        // footer styles - TODO: move to footer.scss
 
-
-        // modal styles
+        // TODO: modal styles
 
     }
 }
