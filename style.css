@@ -1,7 +1,7 @@
 /* head.scss */
 /*
 
-Last Updated: 15-09-2025 - 12:14
+Last Updated: 16-09-2025 - 16:07
 */
 * {
   padding: 0;
@@ -113,8 +113,35 @@ html body.body---login footer p span a:hover {
   text-decoration: underline;
   color: #ffffff;
 }
+html body.body---add--job header, html body.body---list header, html body.body---howto header, html body.body---job--stats header {
+  margin: 12px 0 10px 0px;
+}
+html body.body---add--job header h1, html body.body---add--job header h2, html body.body---list header h1, html body.body---list header h2, html body.body---howto header h1, html body.body---howto header h2, html body.body---job--stats header h1, html body.body---job--stats header h2 {
+  text-align: center;
+}
+html body.body---add--job header h1, html body.body---list header h1, html body.body---howto header h1, html body.body---job--stats header h1 {
+  font-size: 32px;
+  text-align: center;
+}
+html body.body---add--job header h2, html body.body---list header h2, html body.body---howto header h2, html body.body---job--stats header h2 {
+  font-size: 24px;
+}
+html body.body---add--job footer, html body.body---list footer, html body.body---howto footer, html body.body---job--stats footer {
+  margin: 17px 0 0 0;
+}
+html body.body---add--job footer p, html body.body---list footer p, html body.body---howto footer p, html body.body---job--stats footer p {
+  text-align: center;
+}
+html body.body---add--job footer p span a, html body.body---list footer p span a, html body.body---howto footer p span a, html body.body---job--stats footer p span a {
+  color: black;
+  font-size: 12px;
+}
+html body.body---add--job footer p span a:hover, html body.body---list footer p span a:hover, html body.body---howto footer p span a:hover, html body.body---job--stats footer p span a:hover {
+  text-decoration: underline;
+  color: black;
+}
 html body.body---list {
-  background: #d3c2c2;
+  background: #ffffff;
 }
 html body.body---list header {
   margin: 12px 0 10px 0px;
@@ -129,18 +156,130 @@ html body.body---list header h1 {
 html body.body---list header h2 {
   font-size: 24px;
 }
-html body.body---list footer {
-  margin: 17px 0 0 0;
+html body.body---list main h3 {
+  text-align: right;
 }
-html body.body---list footer p {
+html body.body---list main a {
+  display: inline-block;
+  color: #272626;
+  transition: color 0.3s ease-in-out;
+  width: 100%;
   text-align: center;
 }
-html body.body---list footer p span a {
-  color: black;
+html body.body---list main a:hover {
+  color: blue;
 }
-html body.body---list footer p span a:hover {
-  text-decoration: underline;
-  color: black;
+html body.body---list main .top---banner--container {
+  display: flex;
+  background: #d3d3d3;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  margin: 10px auto;
+  padding: 2px 0;
+  border-radius: 6px;
+  border: solid 2px darkgray;
+  width: 95%;
+}
+html body.body---list main .top---banner--container #jobs---pathway--logo {
+  width: 45px;
+  height: 45px;
+}
+html body.body---list main .top---banner--container .app---navigation li {
+  display: inline-block;
+  list-style: none;
+  margin: 0 10px;
+}
+html body.body---list main .top---banner--container .app---navigation li a {
+  padding: 5px;
+  border-radius: 6px;
+  background: #4486ff;
+  text-decoration: none;
+  color: #98cbff;
+  text-align: center;
+  width: 100%;
+  transition: 0.3s ease-in-out;
+}
+html body.body---list main .top---banner--container .app---navigation li a:hover {
+  color: white;
+}
+html body.body---list main .top---banner--container .motivation---message--container {
+  background: #d3d3d3;
+}
+html body.body---list main .section---add--situation-container {
+  /* display: block; */
+  margin: 10px 34px 0 0;
+  /* margin: 10px 34px 0 0; */
+  text-align: right;
+}
+html body.body---list main .section---add--situation-container a {
+  display: inline-block;
+  background: white;
+  background: #4486ff;
+  color: #98cbff;
+  text-align: center;
+  width: 120px;
+  border-radius: 5px;
+  padding: 5px;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+html body.body---list main .section---add--situation-container a:hover {
+  color: white;
+}
+html body.body---list main .section---jobs--list--container {
+  width: 95%;
+  display: block;
+  margin: 10px auto;
+  border-radius: 6px;
+}
+html body.body---list main .section---jobs--list--container table {
+  width: 100%;
+  background: #d3d3d3;
+  border: solid 2px darkgray;
+  border-radius: 6px;
+}
+html body.body---list main .section---jobs--list--container table thead {
+  border-bottom: solid 1px #8b8b8b;
+  /* font-size: 17px; */
+}
+html body.body---list main .section---jobs--list--container table thead tr th {
+  /* border-bottom: soid 1px yellow; */
+}
+html body.body---list main .section---jobs--list--container table tbody tr {
+  height: 55px;
+}
+html body.body---list main .section---jobs--list--container table tbody tr td {
+  text-align: center;
+  transition: background 0.3s ease-in-out;
+}
+html body.body---list main .section---jobs--list--container table tbody tr td input.stage---completed--checkbox {
+  content: "";
+  height: 28px;
+  width: 28px;
+}
+html body.body---list main .section---jobs--list--container table tbody tr td:hover {
+  background: #dbdbdb;
+}
+html body.body---list main .section---jobs--list--container table tbody tr td.stage---completed {
+  background: #72ff72;
+  border: solid #0ff10f 1px;
+}
+html body.body---list main .section---jobs--list--container table tbody tr td:nth-child(2) a {
+  text-decoration: none;
+  font-size: 12px;
+  background: #4486ff;
+  color: #98cbff;
+  font-weight: bold;
+  padding: 4px;
+  width: 57px;
+  display: block;
+  margin: 3px auto;
+  border-radius: 8px;
+  transition: 0.3s ease-in-out;
+}
+html body.body---list main .section---jobs--list--container table tbody tr td:nth-child(2) a:hover {
+  color: white;
 }
 
 /*# sourceMappingURL=style.css.map */
