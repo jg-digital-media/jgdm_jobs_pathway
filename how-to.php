@@ -10,7 +10,13 @@
 
         </header>
 
-        <?php echo "how-to.php"; ?> <a href="list.php">back</a>
+        <main>
+
+            <h3>how-to.php</h3>
+
+            <?php echo "how-to.php"; ?> <a href="list.php">back</a>
+
+        </main>
 
         <section class="section---howto">
 

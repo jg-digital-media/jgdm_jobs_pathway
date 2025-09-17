@@ -3,8 +3,6 @@
  
 <h3>Your Progress</h3>
 
-<a href="list.php">back</a>
-
 <table class="job---profile--container">
     <thead> 
         <tr>

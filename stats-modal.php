@@ -10,6 +10,14 @@
 
         </header>
 
-        <p><?php require "assets/template-parts/stats.php"; ?> </p>
+        <main>
+
+            <h3>stats-modal.php</h3>
+
+            <a href="list.php">back</a>
+
+            <p><?php require "assets/template-parts/stats.php"; ?> </p>
+
+        </main>
        
 <?php require "assets/template-parts/inc/footer.php"; ?> 
