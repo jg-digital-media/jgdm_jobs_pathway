@@ -401,6 +401,13 @@ html {
 
                                         background: $background---stage--completed;                                   
                                         border: solid $border---stage--completed 1px;
+
+                                        transition: background 0.3s ease-in-out;           
+
+                                        &:hover {
+
+                                            background: lighten($border---stage--completed, 9%);
+                                        }
                                     }
                                 }
 
