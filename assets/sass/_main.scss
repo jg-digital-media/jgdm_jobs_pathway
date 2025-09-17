@@ -5,6 +5,9 @@ html {
 
     body {
         
+        font-family: $font---main;
+        font-size: $font---size--md;
+        
         // selectors for login and register pages
         &.body---login {
 
@@ -253,6 +256,7 @@ html {
                 .top---banner--container {
 
                     display: flex;
+                    font-size: $font---size--md;
                     background: $banner---bg--list;
                     border: solid 2px $border---col--list;
                     flex-direction: row;
@@ -434,6 +438,17 @@ html {
                                         }
                                     }
                                 }
+
+                                // No hover effect on the first two columns
+                                td:nth-child(1),
+                                td:nth-child(2) {
+
+                                    &:hover {
+
+                                        background: none;
+                                    }
+
+                                }
                                 
                             }
 
@@ -495,7 +510,7 @@ html {
                         &::placeholder {
 
                             color: rgb(188, 57, 57);
-                            font-family: arial;
+                            font-family: $font---placeholder;
                             padding: 3px 7px; 
 
                         }
@@ -509,7 +524,7 @@ html {
                         &::placeholder {
 
                             color: rgb(188, 57, 57);
-                            font-family: arial;
+                            font-family: $font---placeholder;
                             /* padding: 3px 7px; */ 
                             padding: 7px 8px;
 
