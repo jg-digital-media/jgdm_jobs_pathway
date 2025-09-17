@@ -40,11 +40,15 @@ html body.body---login .container---element--login form .login---input:focus, ht
 }
 
 /* mains.scss */
+html body {
+  font-family: arial;
+  font-size: 14px;
+}
 html body.body---login {
   background: #373737;
   /* background: #393838; */
   color: #ffffff;
-  font-family: "Times New Roman", Times, serif;
+  font-family: arial;
 }
 html body.body---login header.header---login--page {
   background: none;
@@ -139,12 +143,13 @@ html body.body---add--job footer p, html body.body---list footer p, html body.bo
   text-align: center;
 }
 html body.body---add--job footer p span a, html body.body---list footer p span a, html body.body---howto footer p span a, html body.body---job--details footer p span a, html body.body---job--stats footer p span a {
-  color: black;
+  color: #4486ff;
   font-size: 12px;
+  transition: color 0.3s ease-in-out;
 }
 html body.body---add--job footer p span a:hover, html body.body---list footer p span a:hover, html body.body---howto footer p span a:hover, html body.body---job--details footer p span a:hover, html body.body---job--stats footer p span a:hover {
   text-decoration: underline;
-  color: black;
+  color: #0e43b5;
 }
 html body.body---list {
   background: #ffffff;
@@ -167,16 +172,19 @@ html body.body---list main p {
 }
 html body.body---list main a {
   display: inline-block;
-  color: #272626;
+  /* color: #272626; */
+  color: #4486ff;
   transition: color 0.3s ease-in-out;
   width: 100%;
   text-align: center;
 }
 html body.body---list main a:hover {
-  color: blue;
+  /* color: blue; */
+  color: #0e43b5;
 }
 html body.body---list main .top---banner--container {
   display: flex;
+  font-size: 14px;
   background: #d3d3d3;
   border: solid 2px darkgray;
   flex-direction: row;
@@ -220,7 +228,7 @@ html body.body---list main .top---banner--container #motivation---message--conta
 }
 html body.body---list main .section---add--situation-container {
   /* display: block; */
-  margin: 10px 34px 0 0;
+  margin: 22px 34px 10px 0;
   /* margin: 10px 34px 0 0; */
   text-align: right;
 }
@@ -258,6 +266,15 @@ html body.body---list main .section---jobs--list--container table thead {
 html body.body---list main .section---jobs--list--container table thead tr th {
   /* border-bottom: soid 1px yellow; */
 }
+html body.body---list main .section---jobs--list--container table thead tr:first-child {
+  content: "";
+  /* background: navajowhite; */
+  height: 36px;
+  vertical-align: middle;
+  /* display: table; */
+  width: 100%;
+  border-top: solid 1px black;
+}
 html body.body---list main .section---jobs--list--container table tbody tr {
   height: 55px;
 }
@@ -276,10 +293,14 @@ html body.body---list main .section---jobs--list--container table tbody tr td:ho
 html body.body---list main .section---jobs--list--container table tbody tr td.stage---completed {
   background: #72ff72;
   border: solid #0ff10f 1px;
+  transition: background 0.3s ease-in-out;
+}
+html body.body---list main .section---jobs--list--container table tbody tr td.stage---completed:hover {
+  background: #3af43a;
 }
 html body.body---list main .section---jobs--list--container table tbody tr td:nth-child(2) a {
   text-decoration: none;
-  font-size: 12px;
+  /* font-size: 12px; */
   background: #4486ff;
   color: #98cbff;
   font-weight: bold;
@@ -293,10 +314,30 @@ html body.body---list main .section---jobs--list--container table tbody tr td:nt
 html body.body---list main .section---jobs--list--container table tbody tr td:nth-child(2) a:hover {
   color: #ffffff;
 }
+html body.body---list main .section---jobs--list--container table tbody tr td:nth-child(1):hover,
+html body.body---list main .section---jobs--list--container table tbody tr td:nth-child(2):hover {
+  background: none;
+}
+html body.body---add--job main h3,
+html body.body---add--job main h3 + a {
+  display: block;
+  text-align: center;
+}
+html body.body---add--job main a {
+  color: #4486ff;
+  text-align: center;
+  transition: color 0.3s ease-in-out;
+}
+html body.body---add--job main a:hover {
+  color: #0e43b5;
+}
+html body.body---add--job .section---add--situation-container {
+  margin-top: 20px;
+}
 html body.body---add--job .section---add--situation-container h3 {
   text-align: center;
 }
-html body.body---add--job .section---add--situation-container .form---login {
+html body.body---add--job .section---add--situation-container .form---add--job {
   /* border: solid 1px yellow; */
   margin: 10px auto;
   width: 400px;
@@ -304,49 +345,91 @@ html body.body---add--job .section---add--situation-container .form---login {
   border-radius: 4px;
   transition: box-shadow 0.3s ease-in-out;
 }
-html body.body---add--job .section---add--situation-container .form---login:hover {
+html body.body---add--job .section---add--situation-container .form---add--job:hover {
   /* box-shadow: white 0 0 0 0; */
   /* box-shadow: #ffdc78 0 0px 5px 1px; */
   box-shadow: white 0 0px 5px 1px;
 }
-html body.body---add--job .section---add--situation-container .form---login label {
+html body.body---add--job .section---add--situation-container .form---add--job label {
   display: inline-block;
-  font-size: 18pt;
+  /* font-size: 18pt; */
   color: #6c6c6c;
   margin: 25px 0;
-  width: 332px;
+  width: 160px;
+  padding: 0 10px;
   vertical-align: top;
+  font-weight: bold;
 }
-html body.body---add--job .section---add--situation-container .form---login input {
+html body.body---add--job .section---add--situation-container .form---add--job input {
   padding: 3px;
   border: solid 1px red;
+  border: solid 1px darkgray;
+  border: solid 1px darkgray;
   border-radius: 6px;
   margin: 25px 0;
   padding: 3px 7px;
   height: 25px;
+  transition: background 0.3s ease-in-out;
 }
-html body.body---add--job .section---add--situation-container .form---login input::placeholder {
+html body.body---add--job .section---add--situation-container .form---add--job input::placeholder {
   color: rgb(188, 57, 57);
-  font-family: arial;
+  font-family: "Arial", sans-serif;
+  margin: 25px 0;
   padding: 3px 7px;
 }
-html body.body---add--job .section---add--situation-container .form---login textarea {
+html body.body---add--job .section---add--situation-container .form---add--job input:focus-visible {
+  /* border: solid 1px blue; */
+  outline: solid 1px blue;
+  background: #9ddfff;
+  padding: 3px 7px;
+}
+html body.body---add--job .section---add--situation-container .form---add--job textarea {
   border: solid 1px red;
-  padding: 7px 8px;
+  padding: 3px 7px;
+  width: 95%;
+  border-radius: 6px;
 }
-html body.body---add--job .section---add--situation-container .form---login textarea::placeholder {
+html body.body---add--job .section---add--situation-container .form---add--job textarea::placeholder {
   color: rgb(188, 57, 57);
-  font-family: arial;
+  font-family: "Arial", sans-serif;
   /* padding: 3px 7px; */
-  padding: 7px 8px;
+  padding: 3px 7px;
+  transition: background 0.3s ease-in-out;
 }
-html body.body---add--job .section---add--situation-container .form---login .button-login {
-  padding: 5px;
+html body.body---add--job .section---add--situation-container .form---add--job textarea:focus-visible {
+  /* border: solid 1px blue; */
+  outline: solid 1px blue;
+  background: #9ddfff;
+}
+html body.body---add--job .section---add--situation-container .form---add--job .button---login {
+  display: block;
+  height: auto;
+  padding: 8px;
   border: solid 1px #d3c2c2;
-  border-radius: 4px;
-  background: none;
-  margin: 25px 0;
-  margin: 6px;
+  border-radius: 6px;
+  background: #4486ff;
+  color: #98cbff;
+  /* margin: 25px 0; */
+  margin: 0px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+html body.body---add--job .section---add--situation-container .form---add--job .button---login:hover {
+  /* background: $button---bg--hover-list; */
+  color: #ffffff;
+}
+html body.body---job--details main h3,
+html body.body---job--details main h3 + a {
+  display: block;
+  text-align: center;
+}
+html body.body---job--details main a {
+  color: #4486ff;
+  text-align: center;
+  transition: color 0.3s ease-in-out;
+}
+html body.body---job--details main a:hover {
+  color: #0e43b5;
 }
 html body.body---job--details .job---profile---container {
   display: table;
@@ -379,6 +462,13 @@ html body.body---job--details .job---profile---container tbody tr td#job---perso
   margin: 20px 0;
   padding: 4px;
   text-align: left;
+}
+html body.body---job--details .job---profile---container tbody tr td a {
+  color: #4486ff;
+  transition: color 0.3s ease-in-out;
+}
+html body.body---job--details .job---profile---container tbody tr td a:hover {
+  color: #0e43b5;
 }
 html body.body---job--details .job---profile---container tbody tr td:nth-child(1) {
   font-weight: bold;
@@ -415,7 +505,7 @@ html body.body---job--details .section---job--edit a.button---job--edit {
   transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 html body.body---job--details .section---job--edit a.button---job--edit:hover {
-  background: #98cbff;
+  /* background: $button---bg--hover-list; */
   color: #ffffff;
 }
 html body.body---job--stats h3 {
@@ -473,6 +563,19 @@ html body.body---job--stats .job---profile--container tbody tr #job---personal--
 }
 html body.body---job--stats .job---profile--container tfoot#in--work--msg {
   visibility: hidden;
+}
+html body.body---howto main h3,
+html body.body---howto main h3 + a {
+  display: block;
+  text-align: center;
+}
+html body.body---howto main a {
+  color: #4486ff;
+  text-align: center;
+  transition: color 0.3s ease-in-out;
+}
+html body.body---howto main a:hover {
+  color: #0e43b5;
 }
 html body.body---howto section.section---howto {
   margin: 17px auto;

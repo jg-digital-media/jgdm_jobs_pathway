@@ -1,4 +1,4 @@
-`Last Updated: 16-09-2025 - 16:38`
+`Last Updated: 17-09-2025 - 16:40`
 
 # Jobs Pathway
   + Keep track of your way to your professional life
@@ -11,25 +11,33 @@
 
 ## TODOs: 
 
-### (Completed - `2`)
+### (Completed - `4`)
 
 + `COMPLETED: 16-09-2025` - Wireframe and static interface planning for 'Job's Pathway App'
 + `COMPLETED: 16-09-2025` - Add a footer and header template part of the project
++ `COMPLETED: 17-09-2025` - Change table cell background colour of Table cell when the child checkbox is checked
++ `COMPLETED: 17-09-2025` - Custom variable values where required for the different root templates
++ `TODO:` - Add some simulated form validation to the login and register pages
+  + `TODO:` - Standard border: red  - Validated border: green:  focused border: blue - `border: solid 1px color;`
++ `TODO:` - add a logout link along with username, to the top banner
++ `TODO:` - Implement Edit functionality for `job-details.php`.
+
++ `TODO:` - Persist the changes to checkboxes and table cell backgrounds
 + `TODO:` - move header styles to `header.scss`
 + `TODO:` - move footer styles to `footer.scss`
 + `TODO:` - Build `stats-modal.php` template file/page
 + `TODO:` - Build `add-job-form.php` template file/page
-+ `TODO:` - Custom variable values where required for the different root templates
 + `TODO:` - Finish styling the login and register pages
 + `TODO:` - Apply `stage---completed` class to table cells where the containing checkbox is checked
-+ `TODO:` - Add some simulated form validation to the login and register pages
-+ `TODO:` - Swap out mini logo in `top---banner--container`
-  + `TODO:` - Standard border: red  - Validated border: green:  focused border: blue - `border: solid 1px color;`
 + `TODO:` - list.php - build markup for the main list page of jobs
 + `TODO:` - Add responsiveness to Job list table - `list.php`
 + `TODO:` - "How to use" template file/page
 + `TODO:` - style "how to use" page
 + `TODO:` - body---add--job styles
++ `TODO:` - Actions column - `list.php`  Might be useful as a mechanism to edit job profiles 
++ `TODO:` - `button---job--edit` - Change text content from "Edit" to Saved" when  button is clicked.
++ `TODO:` - Add a favicon
++ `TODO:` - Swap out mini logo in `top---banner--container`
 
 [Back to Top](#sections)
 
