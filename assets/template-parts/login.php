@@ -13,6 +13,6 @@
     <input type="password"  name="password" id="password" class="login---input" placeholder="Enter your password...">
 
     <br><br>
-    <input type="submit" value="Submit" class="button button---login">
+    <input type="submit" value="Login >" class="button button---login">
 
 </form>
