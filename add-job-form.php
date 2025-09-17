@@ -10,6 +10,8 @@
 
         </header>
 
+        <a href="list.php">back</a>
+
         <p><?php require "assets/template-parts/add-job.php"; ?> </p>
 
 <?php require "assets/template-parts/inc/footer.php"; ?>
