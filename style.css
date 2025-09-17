@@ -1,7 +1,7 @@
 /* head.scss */
 /*
 
-Last Updated: 16-09-2025 - 16:07
+Last Updated: 17-09-2025 - 08:57
 */
 * {
   padding: 0;
@@ -281,6 +281,59 @@ html body.body---list main .section---jobs--list--container table tbody tr td:nt
 html body.body---list main .section---jobs--list--container table tbody tr td:nth-child(2) a:hover {
   color: white;
 }
+html body.body---add--job .section---add--situation-container h3 {
+  text-align: center;
+}
+html body.body---add--job .section---add--situation-container .form---login {
+  /* border: solid 1px yellow; */
+  margin: 10px auto;
+  width: 400px;
+  padding: 8px;
+  border-radius: 4px;
+  transition: box-shadow 0.3s ease-in-out;
+}
+html body.body---add--job .section---add--situation-container .form---login:hover {
+  /* box-shadow: white 0 0 0 0; */
+  /* box-shadow: #ffdc78 0 0px 5px 1px; */
+  box-shadow: white 0 0px 5px 1px;
+}
+html body.body---add--job .section---add--situation-container .form---login label {
+  display: inline-block;
+  color: #6c6c6c;
+  margin: 25px 0;
+  width: 332px;
+  font-size: 18pt;
+  vertical-align: top;
+}
+html body.body---add--job .section---add--situation-container .form---login input {
+  padding: 3px;
+  border: solid 1px red;
+  border-radius: 6px;
+  margin: 25px 0;
+  padding: 3px 7px;
+  height: 25px;
+}
+html body.body---add--job .section---add--situation-container .form---login input::placeholder {
+  color: rgb(188, 57, 57);
+  font-family: arial;
+  padding: 3px 7px;
+}
+html body.body---add--job .section---add--situation-container .form---login textarea {
+  border: solid 1px red;
+}
+html body.body---add--job .section---add--situation-container .form---login textarea::placeholder {
+  color: rgb(188, 57, 57);
+  font-family: arial;
+  padding: 3px 7px;
+}
+html body.body---add--job .section---add--situation-container .form---login .button-login {
+  padding: 5px;
+  border: solid 1px #d3c2c2;
+  border-radius: 4px;
+  background: none;
+  margin: 25px 0;
+  margin: 6px;
+}
 html body.body---job--details .job---profile---container {
   display: table;
   margin: 10px auto;
@@ -322,6 +375,77 @@ html body.body---job--details .job---profile---container tbody tr #job---persona
 }
 html body.body---job--details .job---profile---container tbody tr #job---personal--notes p {
   margin: 0px;
+}
+html body.body---job--details .section---job--edit {
+  text-align: right;
+}
+html body.body---job--details .section---job--edit a.button---job--edit {
+  padding: 0 6px 0 0;
+  color: red;
+  transition: color 0.3s ease-in-out;
+}
+html body.body---job--details .section---job--edit a.button---job--edit:hover {
+  color: blue;
+}
+html body.body---job--stats .job---profile--container {
+  border: solid 1px blue;
+  display: table;
+  margin: 10px auto;
+  width: 320px;
+  border-radius: 7px;
+}
+html body.body---job--stats .job---profile--container thead th #active-jobs-count {
+  color: red;
+}
+html body.body---job--stats .job---profile--container tbody tr {
+  height: 55px;
+  transition: background 0.3s ease-in-out;
+}
+html body.body---job--stats .job---profile--container tbody tr:hover {
+  background: #cbcbcb;
+  background: #e1dede;
+}
+html body.body---job--stats .job---profile--container tbody tr td {
+  /* width: 50%; */
+}
+html body.body---job--stats .job---profile--container tbody tr td span {
+  color: red;
+}
+html body.body---job--stats .job---profile--container tbody tr td#job---personal--notes {
+  text-align: center;
+}
+html body.body---job--stats .job---profile--container tbody tr td#job---personal--notes p {
+  /* margin: 0px; */
+  margin: 20px 0;
+  padding: 4px;
+  text-align: left;
+}
+html body.body---job--stats .job---profile--container tbody tr td .jobs---applied {
+  color: red;
+  font-weight: bold;
+}
+html body.body---job--stats .job---profile--container tbody tr td span.progress---percentage {
+  color: red;
+}
+html body.body---job--stats .job---profile--container tbody tr td:nth-child(1) {
+  font-weight: bold;
+}
+html body.body---job--stats .job---profile--container tbody tr #job---personal--notes {
+  font-weight: normal;
+  text-align: center;
+}
+html body.body---job--stats .job---profile--container tbody tr #job---personal--notes p {
+  margin: 0px;
+}
+html body.body---job--stats .job---profile--container tfoot#in--work--msg {
+  visibility: hidden;
+}
+html body.body---howto section.section---howto {
+  margin: 17px auto;
+  text-align: center;
+  font-weight: bold;
+  font-size: 15pt;
+  color: #700404;
 }
 
 /*# sourceMappingURL=style.css.map */
