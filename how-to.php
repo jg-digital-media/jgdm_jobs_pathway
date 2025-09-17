@@ -12,7 +12,7 @@
 
         <?php echo "how-to.php"; ?> <a href="list.php">back</a>
 
-        <section>
+        <section class="section---howto">
 
             <p>Watch Back for more details soon</p>
 
