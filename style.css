@@ -113,30 +113,30 @@ html body.body---login footer p span a:hover {
   text-decoration: underline;
   color: #ffffff;
 }
-html body.body---add--job header, html body.body---list header, html body.body---howto header, html body.body---job--stats header {
+html body.body---add--job header, html body.body---list header, html body.body---howto header, html body.body---job--details header, html body.body---job--stats header {
   margin: 12px 0 10px 0px;
 }
-html body.body---add--job header h1, html body.body---add--job header h2, html body.body---list header h1, html body.body---list header h2, html body.body---howto header h1, html body.body---howto header h2, html body.body---job--stats header h1, html body.body---job--stats header h2 {
+html body.body---add--job header h1, html body.body---add--job header h2, html body.body---list header h1, html body.body---list header h2, html body.body---howto header h1, html body.body---howto header h2, html body.body---job--details header h1, html body.body---job--details header h2, html body.body---job--stats header h1, html body.body---job--stats header h2 {
   text-align: center;
 }
-html body.body---add--job header h1, html body.body---list header h1, html body.body---howto header h1, html body.body---job--stats header h1 {
+html body.body---add--job header h1, html body.body---list header h1, html body.body---howto header h1, html body.body---job--details header h1, html body.body---job--stats header h1 {
   font-size: 32px;
   text-align: center;
 }
-html body.body---add--job header h2, html body.body---list header h2, html body.body---howto header h2, html body.body---job--stats header h2 {
+html body.body---add--job header h2, html body.body---list header h2, html body.body---howto header h2, html body.body---job--details header h2, html body.body---job--stats header h2 {
   font-size: 24px;
 }
-html body.body---add--job footer, html body.body---list footer, html body.body---howto footer, html body.body---job--stats footer {
+html body.body---add--job footer, html body.body---list footer, html body.body---howto footer, html body.body---job--details footer, html body.body---job--stats footer {
   margin: 17px 0 0 0;
 }
-html body.body---add--job footer p, html body.body---list footer p, html body.body---howto footer p, html body.body---job--stats footer p {
+html body.body---add--job footer p, html body.body---list footer p, html body.body---howto footer p, html body.body---job--details footer p, html body.body---job--stats footer p {
   text-align: center;
 }
-html body.body---add--job footer p span a, html body.body---list footer p span a, html body.body---howto footer p span a, html body.body---job--stats footer p span a {
+html body.body---add--job footer p span a, html body.body---list footer p span a, html body.body---howto footer p span a, html body.body---job--details footer p span a, html body.body---job--stats footer p span a {
   color: black;
   font-size: 12px;
 }
-html body.body---add--job footer p span a:hover, html body.body---list footer p span a:hover, html body.body---howto footer p span a:hover, html body.body---job--stats footer p span a:hover {
+html body.body---add--job footer p span a:hover, html body.body---list footer p span a:hover, html body.body---howto footer p span a:hover, html body.body---job--details footer p span a:hover, html body.body---job--stats footer p span a:hover {
   text-decoration: underline;
   color: black;
 }
@@ -280,6 +280,48 @@ html body.body---list main .section---jobs--list--container table tbody tr td:nt
 }
 html body.body---list main .section---jobs--list--container table tbody tr td:nth-child(2) a:hover {
   color: white;
+}
+html body.body---job--details .job---profile---container {
+  display: table;
+  margin: 10px auto;
+  /* width: 75%; */
+  width: 455px;
+  border-radius: 5px;
+  border: solid 1px red;
+}
+html body.body---job--details .job---profile---container th {
+  width: 64%;
+  font-size: 15pt;
+}
+html body.body---job--details .job---profile---container tbody tr {
+  height: 55px;
+  transition: background 0.3s ease-in-out;
+}
+html body.body---job--details .job---profile---container tbody tr:hover {
+  background: #cbcbcb;
+  background: #e1dede;
+}
+html body.body---job--details .job---profile---container tbody tr td {
+  /* width: 50%; */
+}
+html body.body---job--details .job---profile---container tbody tr td#job---personal--notes {
+  text-align: center;
+}
+html body.body---job--details .job---profile---container tbody tr td#job---personal--notes p {
+  /* margin: 0px; */
+  margin: 20px 0;
+  padding: 4px;
+  text-align: left;
+}
+html body.body---job--details .job---profile---container tbody tr td:nth-child(1) {
+  font-weight: bold;
+}
+html body.body---job--details .job---profile---container tbody tr #job---personal--notes {
+  font-weight: normal;
+  text-align: center;
+}
+html body.body---job--details .job---profile---container tbody tr #job---personal--notes p {
+  margin: 0px;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -145,6 +145,7 @@ html {
         &.body---add--job,
         &.body---list,
         &.body---howto,
+        &.body---job--details,
         &.body---job--stats {
 
             header {
@@ -431,6 +432,76 @@ html {
         // TODO: body---add--job styles
         &.body---add--job {
 
+
+        }
+
+        // TODO: body---job--details styles
+        &.body---job--details {
+
+            .job---profile---container {
+
+                display: table;
+                margin: 10px auto;
+                /* width: 75%; */
+                width: 455px;
+                border-radius: 5px;
+                border: solid 1px red;
+
+                th {
+
+                    width: 64%;
+                    font-size: 15pt;
+                }
+
+                tbody {
+                    tr {
+
+                        height: 55px;
+                        transition: background 0.3s ease-in-out;                   
+
+                        &:hover {
+
+                            background: darken($banner---bg--list, 3%);
+                            background: #e1dede;
+                        }
+
+                        td {
+
+                            /* width: 50%; */
+
+                            &#job---personal--notes {
+
+                                p {
+
+                                    /* margin: 0px; */
+                                    margin: 20px 0;
+                                    padding: 4px;
+                                    text-align: left;
+                                }
+
+                                text-align: center;
+                            }
+                        }
+
+                        td:nth-child(1) {
+
+                            font-weight: bold;
+                        }
+
+                        #job---personal--notes {
+
+                            font-weight: normal;
+
+                            p {
+
+                                margin: 0px;
+                            }
+
+                            text-align: center;
+                        }
+                    }
+                }
+            }
 
         }
 
