@@ -42,5 +42,13 @@
                 <p>Details go here....</p>
             </td>
         </tr>
+
     </tbody>
+
 </table>
+
+<section class="section---job--edit">
+
+    <a href="list.php" class="button button---job--edit">Edit</a>
+
+</section>
