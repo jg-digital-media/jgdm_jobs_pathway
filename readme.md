@@ -1,4 +1,4 @@
-`Last Updated: 17-09-2025 - 16:40`
+`Last Updated: 17-09-2025 - 17:03`
 
 # Jobs Pathway
   + Keep track of your way to your professional life
@@ -43,7 +43,7 @@
 
 ## Development
 
-[0.0.1](#001) | [0.0.2](#002) | [0.0.3](#003) | [0.0.4](#004) |
+[0.0.1](#001) | [0.0.2](#002) | [0.0.3](#003) | [0.0.4](#004) | [0.0.5](#005) 
 
 ### `0.0.1`
   
@@ -75,6 +75,14 @@
   + Elsewhere, I started building the other screen states, like the progress states page and the "how to use" page. I'm still at the back of my mind thinking whether it should be modals or popups. I'm not sure yet. It might be a better UX experience to be modals, but when this app is complete, persistence of data will not be an issue since changes will be saved at the backend.
 
   + I've tried my best to keep the CSS up with the markup as I go and keep it organised. But there's still a lot of work to do for the Stat and Add Job pages and to keep the SASS files easily maintainable. I'm hopeful that by the end of `17th` (tomorrow) I'll have a solid foundation for the app's look and feel. `15-09-2025`
+
+  #### `0.0.5`
+
+  + I wanted to achieve a couple of main things today. Sort out a first solid draft of the look and feel of the app - which means sorting out the SASS variables and selectors for most aspects of the UI. Now there's some styling for the main application states, like the login and register pages, the list page and the job details page.
+
+  + I'm becoming more and more minded to switch to using modals for things like adding new jobs and the progress stats page.  But the major functionality achievement of the day is getting the checkbox for each table cell to change colour when the child checkbox is checked. This gives people a visual cue that this stage of the job application process has been completed. Of course, there isn't any backend persistence for this yet, so it all resets when you refresh the page.  
+
+  + A big part of the app is the job listing page, and a large part of future database interactions will go there. But it all represents a good step towards completing the prototype of the app.
 
 [Back to Top](#development)
 
