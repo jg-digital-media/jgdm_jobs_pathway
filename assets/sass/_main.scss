@@ -320,7 +320,7 @@ html {
                 .section---add--situation-container {
 
                     /* display: block; */
-                    margin: 10px 34px 0 0;
+                    margin: 22px 34px 10px 0;
                     /* margin: 10px 34px 0 0; */
                     text-align: right;
 
@@ -420,7 +420,7 @@ html {
                                     a {
 
                                         text-decoration: none;
-                                        font-size: 12px;
+                                        /* font-size: 12px; */
                                         background: $button---bg--list;
                                         color: $button---col--list;
                                         font-weight: bold;
@@ -645,7 +645,7 @@ html {
 
                     &:hover {
 
-                        background: $button---bg--hover-list;
+                        /* background: $button---bg--hover-list; */
                         color: $button---col--hover-list;
                     }
                     
