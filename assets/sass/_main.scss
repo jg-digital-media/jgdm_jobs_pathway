@@ -304,7 +304,7 @@ html {
                         #motivation---message {
 
                             padding: 0px 5px;
-                            color: #676676;
+                            color: $text---col--secondary-list;
                             /* background: #ffffb9; */
                             /* border-radius: 7px; */
                         }
@@ -312,8 +312,6 @@ html {
                     }
                     
                 }
-
-                
 
                 .section---add--situation-container {
 
@@ -598,7 +596,6 @@ html {
                 text-align: right;
 
                 a.button---job--edit {
-
                     
                     padding: 0 6px 0 0;
 
@@ -618,7 +615,12 @@ html {
         // TODO: body---job--stats
         &.body---job--stats {
 
-             .job---profile--container {
+            h3 {
+
+                text-align: center;
+            }
+
+            .job---profile--container {
 
                 border: solid 1px blue;
                 display: table;
