@@ -136,7 +136,7 @@ html {
                             &:hover {
 
                                 text-decoration: underline;
-                                color: $url---col--primaryhover;
+                                color: $url---col--primary-hover;
                             }
                         }
                     }
@@ -187,13 +187,15 @@ html {
 
                         a {
 
-                            color: black;  // check
+                            color: $url---col--primary-list;  // check
                             font-size: 12px;
+
+                            transition: color 0.3s ease-in-out;
 
                             &:hover {
 
                                 text-decoration: underline;
-                                color: black; // check
+                                color: $url---col--primary-hover-list; // check
                             }
                         }
                     }
@@ -241,14 +243,16 @@ html {
                 a {
 
                     display: inline-block;
-                    color: #272626;
+                    /* color: #272626; */
+                    color: $url---col--primary-list;
                     transition: color 0.3s ease-in-out;
                     width: 100%;
                     text-align: center;
 
                     &:hover {
 
-                        color: blue;
+                        /* color: blue; */
+                        color: $url---col--primary-hover-list;
                     }
 
                 }
@@ -376,6 +380,18 @@ html {
                                     /* border-bottom: soid 1px yellow; */
                                 }
                             }
+
+                            tr:first-child {
+
+                                content: "";
+                                /* background: navajowhite; */
+                                height: 36px;
+                                vertical-align: middle;
+                                /* display: table; */
+                                width: 100%;
+                                border-top: solid 1px black;
+                            }
+
                         }
 
                         tbody {
@@ -452,6 +468,8 @@ html {
                                 
                             }
 
+                           
+
                             
                         }
                         
@@ -463,14 +481,40 @@ html {
         // TODO: body---add--job styles
         &.body---add--job {
 
+            main {
+
+                h3,
+                h3 + a {
+                    
+                    display: block;
+                    text-align: center;
+                }
+
+                a {
+
+                    color: $url---col--primary-list;
+                    text-align: center;
+
+                    transition: color 0.3s ease-in-out;
+
+                    &:hover {
+
+                        color: $url---col--primary-hover-list;
+                    }
+                }
+                
+            }
+
             .section---add--situation-container {
+
+                margin-top: 20px;
 
                 h3 {
 
                     text-align: center;
-                }
+                }              
 
-                .form---login {
+                .form---add--job {
 
                     /* border: solid 1px yellow; */
                     margin: 10px auto;
@@ -491,54 +535,93 @@ html {
                     label {
 
                         display: inline-block;
-                        font-size: 18pt;
+                        /* font-size: 18pt; */
                         color: #6c6c6c;
                         margin: 25px 0;
-                        width: 332px;
+                        width: 160px;
+                        padding: 0 10px;
                         vertical-align: top;
+                        font-weight: bold;
                     }
 
                     input {
 
                         padding: 3px;
                         border: solid 1px red;
+                        border: solid 1px darkgray;
+                        border: solid 1px $border---col--list;
                         border-radius: 6px;
                         margin: 25px 0;
                         padding: 3px 7px; 
                         height: 25px;
 
+                        transition: background 0.3s ease-in-out;
+
                         &::placeholder {
 
                             color: rgb(188, 57, 57);
                             font-family: $font---placeholder;
+                            margin: 25px 0;
                             padding: 3px 7px; 
 
+                        }
+
+                        &:focus-visible {
+
+                            /* border: solid 1px blue; */
+                            outline: solid 1px blue;
+                            background: #9ddfff;
+                            padding: 3px 7px; 
                         }
                     }
 
                     textarea {
                         
                         border: solid 1px red;
-                        padding: 7px 8px;
+                        padding: 3px 7px;
+                        width: 95%;
+                        border-radius: 6px;
 
                         &::placeholder {
 
                             color: rgb(188, 57, 57);
                             font-family: $font---placeholder;
                             /* padding: 3px 7px; */ 
-                            padding: 7px 8px;
+                            padding: 3px 7px;
+
+                            transition: background 0.3s ease-in-out;
 
                         }
+
+                        &:focus-visible {
+
+                            /* border: solid 1px blue; */
+                            outline: solid 1px blue;
+                            background: #9ddfff;
+                        }
+
                     }
 
-                    .button-login {
+                    .button---login {
 
-                        padding: 5px;
+                        display: block;
+                        height: auto;
+                        padding: 8px;
                         border: solid 1px #d3c2c2;
-                        border-radius: 4px;
-                        background: none;
-                        margin: 25px 0;
-                        margin: 6px;
+                        border-radius: 6px;
+                        background: $button---bg--list;
+                        color: $button---col--list;
+                        /* margin: 25px 0; */
+                        margin: 0px;
+                        cursor: pointer;
+
+                        transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+
+                        &:hover {
+
+                            /* background: $button---bg--hover-list; */
+                            color: $button---col--hover-list;
+                        }
 
                     }
                 }
@@ -549,6 +632,29 @@ html {
 
         // TODO: body---job--details styles
         &.body---job--details {
+
+            main {
+
+                h3,
+                h3 + a {
+                    
+                    display: block;
+                    text-align: center;
+                }
+
+                a {
+
+                    color: $url---col--primary-list;
+                    text-align: center;
+
+                    transition: color 0.3s ease-in-out;
+
+                    &:hover {
+
+                        color: $url---col--primary-hover-list;
+                    }
+                }
+            }
 
             .job---profile---container {
 
@@ -592,6 +698,18 @@ html {
                                 }
 
                                 text-align: center;
+                            }
+
+                            a {
+
+                                color: $url---col--primary-list;
+
+                                transition: color 0.3s ease-in-out;
+
+                                &:hover {
+
+                                    color: $url---col--primary-hover-list;
+                                }
                             }
                         }
 
@@ -768,6 +886,29 @@ html {
 
         // TODO: style "how to use" page
         &.body---howto {
+
+            main {
+
+                h3,
+                h3 + a {
+                    
+                    display: block;
+                    text-align: center;
+                }
+
+                a {
+
+                    color: $url---col--primary-list;
+                    text-align: center;
+
+                    transition: color 0.3s ease-in-out;
+
+                    &:hover {
+
+                        color: $url---col--primary-hover-list;
+                    }
+                }
+            }
 
 
             section.section---howto {

@@ -14,7 +14,7 @@
 
             <h3>how-to.php</h3>
 
-            <?php echo "how-to.php"; ?> <a href="list.php">back</a>
+            <a href="list.php">back</a>
 
         </main>
 

@@ -12,7 +12,7 @@
 
         <section class="container---element--login">
 
-            <?php require "assets/template-parts/login.php"; ?>
+            <?php require "assets/template-parts/register.php"; ?>
 
         </section>
 
