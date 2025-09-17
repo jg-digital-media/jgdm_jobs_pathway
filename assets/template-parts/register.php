@@ -19,6 +19,6 @@
     <input type="password" name="confirm_password" id="confirm_password" class="login---input" placeholder="Confirm your password....">
 
     <br><br>
-    <input type="submit" value="Submit" class="button button---login">
+    <input type="submit" value="Register >" class="button button---login">
 
 </form>
