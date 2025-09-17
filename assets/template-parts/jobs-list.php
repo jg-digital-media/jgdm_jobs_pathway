@@ -47,9 +47,9 @@
             <tr>
                 <td>1</td>
                 <td><a href="job-details.php">Open</a></td>
-                <td id="j1s2" class="stage---completed"><input type="checkbox" class="stage---completed--checkbox" id="chkbox---j1s2" name="j1s2"></a></td>
-                <td id="j1s3" class="stage---completed"><input type="checkbox" class="stage---completed--checkbox" id="chkbox---j1s3" name="j1s3"></a></td>
-                <td id="j1s4" class="stage---completed"><input type="checkbox" class="stage---completed--checkbox" id="chkbox---j1s4" name="j1s4"></a></td>
+                <td id="j1s2"><input type="checkbox" class="stage---completed--checkbox" id="chkbox---j1s2" name="j1s2"></a></td>
+                <td id="j1s3"><input type="checkbox" class="stage---completed--checkbox" id="chkbox---j1s3" name="j1s3"></a></td>
+                <td id="j1s4"><input type="checkbox" class="stage---completed--checkbox" id="chkbox---j1s4" name="j1s4"></a></td>
                 <td id="j1s5"><input type="checkbox" class="stage---completed--checkbox" id="chkbox---j1s5" name="j1s5"></a></td>
                 <td id="j1s6"><input type="checkbox" class="stage---completed--checkbox" id="chkbox---j1s6" name="j1s6"></a></td>
                 <td id="j1s7"><input type="checkbox" class="stage---completed--checkbox" id="chkbox---j1s7" name="j1s7"></a></td>   
