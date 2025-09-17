@@ -1,4 +1,4 @@
-`Last Updated: 17-09-2025 - 17:03`
+`Last Updated: 17-09-2025 - 21:24`
 
 # Jobs Pathway
   + Keep track of your way to your professional life
@@ -17,27 +17,44 @@
 + `COMPLETED: 16-09-2025` - Add a footer and header template part of the project
 + `COMPLETED: 17-09-2025` - Change table cell background colour of Table cell when the child checkbox is checked
 + `COMPLETED: 17-09-2025` - Custom variable values where required for the different root templates
++ `TODO:` - Apply `stage---completed` class to table cells where the containing checkbox is checked
++ `TODO:` - Finish styling the login and register pages
 + `TODO:` - Add some simulated form validation to the login and register pages
   + `TODO:` - Standard border: red  - Validated border: green:  focused border: blue - `border: solid 1px color;`
 + `TODO:` - add a logout link along with username, to the top banner
 + `TODO:` - Implement Edit functionality for `job-details.php`.
+  + `TODO:` - Edit button will switch fields to an editable state where values can be changed.
+            - At this point, the edit button text content will change from "Edit" to "Save"
+            - Save button will save the changes to the database and change text content back to "Edit"
+            - "Tooltip" activated to show the user that the changes have been saved!
 
 + `TODO:` - Persist the changes to checkboxes and table cell backgrounds
 + `TODO:` - move header styles to `header.scss`
 + `TODO:` - move footer styles to `footer.scss`
++ `TODO:` - reduce lines of code in Sass files where possible
++ `TODO:` - Build `stats-modal.php` page - increase font size, make more visible. 
+  + `TODO:` - May need to fill table with classes to get the desired effect.
 + `TODO:` - Build `stats-modal.php` template file/page
 + `TODO:` - Build `add-job-form.php` template file/page
-+ `TODO:` - Finish styling the login and register pages
-+ `TODO:` - Apply `stage---completed` class to table cells where the containing checkbox is checked
 + `TODO:` - list.php - build markup for the main list page of jobs
 + `TODO:` - Add responsiveness to Job list table - `list.php`
-+ `TODO:` - "How to use" template file/page
-+ `TODO:` - style "how to use" page
 + `TODO:` - body---add--job styles
 + `TODO:` - Actions column - `list.php`  Might be useful as a mechanism to edit job profiles 
 + `TODO:` - `button---job--edit` - Change text content from "Edit" to Saved" when  button is clicked.
++ `TODO:` - `motivation---message`- load a different message as its text content whenever the user loads the page.
 + `TODO:` - Add a favicon
 + `TODO:` - Swap out mini logo in `top---banner--container`
++ `TODO:` - Add copy "How to use" template file/page `how-to.php`
++ `TODO:` - Add a "How to use" template file/page
++ `TODO:` - style "how to use" page
++ `TODO:` - Plan a Ruby Rails database schema
++ `TODO:` - Integrate Ruby on Rails into the project (Ruby Templates)
+  + `TODO:` - Plan Screen States - login, register, list (no jobs listed at first), add job, job details, stats dashboard, how to use
++ `TODO:` - `add-job-form.php` sync up placeholder and input text in form elements
++ `TODO:` - Decided to use register form for the landing page. Add to it, a link to login form. `index.php`
++ `TODO:` - Tooltips throughout the app
++ `TODO:` - Delete job or jobs from the list page
++ `TODO:` - Welcome user to the app and then invite to register `register.php`.
 
 [Back to Top](#sections)
 
