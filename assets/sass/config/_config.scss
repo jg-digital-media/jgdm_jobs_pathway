@@ -1,5 +1,13 @@
 
 /* config.scss */
+
+// font stack
+$font---one: arial;
+
+$font---main: $font---one;
+$font---placeholder: "Arial", sans-serif;
+
+/// backgrounds
 $body---bg: #373737;
 $body---bg--list: #ffffff;
 
@@ -28,12 +36,11 @@ $button---col: #040990;
 $url---col--primary: gold;
 $url---col--primaryhover: #ffffff;
 
-$font---main: "Times New Roman", Times, serif;
-
-
 // font size - headings - 
 $font---size--h1: 32px;
 $font---size--h2: 24px;
+
+$font---size--md: 14px;
 
 
 // Breakpoints
