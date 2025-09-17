@@ -431,6 +431,7 @@ html {
 
         // TODO: body---add--job styles
         &.body---add--job {
+           
 
 
         }
@@ -508,11 +509,122 @@ html {
         // TODO: body---job--stats
         &.body---job--stats {
 
+             .job---profile--container {
+
+                border: solid 1px blue;
+                display: table;
+                margin: 10px auto;
+                width: 320px;
+                border-radius: 7px;
+
+                thead {
+
+                    th {
+
+                        #active-jobs-count {
+
+                            color: red;
+                        }
+                    }
+                }
+
+                tbody {
+
+                    tr {
+
+                        height: 55px;
+                        transition: background 0.3s ease-in-out;                   
+
+                        &:hover {
+
+                            background: darken($banner---bg--list, 3%);
+                            background: #e1dede;
+                        }
+
+                       
+
+                        td {
+
+                            /* width: 50%; */
+
+                            span {
+
+                                color: red;
+                            }
+
+                            &#job---personal--notes {
+
+                                p {
+
+                                    /* margin: 0px; */
+                                    margin: 20px 0;
+                                    padding: 4px;
+                                    text-align: left;
+                                }
+
+                                text-align: center;
+                            }
+
+                            .jobs---applied {
+
+                                color: red;
+                                font-weight: bold;
+                            }
+
+
+                            span.progress---percentage {
+
+                                color: red;
+                            }
+                        }
+
+                        td:nth-child(1) {
+
+                            font-weight: bold;
+                        }
+
+                        #job---personal--notes {
+
+                            font-weight: normal;
+
+                            p {
+
+                                margin: 0px;
+                            }
+
+                            text-align: center;
+                        }
+                    }
+                }
+
+                tfoot {
+
+                }
+
+                tfoot#in--work--msg {
+
+                    visibility: hidden;;
+                }
+
+
+            }
+
+
 
         }
 
         // TODO: style "how to use" page
         &.body---howto {
+
+
+            section.section---howto {
+
+                margin: 17px auto;
+                text-align: center;
+                font-weight: bold;
+                font-size: 15pt;
+                color: #700404;
+            }
 
 
         }
