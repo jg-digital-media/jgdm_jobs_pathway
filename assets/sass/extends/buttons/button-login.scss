@@ -1,23 +1,26 @@
 // button-main - for login/register page
 %button-form-main {
 
-    background: none;
+    /* background: none; */
     padding: 5px;
     border-radius: 5px;
 
-    background: beige;
-    background: none;
+    /* background: beige; */
+    /* background: none; */
+    background: $button---bg;
     border: solid white 2px;
     padding: 7px;
-    color: white;
+    color: $button---col;
     border-radius: 5px;
 
     cursor: pointer;
 
-    transition: background 0.3s ease-in-out;
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
 
     &:hover {
 
-        background: #1e1e1e;
+        background: $button---bg--hover;
+        /* background: #1e1e1e; */
+        color: black;
     }
 }
