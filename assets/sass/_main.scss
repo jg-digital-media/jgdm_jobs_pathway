@@ -431,8 +431,86 @@ html {
 
         // TODO: body---add--job styles
         &.body---add--job {
-           
 
+            .section---add--situation-container {
+
+                h3 {
+
+                    text-align: center;
+                }
+
+                .form---login {
+
+                    /* border: solid 1px yellow; */
+                    margin: 10px auto;
+                    width: 400px;
+                    padding: 8px;
+                    border-radius: 4px;
+
+                    transition: box-shadow 0.3s ease-in-out;
+
+                    &:hover {
+
+                        /* box-shadow: white 0 0 0 0; */
+                        /* box-shadow: #ffdc78 0 0px 5px 1px; */
+                        box-shadow: white 0 0px 5px 1px;
+                    }
+
+
+                    label {
+
+                        display: inline-block;
+                        color: #6c6c6c;
+                        margin: 25px 0;
+                        width: 332px;
+                        font-size: 18pt;
+                        vertical-align: top;
+                    }
+
+                    input {
+
+                        padding: 3px;
+                        border: solid 1px red;
+                        border-radius: 6px;
+                        margin: 25px 0;
+                        padding: 3px 7px; 
+                        height: 25px;
+
+                        &::placeholder {
+
+                            color: rgb(188, 57, 57);
+                            font-family: arial;
+                            padding: 3px 7px; 
+
+                        }
+                    }
+
+                    textarea {
+                        
+                        border: solid 1px red;
+
+                        &::placeholder {
+
+                            color: rgb(188, 57, 57);
+                            font-family: arial;
+                            padding: 3px 7px; 
+
+                        }
+                    }
+
+                    .button-login {
+
+                        padding: 5px;
+                        border: solid 1px #d3c2c2;
+                        border-radius: 4px;
+                        background: none;
+                        margin: 25px 0;
+                        margin: 6px;
+
+                    }
+                }
+
+            }  
 
         }
 
@@ -501,6 +579,26 @@ html {
                             text-align: center;
                         }
                     }
+                }
+            }
+
+            .section---job--edit {
+
+                text-align: right;
+
+                a.button---job--edit {
+
+                    
+                    padding: 0 6px 0 0;
+
+                    color: red;
+                    transition: color 0.3s ease-in-out;
+
+                    &:hover {
+
+                        color: blue;
+                    }
+                    
                 }
             }
 
