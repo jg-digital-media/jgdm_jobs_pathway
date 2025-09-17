@@ -1,5 +1,5 @@
 // connection check - app.js
-console.log("app.js connected - 17-09-2025 - 14:13");
+console.log("app.js connected - 17-09-2025 - 14:15");
 
 // Wait for DOM to be fully loaded
 document.addEventListener('DOMContentLoaded', function() {
