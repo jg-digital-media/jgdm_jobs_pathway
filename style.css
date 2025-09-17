@@ -1,7 +1,7 @@
 /* head.scss */
 /*
 
-Last Updated: 17-09-2025 - 10:07
+Last Updated: 17-09-2025 - 12:01
 */
 * {
   padding: 0;
@@ -311,10 +311,10 @@ html body.body---add--job .section---add--situation-container .form---login:hove
 }
 html body.body---add--job .section---add--situation-container .form---login label {
   display: inline-block;
+  font-size: 18pt;
   color: #6c6c6c;
   margin: 25px 0;
   width: 332px;
-  font-size: 18pt;
   vertical-align: top;
 }
 html body.body---add--job .section---add--situation-container .form---login input {
@@ -332,11 +332,13 @@ html body.body---add--job .section---add--situation-container .form---login inpu
 }
 html body.body---add--job .section---add--situation-container .form---login textarea {
   border: solid 1px red;
+  padding: 7px 8px;
 }
 html body.body---add--job .section---add--situation-container .form---login textarea::placeholder {
   color: rgb(188, 57, 57);
   font-family: arial;
-  padding: 3px 7px;
+  /* padding: 3px 7px; */
+  padding: 7px 8px;
 }
 html body.body---add--job .section---add--situation-container .form---login .button-login {
   padding: 5px;
@@ -389,15 +391,32 @@ html body.body---job--details .job---profile---container tbody tr #job---persona
   margin: 0px;
 }
 html body.body---job--details .section---job--edit {
-  text-align: right;
+  /* text-align: right; */
+  text-align: center;
+  display: block;
+  /* width: 320px; */
+  /* margin: 0 auto; */
+  /* display: block; */
+  /* width: 152px; */
+  margin: 6px auto;
 }
 html body.body---job--details .section---job--edit a.button---job--edit {
-  padding: 0 6px 0 0;
-  color: red;
-  transition: color 0.3s ease-in-out;
+  /* padding: 0 6px 0 0; */
+  display: block;
+  /* padding: 0 6px 0 0; */
+  padding: 6px;
+  border-radius: 5px;
+  margin: 13px auto;
+  background: #4486ff;
+  color: #98cbff;
+  width: 120px;
+  /* color: red; */
+  text-decoration: none;
+  transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 html body.body---job--details .section---job--edit a.button---job--edit:hover {
-  color: blue;
+  background: #98cbff;
+  color: #ffffff;
 }
 html body.body---job--stats h3 {
   text-align: center;
