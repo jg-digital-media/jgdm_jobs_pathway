@@ -399,8 +399,8 @@ html {
 
                                     &.stage---completed {
 
-                                        background: #72ff72;                                   
-                                        border: solid #0ff10f 1px;
+                                        background: $background---stage--completed;                                   
+                                        border: solid $border---stage--completed 1px;
                                     }
                                 }
 
@@ -469,10 +469,10 @@ html {
                     label {
 
                         display: inline-block;
+                        font-size: 18pt;
                         color: #6c6c6c;
                         margin: 25px 0;
                         width: 332px;
-                        font-size: 18pt;
                         vertical-align: top;
                     }
 
@@ -497,12 +497,14 @@ html {
                     textarea {
                         
                         border: solid 1px red;
+                        padding: 7px 8px;
 
                         &::placeholder {
 
                             color: rgb(188, 57, 57);
                             font-family: arial;
-                            padding: 3px 7px; 
+                            /* padding: 3px 7px; */ 
+                            padding: 7px 8px;
 
                         }
                     }
@@ -593,18 +595,36 @@ html {
 
             .section---job--edit {
 
-                text-align: right;
+                /* text-align: right; */
+                text-align: center;
+                display: block;
+                /* width: 320px; */
+                /* margin: 0 auto; */
+                /* display: block; */
+                /* width: 152px; */
+                margin: 6px auto;
+
 
                 a.button---job--edit {
                     
-                    padding: 0 6px 0 0;
-
-                    color: red;
-                    transition: color 0.3s ease-in-out;
+                    /* padding: 0 6px 0 0; */
+                    display: block;
+                    /* padding: 0 6px 0 0; */
+                    padding: 6px;
+                    border-radius: 5px;
+                    margin: 13px auto;
+                    background: #4486ff;
+                    color: #98cbff;
+                    width: 120px;
+                    /* color: red; */
+                    text-decoration: none;
+                    
+                    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
 
                     &:hover {
 
-                        color: blue;
+                        background: $button---bg--hover-list;
+                        color: $button---col--hover-list;
                     }
                     
                 }
