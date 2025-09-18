@@ -1,4 +1,4 @@
-`Last Updated: 18-09-2025 - 13:50`
+`Last Updated: 18-09-2025 - 15:15`
 
 # Jobs Pathway
   + Keep track of your way to your professional life
@@ -24,8 +24,9 @@
 + `TODO:` - list.php - build markup for the main list page of jobs
 + `TODO:` - finish `.body---add--job` styles
 + `TODO:` - Decided to use register form for the landing page. Add to it, a link to login form. `index.php`
-
 + `TODO:` - Add some simulated form validation to the login and register pages
+
+
   + `TODO:` - Standard border: red  - Validated border: green:  focused border: blue - `border: solid 1px color;`
 + `TODO:` - Implement Edit functionality for `job-details.php`.
   + `TODO:` - Edit button will switch fields to an editable state where values can be changed.
@@ -118,6 +119,7 @@ Or
 
 + User logs in to the app via registration screen  ( `#registration a` -->  Form inputs `username`, `Email`, `Password` - `.button---login`) `login-screen.php`
 
+
 ### Step 2 - The list page is viewed in an empty state. - `list-empty.php`
 
 + Simulates the user being on the list page when they have no jobs listed - the start of their journey in the app.
@@ -126,7 +128,7 @@ Or
 
 + How to Use! (`Step [N]`)
 
-motivation---message - "random message from the data file as this element's text content"
++ Random message from the data file as this element's text content `#motivation---message`
 
 + ID
 + Job Details
@@ -138,7 +140,7 @@ motivation---message - "random message from the data file as this element's text
 + Got the Job!!!
 + Actions
 
-Contains a link to add a job in place of where the table would otherwise have data.
+Contains a link to add a job in place of where the table would otherwise have data. `section---jobs--list--container table`
 
 ### Step 3 - A screen or modal area to allow users to add a new job to the app - `add-job-form.php`
 
@@ -199,17 +201,17 @@ A clickable button allows the user to edit the job details on the page/modal. - 
 
 ### Step 6 - 
 
-logout
+Logout button to goes back to register - landing page.  `username---and--logout li a`
 
 ### Step 7 - `how-to.php`
 
-No interation on this page. Read the copy.
+No interaction on this page. Read the copy.
 
 ---
 
-Login - View List State ----> Add Job Details ----> View List State
+Login - View List State (empty) ----> Add Job Details ----> View List State (has content)
 
-Login - View List State ----> Add Job Details ----> View Job Details State ----> Edit Job Details ----> View List State
+Login - View List State (empty) ----> Add Job Details ----> View Job Details State ----> Edit Job Details ----> View List State (has content) ----> Progress Stats   ----> Delete Jobs ----> View List State (empty)
 
 ## Deployment
 
