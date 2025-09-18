@@ -1,7 +1,9 @@
-`Last Updated: 18-09-2025 - 15:15`
+`Last Updated: 18-09-2025 - 16:33`
 
 # Jobs Pathway
   + Keep track of your way to your professional life
+    + Prototype URL: https://projects.jonniegrieve.co.uk/jobs_pathway/
+    + Repository URL: https://github.com/jg-digital-media/jgdm_jobs_pathway
 
 ## Sections 
 
@@ -12,20 +14,29 @@
 
 ## TODOs: 
 
-### (Completed - `4`)
+### (Tasks: `49` - Completed - `10`)
 
 + `COMPLETED: 16-09-2025` - Wireframe and static interface planning for 'Job's Pathway App'
 + `COMPLETED: 16-09-2025` - Add a footer and header template part of the project
 + `COMPLETED: 17-09-2025` - Change table cell background colour of Table cell when the child checkbox is checked
 + `COMPLETED: 17-09-2025` - Custom variable values where required for the different root templates
-+ `TODO:` - Apply `stage---completed` class to table cells where the containing checkbox is checked
-+ `TODO:` - Finish styling the login and register pages
-+ `TODO:` - add a logout link along with username, to the top banner
-+ `TODO:` - list.php - build markup for the main list page of jobs
-+ `TODO:` - finish `.body---add--job` styles
-+ `TODO:` - Decided to use register form for the landing page. Add to it, a link to login form. `index.php`
-+ `TODO:` - Add some simulated form validation to the login and register pages
++ `COMPLETED: 18-09-2025:` - Apply `stage---completed` class to table cells where the containing checkbox is checked
++ `COMPLETED: 18-09-2025` - add a logout link along with username, to the top banner
++ `COMPLETED: 18-09-2025` - build markup for the main list page of jobs. `list.php` 
++ `COMPLETED: 18-09-2025` - build markup for the main list page of jobs - simulated for no job situations added `list-empty.php` 
++ `COMPLETED: 18-09-2025` - Decided to use register form for the landing page. Add to it, a link to login form. `index.php`
++ `COMPLETED: 18-09-2025` - finish `.body---add--job` styles
 
+
++ `TODO:` - move header styles to `header.scss`
++ `TODO:` - move footer styles to `footer.scss`
++ `TODO:` - Finish styling the login and register pages
++ `TODO:` - body---job--details styles
++ `TODO:` - style .body---job--stats
++ `TODO:` -  style "how to use" page
++ `TODO:` - Add some simulated form validation to the login and register pages
++ `TODO:` - modal styles
+  + `TODO:` - Not all form validation errors are showing - e.g. password validation on registration for passwords less than 6 characters
 
   + `TODO:` - Standard border: red  - Validated border: green:  focused border: blue - `border: solid 1px color;`
 + `TODO:` - Implement Edit functionality for `job-details.php`.
@@ -35,8 +46,6 @@
             - "Tooltip" activated to show the user that the changes have been saved!
 
 + `TODO:` - Persist the changes to checkboxes and table cell backgrounds
-+ `TODO:` - move header styles to `header.scss`
-+ `TODO:` - move footer styles to `footer.scss`
 + `TODO:` - reduce lines of code in Sass files where possible
 + `TODO:` - Build `stats-modal.php` page - increase font size, make more visible. 
   + `TODO:` - May need to fill table with classes to get the desired effect.
@@ -59,12 +68,16 @@
 + `TODO:` - Delete job or jobs from the list page via the stats page/modal - `button button---delete--jobs`
 + `TODO:` - Welcome user to the app and then invite to register `register.php`.
 + `TODO:` - Style register and login buttons `register.php` and `login.php`
++ `TODO:` - input elements "do not have an autocomplete attribute" - add autocomplete="off" to all input elements
++ `TODO:` - Progress Stats Button an #id `btn---progress--stats`
++ `TODO:` - How to Use Button an #id `btn---how--to`
++ `TODO:` - Rails: Check for existing usernames and email addresses when registering and logging in
 
 [Back to Top](#sections)
 
 ## Development
 
-[0.0.1](#001) | [0.0.2](#002) | [0.0.3](#003) | [0.0.4](#004) | [0.0.5](#005) 
+[0.0.1](#001) | [0.0.2](#002) | [0.0.3](#003) | [0.0.4](#004) | [0.0.5](#005) | [0.0.6](#006) 
 
 ### `0.0.1`
   
@@ -104,6 +117,14 @@
   + I'm becoming more and more minded to switch to using modals for things like adding new jobs and the progress stats page.  But the major functionality achievement of the day is getting the checkbox for each table cell to change colour when the child checkbox is checked. This gives people a visual cue that this stage of the job application process has been completed. Of course, there isn't any backend persistence for this yet, so it all resets when you refresh the page.  
 
   + A big part of the app is the job listing page, and a large part of future database interactions will go there. But it all represents a good step towards completing the prototype of the app.
+
+#### `0.0.6`
+
+  + I've added some form validation to the login and register pages. Emphasis on the word "some". There's no doubt the validation is in place and seems to be working but there are issues getting all of the UI feedback in place. I'm leaving this as it is for today, but it warrants further work.
+
+  + I made other changes to the app, bringing it further towards a finished Prototype. Including simulated logging in and logging out. I've also added a delete jobs button to the progress stats page, which will allow users, when ready, or if necessary, to delete jobs they've added to their account and start again.
+
+  + But it's a tricky moment in the development of this app. At some point, we have to declare the prototype stage of the app complete and start to build in Rails. This will probably be on Monday. A final look at what needs doing will be done tomorrow. `18-09-2025`
 
 [Back to Top](#development)
 
