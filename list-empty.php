@@ -21,7 +21,7 @@
 
             </ul>
 
-            <?php require "assets/template-parts/jobs-list.php"; ?>
+            <?php require "assets/template-parts/jobs-list-empty.php"; ?>
 
         </main>
     

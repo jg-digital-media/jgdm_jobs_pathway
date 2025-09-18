@@ -1,5 +1,5 @@
  <!-- Form: register form -->
- <form name="main_form_register" action="list.php" method="post" id="" class="form form---register">
+ <form name="main_form_register" action="list-empty.php" method="post" id="" class="form form---register">
    
     <h3>Register (it's free)</h3>
 

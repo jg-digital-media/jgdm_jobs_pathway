@@ -1,5 +1,5 @@
  <!-- Form: login form -->
- <form name="main_form_login" action="list.php" method="post" id="" class="form form---login">
+ <form name="main_form_login" action="list-empty.php" method="post" id="" class="form form---login">
    
     <h3>Login</h3>
 
