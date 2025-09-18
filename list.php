@@ -14,8 +14,14 @@
 
             <p>list.php</p>
 
-            <a href="index.php">back</a>
-            <?php require "assets/template-parts/jobs-list.php"; ?>
+            <ul class="username---and--logout">
+
+                <li>Welcome, <span>username</span></li>
+                <li><a href="index.php">(Logout)</a></li>
+
+            </ul>
+
+            <?php require "assets/template-parts/jobs-list-empty.php"; ?>
 
         </main>
     
