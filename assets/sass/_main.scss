@@ -868,6 +868,27 @@ html {
             h3 {
 
                 text-align: center;
+                margin-top: 15px;
+            }
+
+            h3,
+            h3 + a {
+                    
+                display: block;
+                text-align: center;
+            }
+
+            a {
+
+                color: $url---col--primary-list;
+                text-align: center;
+
+                transition: color 0.3s ease-in-out;
+
+                &:hover {
+
+                    color: $url---col--primary-hover-list;
+                }
             }
 
             .job---profile--container {
