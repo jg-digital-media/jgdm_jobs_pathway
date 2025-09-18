@@ -289,6 +289,51 @@ html {
 
                 }
 
+                // a link to add a job - empty list state
+                a#add---job--url {
+
+                    display: inline;
+                    margin-top: 10px;
+                }
+
+                ul.username---and--logout {
+
+                    padding: 2px;
+                    margin: 5px auto;
+                    width: 95%;
+                    font-size: 14pt;
+
+                    li {
+
+                        display: inline-block;
+                        font-weight: bold;
+
+                        span {
+
+                            color: lighten(black, 36%);
+                        }
+
+                        a {
+
+                            color: $url---col--primary-list;
+                            transition: color 0.3s ease-in-out;
+                            width: 100%;
+                            text-align: center;
+                            vertical-align: middle;
+                            font-size: 11px;
+
+                            &:hover {
+
+                                /* color: blue; */
+                                color: $url---col--primary-hover-list;
+                            }
+
+                        }
+
+                    }
+
+                }
+
                 .top---banner--container {
 
                     display: flex;
@@ -339,7 +384,8 @@ html {
 
                     #motivation---message--container {
                             
-                        /* background: $banner---bg--list;  */                      
+                        /* background: $banner---bg--list;  */  
+                        width: 60%;                    
 
                         #motivation---message {
 
@@ -460,6 +506,13 @@ html {
 
                                             background: lighten($border---stage--completed, 9%);
                                         }
+                                    }
+
+                                    // a link to add a job - empty list state
+                                    a#add---job--url {
+
+                                        display: block;
+                                        margin-top: 10px;
                                     }
                                 }
 
@@ -715,6 +768,8 @@ html {
                             background: #e1dede;
                         }
 
+                        
+
                         td {
 
                             /* width: 50%; */
@@ -743,6 +798,9 @@ html {
                                     color: $url---col--primary-hover-list;
                                 }
                             }
+
+                            
+
                         }
 
                         td:nth-child(1) {
