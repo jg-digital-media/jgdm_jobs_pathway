@@ -1,7 +1,7 @@
 /* head.scss */
 /*
 
-Last Updated: 17-09-2025 - 12:01
+Last Updated: 18-09-2025 - 16:33
 */
 * {
   padding: 0;
@@ -30,6 +30,9 @@ html body.body---login .container---element--login form .button:hover {
 }
 
 html body.body---login .container---element--login form .login---input {
+  /* border: solid red 1.4px; */
+  /* border: solid #45ff45 2px; */
+  /* border: solid #ffc217 1px; */
   border: solid red 1px;
   padding: 2px 0;
   padding: 5px;
@@ -80,6 +83,13 @@ html body.body---login .container---element--login form:hover {
   /* box-shadow: #ffdc78 0 0px 5px 1px; */
   box-shadow: white 0 0px 5px 1px;
 }
+html body.body---login .container---element--login form h3 {
+  font-size: 16pt;
+  margin: 4px 0;
+  text-align: center;
+  color: #98cbff;
+  color: #ffef7a;
+}
 html body.body---login .container---element--login form label {
   display: inline-block;
   width: 80px;
@@ -107,6 +117,49 @@ html body.body---login .container---element--login form input[type=text]::placeh
   color: black;
   font-weight: normal;
   letter-spacing: 0px;
+}
+html body.body---login .container---element--login form .login---input.validation-error {
+  border: 2px solid #e74c3c;
+  background-color: #fdf2f2;
+}
+html body.body---login .container---element--login form .login---input.validation-error:focus {
+  outline-color: #e74c3c;
+  box-shadow: 0 0 5px rgba(231, 76, 60, 0.3);
+}
+html body.body---login .container---element--login form .validation-error-message {
+  display: block;
+  color: #e74c3c;
+  font-size: 12px;
+  margin-top: 4px;
+  margin-bottom: 8px;
+  font-style: italic;
+  animation: fadeIn 0.3s ease-in-out;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+html body.body---login .container---element--login form #registration {
+  display: block;
+  font-size: 12px;
+  text-align: center;
+  margin-top: 12px;
+}
+html body.body---login .container---element--login form #registration a {
+  color: gold;
+  font-size: 11px;
+  font-style: italic;
+  transition: color 0.3s ease-in-out;
+}
+html body.body---login .container---element--login form #registration a:hover {
+  /* text-decoration: underline; */
+  color: #ffffff;
 }
 html body.body---login footer {
   margin: 17px 0 0 0;
@@ -182,6 +235,35 @@ html body.body---list main a:hover {
   /* color: blue; */
   color: #0e43b5;
 }
+html body.body---list main a#add---job--url {
+  display: inline;
+  margin-top: 10px;
+}
+html body.body---list main ul.username---and--logout {
+  padding: 2px;
+  margin: 5px auto;
+  width: 95%;
+  font-size: 14pt;
+}
+html body.body---list main ul.username---and--logout li {
+  display: inline-block;
+  font-weight: bold;
+}
+html body.body---list main ul.username---and--logout li span {
+  color: #5c5c5c;
+}
+html body.body---list main ul.username---and--logout li a {
+  color: #4486ff;
+  transition: color 0.3s ease-in-out;
+  width: 100%;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 11px;
+}
+html body.body---list main ul.username---and--logout li a:hover {
+  /* color: blue; */
+  color: #0e43b5;
+}
 html body.body---list main .top---banner--container {
   display: flex;
   font-size: 14px;
@@ -219,6 +301,7 @@ html body.body---list main .top---banner--container .app---navigation li a:hover
 }
 html body.body---list main .top---banner--container #motivation---message--container {
   /* background: $banner---bg--list;  */
+  width: 60%;
 }
 html body.body---list main .top---banner--container #motivation---message--container #motivation---message {
   padding: 0px 5px;
@@ -297,6 +380,10 @@ html body.body---list main .section---jobs--list--container table tbody tr td.st
 }
 html body.body---list main .section---jobs--list--container table tbody tr td.stage---completed:hover {
   background: #3af43a;
+}
+html body.body---list main .section---jobs--list--container table tbody tr td a#add---job--url {
+  display: block;
+  margin-top: 10px;
 }
 html body.body---list main .section---jobs--list--container table tbody tr td:nth-child(2) a {
   text-decoration: none;
@@ -401,6 +488,7 @@ html body.body---add--job .section---add--situation-container .form---add--job t
   outline: solid 1px blue;
   background: #9ddfff;
 }
+html body.body---add--job .section---add--situation-container .form---add--job .button---register,
 html body.body---add--job .section---add--situation-container .form---add--job .button---login {
   display: block;
   height: auto;
@@ -414,6 +502,7 @@ html body.body---add--job .section---add--situation-container .form---add--job .
   cursor: pointer;
   transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
 }
+html body.body---add--job .section---add--situation-container .form---add--job .button---register:hover,
 html body.body---add--job .section---add--situation-container .form---add--job .button---login:hover {
   /* background: $button---bg--hover-list; */
   color: #ffffff;
@@ -510,6 +599,20 @@ html body.body---job--details .section---job--edit a.button---job--edit:hover {
 }
 html body.body---job--stats h3 {
   text-align: center;
+  margin-top: 15px;
+}
+html body.body---job--stats h3,
+html body.body---job--stats h3 + a {
+  display: block;
+  text-align: center;
+}
+html body.body---job--stats a {
+  color: #4486ff;
+  text-align: center;
+  transition: color 0.3s ease-in-out;
+}
+html body.body---job--stats a:hover {
+  color: #0e43b5;
 }
 html body.body---job--stats .job---profile--container {
   border: solid 1px blue;
@@ -517,6 +620,14 @@ html body.body---job--stats .job---profile--container {
   margin: 10px auto;
   width: 320px;
   border-radius: 7px;
+}
+html body.body---job--stats .job---profile--container thead {
+  background: white;
+}
+html body.body---job--stats .job---profile--container thead th {
+  background: white;
+  font-size: 15pt;
+  height: 25px;
 }
 html body.body---job--stats .job---profile--container thead th #active-jobs-count {
   color: red;
@@ -526,11 +637,11 @@ html body.body---job--stats .job---profile--container tbody tr {
   transition: background 0.3s ease-in-out;
 }
 html body.body---job--stats .job---profile--container tbody tr:hover {
-  background: #cbcbcb;
-  background: #e1dede;
+  /* background: darken($banner---bg--list, 3%); */
+  /* background: #e1dede; */
 }
 html body.body---job--stats .job---profile--container tbody tr td {
-  /* width: 50%; */
+  /* width: 70%; */
 }
 html body.body---job--stats .job---profile--container tbody tr td span {
   color: red;
@@ -553,6 +664,11 @@ html body.body---job--stats .job---profile--container tbody tr td span.progress-
 }
 html body.body---job--stats .job---profile--container tbody tr td:nth-child(1) {
   font-weight: bold;
+  font-size: 15px;
+}
+html body.body---job--stats .job---profile--container tbody tr td:nth-child(2) {
+  font-weight: bold;
+  font-size: 18pt;
 }
 html body.body---job--stats .job---profile--container tbody tr #job---personal--notes {
   font-weight: normal;
@@ -563,6 +679,23 @@ html body.body---job--stats .job---profile--container tbody tr #job---personal--
 }
 html body.body---job--stats .job---profile--container tfoot#in--work--msg {
   visibility: hidden;
+  display: none;
+}
+html body.body---job--stats .job---profile--container tfoot#in--work--msg tr td p {
+  text-align: center;
+  /* margin: 30px auto; */
+  margin: 9px auto;
+  padding: 20px 0;
+  display: block;
+  display: table;
+  width: 81%;
+  border: dashed 2px #24b500;
+  background: #98ff98;
+  color: #056705;
+  font-weight: bold;
+}
+html body.body---job--stats .section---delete--jobs {
+  text-align: center;
 }
 html body.body---howto main h3,
 html body.body---howto main h3 + a {
