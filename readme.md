@@ -1,4 +1,4 @@
-`Last Updated: 17-09-2025 - 21:24`
+`Last Updated: 18-09-2025 - 13:50`
 
 # Jobs Pathway
   + Keep track of your way to your professional life
@@ -7,6 +7,7 @@
 
 [Development](#development) | 
 [TODOs](#todos) |
+[User Flows](#user-flows) |
 [Deployment](#deployment) |
 
 ## TODOs: 
@@ -19,9 +20,13 @@
 + `COMPLETED: 17-09-2025` - Custom variable values where required for the different root templates
 + `TODO:` - Apply `stage---completed` class to table cells where the containing checkbox is checked
 + `TODO:` - Finish styling the login and register pages
++ `TODO:` - add a logout link along with username, to the top banner
++ `TODO:` - list.php - build markup for the main list page of jobs
++ `TODO:` - finish `.body---add--job` styles
++ `TODO:` - Decided to use register form for the landing page. Add to it, a link to login form. `index.php`
+
 + `TODO:` - Add some simulated form validation to the login and register pages
   + `TODO:` - Standard border: red  - Validated border: green:  focused border: blue - `border: solid 1px color;`
-+ `TODO:` - add a logout link along with username, to the top banner
 + `TODO:` - Implement Edit functionality for `job-details.php`.
   + `TODO:` - Edit button will switch fields to an editable state where values can be changed.
             - At this point, the edit button text content will change from "Edit" to "Save"
@@ -36,9 +41,7 @@
   + `TODO:` - May need to fill table with classes to get the desired effect.
 + `TODO:` - Build `stats-modal.php` template file/page
 + `TODO:` - Build `add-job-form.php` template file/page
-+ `TODO:` - list.php - build markup for the main list page of jobs
 + `TODO:` - Add responsiveness to Job list table - `list.php`
-+ `TODO:` - body---add--job styles
 + `TODO:` - Actions column - `list.php`  Might be useful as a mechanism to edit job profiles 
 + `TODO:` - `button---job--edit` - Change text content from "Edit" to Saved" when  button is clicked.
 + `TODO:` - `motivation---message`- load a different message as its text content whenever the user loads the page.
@@ -51,10 +54,10 @@
 + `TODO:` - Integrate Ruby on Rails into the project (Ruby Templates)
   + `TODO:` - Plan Screen States - login, register, list (no jobs listed at first), add job, job details, stats dashboard, how to use
 + `TODO:` - `add-job-form.php` sync up placeholder and input text in form elements
-+ `TODO:` - Decided to use register form for the landing page. Add to it, a link to login form. `index.php`
 + `TODO:` - Tooltips throughout the app
-+ `TODO:` - Delete job or jobs from the list page
++ `TODO:` - Delete job or jobs from the list page via the stats page/modal - `button button---delete--jobs`
 + `TODO:` - Welcome user to the app and then invite to register `register.php`.
++ `TODO:` - Style register and login buttons `register.php` and `login.php`
 
 [Back to Top](#sections)
 
@@ -102,6 +105,111 @@
   + A big part of the app is the job listing page, and a large part of future database interactions will go there. But it all represents a good step towards completing the prototype of the app.
 
 [Back to Top](#development)
+
+## User Flows
+
+Planning the user flows for the app in its prototype form.
+
+### Step 1 - User Registers for the app - `index.php`
+
++ User registers for the app (Form Inputs `Username`, `Email`, `Password`, `Confirm Password` - `.button---register`) `index.php`
+
+Or
+
++ User logs in to the app via registration screen  ( `#registration a` -->  Form inputs `username`, `Email`, `Password` - `.button---login`) `login-screen.php`
+
+### Step 2 - The list page is viewed in an empty state. - `list-empty.php`
+
++ Simulates the user being on the list page when they have no jobs listed - the start of their journey in the app.
+
++ Progress Stats (`Step [N]`)
+
++ How to Use! (`Step [N]`)
+
+motivation---message - "random message from the data file as this element's text content"
+
++ ID
++ Job Details
++ Application Sent
++ CV/Resume
++ Interview Secured
++ Interview Attended
++ References
++ Got the Job!!!
++ Actions
+
+Contains a link to add a job in place of where the table would otherwise have data.
+
+### Step 3 - A screen or modal area to allow users to add a new job to the app - `add-job-form.php`
+
++ User adds a new job to the app  - Button Click - `#btn---add---job`
+
+  + (**Form Inputs** - `Name of Company/Organisation` - Text input, `Job Title` - Text Input, `Salary` - Text Input, `Location` - Text Input, `Contact Person` - Text Input, `Contact Info` - Text Input, `Description` - TextArea) `.button---job--add` 
+    + `add-job-form.php`
+
+Or
+
++ User adds a new job to the app  - Button Click - `#add---job--url`
+
+  + (**Form Inputs** - `Name of Company/Organisation` - Text input, `Job Title` - Text Input, `Salary` - Text Input, `Location` - Text Input, `Contact Person` - Text Input, `Contact Info` - Text Input, `Description` - TextArea) `.add---job--url` 
+    + `add-job-form.php`
+
+
+### Step 4 - List page - simulated to include a list of jobs - `list.php`
+
+.section---jobs--list--container
+
++ ID - `Text Content`
++ Job Details - `Link to page or modal`
++ Application Sent - `Checkbox`
++ CV/Resume - `Checkbox`
++ Interview Secured - `Checkbox`
++ Interview Attended - `Checkbox`
++ References - `Checkbox`
++ Got the Job!!! - `Checkbox`
++ Actions - `Checkbox`
+
+Checkboxes mark a stage of the job application process as completed.
+
+tr td a job-details link "open"
+
+.stage---completed--checkbox - Checks the checkbox - parent TD element get a toggle class of `.stage---completed`
+
+Or
+
+
+### Step 5 - Progress Stats - `stats-modal.php`
+
+A list of details for the selected job.
+
++ `Job Title:`	Text Input
++ `Salary Details:`	Text Input
++ `Job Location:`	Text Input
++ `Contact Person:`	Text Input
++ `Contact Detail`	Text Input
++ `Description:`	Text Area - Extra notes and important details about the job
+
+A clickable button allows the user to edit the job details on the page/modal. - `button button---job--edit`
+
++ Clicking the button (`button---job--edit`) - changes the text content from "Edit" to "Saved" puts the fields above into an editable state.
+
++ Clicking the button again (`button---job--edit`) - changes the text content back to "Edit" and the fields above go back into a non-editable state and saves the changes as they are now to the database.
+
+[Back to Top](#sections)
+
+### Step 6 - 
+
+logout
+
+### Step 7 - `how-to.php`
+
+No interation on this page. Read the copy.
+
+---
+
+Login - View List State ----> Add Job Details ----> View List State
+
+Login - View List State ----> Add Job Details ----> View Job Details State ----> Edit Job Details ----> View List State
 
 ## Deployment
 
