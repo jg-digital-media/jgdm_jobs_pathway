@@ -116,11 +116,44 @@ html {
                     .login---input { 
 
                         @extend %form-input-login;
+                        
+                        // Validation error styles
+                        &.validation-error {
+                            border: 2px solid #e74c3c;
+                            background-color: #fdf2f2;
+                            
+                            &:focus {
+                                outline-color: #e74c3c;
+                                box-shadow: 0 0 5px rgba(231, 76, 60, 0.3);
+                            }
+                        }
                     }
 
                     .button {
 
                         @extend %button-form-main;
+                    }
+                    
+                    // Validation error message styles
+                    .validation-error-message {
+                        display: block;
+                        color: #e74c3c;
+                        font-size: 12px;
+                        margin-top: 4px;
+                        margin-bottom: 8px;
+                        font-style: italic;
+                        animation: fadeIn 0.3s ease-in-out;
+                    }
+                    
+                    @keyframes fadeIn {
+                        from {
+                            opacity: 0;
+                            transform: translateY(-5px);
+                        }
+                        to {
+                            opacity: 1;
+                            transform: translateY(0);
+                        }
                     }
 
                     #registration {
