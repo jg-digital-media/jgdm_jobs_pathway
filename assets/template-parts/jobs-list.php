@@ -1,5 +1,12 @@
 <!-- <p>jobs-list.php</p> -->
 
+<ul class="username---and--logout">
+
+    <li>Welcome, <span class="display---username">username</span></li>
+    <li><a href="index.php">(Logout)</a></li>
+
+</ul>
+
 <nav class="top---banner--container">
 
     <img src="https://jgdm.s3.eu-west-2.amazonaws.com/logo.png" alt="Logo - <?php echo $website_title ?>" title="Logo - <?php echo $website_title ?>" id="jobs---pathway--logo"></li>
