@@ -46,6 +46,6 @@
 
 <section class="section---delete--jobs">
 
-    <a href="#">Delete Jobs ></a>
+    <a href="list-empty.php">Delete Jobs ></a>
         
 </section>
