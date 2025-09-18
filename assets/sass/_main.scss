@@ -902,7 +902,13 @@ html {
 
                 thead {
 
+                    background: white;
+
                     th {
+
+                        background: white;
+                        font-size: 15pt;
+                        height: 25px;
 
                         #active-jobs-count {
 
@@ -920,15 +926,15 @@ html {
 
                         &:hover {
 
-                            background: darken($banner---bg--list, 3%);
-                            background: #e1dede;
+                            /* background: darken($banner---bg--list, 3%); */
+                            /* background: #e1dede; */
                         }
 
                        
 
                         td {
 
-                            /* width: 50%; */
+                            /* width: 70%; */
 
                             span {
 
@@ -964,6 +970,14 @@ html {
                         td:nth-child(1) {
 
                             font-weight: bold;
+                            font-size: 15px;
+                        }
+
+                        
+                        td:nth-child(2) {
+
+                            font-weight: bold;
+                            font-size: 18pt;
                         }
 
                         #job---personal--notes {
@@ -986,13 +1000,40 @@ html {
 
                 tfoot#in--work--msg {
 
-                    visibility: hidden;;
+                    visibility: hidden;
+                    display: none;
+
+                    tr {
+
+                        td {
+
+                            p {
+
+                                text-align: center;
+                                /* margin: 30px auto; */
+                                margin: 9px auto;
+                                padding: 20px 0;
+                                display: block;
+                                display: table;
+                                width: 81%;
+                                border: dashed 2px #24b500;
+                                background: #98ff98;
+                                color: #056705;
+                                font-weight: bold;
+                            }
+                        }
+                    }
                 }
 
 
             }
 
+            .section---delete--jobs {
 
+                text-align: center;
+
+
+            }
 
         }
 

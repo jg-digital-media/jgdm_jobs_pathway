@@ -6,8 +6,7 @@
 <table class="job---profile--container">
     <thead> 
         <tr>
-            <th>Active Jobs</th>
-            <th>(<span id="active-jobs-count">0</span>)</th>
+            <th colspan="2">Active Job Searches (<span id="active-jobs-count">6</span>)</th>
         </tr>
     </thead>
     <tbody>
@@ -41,6 +40,12 @@
 
             </td>
         </tr>  
-    </tfoot>
+    </tfoot>    
 
 </table>
+
+<section class="section---delete--jobs">
+
+    <a href="#">Delete Jobs ></a>
+        
+</section>
