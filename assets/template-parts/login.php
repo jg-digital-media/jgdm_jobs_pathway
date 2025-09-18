@@ -1,5 +1,7 @@
  <!-- Form: login form -->
  <form name="main_form_login" action="list.php" method="post" id="" class="form form---login">
+   
+    <h3>Login</h3>
 
     <label for="username">Username: </label>
     <input type="text" name="username" class="login---input" id="username" placeholder="Enter your name...">
@@ -14,5 +16,7 @@
 
     <br><br>
     <input type="submit" value="Login >" class="button button---login">
+
+    <p id="registration">Not Registered?  <a href="index.php">Click here to Register</a></p>
 
 </form>

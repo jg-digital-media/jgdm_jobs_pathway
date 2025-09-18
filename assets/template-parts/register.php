@@ -1,7 +1,7 @@
  <!-- Form: register form -->
  <form name="main_form_register" action="list.php" method="post" id="" class="form form---register">
    
-    <p>Registration Form (register.php)</p>
+    <h3>Register (it's free)</h3>
 
     <label for="username">Username: </label>
     <input type="text" name="username" class="login---input" id="username" placeholder="Enter your name...">
@@ -20,5 +20,8 @@
 
     <br><br>
     <input type="submit" value="Register >" class="button button---login">
+
+    
+    <p id="registration">Already Registered?  <a href="login-screen.php">Click here to Login</a></p>
 
 </form>
