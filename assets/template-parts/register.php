@@ -19,7 +19,7 @@
     <input type="password" name="confirm_password" id="confirm_password" class="login---input" placeholder="Confirm your password....">
 
     <br><br>
-    <input type="submit" value="Register >" class="button button---login">
+    <input type="submit" value="Register >" class="button button---register">
 
     
     <p id="registration">Already Registered?  <a href="login-screen.php">Click here to Login</a></p>
