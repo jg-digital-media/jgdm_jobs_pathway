@@ -12,7 +12,7 @@
 
         <main>
 
-            <h3>how-to.php</h3>
+            <h3 class="filename">how-to.php</h3>
 
             <a href="list.php">back</a>
 

@@ -12,7 +12,7 @@
 
         <main>
 
-            <p>list.php</p>
+            <p class="filename">list.php</p>
 
             <?php require "assets/template-parts/jobs-list.php"; ?>
 

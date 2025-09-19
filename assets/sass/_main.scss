@@ -7,6 +7,16 @@ html {
         
         font-family: $font---main;
         font-size: $font---size--md;
+
+        main {
+
+            .filename {
+
+                color: darkgray;
+                font-size: 12px;
+                font-style: italic;
+            }
+        }
         
         // selectors for login and register pages
         &.body---login {
@@ -374,6 +384,13 @@ html {
 
                     text-align: right;
 
+                }
+
+                .filename {
+
+                    color: darkgray;
+                    font-size: 12px;
+                    font-style: italic;
                 }
 
                 a {
@@ -822,6 +839,13 @@ html {
                     
                     display: block;
                     text-align: center;
+                }
+
+                .filename {
+
+                    color: darkgray;
+                    font-size: 12px;
+                    font-style: italic;
                 }
 
                 a {

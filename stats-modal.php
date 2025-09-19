@@ -12,9 +12,9 @@
 
         <main>
 
-            <h3>stats-modal.php</h3>
+            <h3 class="filename">stats-modal.php</h3>
 
-            <a href="list.php">back</a>
+            <!-- <a href="list.php">back</a> -->
 
             <p><?php require "assets/template-parts/stats.php"; ?> </p>
 

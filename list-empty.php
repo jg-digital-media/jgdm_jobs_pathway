@@ -12,7 +12,7 @@
 
         <main>
 
-            <p>list.php</p>
+            <p class="filename">list-empty.php</p>
 
             <?php require "assets/template-parts/jobs-list-empty.php"; ?>
 
