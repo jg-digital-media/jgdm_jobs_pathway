@@ -311,8 +311,9 @@ html {
                     /* color: #272626; */
                     color: $url---col--primary-list;
                     transition: color 0.3s ease-in-out;
-                    width: 100%;
+                    /* width: 100%; */
                     text-align: center;
+                    font-size: 12px;
 
                     &:hover {
 
@@ -329,14 +330,14 @@ html {
                     margin-top: 10px;
                 }
 
-                ul.username---and--logout {
+                .username---and--logout {
 
                     padding: 2px;
-                    margin: 5px auto;
+                    margin: 10px auto;
                     width: 95%;
                     font-size: 14pt;
 
-                    li {
+                    span {
 
                         display: inline-block;
                         font-weight: bold;
@@ -346,7 +347,7 @@ html {
                             color: lighten(black, 36%);
                         }
 
-                        a {
+                        a.logout-link {
 
                             color: $url---col--primary-list;
                             transition: color 0.3s ease-in-out;

@@ -1,11 +1,9 @@
 <!-- <p>jobs-list.php</p> -->
 
-<ul class="username---and--logout">
-
-    <li>Welcome, <span class="display---username">username</span></li>
-    <li><a href="index.php">(Logout)</a></li>
-
-</ul>
+<div class="username---and--logout">
+    <span>Welcome, <span class="display---username">username</span></span>
+    <a href="index.php" class="logout-link">(Logout)</a>
+</div>
 
 <nav class="top---banner--container">
 
