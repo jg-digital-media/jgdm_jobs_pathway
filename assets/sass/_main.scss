@@ -127,6 +127,15 @@ html {
                                 box-shadow: 0 0 5px rgba(231, 76, 60, 0.3);
                             }
                         }
+
+                        &:focus,
+                        &:focus-visible {
+
+                            border: solid 1px blue;
+                            outline: solid 1px blue;
+                            background: #9ddfff;
+                        }
+
                     }
 
                     .button {
