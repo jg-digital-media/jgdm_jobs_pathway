@@ -76,7 +76,7 @@ html {
                     label {
 
                         display: block;
-                        width: 80px;
+                        width: 180px;
                         margin: 20px 0;
                     }
 
@@ -142,8 +142,8 @@ html {
                         &:focus,
                         &:focus-visible {
 
-                            border: solid 1px blue;
-                            outline: solid 1px blue;
+                            border: solid 1px #ffef7a;
+                            outline: solid 1px #ffef7a;
                             background: #9ddfff;
                         }
 
@@ -851,6 +851,7 @@ html {
 
                 display: table;
                 margin: 10px auto;
+                background: #f9f9f9;
                 /* width: 75%; */
                 width: 455px;
                 border-radius: 5px;
@@ -870,8 +871,8 @@ html {
 
                         &:hover {
 
-                            background: darken($banner---bg--list, 3%);
-                            background: #e1dede;
+                            /* background: darken($banner---bg--list, 3%); */
+                            /* background: #e1dede; */
                         }
 
                         
@@ -884,13 +885,26 @@ html {
 
                                 p {
 
+                                    background: #dbdbdb;
+                                    border-radius: 5px;
+                                    border: solid 1px #cbcbcb;
                                     /* margin: 0px; */
-                                    margin: 20px 0;
-                                    padding: 4px;
+                                    margin: 4px 10px;
+                                    padding: 8px 10px;
                                     text-align: left;
+                                    font-size: 12px;
+                                    height: auto;
+                                    min-height: 50px;
                                 }
 
-                                text-align: center;
+                                h4 {
+                                
+                                    text-align: center;
+                                    padding: 4px;
+                                    margin-top: 3px;
+                                    font-size: 13px;
+                                }
+
                             }
 
                             a {
@@ -912,6 +926,7 @@ html {
                         td:nth-child(1) {
 
                             font-weight: bold;
+                            font-size: 14pt;
                         }
 
                         #job---personal--notes {

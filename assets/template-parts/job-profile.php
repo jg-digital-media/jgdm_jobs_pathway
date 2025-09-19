@@ -11,7 +11,7 @@
     </thead>
     <tbody>
         <tr>
-            <td>Name of Company/Organisation:</td>
+            <td>Company Name:</td>
             <td>Company name here!</td>
         </tr>
         <tr>
@@ -39,7 +39,10 @@
             <td colspan="2" id="job---personal--notes">
                 <h4>Description:</h4>
                 
-                <p>Details go here....</p>
+                <div>
+                    <p>Details go here....</p>
+
+                </div>
             </td>
         </tr>
 
