@@ -1,7 +1,8 @@
+@charset "UTF-8";
 /* head.scss */
 /*
 
-Last Updated: 18-09-2025 - 16:33
+Last Updated: 19-09-2025 - 10:44
 */
 * {
   padding: 0;
@@ -14,26 +15,28 @@ html body.body---login .container---element--login form .button {
   padding: 5px;
   border-radius: 5px;
   /* background: beige; */
-  /* background: none; */
-  background: #4486ff;
+  background: none;
+  /* background: $button---bg; */
   border: solid white 2px;
   padding: 7px;
   color: #040990;
+  color: white;
   border-radius: 5px;
   cursor: pointer;
   transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 html body.body---login .container---element--login form .button:hover {
-  background: #98cbff;
+  /* background: $button---bg--hover; */
   /* background: #1e1e1e; */
-  color: black;
+  background: #2a2a2a;
+  color: lightblue;
 }
 
 html body.body---login .container---element--login form .login---input {
   /* border: solid red 1.4px; */
   /* border: solid #45ff45 2px; */
   /* border: solid #ffc217 1px; */
-  border: solid red 1px;
+  border: solid white 2px;
   padding: 2px 0;
   padding: 5px;
   font-family: arial;
@@ -126,14 +129,70 @@ html body.body---login .container---element--login form .login---input.validatio
   outline-color: #e74c3c;
   box-shadow: 0 0 5px rgba(231, 76, 60, 0.3);
 }
+html body.body---login .container---element--login form .login---input.validation-success {
+  border: 2px solid #27ae60;
+  background-color: #f1f9f4;
+  position: relative;
+}
+html body.body---login .container---element--login form .login---input.validation-success:focus {
+  outline-color: #27ae60;
+  box-shadow: 0 0 5px rgba(39, 174, 96, 0.3);
+}
+html body.body---login .container---element--login form .login---input:focus, html body.body---login .container---element--login form .login---input:focus-visible {
+  border: solid 1px blue;
+  outline: solid 1px blue;
+  background: #9ddfff;
+}
 html body.body---login .container---element--login form .validation-error-message {
   display: block;
-  color: #e74c3c;
+  background: #ff946b;
+  color: #5a0808;
+  border: 2px dotted red;
   font-size: 12px;
-  margin-top: 4px;
-  margin-bottom: 8px;
   font-style: italic;
+  margin: 4px 6px;
+  padding: 5px 5px;
+  border-radius: 6px;
   animation: fadeIn 0.3s ease-in-out;
+}
+html body.body---login .container---element--login form .validation-success-message {
+  display: block;
+  background: #d4edda;
+  color: #155724;
+  border: 2px solid #27ae60;
+  font-size: 12px;
+  font-style: italic;
+  margin: 4px 6px;
+  padding: 5px 5px;
+  border-radius: 6px;
+  animation: fadeIn 0.3s ease-in-out;
+}
+html body.body---login .container---element--login form .validation-success-icon {
+  display: inline-block;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  background-color: #27ae60;
+  border-radius: 50%;
+  color: white;
+  text-align: center;
+  line-height: 20px;
+  font-size: 14px;
+  font-weight: bold;
+  animation: fadeIn 0.3s ease-in-out;
+  z-index: 100;
+  pointer-events: none;
+}
+html body.body---login .container---element--login form .validation-success-icon::after {
+  content: "✓";
+}
+html body.body---login .container---element--login form [data-field-wrapper] {
+  position: relative !important;
+  display: inline-block !important;
+  width: 100% !important;
 }
 @keyframes fadeIn {
   from {
@@ -228,8 +287,9 @@ html body.body---list main a {
   /* color: #272626; */
   color: #4486ff;
   transition: color 0.3s ease-in-out;
-  width: 100%;
+  /* width: 100%; */
   text-align: center;
+  font-size: 12px;
 }
 html body.body---list main a:hover {
   /* color: blue; */
@@ -239,20 +299,20 @@ html body.body---list main a#add---job--url {
   display: inline;
   margin-top: 10px;
 }
-html body.body---list main ul.username---and--logout {
+html body.body---list main .username---and--logout {
   padding: 2px;
-  margin: 5px auto;
+  margin: 10px auto;
   width: 95%;
   font-size: 14pt;
 }
-html body.body---list main ul.username---and--logout li {
+html body.body---list main .username---and--logout span {
   display: inline-block;
   font-weight: bold;
 }
-html body.body---list main ul.username---and--logout li span {
+html body.body---list main .username---and--logout span span {
   color: #5c5c5c;
 }
-html body.body---list main ul.username---and--logout li a {
+html body.body---list main .username---and--logout span a.logout-link {
   color: #4486ff;
   transition: color 0.3s ease-in-out;
   width: 100%;
@@ -260,7 +320,7 @@ html body.body---list main ul.username---and--logout li a {
   vertical-align: middle;
   font-size: 11px;
 }
-html body.body---list main ul.username---and--logout li a:hover {
+html body.body---list main .username---and--logout span a.logout-link:hover {
   /* color: blue; */
   color: #0e43b5;
 }
