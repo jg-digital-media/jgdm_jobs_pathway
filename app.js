@@ -1,5 +1,5 @@
 // connection check - app.js
-console.log("app.js connected - 19-09-2025 - 10:05");
+console.log("app.js connected - 19-09-2025 - 10:18");
 
 // Wait for DOM to be fully loaded
 document.addEventListener('DOMContentLoaded', function() {
@@ -216,8 +216,7 @@ function showFieldError(field, message) {
     const errorElement = document.createElement('div');
     errorElement.className = 'validation-error-message';
     errorElement.textContent = message;
-    errorElement.setAttribute('data-field', field.id || field.name);
-    errorElement.style.cssText = 'display: block; color: #e74c3c; font-size: 12px; margin: 4px 0; font-style: italic; background: yellow; padding: 2px; border: 1px solid red;';
+    errorElement.setAttribute('data-field', field.id || field.name);    
     
     console.log('Created error element:', errorElement);
     

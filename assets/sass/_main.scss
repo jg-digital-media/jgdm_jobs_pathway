@@ -145,12 +145,17 @@ html {
                     
                     // Validation error message styles
                     .validation-error-message {
-                        display: block;
-                        color: #e74c3c;
-                        font-size: 12px;
-                        margin-top: 4px;
-                        margin-bottom: 8px;
-                        font-style: italic;
+
+                        display: block; 
+                        background: #ff946b;
+                        color: #5a0808; 
+                        border: 2px dotted red;
+                        font-size: 12px; 
+                        font-style: italic; 
+                        margin: 4px 6px; 
+                        padding: 5px 5px;
+                        border-radius: 6px;
+
                         animation: fadeIn 0.3s ease-in-out;
                     }
                     
