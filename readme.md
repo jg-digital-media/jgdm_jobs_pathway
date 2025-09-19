@@ -1,4 +1,4 @@
-`Last Updated: 18-09-2025 - 16:33`
+`Last Updated: 19-09-2025 - 15:32`
 
 # Jobs Pathway
   + Keep track of your way to your professional life
@@ -14,7 +14,7 @@
 
 ## TODOs: 
 
-### (Tasks: `49` - Completed - `10`)
+### (Tasks: `59` - Completed - `21`)
 
 + `COMPLETED: 16-09-2025` - Wireframe and static interface planning for 'Job's Pathway App'
 + `COMPLETED: 16-09-2025` - Add a footer and header template part of the project
@@ -26,34 +26,34 @@
 + `COMPLETED: 18-09-2025` - build markup for the main list page of jobs - simulated for no job situations added `list-empty.php` 
 + `COMPLETED: 18-09-2025` - Decided to use register form for the landing page. Add to it, a link to login form. `index.php`
 + `COMPLETED: 18-09-2025` - finish `.body---add--job` styles
++ `COMPLETED: 19-09-2025` - move header styles to `header.scss`
++ `COMPLETED: 19-09-2025` - move footer styles to `footer.scss`
++ `COMPLETED: 19-09-2025` - Add some simulated form validation to the login and register pages
 
++ `COMPLETED: 19-09-2025` - Finish styling the login and register pages
++ `COMPLETED: 19-09-2025` - body---job--details styles
++ `COMPLETED: 19-09-2025` - Build `stats-modal.php` page - increase font size, make more visible. 
++ `COMPLETED: 19-09-2025` - style .body---job--stats
++ `COMPLETED: 19-09-2025` - Not all form validation errors are showing - e.g. password validation on registration for passwords less than 6 characters
+  + `COMPLETED: 19-09-2025` - Standard border: red  - Validated border: green:  focused border: blue - `border: solid 1px color;`
++ `COMPLETED: 19-09-2025` - Build `stats-modal.php` template file/page
++ `COMPLETED: 19-09-2025` - Build `add-job-form.php` template file/page
 
-+ `TODO:` - move header styles to `header.scss`
-+ `TODO:` - move footer styles to `footer.scss`
-+ `TODO:` - Finish styling the login and register pages
-+ `TODO:` - body---job--details styles
-+ `TODO:` - style .body---job--stats
-+ `TODO:` -  style "how to use" page
-+ `TODO:` - Add some simulated form validation to the login and register pages
++ `TODO:` - Implement modal areas for `job-details.php`,`add-job-form.php`, `stats-modal.php`,`how-to.php`.
 + `TODO:` - modal styles
-  + `TODO:` - Not all form validation errors are showing - e.g. password validation on registration for passwords less than 6 characters
-
-  + `TODO:` - Standard border: red  - Validated border: green:  focused border: blue - `border: solid 1px color;`
++ `TODO:` -  style "how to use" page
 + `TODO:` - Implement Edit functionality for `job-details.php`.
-  + `TODO:` - Edit button will switch fields to an editable state where values can be changed.
-            - At this point, the edit button text content will change from "Edit" to "Save"
-            - Save button will save the changes to the database and change text content back to "Edit"
-            - "Tooltip" activated to show the user that the changes have been saved!
-
+  1. `TODO:` - Edit button will switch fields to an editable state where values can be changed.
+  2. `TODO:` - `button---job--edit` - Change text content from "Edit" to Saved" when  button is clicked.
+  3. `TODO:`  At this point, the edit button text content will change from "Edit" to "Save"
+  4. `TODO:`  Save button will save the changes to the database and change text content back to "Edit"
+  5. `TODO:`  "Tooltip" activated to show the user that the changes have been saved!
 + `TODO:` - Persist the changes to checkboxes and table cell backgrounds
-+ `TODO:` - reduce lines of code in Sass files where possible
-+ `TODO:` - Build `stats-modal.php` page - increase font size, make more visible. 
++ `TODO:` - Reduce lines of code in Sass files where possible
   + `TODO:` - May need to fill table with classes to get the desired effect.
-+ `TODO:` - Build `stats-modal.php` template file/page
-+ `TODO:` - Build `add-job-form.php` template file/page
-+ `TODO:` - Add responsiveness to Job list table - `list.php`
++ `TODO:` - Add responsiveness to Job list table - `list.php` and `list-empty.php`
 + `TODO:` - Actions column - `list.php`  Might be useful as a mechanism to edit job profiles 
-+ `TODO:` - `button---job--edit` - Change text content from "Edit" to Saved" when  button is clicked.
+  + `TODO:` - Consider Deleting Actions Column
 + `TODO:` - `motivation---message`- load a different message as its text content whenever the user loads the page.
 + `TODO:` - Add a favicon
 + `TODO:` - Swap out mini logo in `top---banner--container`
@@ -72,12 +72,17 @@
 + `TODO:` - Progress Stats Button an #id `btn---progress--stats`
 + `TODO:` - How to Use Button an #id `btn---how--to`
 + `TODO:` - Rails: Check for existing usernames and email addresses when registering and logging in
++ `TODO:` - Back-end password validation required - Check for the correct password
++ `TODO:` - Customise validation and success error messages in app.js
++ `TODO:` - Fade out custom validation messages after going out of element focus
++ `TODO:` - Remove filenames and .filename class and selector from project at the appropriate time.
++ `TODO:` - Require stronger passwords for the app - e.g. at least 8 characters (include special characters, uppercase, lowercase, numbers)
 
 [Back to Top](#sections)
 
 ## Development
 
-[0.0.1](#001) | [0.0.2](#002) | [0.0.3](#003) | [0.0.4](#004) | [0.0.5](#005) | [0.0.6](#006) 
+[0.0.1](#001) | [0.0.2](#002) | [0.0.3](#003) | [0.0.4](#004) | [0.0.5](#005) | [0.0.6](#006) | [0.0.7](#007)
 
 ### `0.0.1`
   
@@ -102,6 +107,8 @@
 
   + With this, I can customise different "states" of the app. Be that the login/register page, the main listing page, adding a job and the job details page. There is much more work still to be done, but this gives me a grounding on how the finished app will be structured. `15-09-2025`
 
+[Back to Top](#development)
+
 ### `0.0.4`
 
   + Focused on building the Job listing screen today. This is going to be a challenging project to do, which is partly why I'm looking forward to doing it. I added 6 rows of default data to the markup to test in its various states. That is to say, when a checkbox for a table cell is checked, that table cell's background will turn green.
@@ -109,6 +116,8 @@
   + Elsewhere, I started building the other screen states, like the progress states page and the "how to use" page. I'm still at the back of my mind thinking whether it should be modals or popups. I'm not sure yet. It might be a better UX experience to be modals, but when this app is complete, persistence of data will not be an issue since changes will be saved at the backend.
 
   + I've tried my best to keep the CSS up with the markup as I go and keep it organised. But there's still a lot of work to do for the Stat and Add Job pages and to keep the SASS files easily maintainable. I'm hopeful that by the end of `17th` (tomorrow) I'll have a solid foundation for the app's look and feel. `15-09-2025`
+
+[Back to Top](#development)
 
   #### `0.0.5`
 
@@ -118,6 +127,8 @@
 
   + A big part of the app is the job listing page, and a large part of future database interactions will go there. But it all represents a good step towards completing the prototype of the app.
 
+[Back to Top](#development)
+
 #### `0.0.6`
 
   + I've added some form validation to the login and register pages. Emphasis on the word "some". There's no doubt the validation is in place and seems to be working but there are issues getting all of the UI feedback in place. I'm leaving this as it is for today, but it warrants further work.
@@ -125,6 +136,16 @@
   + I made other changes to the app, bringing it further towards a finished Prototype. Including simulated logging in and logging out. I've also added a delete jobs button to the progress stats page, which will allow users, when ready, or if necessary, to delete jobs they've added to their account and start again.
 
   + But it's a tricky moment in the development of this app. At some point, we have to declare the prototype stage of the app complete and start to build in Rails. This will probably be on Monday. A final look at what needs doing will be done tomorrow. `18-09-2025`
+
+[Back to Top](#development)
+
+#### `0.0.7`
+
+  + Form validation at the front-end has been added to the login and register pages. This appears to be a robust, interactive and real-time implementation which tells people what is wrong and how to put it right.  There's still validation for the backend to do, but that will come in time.
+
+  + I've stalled out long enough.  We now have what I believe to be a good enough prototype to start working from. Over the weekend, I'd like to create a plan for integrating the app with Rails. The prototype will be kept as it is as a copy, and the Rails element will be built around these templates.
+
+  + I won't lie. I've never used Rails before. I am daunted; there are many facets to this app, and it's a learning curve. I intend to go bit by bit and hopefully, it'll be done before I know it. `19-09-2025`
 
 [Back to Top](#development)
 
