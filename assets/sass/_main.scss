@@ -469,11 +469,11 @@ html {
 
                             a {
 
+                                @extend %button---list--page;
+
                                 padding: 5px;
                                 border-radius: 6px;
-                                background: $button---bg--list;
                                 text-decoration: none;
-                                color: $button---col--list;
                                 text-align: center;
                                 width: 100%;
 
@@ -513,22 +513,17 @@ html {
 
                     a {
 
+                        @extend %button---list--page;
+
                         display: inline-block;
                         /* background: white; */
-                        background: $button---bg--list;
-                        color: $button---col--list;
                         text-align: center;
                         width: 120px;
                         border-radius: 5px;
                         padding: 5px;
                         text-decoration: none;
 
-                        transition: color 0.3s ease-in-out;
-
-                        &:hover {
-
-                            color: $button---col--hover-list;
-                        }
+                        transition: color 0.3s ease-in-out;                      
 
                     }
 
@@ -625,10 +620,10 @@ html {
 
                                     a {
 
+                                        @extend %button---list--page;
+
                                         text-decoration: none;
                                         /* font-size: 12px; */
-                                        background: $button---bg--list;
-                                        color: $button---col--list;
                                         font-weight: bold;
                                         padding: 4px;
                                         width: 57px;
@@ -637,11 +632,7 @@ html {
                                         border-radius: 8px;
                                         
                                         transition: .3s ease-in-out;
-
-                                        &:hover {
-
-                                            color: $button---col--hover-list;
-                                        }
+                                       
                                     }
                                 }
 
@@ -957,15 +948,16 @@ html {
 
 
                 a.button---job--edit {
-                    
+
+                    // extend common button styles
+                    @extend %button---list--page;                   
+                
                     /* padding: 0 6px 0 0; */
                     display: block;
                     /* padding: 0 6px 0 0; */
                     padding: 6px;
                     border-radius: 5px;
                     margin: 13px auto;
-                    background: #4486ff;
-                    color: #98cbff;
                     width: 120px;
                     /* color: red; */
                     text-decoration: none;
@@ -1151,6 +1143,24 @@ html {
             .section---delete--jobs {
 
                 text-align: center;
+
+
+                a.button---delete--jobs {
+
+                    
+                    @extend %button---section--element;
+
+                    display: block;
+                    /* padding: 0 6px 0 0; */
+                    padding: 6px;
+                    border-radius: 5px;
+                    margin: 13px auto;
+                    width: 120px;
+                    /* color: red; */
+                    text-decoration: none;
+                    transition: background 0.3s, color 0.3s;
+
+                }
 
 
             }
