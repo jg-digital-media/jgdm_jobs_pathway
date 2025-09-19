@@ -2,7 +2,7 @@
 /* head.scss */
 /*
 
-Last Updated: 19-09-2025 - 13:36
+Last Updated: 19-09-2025 - 15:33
 */
 * {
   padding: 0;
@@ -66,6 +66,11 @@ html body.body---login .container---element--login form .login---input:focus, ht
 html body {
   font-family: arial;
   font-size: 14px;
+}
+html body main .filename {
+  color: darkgray;
+  font-size: 12px;
+  font-style: italic;
 }
 html body.body---login {
   background: #373737;
