@@ -1,5 +1,5 @@
 // connection check - app.js
-console.log("app.js connected - 18-09-2025 - 14:37");
+console.log("app.js connected - 19-09-2025 - 10:05");
 
 // Wait for DOM to be fully loaded
 document.addEventListener('DOMContentLoaded', function() {
@@ -61,6 +61,13 @@ function setupRegisterValidation(form) {
     const usernameField = form.querySelector('#username');
     const emailField = form.querySelector('#email');
     
+    /* console.log('Register validation setup:', {
+        passwordField: !!passwordField,
+        confirmPasswordField: !!confirmPasswordField,
+        usernameField: !!usernameField,
+        emailField: !!emailField
+    }); */
+    
     // Real-time password matching validation
     if (passwordField && confirmPasswordField) {
         confirmPasswordField.addEventListener('input', function() {
@@ -81,24 +88,32 @@ function setupRegisterValidation(form) {
         // Clear previous error messages
         clearValidationErrors(form);
         
+        console.log('Register form validation started');
+        
         // Validate username
         if (!validateRequired(usernameField, 'Username is required')) {
+            console.log('Username validation failed: required');
             isValid = false;
         } else if (!validateMinLength(usernameField, 3, 'Username must be at least 3 characters')) {
+            console.log('Username validation failed: min length');
             isValid = false;
         }
         
         // Validate email
         if (!validateRequired(emailField, 'Email is required')) {
+            console.log('Email validation failed: required');
             isValid = false;
         } else if (!validateEmail(emailField, 'Please enter a valid email address')) {
+            console.log('Email validation failed: format');
             isValid = false;
         }
         
         // Validate password
         if (!validateRequired(passwordField, 'Password is required')) {
+            console.log('Password validation failed: required');
             isValid = false;
         } else if (!validateMinLength(passwordField, 6, 'Password must be at least 6 characters')) {
+            console.log('Password validation failed: min length');
             isValid = false;
         }
         
@@ -189,6 +204,8 @@ function validatePasswordMatch(passwordField, confirmPasswordField) {
 }
 
 function showFieldError(field, message) {
+    console.log('showFieldError called:', field.id || field.name, message);
+    
     // Remove existing error
     removeFieldError(field);
     
@@ -196,21 +213,52 @@ function showFieldError(field, message) {
     field.classList.add('validation-error');
     
     // Create and insert error message
-    const errorElement = document.createElement('span');
+    const errorElement = document.createElement('div');
     errorElement.className = 'validation-error-message';
     errorElement.textContent = message;
+    errorElement.setAttribute('data-field', field.id || field.name);
+    errorElement.style.cssText = 'display: block; color: #e74c3c; font-size: 12px; margin: 4px 0; font-style: italic; background: yellow; padding: 2px; border: 1px solid red;';
     
-    // Insert error message after the field
-    field.parentNode.insertBefore(errorElement, field.nextSibling);
+    console.log('Created error element:', errorElement);
+    
+    // Create a unique container for this field's error message
+    let errorContainer = field.parentNode.querySelector(`[data-error-container="${field.id}"]`);
+    if (!errorContainer) {
+        errorContainer = document.createElement('div');
+        errorContainer.setAttribute('data-error-container', field.id);
+        errorContainer.style.cssText = 'display: block; margin: 2px 0;';
+        
+        // Insert the container right after the field
+        if (field.nextSibling) {
+            field.parentNode.insertBefore(errorContainer, field.nextSibling);
+        } else {
+            field.parentNode.appendChild(errorContainer);
+        }
+    }
+    
+    // Clear any existing error messages in this container
+    errorContainer.innerHTML = '';
+    
+    // Add the error message to the container
+    errorContainer.appendChild(errorElement);
+    
+    // Verify the element was inserted and is visible
+    setTimeout(() => {
+        const insertedElement = document.querySelector(`#${field.id} + .validation-error-message, #${field.id} ~ .validation-error-message`);
+        console.log('Error message in DOM:', !!insertedElement, insertedElement);
+        if (insertedElement) {
+            console.log('Element styles:', window.getComputedStyle(insertedElement));
+        }
+    }, 100);
 }
 
 function removeFieldError(field) {
     field.classList.remove('validation-error');
     
-    // Remove error message
-    const errorMessage = field.parentNode.querySelector('.validation-error-message');
-    if (errorMessage) {
-        errorMessage.remove();
+    // Remove the error container for this specific field
+    const errorContainer = field.parentNode.querySelector(`[data-error-container="${field.id}"]`);
+    if (errorContainer) {
+        errorContainer.remove();
     }
 }
 
