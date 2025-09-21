@@ -1,4 +1,4 @@
-`Last Updated: 19-09-2025 - 15:32`
+`Last Updated: 21-09-2025 - 17:57`
 
 # Jobs Pathway
   + Keep track of your way to your professional life
@@ -14,7 +14,7 @@
 
 ## TODOs: 
 
-### (Tasks: `59` - Completed - `21`)
+### (Tasks: `64` - Completed - `21`)
 
 + `COMPLETED: 16-09-2025` - Wireframe and static interface planning for 'Job's Pathway App'
 + `COMPLETED: 16-09-2025` - Add a footer and header template part of the project
@@ -38,6 +38,14 @@
   + `COMPLETED: 19-09-2025` - Standard border: red  - Validated border: green:  focused border: blue - `border: solid 1px color;`
 + `COMPLETED: 19-09-2025` - Build `stats-modal.php` template file/page
 + `COMPLETED: 19-09-2025` - Build `add-job-form.php` template file/page
+
+
++ `TODO:` Download Rails and check GitBash/Command Line for Ruby and Rails Gems
++ `TODO:` Create a new Rails project
++ `TODO:` Remove files and add them back in, in a directory called `prototype`
++ `TODO:` Get a feel for development process with Rails. 
++ `TODO:` Create a functional Rails Schema for the backend database.
+
 
 + `TODO:` - Implement modal areas for `job-details.php`,`add-job-form.php`, `stats-modal.php`,`how-to.php`.
 + `TODO:` - modal styles
@@ -119,7 +127,7 @@
 
 [Back to Top](#development)
 
-  #### `0.0.5`
+### `0.0.5`
 
   + I wanted to achieve a couple of main things today. Sort out a first solid draft of the look and feel of the app - which means sorting out the SASS variables and selectors for most aspects of the UI. Now there's some styling for the main application states, like the login and register pages, the list page and the job details page.
 
@@ -129,7 +137,7 @@
 
 [Back to Top](#development)
 
-#### `0.0.6`
+### `0.0.6`
 
   + I've added some form validation to the login and register pages. Emphasis on the word "some". There's no doubt the validation is in place and seems to be working but there are issues getting all of the UI feedback in place. I'm leaving this as it is for today, but it warrants further work.
 
@@ -139,13 +147,25 @@
 
 [Back to Top](#development)
 
-#### `0.0.7`
+### `0.0.7`
 
   + Form validation at the front-end has been added to the login and register pages. This appears to be a robust, interactive and real-time implementation which tells people what is wrong and how to put it right.  There's still validation for the backend to do, but that will come in time.
 
   + I've stalled out long enough.  We now have what I believe to be a good enough prototype to start working from. Over the weekend, I'd like to create a plan for integrating the app with Rails. The prototype will be kept as it is as a copy, and the Rails element will be built around these templates.
 
   + I won't lie. I've never used Rails before. I am daunted; there are many facets to this app, and it's a learning curve. I intend to go bit by bit and hopefully, it'll be done before I know it. `19-09-2025`
+
+### `1.0.0`
+
+  + All weekend, I've been working on plans for integrating the app with Rails. While I was doing so, I realised just how much of an upheaval it is to use Rails compared to a PHP Prototype. Rails is an `MVC` framework (**M**odel **V**iew **C**ontroller), and recreating the visual interface of the app in Rails would be a massive undertaking - whether using AI or not. This almost caused enough jitters to change my plans for this project.
+  
+  + Plans and plans and plans. It's time to do. The purpose of this note is to try and nail down a solid plan for getting the app going and refining a development process.
+    + Download Rails and check GitBash for Ruby and Rails Gems
+    + Create a new Rails project - Now here's the nub of it. What Rails will do is put some directories and files into the project root. I'll probably need to empty the PHP prototype files while I do that, and then maybe add them back in, in a directory called `prototype`
+    + Then, I need to learn how to rebuild the app using Rails syntax. And we'll need to create a functional Rails Schema for the backend database.
+    + This will involve learning about adding gems for authentication and database management.
+    + Putting all of this into a chat prompt in Cursor might do the trick to get me started on all of this.
+
 
 [Back to Top](#development)
 
