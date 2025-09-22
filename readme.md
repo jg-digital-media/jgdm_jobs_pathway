@@ -1,9 +1,10 @@
-`Last Updated: 22-09-2025 - 11:31`
+`Last Updated: 22-09-2025 - 11:42`
 
 # Jobs Pathway
   + Keep track of your way to your professional life
     + Prototype URL: https://projects.jonniegrieve.co.uk/jobs_pathway/
     + Repository URL: https://github.com/jg-digital-media/jgdm_jobs_pathway
+    + `rails server` - http://localhost:3000
 
 ## Sections 
 
@@ -309,6 +310,11 @@ Login - View List State (empty) ----> Add Job Details ----> View Job Details Sta
     ruby -v
     rails-v
     gem update --system 3.7.2
+    bundle install - to install dependencies in another location using Gemfile (package manager)
+
+    to restore database
+    rails db:create
+    rails db:migrate
 ```
 
 + [Heroku](https://www.heroku.com/)
