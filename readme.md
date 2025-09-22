@@ -1,4 +1,4 @@
-`Last Updated: 22-09-2025 - 10:00`
+`Last Updated: 22-09-2025 - 11:31`
 
 # Jobs Pathway
   + Keep track of your way to your professional life
@@ -102,7 +102,7 @@
 [0.0.1](#001) | [0.0.2](#002) | [0.0.3](#003) | [0.0.4](#004) | [0.0.5](#005) | [0.0.6](#006) | [0.0.7](#007)
 
 ### Rails Development
-[1.0.0](#100)
+[1.0.0](#100) | [1.0.1](#101)
 
 ### `0.0.1`
   
@@ -166,6 +166,9 @@
   + I've stalled out long enough.  We now have what I believe to be a good enough prototype to start working from. Over the weekend, I'd like to create a plan for integrating the app with Rails. The prototype will be kept as it is as a copy, and the Rails element will be built around these templates.
 
   + I won't lie. I've never used Rails before. I am daunted; there are many facets to this app, and it's a learning curve. I intend to go bit by bit and hopefully, it'll be done before I know it. `19-09-2025`
+  
+[Back to Top](#development)
+
 
 ### `1.0.0`
 
@@ -178,6 +181,16 @@
     + This will involve learning about adding gems for authentication and database management.
     + Putting all of this into a chat prompt in Cursor might do the trick to get me started on all of this.
 
+[Back to Top](#development)
+
+
+#### `1.0.1`
+
++ I have Ruby and Rails now installed. I have a Rails project, but I'm feeling totally lost as to where I am with the dependencies required for authentication and database schemas. I probably spent a good hour or half hour looking at the work Cursor was doing to try to build the Rails project and work out issues getting the local server set up.
+
++ I'm going to have to look at this further. I might just have to start with a fresh installation and build things like the views, roots and controllers manually.  Even with the aid of AI, this is a very, very steep learning curve. 
+
++ It'll be more worth my time pacing myself with this and finding a way to get to a foundation I can build on. So I'll take a pause, a bit of a breather while I work things out. It all doesn't have to be done in one go.
 
 [Back to Top](#development)
 
