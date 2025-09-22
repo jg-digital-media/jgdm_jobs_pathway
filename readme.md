@@ -1,4 +1,4 @@
-`Last Updated: 22-09-2025 - 09:58`
+`Last Updated: 22-09-2025 - 10:00`
 
 # Jobs Pathway
   + Keep track of your way to your professional life
@@ -16,7 +16,7 @@
 
 ## Requirements
 
-+ Windows/Linux/MacOS |  Ruby `v3.4.6` | Ruby on Rails `v` | 
++ Windows/Linux/MacOS |  Ruby `v3.4.6` | Ruby on Rails `v8.0.2.1` | 
 
 [Back to Top](#sections)
 
@@ -287,7 +287,7 @@ Login - View List State (empty) ----> Add Job Details ----> View List State (has
 
 Login - View List State (empty) ----> Add Job Details ----> View Job Details State ----> Edit Job Details ----> View List State (has content) ----> Progress Stats   ----> Delete Jobs ----> View List State (empty)
 
-## Deployment and Intallation
+## Deployment and Installation
 
 +
 
