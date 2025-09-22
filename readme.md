@@ -1,4 +1,4 @@
-`Last Updated: 21-09-2025 - 17:57`
+`Last Updated: 22-09-2025 - 09:58`
 
 # Jobs Pathway
   + Keep track of your way to your professional life
@@ -7,10 +7,18 @@
 
 ## Sections 
 
-[Development](#development) | 
+[Requirements](#requirements) |
 [TODOs](#todos) |
+[Development](#development) | 
 [User Flows](#user-flows) |
-[Deployment](#deployment) |
+[Deployment](#deployment-and-installation)
+
+
+## Requirements
+
++ Windows/Linux/MacOS |  Ruby `v3.4.6` | Ruby on Rails `v` | 
+
+[Back to Top](#sections)
 
 ## TODOs: 
 
@@ -90,7 +98,11 @@
 
 ## Development
 
+### Protoype Development
 [0.0.1](#001) | [0.0.2](#002) | [0.0.3](#003) | [0.0.4](#004) | [0.0.5](#005) | [0.0.6](#006) | [0.0.7](#007)
+
+### Rails Development
+[1.0.0](#100)
 
 ### `0.0.1`
   
@@ -275,7 +287,16 @@ Login - View List State (empty) ----> Add Job Details ----> View List State (has
 
 Login - View List State (empty) ----> Add Job Details ----> View Job Details State ----> Edit Job Details ----> View List State (has content) ----> Progress Stats   ----> Delete Jobs ----> View List State (empty)
 
-## Deployment
+## Deployment and Intallation
+
++
+
+```txt
+    Ruby Installer - https://rubyinstaller.org/downloads/
+    ruby -v
+    rails-v
+    gem update --system 3.7.2
+```
 
 + [Heroku](https://www.heroku.com/)
 + [Rails Tutorial](https://www.railstutorial.org/book) as a guide.
