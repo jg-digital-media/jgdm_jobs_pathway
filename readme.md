@@ -1,4 +1,4 @@
-`Last Updated: 23-09-2025 - 11:08`
+`Last Updated: 23-09-2025 - 11:21`
 
 # Jobs Pathway
   + Keep track of your way to your professional life
@@ -23,7 +23,7 @@
 
 ## TODOs: 
 
-### (Tasks: `64` - Completed - `21`)
+### (Tasks: `64` - Completed - `24`)
 
 + `COMPLETED: 16-09-2025` - Wireframe and static interface planning for 'Job's Pathway App'
 + `COMPLETED: 16-09-2025` - Add a footer and header template part of the project
@@ -47,15 +47,12 @@
   + `COMPLETED: 19-09-2025` - Standard border: red  - Validated border: green:  focused border: blue - `border: solid 1px color;`
 + `COMPLETED: 19-09-2025` - Build `stats-modal.php` template file/page
 + `COMPLETED: 19-09-2025` - Build `add-job-form.php` template file/page
++ `COMPLETED: 23-09-2025` - Download Rails and check GitBash/Command Line for Ruby and Rails Gems
++ `COMPLETED: 23-09-2025` - Create a new Rails project
++ `COMPLETED: 23-09-2025` - Remove files and add them back in, in a directory called `prototype`
 
-
-+ `TODO:` Download Rails and check GitBash/Command Line for Ruby and Rails Gems
-+ `TODO:` Create a new Rails project
-+ `TODO:` Remove files and add them back in, in a directory called `prototype`
 + `TODO:` Get a feel for development process with Rails. 
 + `TODO:` Create a functional Rails Schema for the backend database.
-
-
 + `TODO:` - Implement modal areas for `job-details.php`,`add-job-form.php`, `stats-modal.php`,`how-to.php`.
 + `TODO:` - modal styles
 + `TODO:` -  style "how to use" page
@@ -195,9 +192,9 @@
 
 ### `1.0.2`
 
-+ All right!  I now have the application working to a point where I can a route pointing to a web page which is served on localhost (port 3000). I'd love to have done it without any friction or database compatability issues conflicts but I can't have everything :).
++ All right!  I now have the application working to a point where I have a Rails Route pointing to a web page which is served on localhost (port 3000). I'd love to have done it without any friction or database compatability issues conflicts but I can't have everything :).
 
-+ So I'm going to pause there annd think about what the next step is. 
++ So I'm going to pause there and think about what the next step is. 
 
 [Back to Top](#development)
 
