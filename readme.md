@@ -1,4 +1,4 @@
-`Last Updated: 22-09-2025 - 11:42`
+`Last Updated: 23-09-2025 - 11:08`
 
 # Jobs Pathway
   + Keep track of your way to your professional life
@@ -103,7 +103,7 @@
 [0.0.1](#001) | [0.0.2](#002) | [0.0.3](#003) | [0.0.4](#004) | [0.0.5](#005) | [0.0.6](#006) | [0.0.7](#007)
 
 ### Rails Development
-[1.0.0](#100) | [1.0.1](#101)
+[1.0.0](#100) | [1.0.1](#101) | [1.0.2](#102)
 
 ### `0.0.1`
   
@@ -185,13 +185,19 @@
 [Back to Top](#development)
 
 
-#### `1.0.1`
+### `1.0.1`
 
 + I have Ruby and Rails now installed. I have a Rails project, but I'm feeling totally lost as to where I am with the dependencies required for authentication and database schemas. I probably spent a good hour or half hour looking at the work Cursor was doing to try to build the Rails project and work out issues getting the local server set up.
 
-+ I'm going to have to look at this further. I might just have to start with a fresh installation and build things like the views, roots and controllers manually.  Even with the aid of AI, this is a very, very steep learning curve. 
++ I'm going to have to look at this further. I might just have to start with a fresh installation and build things like the views, roots and controllers manually. Even with the aid of AI, this is a very, very steep learning curve. 
 
 + It'll be more worth my time pacing myself with this and finding a way to get to a foundation I can build on. So I'll take a pause, a bit of a breather while I work things out. It all doesn't have to be done in one go.
+
+### `1.0.2`
+
++ All right!  I now have the application working to a point where I can a route pointing to a web page which is served on localhost (port 3000). I'd love to have done it without any friction or database compatability issues conflicts but I can't have everything :).
+
++ So I'm going to pause there annd think about what the next step is. 
 
 [Back to Top](#development)
 
@@ -302,6 +308,14 @@ Login - View List State (empty) ----> Add Job Details ----> View List State (has
 Login - View List State (empty) ----> Add Job Details ----> View Job Details State ----> Edit Job Details ----> View List State (has content) ----> Progress Stats   ----> Delete Jobs ----> View List State (empty)
 
 ## Deployment and Installation
+
++ Installation and Server Setup
+
+  + `gem install rails`
+  + `rails new job_tracker_app -d postgresql`
+  + `cd job_tracker_app`
+  + `bin/rails server`
+  + `ralils server` - standard server launch command http localhost:3000
 
 +
 
