@@ -1,0 +1,1236 @@
+
+/* mains.scss */
+
+html {
+
+    body {
+        
+        font-family: $font---main;
+        font-size: $font---size--md;
+
+        main {
+
+            .filename {
+
+                color: darkgray;
+                font-size: 12px;
+                font-style: italic;
+            }
+        }
+        
+        // selectors for login and register pages
+        &.body---login {
+
+            background: $body---bg;
+            
+            /* background: #393838; */
+            color: $text---col--primary;
+            font-family: $font---main;
+
+            header {
+
+                &.header---login--page {
+
+                    background: none;
+                    margin: 65pt 0 7px 0px;
+
+                    h1, h2 {
+
+                        text-align: center;
+                    }
+
+                    h1 {
+
+                        font-size: 12px;
+                        text-align: center;
+                    }
+
+                    h2 {
+
+                        font-size: 10px;
+                    }
+                }
+            }
+
+            .container---element--login {
+
+                form {
+
+                    display: block;
+                    margin: 2px auto;
+                    width: 400px;
+                    padding: 8px;
+                    border: solid 1px #d3c2c2;
+                    border-radius: 4px;
+                    /* background: #585858; */
+                    box-shadow: none;
+
+                    transition: box-shadow 0.3s ease-in-out;
+
+                    &:hover {
+
+                        /* box-shadow: white 0 0 0 0; */
+                        /* box-shadow: #ffdc78 0 0px 5px 1px; */
+                        box-shadow: white 0 0px 5px 1px;
+                    }
+
+                    h3 {
+
+                        font-size: 16pt;
+                        margin: 4px 0;
+                        text-align: center;
+                        color: $text---col--tertiary-list;
+                        color: #ffef7a
+                    }
+
+                    label {
+
+                        display: block;
+                        width: 180px;
+                        margin: 20px 0;
+                    }
+
+                    input[type="text"], input[type="email"], input[type="password"], textarea {
+
+                        display: inline-block;  
+                        /* background: none; */
+                        /* vertical-align: middle; */
+                        /* width: 249px; */
+                        margin: 0px 0px;
+                        padding: 7px;
+                        border-radius: 6px;
+
+                        transition: background 0.3s ease-in-out;
+
+                        &:hover {
+
+                            background: lightblue;
+                        }
+
+                        &::placeholder {
+
+                            color: grey;
+
+                            transition: color 0.3s ease-in-out;
+
+                            &:hover {
+
+                                color: black;
+                                font-weight: normal;
+                                letter-spacing: 0px;
+                            }
+                        }
+                    }
+
+                    .login---input { 
+
+                        @extend %form-input-login;
+                        
+                        // Validation error styles
+                        &.validation-error {
+                            border: 2px solid #e74c3c;
+                            background-color: #fdf2f2;
+                            
+                            &:focus {
+                                outline-color: #e74c3c;
+                                box-shadow: 0 0 5px rgba(231, 76, 60, 0.3);
+                            }
+                        }
+                        
+                        // Validation success styles
+                        &.validation-success {
+                            border: 2px solid #27ae60;
+                            background-color: #f1f9f4;
+                            position: relative;
+                            
+                            &:focus {
+                                outline-color: #27ae60;
+                                box-shadow: 0 0 5px rgba(39, 174, 96, 0.3);
+                            }
+                        }
+
+                        &:focus,
+                        &:focus-visible {
+
+                            border: solid 1px #ffef7a;
+                            outline: solid 1px #ffef7a;
+                            background: #9ddfff;
+                        }
+
+                    }
+
+                    .button {
+
+                        @extend %button-form-main;
+                    }
+                    
+                    // Validation error message styles
+                    .validation-error-message {
+
+                        display: block; 
+                        background: #ff946b;
+                        color: #5a0808; 
+                        border: 2px dotted red;
+                        font-size: 12px; 
+                        font-style: italic; 
+                        margin: 4px 6px; 
+                        padding: 5px 5px;
+                        border-radius: 6px;
+
+                        animation: fadeIn 0.3s ease-in-out;
+                    }
+                    
+                    // Validation success message styles
+                    .validation-success-message {
+                        display: block;
+                        background: #d4edda;
+                        color: #155724;
+                        border: 2px solid #27ae60;
+                        font-size: 12px;
+                        font-style: italic;
+                        margin: 4px 6px;
+                        padding: 5px 5px;
+                        border-radius: 6px;
+                        animation: fadeIn 0.3s ease-in-out;
+                    }
+                    
+                    // Success tick icon
+                    .validation-success-icon {
+                        display: inline-block;
+                        position: absolute;
+                        right: 10px;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        width: 20px;
+                        height: 20px;
+                        background-color: #27ae60;
+                        border-radius: 50%;
+                        color: white;
+                        text-align: center;
+                        line-height: 20px;
+                        font-size: 14px;
+                        font-weight: bold;
+                        animation: fadeIn 0.3s ease-in-out;
+                        z-index: 100;
+                        pointer-events: none;
+                        
+                        &::after {
+                            content: '✓';
+                        }
+                    }
+                    
+                    // Field wrapper for positioning icons
+                    [data-field-wrapper] {
+                        position: relative !important;
+                        display: inline-block !important;
+                        width: 100% !important;
+                    }
+                    
+                    @keyframes fadeIn {
+                        from {
+                            opacity: 0;
+                            transform: translateY(-5px);
+                        }
+                        to {
+                            opacity: 1;
+                            transform: translateY(0);
+                        }
+                    }
+
+                    #registration {
+
+                        display: block;
+                        font-size: 12px;
+                        text-align: center;
+                        margin-top: 12px;
+
+                        a {
+
+                            color: $url---col--primary;
+                            font-size: 11px;
+                            font-style: italic;
+
+                            transition: color 0.3s ease-in-out;
+
+                            &:hover {
+
+                                /* text-decoration: underline; */
+                                color: $url---col--primary-hover;
+                            }
+                        }
+                    }
+                }
+            } 
+
+            footer {
+
+                margin: 17px 0 0 0;
+
+                p {
+
+                    text-align: center;
+
+                    span {
+
+                        a {
+
+                            color: $url---col--primary;
+                            font-size: 12px;
+
+                            transition: color 0.3s ease-in-out;
+
+                            &:hover {
+
+                                text-decoration: underline;
+                                color: $url---col--primary-hover;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        // Selectors for header and footer elements
+        &.body---add--job,
+        &.body---list,
+        &.body---howto,
+        &.body---job--details,
+        &.body---job--stats {
+
+            header {
+
+                margin: 12px 0 10px 0px;
+                
+                h1, h2 {
+
+                    text-align: center;
+                }
+
+                h1 {
+
+                    font-size: 32px;
+                    text-align: center;
+                }
+
+                h2 {
+
+                    font-size: 24px;
+                }
+
+
+
+            }
+
+            footer {
+
+                margin: 17px 0 0 0;
+
+                p {
+
+                    text-align: center;
+
+                    span {
+
+                        a {
+
+                            color: $url---col--primary-list;  // check
+                            font-size: 12px;
+
+                            transition: color 0.3s ease-in-out;
+
+                            &:hover {
+
+                                text-decoration: underline;
+                                color: $url---col--primary-hover-list; // check
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        // content and selectors for list page
+        &.body---list {
+
+            background: $body---bg--list;
+
+            header {
+
+                margin: 12px 0 10px 0px;
+                
+                h1, h2 {
+
+                    text-align: center;
+                }
+
+                h1 {
+
+                    font-size: 32px;
+                    text-align: center;
+                }
+
+                h2 {
+
+                    font-size: 24px;
+                }
+
+
+
+            }
+
+            main {
+
+                p {
+
+                    text-align: right;
+
+                }
+
+                .filename {
+
+                    color: darkgray;
+                    font-size: 12px;
+                    font-style: italic;
+                }
+
+                a {
+
+                    display: inline-block;
+                    /* color: #272626; */
+                    color: $url---col--primary-list;
+                    transition: color 0.3s ease-in-out;
+                    /* width: 100%; */
+                    text-align: center;
+                    font-size: 12px;
+
+                    &:hover {
+
+                        /* color: blue; */
+                        color: $url---col--primary-hover-list;
+                    }
+
+                }
+
+                // a link to add a job - empty list state
+                a#add---job--url {
+
+                    display: inline;
+                    margin-top: 10px;
+                }
+
+                .username---and--logout {
+
+                    padding: 2px;
+                    margin: 10px auto;
+                    width: 95%;
+                    font-size: 14pt;
+
+                    span {
+
+                        display: inline-block;
+                        font-weight: bold;
+
+                        span {
+
+                            color: lighten(black, 36%);
+                        }
+
+                        a.logout-link {
+
+                            color: $url---col--primary-list;
+                            transition: color 0.3s ease-in-out;
+                            width: 100%;
+                            text-align: center;
+                            vertical-align: middle;
+                            font-size: 11px;
+
+                            &:hover {
+
+                                /* color: blue; */
+                                color: $url---col--primary-hover-list;
+                            }
+
+                        }
+
+                    }
+
+                }
+
+                .top---banner--container {
+
+                    display: flex;
+                    font-size: $font---size--md;
+                    background: $banner---bg--list;
+                    border: solid 2px $border---col--list;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: space-around;
+                    margin: 10px auto;
+                    padding: 2px 0;
+                    border-radius: 6px;
+                    width: 95%;
+
+                    #jobs---pathway--logo {
+
+                        width: 45px;
+                        height: 45px;
+                    }
+
+                    .app---navigation {
+
+                        li {
+
+                            display: inline-block;
+                            list-style: none;
+                            margin: 0 10px;
+
+                            a {
+
+                                @extend %button---list--page;
+
+                                padding: 5px;
+                                border-radius: 6px;
+                                text-decoration: none;
+                                text-align: center;
+                                width: 100%;
+
+                                transition: .3s ease-in-out;
+
+                                &:hover {
+
+                                    color: $button---col--hover-list;
+                                }
+                            }
+                        }
+                    }
+
+                    #motivation---message--container {
+                            
+                        /* background: $banner---bg--list;  */  
+                        width: 60%;                    
+
+                        #motivation---message {
+
+                            padding: 0px 5px;
+                            color: $text---col--secondary-list;
+                            /* background: #ffffb9; */
+                            /* border-radius: 7px; */
+                        }
+
+                    }
+                    
+                }
+
+                .section---add--situation-container {
+
+                    /* display: block; */
+                    margin: 22px 34px 10px 0;
+                    /* margin: 10px 34px 0 0; */
+                    text-align: right;
+
+                    a {
+
+                        @extend %button---list--page;
+
+                        display: inline-block;
+                        /* background: white; */
+                        text-align: center;
+                        width: 120px;
+                        border-radius: 5px;
+                        padding: 5px;
+                        text-decoration: none;
+
+                        transition: color 0.3s ease-in-out;                      
+
+                    }
+
+                }
+
+                .section---jobs--list--container {
+
+                    width: 95%;
+                    display: block;
+                    margin: 10px auto;
+                    border-radius: 6px;
+
+                    table {
+
+                        width: 100%;
+                        background: $banner---bg--list;
+                        border: solid 2px $border---col--list;
+                        border-radius: 6px;
+
+
+
+                        thead {
+                            
+                            border-bottom: solid 1px #8b8b8b;
+                            /* font-size: 17px; */
+
+                            tr {
+
+
+                                th {
+
+                                    /* border-bottom: soid 1px yellow; */
+                                }
+                            }
+
+                            tr:first-child {
+
+                                content: "";
+                                /* background: navajowhite; */
+                                height: 36px;
+                                vertical-align: middle;
+                                /* display: table; */
+                                width: 100%;
+                                border-top: solid 1px black;
+                            }
+
+                        }
+
+                        tbody {
+
+                            tr {
+
+                                height: 55px;
+
+                                td {
+
+                                    text-align: center;
+                                    transition: background 0.3s ease-in-out;
+
+                                    input.stage---completed--checkbox {
+
+                                        content: "";
+                                        height: 28px;
+                                        width: 28px;
+                                    }
+
+                                    &:hover {
+
+                                        background: lighten($banner---bg--list, 3%);
+                                    }
+
+                                    &.stage---completed {
+
+                                        background: $background---stage--completed;                                   
+                                        border: solid $border---stage--completed 1px;
+
+                                        transition: background 0.3s ease-in-out;           
+
+                                        &:hover {
+
+                                            background: lighten($border---stage--completed, 9%);
+                                        }
+                                    }
+
+                                    // a link to add a job - empty list state
+                                    a#add---job--url {
+
+                                        display: block;
+                                        margin-top: 10px;
+                                    }
+                                }
+
+                                td:nth-child(2) {
+
+                                    a {
+
+                                        @extend %button---list--page;
+
+                                        text-decoration: none;
+                                        /* font-size: 12px; */
+                                        font-weight: bold;
+                                        padding: 4px;
+                                        width: 57px;
+                                        display: block;
+                                        margin: 3px auto;
+                                        border-radius: 8px;
+                                        
+                                        transition: .3s ease-in-out;
+                                       
+                                    }
+                                }
+
+                                // No hover effect on the first two columns
+                                td:nth-child(1),
+                                td:nth-child(2) {
+
+                                    &:hover {
+
+                                        background: none;
+                                    }
+
+                                }
+                                
+                            }
+
+                           
+
+                            
+                        }
+                        
+                    }
+                }
+            }            
+        }
+
+        // .body---add--job styles
+        &.body---add--job {
+
+            main {
+
+                h3,
+                h3 + a {
+                    
+                    display: block;
+                    text-align: center;
+                }
+
+                a {
+
+                    color: $url---col--primary-list;
+                    text-align: center;
+
+                    transition: color 0.3s ease-in-out;
+
+                    &:hover {
+
+                        color: $url---col--primary-hover-list;
+                    }
+                }
+                
+            }
+
+            .section---add--situation-container {
+
+                margin-top: 20px;
+
+                h3 {
+
+                    text-align: center;
+                }              
+
+                .form---add--job {
+
+                    /* border: solid 1px yellow; */
+                    margin: 10px auto;
+                    width: 400px;
+                    padding: 8px;
+                    border-radius: 4px;
+
+                    transition: box-shadow 0.3s ease-in-out;
+
+                    &:hover {
+
+                        /* box-shadow: white 0 0 0 0; */
+                        /* box-shadow: #ffdc78 0 0px 5px 1px; */
+                        box-shadow: white 0 0px 5px 1px;
+                    }
+
+
+                    label {
+
+                        display: inline-block;
+                        /* font-size: 18pt; */
+                        color: #6c6c6c;
+                        margin: 25px 0;
+                        width: 160px;
+                        padding: 0 10px;
+                        vertical-align: top;
+                        font-weight: bold;
+                    }
+
+                    input {
+
+                        padding: 3px;
+                        border: solid 1px red;
+                        border: solid 1px darkgray;
+                        border: solid 1px $border---col--list;
+                        border-radius: 6px;
+                        margin: 25px 0;
+                        padding: 3px 7px; 
+                        height: 25px;
+
+                        transition: background 0.3s ease-in-out;
+
+                        &::placeholder {
+
+                            color: rgb(188, 57, 57);
+                            font-family: $font---placeholder;
+                            margin: 25px 0;
+                            padding: 3px 7px; 
+
+                        }
+
+                        &:focus-visible {
+
+                            /* border: solid 1px blue; */
+                            outline: solid 1px blue;
+                            background: #9ddfff;
+                            padding: 3px 7px; 
+                        }
+                    }
+
+                    textarea {
+                        
+                        border: solid 1px red;
+                        padding: 3px 7px;
+                        width: 95%;
+                        border-radius: 6px;
+
+                        &::placeholder {
+
+                            color: rgb(188, 57, 57);
+                            font-family: $font---placeholder;
+                            /* padding: 3px 7px; */ 
+                            padding: 3px 7px;
+
+                            transition: background 0.3s ease-in-out;
+
+                        }
+
+                        &:focus-visible {
+
+                            /* border: solid 1px blue; */
+                            outline: solid 1px blue;
+                            background: #9ddfff;
+                        }
+
+                    }
+
+                    .button---register, 
+                    .button---login {
+
+                        display: block;
+                        height: auto;
+                        padding: 8px;
+                        border: solid 1px #d3c2c2;
+                        border-radius: 6px;
+                        background: $button---bg--list;
+                        color: $button---col--list;
+                        /* margin: 25px 0; */
+                        margin: 0px;
+                        cursor: pointer;
+
+                        transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+
+                        &:hover {
+
+                            /* background: $button---bg--hover-list; */
+                            color: $button---col--hover-list;
+                        }
+
+                    }
+                }
+
+            }  
+
+        }
+
+        // TODO: body---job--details styles
+        &.body---job--details {
+
+            main {
+
+                h3,
+                h3 + a {
+                    
+                    display: block;
+                    text-align: center;
+                }
+
+                .filename {
+
+                    color: darkgray;
+                    font-size: 12px;
+                    font-style: italic;
+                }
+
+                a {
+
+                    color: $url---col--primary-list;
+                    text-align: center;
+
+                    transition: color 0.3s ease-in-out;
+
+                    &:hover {
+
+                        color: $url---col--primary-hover-list;
+                    }
+                }
+            }
+
+            .job---profile---container {
+
+                display: table;
+                margin: 10px auto;
+                background: #f9f9f9;
+                /* width: 75%; */
+                width: 455px;
+                border-radius: 5px;
+                border: solid 1px red;
+
+                th {
+
+                    width: 64%;
+                    font-size: 15pt;
+                }
+
+                tbody {
+                    tr {
+
+                        height: 55px;
+                        transition: background 0.3s ease-in-out;                   
+
+                        &:hover {
+
+                            /* background: darken($banner---bg--list, 3%); */
+                            /* background: #e1dede; */
+                        }
+
+                        
+
+                        td {
+
+                            /* width: 50%; */
+
+                            &#job---personal--notes {
+
+                                p {
+
+                                    background: #dbdbdb;
+                                    border-radius: 5px;
+                                    border: solid 1px #cbcbcb;
+                                    /* margin: 0px; */
+                                    margin: 4px 10px;
+                                    padding: 8px 10px;
+                                    text-align: left;
+                                    font-size: 12px;
+                                    height: auto;
+                                    min-height: 50px;
+                                }
+
+                                h4 {
+                                
+                                    text-align: center;
+                                    padding: 4px;
+                                    margin-top: 3px;
+                                    font-size: 13px;
+                                }
+
+                            }
+
+                            a {
+
+                                color: $url---col--primary-list;
+
+                                transition: color 0.3s ease-in-out;
+
+                                &:hover {
+
+                                    color: $url---col--primary-hover-list;
+                                }
+                            }
+
+                            
+
+                        }
+
+                        td:nth-child(1) {
+
+                            font-weight: bold;
+                            font-size: 14pt;
+                        }
+
+                        #job---personal--notes {
+
+                            font-weight: normal;
+
+                            p {
+
+                                margin: 0px;
+                            }
+
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+
+            .section---job--edit {
+
+                /* text-align: right; */
+                text-align: center;
+                display: block;
+                /* width: 320px; */
+                /* margin: 0 auto; */
+                /* display: block; */
+                /* width: 152px; */
+                margin: 6px auto;
+
+
+                a.button---job--edit {
+
+                    // extend common button styles
+                    @extend %button---list--page;                   
+                
+                    /* padding: 0 6px 0 0; */
+                    display: block;
+                    /* padding: 0 6px 0 0; */
+                    padding: 6px;
+                    border-radius: 5px;
+                    margin: 13px auto;
+                    width: 120px;
+                    /* color: red; */
+                    text-decoration: none;
+                    
+                    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+
+                    &:hover {
+
+                        /* background: $button---bg--hover-list; */
+                        color: $button---col--hover-list;
+                    }
+                    
+                }
+            }
+
+        }
+
+        // TODO: style .body---job--stats
+        &.body---job--stats {
+
+            h3 {
+
+                text-align: center;
+                margin-top: 15px;
+            }
+
+            h3,
+            h3 + a {
+                    
+                display: block;
+                text-align: center;
+            }
+
+            a {
+
+                color: $url---col--primary-list;
+                text-align: center;
+
+                transition: color 0.3s ease-in-out;
+
+                &:hover {
+
+                    color: $url---col--primary-hover-list;
+                }
+            }
+
+            .job---profile--container {
+
+                border: solid 1px blue;
+                display: table;
+                margin: 10px auto;
+                width: 320px;
+                border-radius: 7px;
+
+                thead {
+
+                    background: white;
+
+                    th {
+
+                        background: white;
+                        font-size: 15pt;
+                        height: 25px;
+
+                        #active-jobs-count {
+
+                            color: red;
+                        }
+                    }
+                }
+
+                tbody {
+
+                    tr {
+
+                        height: 55px;
+                        transition: background 0.3s ease-in-out;                   
+
+                        &:hover {
+
+                            /* background: darken($banner---bg--list, 3%); */
+                            /* background: #e1dede; */
+                        }
+
+                       
+
+                        td {
+
+                            /* width: 70%; */
+
+                            span {
+
+                                color: red;
+                            }
+
+                            &#job---personal--notes {
+
+                                p {
+
+                                    /* margin: 0px; */
+                                    margin: 20px 0;
+                                    padding: 4px;
+                                    text-align: left;
+                                }
+
+                                text-align: center;
+                            }
+
+                            .jobs---applied {
+
+                                color: red;
+                                font-weight: bold;
+                            }
+
+
+                            span.progress---percentage {
+
+                                color: red;
+                            }
+                        }
+
+                        td:nth-child(1) {
+
+                            font-weight: bold;
+                            font-size: 15px;
+                        }
+
+                        
+                        td:nth-child(2) {
+
+                            font-weight: bold;
+                            font-size: 18pt;
+                        }
+
+                        #job---personal--notes {
+
+                            font-weight: normal;
+
+                            p {
+
+                                margin: 0px;
+                            }
+
+                            text-align: center;
+                        }
+                    }
+                }
+
+                tfoot {
+
+                }
+
+                tfoot#in--work--msg {
+
+                    visibility: hidden;
+                    display: none;
+
+                    tr {
+
+                        td {
+
+                            p {
+
+                                text-align: center;
+                                /* margin: 30px auto; */
+                                margin: 9px auto;
+                                padding: 20px 0;
+                                display: block;
+                                display: table;
+                                width: 81%;
+                                border: dashed 2px #24b500;
+                                background: #98ff98;
+                                color: #056705;
+                                font-weight: bold;
+                            }
+                        }
+                    }
+                }
+
+
+            }
+
+            .section---delete--jobs {
+
+                text-align: center;
+
+
+                a.button---delete--jobs {
+
+                    
+                    @extend %button---section--element;
+
+                    display: block;
+                    /* padding: 0 6px 0 0; */
+                    padding: 6px;
+                    border-radius: 5px;
+                    margin: 13px auto;
+                    width: 120px;
+                    /* color: red; */
+                    text-decoration: none;
+                    transition: background 0.3s, color 0.3s;
+
+                }
+
+
+            }
+
+        }
+
+        // TODO: style "how to use" page
+        &.body---howto {
+
+            main {
+
+                h3,
+                h3 + a {
+                    
+                    display: block;
+                    text-align: center;
+                }
+
+                a {
+
+                    color: $url---col--primary-list;
+                    text-align: center;
+
+                    transition: color 0.3s ease-in-out;
+
+                    &:hover {
+
+                        color: $url---col--primary-hover-list;
+                    }
+                }
+            }
+
+
+            section.section---howto {
+
+                margin: 17px auto;
+                text-align: center;
+                font-weight: bold;
+                font-size: 15pt;
+                color: #700404;
+            }
+
+
+        }
+
+        // TODO: modal styles
+
+    }
+}
