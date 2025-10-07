@@ -1,4 +1,4 @@
-`Last Updated: 07-10-2025 - 16:08`
+`Last Updated: 07-10-2025 - 17:03`
 
 # Jobs Pathway
   + Jobs Pathway is a project in Ruby on Rails. Sign in and details of jobs applied for so you can keep track of your way to your professional life with this web app.
@@ -198,7 +198,7 @@
 
 ### `1.0.3`
 
-+ What I wanted to do was to see if I could create the first 2 routes and views for the app; the login and register pages which would be be the first 2 pages the user would see. Iy took a couple of prompts to get something like the required solution.  The design of the first screen seems to be in place with some hidden fields not rendering and therefore showin up non the page. But I'm taking that little win for now. 
++ What I wanted to do was to see if I could create the first 2 routes and views for the app; the login and register pages, which would be the first 2 pages the user would see. It took a couple of prompts to get something like the required solution.  The design of the first screen seems to be in place, with some hidden fields not rendering and therefore showing up non the page. But I'm taking that little win for now.  
 
 + The upshot is I now have a partial recreation for the login and register pages.
 
