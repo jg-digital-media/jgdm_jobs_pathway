@@ -1,7 +1,7 @@
-`Last Updated: 23-09-2025 - 11:21`
+`Last Updated: 07-10-2025 - 15:35`
 
 # Jobs Pathway
-  + Keep track of your way to your professional life
+  + Jobs Pathway is a project in Ruby on Rails. Sign in and details of jobs applied for so you can keep track of your way to your professional life with this web app.
     + Prototype URL: https://projects.jonniegrieve.co.uk/jobs_pathway/
     + Repository URL: https://github.com/jg-digital-media/jgdm_jobs_pathway
     + `rails server` - http://localhost:3000
