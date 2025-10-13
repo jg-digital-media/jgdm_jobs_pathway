@@ -1,10 +1,9 @@
-`Last Updated: 07-10-2025 - 17:03`
+`Last Updated: 13-10-2025 - 12:56`
 
 # Jobs Pathway
   + Jobs Pathway is a project in Ruby on Rails. Sign in and details of jobs applied for so you can keep track of your way to your professional life with this web app.
     + Prototype URL: https://projects.jonniegrieve.co.uk/jobs_pathway/
     + Repository URL: https://github.com/jg-digital-media/jgdm_jobs_pathway
-    + `rails server` - http://localhost:3000
 
 ## Sections 
 
@@ -14,10 +13,17 @@
 [User Flows](#user-flows) |
 [Deployment](#deployment-and-installation)
 
-
 ## Requirements
 
-+ Windows/Linux/MacOS |  Ruby `v3.4.6` | Ruby on Rails `v8.0.2.1` | 
++ Windows/Linux/MacOS |  <!-- Ruby `v3.4.6` | Ruby on Rails `v8.0.2.1` --> WordPress.org Installation | 
++ A server to host the app
++ Dynamic data driven by MySQL
+
+### Plugins Used
+
+To be determined
+
+<!-- + []() - -->
 
 [Back to Top](#sections)
 
@@ -51,46 +57,38 @@
 + `COMPLETED: 23-09-2025` - Create a new Rails project
 + `COMPLETED: 23-09-2025` - Remove files and add them back in, in a directory called `prototype`
 
-+ `TODO:` Get a feel for development process with Rails. 
-+ `TODO:` Create a functional Rails Schema for the backend database.
-+ `TODO:` - Implement modal areas for `job-details.php`,`add-job-form.php`, `stats-modal.php`,`how-to.php`.
-+ `TODO:` - modal styles
-+ `TODO:` -  style "how to use" page
-+ `TODO:` - Implement Edit functionality for `job-details.php`.
-  1. `TODO:` - Edit button will switch fields to an editable state where values can be changed.
-  2. `TODO:` - `button---job--edit` - Change text content from "Edit" to Saved" when  button is clicked.
-  3. `TODO:`  At this point, the edit button text content will change from "Edit" to "Save"
-  4. `TODO:`  Save button will save the changes to the database and change text content back to "Edit"
-  5. `TODO:`  "Tooltip" activated to show the user that the changes have been saved!
-+ `TODO:` - Persist the changes to checkboxes and table cell backgrounds
-+ `TODO:` - Reduce lines of code in Sass files where possible
-  + `TODO:` - May need to fill table with classes to get the desired effect.
-+ `TODO:` - Add responsiveness to Job list table - `list.php` and `list-empty.php`
-+ `TODO:` - Actions column - `list.php`  Might be useful as a mechanism to edit job profiles 
-  + `TODO:` - Consider Deleting Actions Column
-+ `TODO:` - `motivation---message`- load a different message as its text content whenever the user loads the page.
-+ `TODO:` - Add a favicon
-+ `TODO:` - Swap out mini logo in `top---banner--container`
-+ `TODO:` - Add copy "How to use" template file/page `how-to.php`
-+ `TODO:` - Add a "How to use" template file/page
-+ `TODO:` - style "how to use" page
-+ `TODO:` - Plan a Ruby Rails database schema
-+ `TODO:` - Integrate Ruby on Rails into the project (Ruby Templates)
-  + `TODO:` - Plan Screen States - login, register, list (no jobs listed at first), add job, job details, stats dashboard, how to use
-+ `TODO:` - `add-job-form.php` sync up placeholder and input text in form elements
-+ `TODO:` - Tooltips throughout the app
-+ `TODO:` - Delete job or jobs from the list page via the stats page/modal - `button button---delete--jobs`
-+ `TODO:` - Welcome user to the app and then invite to register `register.php`.
-+ `TODO:` - Style register and login buttons `register.php` and `login.php`
-+ `TODO:` - input elements "do not have an autocomplete attribute" - add autocomplete="off" to all input elements
-+ `TODO:` - Progress Stats Button an #id `btn---progress--stats`
-+ `TODO:` - How to Use Button an #id `btn---how--to`
-+ `TODO:` - Rails: Check for existing usernames and email addresses when registering and logging in
-+ `TODO:` - Back-end password validation required - Check for the correct password
-+ `TODO:` - Customise validation and success error messages in app.js
-+ `TODO:` - Fade out custom validation messages after going out of element focus
-+ `TODO:` - Remove filenames and .filename class and selector from project at the appropriate time.
-+ `TODO:` - Require stronger passwords for the app - e.g. at least 8 characters (include special characters, uppercase, lowercase, numbers)
++ `TODO: ` - Implement modal areas for `job-details.php`,`add-job-form.php`, `stats-modal.php`,`how-to.php`.
++ `TODO: ` - modal styles
++ `TODO: ` -  style "how to use" page
++ `TODO: ` - Implement Edit functionality for `job-details.php`.
+  1. `TODO: ` - Edit button will switch fields to an editable state where values can be changed.
+  2. `TODO: ` - `button---job--edit` - Change text content from "Edit" to Saved" when  button is clicked.
+  3. `TODO: `  At this point, the edit button text content will change from "Edit" to "Save"
+  4. `TODO: `  Save button will save the changes to the database and change text content back to "Edit"
+  5. `TODO: `  "Tooltip" activated to show the user that the changes have been saved!
++ `TODO: ` - Persist the changes to checkboxes and table cell backgrounds
++ `TODO: ` - Reduce lines of code in Sass files where possible
+  + `TODO: ` - May need to fill table with classes to get the desired effect.
++ `TODO: ` - Add responsiveness to Job list table - `list.php` and `list-empty.php`
++ `TODO: ` - Actions column - `list.php`  Might be useful as a mechanism to edit job profiles 
+  + `TODO: ` - Consider Deleting Actions Column
++ `TODO: ` - `motivation---message`- load a different message as its text content whenever the user loads the page.
++ `TODO: ` - Add a favicon
++ `TODO: ` - Swap out mini logo in `top---banner--container`
++ `TODO: ` - Add copy "How to use" template file/page `how-to.php`
++ `TODO: ` - Add a "How to use" template file/page
++ `TODO: ` - style "how to use" page
++ `TODO: ` - Delete job or jobs from the list page via the stats page/modal - `button button---delete--jobs`
++ `TODO: ` - Welcome user to the app and then invite to register `register.php`.
++ `TODO: ` - Style register and login buttons `register.php` and `login.php`
++ `TODO: ` - input elements "do not have an autocomplete attribute" - add autocomplete="off" to all input elements
++ `TODO: ` - Progress Stats Button an #id `btn---progress--stats`
++ `TODO: ` - How to Use Button an #id `btn---how--to`
++ `TODO: ` - Back-end password validation required - Check for the correct password
++ `TODO: ` - Customise validation and success error messages in app.js
++ `TODO: ` - Fade out custom validation messages after going out of element focus
++ `TODO: ` - Remove filenames and .filename class and selector from project at the appropriate time.
++ `TODO: ` - Require stronger passwords for the app - e.g. at least 8 characters (include special characters, uppercase, lowercase, numbers)
 
 [Back to Top](#sections)
 
@@ -101,6 +99,9 @@
 
 ### Rails Development
 [1.0.0](#100) | [1.0.1](#101) | [1.0.2](#102)
+
+### WordPress Development
+[2.0.0](#200)
 
 ### `0.0.1`
   
@@ -203,6 +204,12 @@
 + The upshot is I now have a partial recreation for the login and register pages.
 
 [Back to Top](#development)
+
+### `2.0.0`
+
++  As of `13-10-2025`, I decided to take steps to switch the development of this app from Rails to WordPress. The learning curve was simply too steep owing to my lack of experience with Rails and the nature of the app. I am far more comfortable and experienced with WordPress. There's also the fact that a lot of the things I need for the app (authentication, authorisation, database management) are already built into WordPress. And I'd rather get (something) working with this app than not do it at all. I have another project in mind for Rails, which I might touch on in the future. So I'm not giving up on Rails, but for now, I'm implementing changes to this repository.
+
++ 
 
 ## User Flows
 
@@ -312,30 +319,6 @@ Login - View List State (empty) ----> Add Job Details ----> View Job Details Sta
 
 ## Deployment and Installation
 
-+ Installation and Server Setup
-
-  + `gem install rails`
-  + `rails new job_tracker_app -d postgresql`
-  + `cd job_tracker_app`
-  + `bin/rails server`
-  + `ralils server` - standard server launch command http localhost:3000
-
-+
-
-```txt
-    Ruby Installer - https://rubyinstaller.org/downloads/
-    ruby -v
-    rails-v
-    gem update --system 3.7.2
-    bundle install - to install dependencies in another location using Gemfile (package manager)
-
-    to restore database
-    rails db:create
-    rails db:migrate
-```
-
-+ [Heroku](https://www.heroku.com/)
-+ [Rails Tutorial](https://www.railstutorial.org/book) as a guide.
-
+This project will be deployed to a server. Location TBC.
 
 [Back to Top](#sections)
