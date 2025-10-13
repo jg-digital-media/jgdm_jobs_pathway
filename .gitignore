@@ -1,70 +1,57 @@
+# Created by https://gitignore.org
+# WordPress.gitignore
 
-*.rbc
-capybara-*.html
-.rspec
-/db/*.sqlite3
-/db/*.sqlite3-journal
-/db/*.sqlite3-[0-9]*
-/public/system
-/coverage/
-/spec/tmp
-*.orig
-rerun.txt
-pickle-email-*.html
+# Wordpress - ignore core, configuration, examples, uploads and logs.
+# https://github.com/github/gitignore/blob/main/WordPress.gitignore
 
-# Ignore all logfiles and tempfiles.
-/log/*
-/tmp/*
-!/log/.keep
-!/tmp/.keep
+# Core
+#
+# Note: if you want to stage/commit WP core files
+# you can delete this whole section/until Configuration.
+/wp-admin/
+/wp-content/index.php
+/wp-content/languages
+/wp-content/plugins/index.php
+/wp-content/themes/index.php
+/wp-includes/
+/index.php
+/license.txt
+/readme.html
+/wp-*.php
+/xmlrpc.php
 
-# TODO Comment out this rule if you are OK with secrets being uploaded to the repo
-config/initializers/secret_token.rb
-config/master.key
+# Configuration
+wp-config.php
 
-# Only include if you have production secrets in this file, which is no longer a Rails default
-# config/secrets.yml
+# Example themes
+/wp-content/themes/twenty*/
 
-# dotenv, dotenv-rails
-# TODO Comment out these rules if environment variables can be committed
-.env
-.env*.local
+# Example plugin
+/wp-content/plugins/hello.php
 
-## Environment normalization:
-/.bundle
-/vendor/bundle
+# Uploads
+/wp-content/uploads/
 
-# these should all be checked in to normalize the environment:
-# Gemfile.lock, .ruby-version, .ruby-gemset
+# Log files
+*.log
 
-# unless supporting rvm < 1.11.0 or doing something fancy, ignore this:
-.rvmrc
+# htaccess
+/.htaccess
 
-# if using bower-rails ignore default bower_components path bower.json files
-/vendor/assets/bower_components
-*.bowerrc
-bower.json
+# All plugins
+#
+# Note: If you wish to whitelist plugins,
+# uncomment the next line
+/wp-content/plugins/
 
-# Ignore pow environment settings
-.powenv
+# All themes
+#
+# Note: If you wish to whitelist themes,
+# uncomment the next line
+#/wp-content/themes
 
-# Ignore Byebug command history file.
-.byebug_history
+# Except my theme and child theme.
+!wp-content/themes/jobs_pathway_theme/
 
-# Ignore node_modules
-node_modules/
-
-# Ignore precompiled javascript packs
-/public/packs
-/public/packs-test
-/public/assets
-
-# Ignore yarn files
-/yarn-error.log
-yarn-debug.log*
-.yarn-integrity
-
-# Ignore uploaded files in development
-/storage/*
-!/storage/.keep
-/public/uploads
+# Except my own plugin:
+#!wp-content/plugins/your-plugin-name
