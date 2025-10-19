@@ -1,4 +1,4 @@
-`Last Updated: 13-10-2025 - 12:56`
+`Last Updated: 19-10-2025 - 15:12`
 
 # Jobs Pathway
   + Jobs Pathway is a project in Ruby on Rails. Sign in and details of jobs applied for so you can keep track of your way to your professional life with this web app.
@@ -29,7 +29,7 @@ To be determined
 
 ## TODOs: 
 
-### (Tasks: `64` - Completed - `24`)
+### (Tasks: `85` - Completed - `24`)
 
 + `COMPLETED: 16-09-2025` - Wireframe and static interface planning for 'Job's Pathway App'
 + `COMPLETED: 16-09-2025` - Add a footer and header template part of the project
@@ -56,6 +56,52 @@ To be determined
 + `COMPLETED: 23-09-2025` - Download Rails and check GitBash/Command Line for Ruby and Rails Gems
 + `COMPLETED: 23-09-2025` - Create a new Rails project
 + `COMPLETED: 23-09-2025` - Remove files and add them back in, in a directory called `prototype`
+
++ `TODO: ` - IMPLEMENT TRANSFER OF PROTOTYPE TO THE WORDPRESS FRAMEWORK
+  + `TODO: ` - STAGE 1 — Set Up Your Development Environment
+	  + `TODO: ` - install WordPress
+	  + `TODO: ` - verify installation
+
+  + `TODO: ` - STAGE 2 - Build Custom Theme files
+	  + `TODO: ` - index.php
+	  + `TODO: ` - sreenshot.php
+	  + `TODO: ` - style.css
+	  + `TODO: ` - functions.php
+
+  + `TODO: ` - STAGE 3 - Register Your "Job Application" Custom Post Type
+	  + `TODO: ` - Add section to dashboard called "Job Applications"
+
+  + `TODO: ` - STAGE 4 — Add Custom Fields with ACF (Advanced Custom Fields)
+	  + `TODO: ` - Install ACF Plugin
+	
+	  + `TODO: ` - Use "Job Details" Field Group (Add field labels, field names and type.
+	
+	  + `TODO: ` - Then set "Location → Post Type is equal to Job Application."
+
+  + `TODO: ` - STAGE 5 — Create a Front-End Dashboard Template
+
+	  + `TODO: ` - page-dashboard.php
+	  + `TODO: ` - In WordPress → Pages → Add New → call it Dashboard, and assign the “Job Dashboard” template.
+
+  + `TODO: ` - STAGE 6 - Add a Front-end "Add Job" Form
+	  + `TODO: ` - use the ACF Frontend Form Feature
+	  + `TODO: ` - Auto assign posts to logged in user
+
+  + `TODO: ` - STAGE 7 — Motivational Messages
+
+	  + `TODO: ` - adding a helper function to `functions.php`
+	  + `TODO: ` - call it in PHP template
+
+  + `TODO: ` - STAGE 8 - Progress Tracking page
+
+    + `TODO: ` - Delete Jobs - button - users should be offered the chance to confirm their choice to delete all jobs.
+
+    + `TODO: ` - add-job-form.php - Description text area has no hover transition of background colour
+
+  + `TODO: ` - STAGE 9 - Styling via css and js from protyotype
+
+	  + `TODO: ` - Use PHP to pull data from your job_application posts.
+
 
 + `TODO: ` - Implement modal areas for `job-details.php`,`add-job-form.php`, `stats-modal.php`,`how-to.php`.
 + `TODO: ` - modal styles
