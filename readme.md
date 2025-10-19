@@ -1,7 +1,7 @@
-`Last Updated: 19-10-2025 - 15:12`
+`Last Updated: 19-10-2025 - 15:30`
 
 # Jobs Pathway
-  + Jobs Pathway is a project in Ruby on Rails. Sign in and details of jobs applied for so you can keep track of your way to your professional life with this web app.
+  + Jobs Pathway is a project in PHP and WordPress. Sign in and add details of jobs applied for so you can keep track of your way to your professional life with this app.
     + Prototype URL: https://projects.jonniegrieve.co.uk/jobs_pathway/
     + Repository URL: https://github.com/jg-digital-media/jgdm_jobs_pathway
 
