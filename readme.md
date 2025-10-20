@@ -1,4 +1,4 @@
-`Last Updated: 20-10-2025 - 13:15`
+`Last Updated: 20-10-2025 - 13:25`
 
 # Jobs Pathway
   + Jobs Pathway is a project in PHP and WordPress. Sign in and add details of jobs applied for so you can keep track of your way to your professional life with this app.
@@ -30,7 +30,7 @@
 
 ## TODOs: 
 
-### (Tasks: `85` - Completed - `24`)
+### (Tasks: `80` - Completed - `33`)
 
 + `COMPLETED: 16-09-2025` - Wireframe and static interface planning for 'Job's Pathway App'
 + `COMPLETED: 16-09-2025` - Add a footer and header template part of the project
@@ -58,16 +58,16 @@
 + `COMPLETED: 23-09-2025` - Create a new Rails project
 + `COMPLETED: 23-09-2025` - Remove files and add them back in, in a directory called `prototype`
 
-+ `TODO: ` - IMPLEMENT TRANSFER OF PROTOTYPE TO THE WORDPRESS FRAMEWORK
-  + `TODO: ` - STAGE 1 — Set Up Your Development Environment
-	  + `TODO: ` - install WordPress
-	  + `TODO: ` - verify installation
++ `COMPLETED: 20-10-2025` - IMPLEMENT TRANSFER OF PROTOTYPE TO THE WORDPRESS FRAMEWORK
+  + `COMPLETED: 20-10-2025` - STAGE 1 — Set Up Your Development Environment
+	  + `COMPLETED: 20-10-2025` - install WordPress
+	  + `COMPLETED: 20-10-2025` - verify installation
 
-  + `TODO: ` - STAGE 2 - Build Custom Theme files
-	  + `TODO: ` - index.php
-	  + `TODO: ` - sreenshot.php
-	  + `TODO: ` - style.css
-	  + `TODO: ` - functions.php
+  + `COMPLETED: 20-10-2025` - STAGE 2 - Build Custom Theme files
+	  + `COMPLETED: 20-10-2025` - index.php
+	  + `COMPLETED: 20-10-2025` - sreenshot.php
+	  + `COMPLETED: 20-10-2025` - style.css
+	  + `COMPLETED: 20-10-2025` - functions.php
 
   + `TODO: ` - STAGE 3 - Register Your "Job Application" Custom Post Type
 	  + `TODO: ` - Add section to dashboard called "Job Applications"
@@ -256,7 +256,7 @@
 
 +  As of `13-10-2025`, I decided to take steps to switch the development of this app from Rails to WordPress. The learning curve was simply too steep owing to my lack of experience with Rails and the nature of the app. I am far more comfortable and experienced with WordPress. There's also the fact that a lot of the things I need for the app (authentication, authorisation, database management) are already built into WordPress. And I'd rather get (something) working with this app than not do it at all. I have another project in mind for Rails, which I might touch on in the future. So I'm not giving up on Rails, but for now, I'm implementing changes to this repository.
 
-+ 
++ I spent some time today sorting out the repository, local location and server and getting WordPress installed.  Development on the app can now begin again in earnest. `20-10-2025`
 
 ## User Flows
 
