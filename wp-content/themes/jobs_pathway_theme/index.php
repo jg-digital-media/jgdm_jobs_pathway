@@ -51,9 +51,8 @@
 
     <?php 
 
-
         echo "<h1>Jobs Pathway App </h1>";
-        echo "<p>index.php</p>";
+        echo "<p>(jobs_pathway_theme - index.php)</p>";
 
     ?>
 
