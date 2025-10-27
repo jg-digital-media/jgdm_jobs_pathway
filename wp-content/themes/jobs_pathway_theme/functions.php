@@ -79,3 +79,16 @@ function jt_random_motivation() {
 
   return $messages[array_rand($messages)];
 }
+
+
+// Enqueue styles and scripts in `functions.php`
+function jt_enqueue_styles() {
+
+  // Styles
+  wp_enqueue_style( 'style', get_stylesheet_uri() );
+
+  // Scripts
+  wp_enqueue_script( 'main', get_stylesheet_directory_uri() . '/app.js' );
+}
+
+add_action( 'wp_enqueue_scripts', 'jt_enqueue_styles' );
