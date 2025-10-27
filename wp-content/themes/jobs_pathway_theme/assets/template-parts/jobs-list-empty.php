@@ -19,7 +19,8 @@
 
     <span id="motivation---message--container"> 
 
-        <p id="motivation---message">Keep up the good work! You'll get there!</p>
+        <p id="motivation---message"> <?php echo jt_random_motivation(); ?> </p>
+        
 
     </span>
 
