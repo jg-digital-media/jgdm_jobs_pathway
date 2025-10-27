@@ -62,3 +62,20 @@ add_filter('acf/pre_save_post', function($post_id) {
 
   return wp_insert_post($post);
 });
+
+
+// helper function to generate random motivation messages
+function jt_random_motivation() {
+
+  $messages = [
+    
+    "Add code to template where you need it.",
+    "Message 1.",
+    "Message 2.",
+    "Message 3.",
+    "Message 4.",
+    "Message 5.",
+  ];
+
+  return $messages[array_rand($messages)];
+}
