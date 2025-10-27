@@ -2,7 +2,7 @@
 
 <div class="username---and--logout">
     <span>Welcome, <span class="display---username">username</span></span>
-    <a href="index.php" class="logout-link">(Logout)</a>
+    <a href="../" class="logout-link">(Logout)</a>
 </div>
 
 <nav class="top---banner--container">
@@ -11,9 +11,9 @@
 
     <ul class="app---navigation">
         <li>
-            <a href="stats-modal.php">Progress Stats</a></li> 
+            <a href="job-stats/">Progress Stats</a></li> 
         <li>
-            <a href="how-to.php">How to Use!</a>
+            <a href="how-to/">How to Use!</a>
         </li>
     </ul>
 
@@ -27,7 +27,7 @@
 
 <section class="section---add--situation-container">
 
-    <a href="add-job-form.php" id="btn---add---job">Add a Situation</a>
+    <a href="add-job/" id="btn---add---job">Add a Situation</a>
 
 </section>
 
@@ -50,7 +50,7 @@
         </thead>
         <tbody>
             <tr>
-                <td colspan="9">No Jobs Listed. Add a Job now to get started. <a href="add-job-form.php" id="add---job--url">Add a Situation</a></td>
+                <td colspan="9">No Jobs Listed. Add a Job now to get started. <a href="add-job/" id="add---job--url">Add a Situation</a></td>
             </tr>
         </tbody>
     </table>

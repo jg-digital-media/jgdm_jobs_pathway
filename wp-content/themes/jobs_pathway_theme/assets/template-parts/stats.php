@@ -3,6 +3,12 @@
  
 <h3>Your Progress</h3>
 
+<main>   
+
+    <a href="dashboard/">back</a>
+    
+</main>
+
 <table class="job---profile--container">
     <thead> 
         <tr>
@@ -46,6 +52,6 @@
 
 <section class="section---delete--jobs">
 
-    <a href="list-empty.php" class="button button---delete--jobs">Delete Jobs</a>
+    <a href="dashboard/" class="button button---delete--jobs">Delete Jobs</a>
         
 </section>

@@ -75,7 +75,7 @@
 
         <section class="container---element--login">
 
-            <?php //require "assets/template-parts/register.php"; ?>
+            <?php require "assets/template-parts/login.php"; ?>
 
         </section>
     </body>

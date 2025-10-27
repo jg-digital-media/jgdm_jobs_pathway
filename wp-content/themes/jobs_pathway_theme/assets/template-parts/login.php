@@ -1,9 +1,9 @@
  <!-- Form: login form -->
- <form name="main_form_login" action="list-empty.php" method="post" id="" class="form form---login">
+ <form name="main_form_login" action="dashboard/" method="post" id="" class="form form---login">
    
     <h3>Login</h3>
 
-    <p id="registration">Not Registered?  <a href="index.php">Click here to Register</a></p>
+    <p id="registration">Not Registered?  <a href="http://localhost/jgdm_jobs_pathway/">Click here to Register</a></p>
 
     <label for="username">Username: </label>
     <input type="text" name="username" class="login---input" id="username" placeholder="Enter your name...">
