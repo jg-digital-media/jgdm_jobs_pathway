@@ -1,4 +1,4 @@
-`Last Updated: 27-10-2025 - 12:06`
+`Last Updated: 27-10-2025 - 16:57`
 
 # Jobs Pathway
   + Jobs Pathway is a project in PHP and WordPress. Sign in and add details of jobs applied for so you can keep track of your way to your professional life with this app.
@@ -22,7 +22,12 @@
 
 ### Pages
 
-+ Dashboard - assigned to `page-dashboard.php` "Job Dashboard" template
+The following pages are assigned to templates in the `wp-content/themes/jobs_pathway_theme` directory.
+
++ Dashboard - assigned to `page-dashboard.php` "Job Dashboard" template `/dashboard/`
++ Add Job - assigned to `page-addjob.php` "Job Dashboard" template `add-job/`
++ How To - assigned to `page-howto.php` "How To" template `how-to/`
++ Job Stats - assigned to `page-jobstats.php` "Job Stats" template `job-stats/`
 
 ### Plugins Used
 
@@ -35,7 +40,7 @@
 
 ## TODOs: 
 
-### (Tasks: `89` - Completed - `41`)
+### (Tasks: `100` - Completed - `43`)
 
 + `COMPLETED: 16-09-2025` - Wireframe and static interface planning for 'Job's Pathway App'
 + `COMPLETED: 16-09-2025` - Add a footer and header template part of the project
@@ -84,11 +89,10 @@
 	
 	  + `COMPLETED: 27-10-2025` - Then set "Location → Post Type is equal to Job Application."
 
-  + `TODO: ` - STAGE 5 — Create a Front-End Dashboard Template
-      
+  + `TODO: ` - STAGE 5 — Create a Front-End Dashboard Template            
+
 	  + `TODO: ` - page-dashboard.php
-      + `TODO: ` - Add Markup from Prototype
-	  + `TODO: ` - In WordPress → Pages → Add New → call it Dashboard, and assign the "Job Dashboard" template.
+	  + `COMPLETED: 27-10-2025` - In WordPress → Pages → Add New → call it Dashboard, and assign the "Job Dashboard" template.
 
   + `TODO: ` - STAGE 6 - Add a Front-end "Add Job" Form
 	  + `TODO: ` - use the ACF Frontend Form Feature
@@ -98,24 +102,26 @@
 
 	  + `COMPLETED: 27-10-2025 ` - adding a helper function to `functions.php`
       + `TODO: ` - Fill in messages for motivation helper function in `functions.php`
-	  + `TODO: ` - call it in PHP template
+	  + `TODO: ` - call it in a specific place in a PHP/WordPress template
 
   + `TODO: ` - STAGE 8 - Progress Tracking page
 
     + `TODO: ` - Delete Jobs - button - users should be offered the chance to confirm their choice to delete all jobs.
 
-    + `TODO: ` - add-job-form.php - Description text area has no hover transition of background colour
+    + `TODO: ` - add-job-form.php - Description text area has no hover transition of background colour (filename as per prototype)
 
   + `TODO: ` - STAGE 9 - Styling via css and js from protyotype
 
 	  + `TODO: ` - Use PHP to pull data from your job_application posts.
 
-+ `TODO: ` - Enqueue styles and scripts in `functions.php`
++ `TODO: ` - Link logout page to WordPerss logout system (Logout)"
++ `COMPLETED: 27-10-2025` - Enqueue styles and scripts in `functions.php`
 + `TODO: ` - Sort `header.php` meta tags`.
 + `TODO: ` - Implement modal areas for `job-details.php`,`add-job-form.php`, `stats-modal.php`,`how-to.php`.
 + `TODO: ` - modal styles
-+ `TODO: ` -  style "how to use" page
-+ `TODO: ` - Implement Edit functionality for `job-details.php`.
++ `TODO: ` - Create and style "how to use" page
++ `TODO: ` - "Your Progress" could be "Progress Stats for [username]" slug: `/jobs-stats/`
++ `TODO: ` - Implement Edit functionality for `job-details.php` (filename as per prototype).
   1. `TODO: ` - Edit button will switch fields to an editable state where values can be changed.
   2. `TODO: ` - `button---job--edit` - Change text content from "Edit" to Saved" when  button is clicked.
   3. `TODO: `  At this point, the edit button text content will change from "Edit" to "Save"
@@ -124,7 +130,7 @@
 + `TODO: ` - Persist the changes to checkboxes and table cell backgrounds
 + `TODO: ` - Reduce lines of code in Sass files where possible
   + `TODO: ` - May need to fill table with classes to get the desired effect.
-+ `TODO: ` - Add responsiveness to Job list table - `list.php` and `list-empty.php`
++ `TODO: ` - Add responsiveness to Job list table - `list.php` and `list-empty.php` (filenames as per prototype)
 + `TODO: ` - Actions column - `list.php`  Might be useful as a mechanism to edit job profiles 
   + `TODO: ` - Consider Deleting Actions Column
 + `TODO: ` - `motivation---message`- load a different message as its text content whenever the user loads the page.
@@ -268,15 +274,15 @@
 
 ### 2.0.1
 
-+ This week i'm working on finising the app. Again the scale of what I'm trying to build was slowly beginning to dawn on me.  But I am on much more solig ground with WordPress.  Here's a summary of where I'm up to now.
++ This week, I'm working on finishing the app. Again, the scale of what I'm trying to build was slowly beginning to dawn on me. Even the job of copying code from the prototype was not a simple task, as you have to consider the hierarchy and how to make sure WordPress takes over correctly. That said, I am on much more solid ground with WordPress. Here's a summary of where I'm up as of today. (`27-10-2025`).
 
-+ I have enqueued styles and scripts ito the app so the app looks like it does in the prototype even if it is not yet working like it does in the prototype. 
+  + I have enqueued styles and scripts into the app so the app looks like it does in the prototype, even if it is not yet working like it does in the prototype. What I have done on that score is to mimic the applications' user flows which are in place until the app is further developed.
 
-+ I have added Custom Post Type to the app - the thing that drives the app.
+  + I have added a Custom Post Type to the app. This is the thing that drives the app. It will take input from a user where each person will have it's own base of data.
+  
+  + Have verified that the random motivation messages with `jt_random_motivation()` method are indeed working. I have already built a full implementation of this feature into the app.
 
-+ I havent yet customised the login and logout features.
-
-+ Have verified that the random motivation messages with `jt_random_motivation()` method are working. `27-10-2025`
+  + I haven't yet customised the login and logout features. I'll look into doing that, hopefully within the next day. I'm pleased to say I've made a tremendous amount of progress already. A lot more work is ahead of me, and I'm looking forward to the challenge.
 
 ## User Flows
 
