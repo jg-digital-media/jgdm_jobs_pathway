@@ -1,8 +1,9 @@
 <?php
 
 /* Template Name: Job Dashboard */
+?>
 
-get_header();
+<?php get_header();
 
 if ( is_user_logged_in() ) {
 
@@ -16,6 +17,7 @@ if ( is_user_logged_in() ) {
 
     <h2><?php echo $current_user->display_name; ?>'s Job Applications</h2>
 
+    <?php echo "<p>page-dashboard.php</p>"; ?>
     <table>
         <tr>
             <th>Job Title</th>
@@ -40,7 +42,8 @@ if ( is_user_logged_in() ) {
 
 } else {
 
-    echo "<p>Please log in to see your dashboard.</p>";
+    echo "<p>Please log in to see your dashboard. (page-dashboard.php)</p>";
 }
+?>
 
-get_footer();
+<?php get_footer(); ?>
