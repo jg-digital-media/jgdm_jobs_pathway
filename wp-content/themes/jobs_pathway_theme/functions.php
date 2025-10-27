@@ -27,6 +27,7 @@ add_action('init', 'jt_register_job_application_cpt'); */
 
 // add_action('init', $labels);
 
+
 // Add custom post type
 function jt_register_job_application_cpt() {
 
@@ -36,7 +37,7 @@ function jt_register_job_application_cpt() {
             'name' => 'Job Applications',
             'singular_name' => 'Job Application'
         ],
-        
+
         'public' => true,
         'has_archive' => true,
         'menu_icon' => 'dashicons-portfolio',
@@ -46,3 +47,18 @@ function jt_register_job_application_cpt() {
 }
 
 add_action('init', 'jt_register_job_application_cpt');
+
+
+// Auto assign new job application posts to the logged in user
+add_filter('acf/pre_save_post', function($post_id) {
+
+  if ($post_id != 'new_post') return $post_id;
+
+  $post = [
+    'post_status' => 'publish',
+    'post_type' => 'job_application',
+    'post_author' => get_current_user_id(),
+  ];
+
+  return wp_insert_post($post);
+});
