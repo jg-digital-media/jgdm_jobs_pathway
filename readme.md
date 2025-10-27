@@ -1,4 +1,4 @@
-`Last Updated: 20-10-2025 - 13:25`
+`Last Updated: 27-10-2025 - 12:06`
 
 # Jobs Pathway
   + Jobs Pathway is a project in PHP and WordPress. Sign in and add details of jobs applied for so you can keep track of your way to your professional life with this app.
@@ -20,9 +20,14 @@
 + A server to host the app
 + Dynamic data driven by MySQL
 
+### Pages
+
++ Dashboard - assigned to `page-dashboard.php` "Job Dashboard" template
+
 ### Plugins Used
 
 + "Maintenance" - `Version 4.18`  `WebFactory Ltd`
++ "ACF" - `Version 6.6.1` `WP Engine`
 
 <!-- + []() - -->
 
@@ -30,7 +35,7 @@
 
 ## TODOs: 
 
-### (Tasks: `80` - Completed - `33`)
+### (Tasks: `89` - Completed - `41`)
 
 + `COMPLETED: 16-09-2025` - Wireframe and static interface planning for 'Job's Pathway App'
 + `COMPLETED: 16-09-2025` - Add a footer and header template part of the project
@@ -69,28 +74,30 @@
 	  + `COMPLETED: 20-10-2025` - style.css
 	  + `COMPLETED: 20-10-2025` - functions.php
 
-  + `TODO: ` - STAGE 3 - Register Your "Job Application" Custom Post Type
-	  + `TODO: ` - Add section to dashboard called "Job Applications"
+  + `COMPLETED: 27-10-2025 ` - STAGE 3 - Register Your "Job Application" Custom Post Type
+	  + `COMPLETED: 27-10-2025` - Add section to dashboard called "Job Applications"
 
-  + `TODO: ` - STAGE 4 — Add Custom Fields with ACF (Advanced Custom Fields)
-	  + `TODO: ` - Install ACF Plugin
+  + `COMPLETED: 27-10-2025 ` - STAGE 4 — Add Custom Fields with ACF (Advanced Custom Fields)
+	  + `COMPLETED: 27-10-2025` - Install ACF Plugin
 	
-	  + `TODO: ` - Use "Job Details" Field Group (Add field labels, field names and type.
+	  + `COMPLETED: 27-10-2025` - Use "Job Details" Field Group (Add field labels, field names and type.
 	
-	  + `TODO: ` - Then set "Location → Post Type is equal to Job Application."
+	  + `COMPLETED: 27-10-2025` - Then set "Location → Post Type is equal to Job Application."
 
   + `TODO: ` - STAGE 5 — Create a Front-End Dashboard Template
-
+      
 	  + `TODO: ` - page-dashboard.php
-	  + `TODO: ` - In WordPress → Pages → Add New → call it Dashboard, and assign the “Job Dashboard” template.
+      + `TODO: ` - Add Markup from Prototype
+	  + `TODO: ` - In WordPress → Pages → Add New → call it Dashboard, and assign the "Job Dashboard" template.
 
   + `TODO: ` - STAGE 6 - Add a Front-end "Add Job" Form
 	  + `TODO: ` - use the ACF Frontend Form Feature
-	  + `TODO: ` - Auto assign posts to logged in user
+	  + `COMPLETED: 27-10-2025` - Auto assign posts to logged in user
 
   + `TODO: ` - STAGE 7 — Motivational Messages
 
-	  + `TODO: ` - adding a helper function to `functions.php`
+	  + `COMPLETED: 27-10-2025 ` - adding a helper function to `functions.php`
+      + `TODO: ` - Fill in messages for motivation helper function in `functions.php`
 	  + `TODO: ` - call it in PHP template
 
   + `TODO: ` - STAGE 8 - Progress Tracking page
@@ -103,7 +110,8 @@
 
 	  + `TODO: ` - Use PHP to pull data from your job_application posts.
 
-
++ `TODO: ` - Enqueue styles and scripts in `functions.php`
++ `TODO: ` - Sort `header.php` meta tags`.
 + `TODO: ` - Implement modal areas for `job-details.php`,`add-job-form.php`, `stats-modal.php`,`how-to.php`.
 + `TODO: ` - modal styles
 + `TODO: ` -  style "how to use" page
@@ -257,6 +265,18 @@
 +  As of `13-10-2025`, I decided to take steps to switch the development of this app from Rails to WordPress. The learning curve was simply too steep owing to my lack of experience with Rails and the nature of the app. I am far more comfortable and experienced with WordPress. There's also the fact that a lot of the things I need for the app (authentication, authorisation, database management) are already built into WordPress. And I'd rather get (something) working with this app than not do it at all. I have another project in mind for Rails, which I might touch on in the future. So I'm not giving up on Rails, but for now, I'm implementing changes to this repository.
 
 + I spent some time today sorting out the repository, local location and server and getting WordPress installed.  Development on the app can now begin again in earnest. `20-10-2025`
+
+### 2.0.1
+
++ This week i'm working on finising the app. Again the scale of what I'm trying to build was slowly beginning to dawn on me.  But I am on much more solig ground with WordPress.  Here's a summary of where I'm up to now.
+
++ I have enqueued styles and scripts ito the app so the app looks like it does in the prototype even if it is not yet working like it does in the prototype. 
+
++ I have added Custom Post Type to the app - the thing that drives the app.
+
++ I havent yet customised the login and logout features.
+
++ Have verified that the random motivation messages with `jt_random_motivation()` method are working. `27-10-2025`
 
 ## User Flows
 
