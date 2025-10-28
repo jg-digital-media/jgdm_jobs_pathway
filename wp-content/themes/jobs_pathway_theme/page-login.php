@@ -37,8 +37,6 @@
 
     <!-- <p class="motivation"><?php echo jt_random_motivation(); ?></p> -->
 
-    <p>page-login.php</p>
-
     <body class="body---login">
 
         <header class="header---login--page">
@@ -46,6 +44,14 @@
             <h1> Jobs Pathway App <?php //echo $website_title ?> </h1>
 
             <h2>Keep track of your way to your professional life</h2>
+
+            <!-- Debug Info -->
+            <div style="background: #f0f0f0; padding: 10px; margin: 10px 0; border-radius: 5px; font-size: 12px;">
+                <strong>Debug Info:</strong> 
+                Login Form Active | 
+                WordPress Login URL: <?php echo wp_login_url(); ?> |
+                Form Method: POST
+            </div>
 
         </header>
 
