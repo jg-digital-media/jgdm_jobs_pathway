@@ -2,7 +2,7 @@
 /* head.scss */
 /*
 
-Last Updated: 27-10-2025 - 11:46
+Last Updated: 28-10-2025 - 14:05
 */
 * {
   padding: 0;
@@ -27,6 +27,8 @@ html body.body---job--stats .section---delete--jobs a.button---delete--jobs:hove
   color: #ffffff;
 }
 
+html body.body---register .container---element--register form .button,
+html body.body---register .container---element--login form .button, html body.body---login .container---element--register form .button,
 html body.body---login .container---element--login form .button {
   /* background: none; */
   padding: 5px;
@@ -42,6 +44,8 @@ html body.body---login .container---element--login form .button {
   cursor: pointer;
   transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
 }
+html body.body---register .container---element--register form .button:hover,
+html body.body---register .container---element--login form .button:hover, html body.body---login .container---element--register form .button:hover,
 html body.body---login .container---element--login form .button:hover {
   /* background: $button---bg--hover; */
   /* background: #1e1e1e; */
@@ -49,6 +53,8 @@ html body.body---login .container---element--login form .button:hover {
   color: lightblue;
 }
 
+html body.body---register .container---element--register form .login---input,
+html body.body---register .container---element--login form .login---input, html body.body---login .container---element--register form .login---input,
 html body.body---login .container---element--login form .login---input {
   /* border: solid red 1.4px; */
   /* border: solid #45ff45 2px; */
@@ -58,7 +64,15 @@ html body.body---login .container---element--login form .login---input {
   padding: 5px;
   font-family: arial;
 }
-html body.body---login .container---element--login form .login---input:focus, html body.body---login .container---element--login form .login---input:focus-visible, html body.body---login .container---element--login form .login---input:active, html body.body---login .container---element--login form .login---input:outline {
+html body.body---register .container---element--register form .login---input:focus,
+html body.body---register .container---element--login form .login---input:focus, html body.body---login .container---element--register form .login---input:focus,
+html body.body---login .container---element--login form .login---input:focus, html body.body---register .container---element--register form .login---input:focus-visible,
+html body.body---register .container---element--login form .login---input:focus-visible, html body.body---login .container---element--register form .login---input:focus-visible,
+html body.body---login .container---element--login form .login---input:focus-visible, html body.body---register .container---element--register form .login---input:active,
+html body.body---register .container---element--login form .login---input:active, html body.body---login .container---element--register form .login---input:active,
+html body.body---login .container---element--login form .login---input:active, html body.body---register .container---element--register form .login---input:outline,
+html body.body---register .container---element--login form .login---input:outline, html body.body---login .container---element--register form .login---input:outline,
+html body.body---login .container---element--login form .login---input:outline {
   border: solid blue 1px;
 }
 
@@ -72,26 +86,28 @@ html body main .filename {
   font-size: 12px;
   font-style: italic;
 }
-html body.body---login {
+html body.body---register, html body.body---login {
   background: #373737;
   /* background: #393838; */
   color: #ffffff;
   font-family: arial;
 }
-html body.body---login header.header---login--page {
+html body.body---register header.header---register--page, html body.body---register header.header---login--page, html body.body---login header.header---register--page, html body.body---login header.header---login--page {
   background: none;
   margin: 65pt 0 7px 0px;
 }
-html body.body---login header.header---login--page h1, html body.body---login header.header---login--page h2 {
+html body.body---register header.header---register--page h1, html body.body---register header.header---register--page h2, html body.body---register header.header---login--page h1, html body.body---register header.header---login--page h2, html body.body---login header.header---register--page h1, html body.body---login header.header---register--page h2, html body.body---login header.header---login--page h1, html body.body---login header.header---login--page h2 {
   text-align: center;
 }
-html body.body---login header.header---login--page h1 {
+html body.body---register header.header---register--page h1, html body.body---register header.header---login--page h1, html body.body---login header.header---register--page h1, html body.body---login header.header---login--page h1 {
   font-size: 12px;
   text-align: center;
 }
-html body.body---login header.header---login--page h2 {
+html body.body---register header.header---register--page h2, html body.body---register header.header---login--page h2, html body.body---login header.header---register--page h2, html body.body---login header.header---login--page h2 {
   font-size: 10px;
 }
+html body.body---register .container---element--register form,
+html body.body---register .container---element--login form, html body.body---login .container---element--register form,
 html body.body---login .container---element--login form {
   display: block;
   margin: 2px auto;
@@ -103,11 +119,15 @@ html body.body---login .container---element--login form {
   box-shadow: none;
   transition: box-shadow 0.3s ease-in-out;
 }
+html body.body---register .container---element--register form:hover,
+html body.body---register .container---element--login form:hover, html body.body---login .container---element--register form:hover,
 html body.body---login .container---element--login form:hover {
   /* box-shadow: white 0 0 0 0; */
   /* box-shadow: #ffdc78 0 0px 5px 1px; */
   box-shadow: white 0 0px 5px 1px;
 }
+html body.body---register .container---element--register form h3,
+html body.body---register .container---element--login form h3, html body.body---login .container---element--register form h3,
 html body.body---login .container---element--login form h3 {
   font-size: 16pt;
   margin: 4px 0;
@@ -115,12 +135,22 @@ html body.body---login .container---element--login form h3 {
   color: #98cbff;
   color: #ffef7a;
 }
+html body.body---register .container---element--register form label,
+html body.body---register .container---element--login form label, html body.body---login .container---element--register form label,
 html body.body---login .container---element--login form label {
   display: block;
   width: 180px;
   margin: 20px 0;
 }
-html body.body---login .container---element--login form input[type=text], html body.body---login .container---element--login form input[type=email], html body.body---login .container---element--login form input[type=password], html body.body---login .container---element--login form textarea {
+html body.body---register .container---element--register form input[type=text], html body.body---register .container---element--register form input[type=email], html body.body---register .container---element--register form input[type=password], html body.body---register .container---element--register form textarea,
+html body.body---register .container---element--login form input[type=text],
+html body.body---register .container---element--login form input[type=email],
+html body.body---register .container---element--login form input[type=password],
+html body.body---register .container---element--login form textarea, html body.body---login .container---element--register form input[type=text], html body.body---login .container---element--register form input[type=email], html body.body---login .container---element--register form input[type=password], html body.body---login .container---element--register form textarea,
+html body.body---login .container---element--login form input[type=text],
+html body.body---login .container---element--login form input[type=email],
+html body.body---login .container---element--login form input[type=password],
+html body.body---login .container---element--login form textarea {
   display: inline-block;
   /* background: none; */
   /* vertical-align: middle; */
@@ -130,40 +160,78 @@ html body.body---login .container---element--login form input[type=text], html b
   border-radius: 6px;
   transition: background 0.3s ease-in-out;
 }
-html body.body---login .container---element--login form input[type=text]:hover, html body.body---login .container---element--login form input[type=email]:hover, html body.body---login .container---element--login form input[type=password]:hover, html body.body---login .container---element--login form textarea:hover {
+html body.body---register .container---element--register form input[type=text]:hover, html body.body---register .container---element--register form input[type=email]:hover, html body.body---register .container---element--register form input[type=password]:hover, html body.body---register .container---element--register form textarea:hover,
+html body.body---register .container---element--login form input[type=text]:hover,
+html body.body---register .container---element--login form input[type=email]:hover,
+html body.body---register .container---element--login form input[type=password]:hover,
+html body.body---register .container---element--login form textarea:hover, html body.body---login .container---element--register form input[type=text]:hover, html body.body---login .container---element--register form input[type=email]:hover, html body.body---login .container---element--register form input[type=password]:hover, html body.body---login .container---element--register form textarea:hover,
+html body.body---login .container---element--login form input[type=text]:hover,
+html body.body---login .container---element--login form input[type=email]:hover,
+html body.body---login .container---element--login form input[type=password]:hover,
+html body.body---login .container---element--login form textarea:hover {
   background: lightblue;
 }
-html body.body---login .container---element--login form input[type=text]::placeholder, html body.body---login .container---element--login form input[type=email]::placeholder, html body.body---login .container---element--login form input[type=password]::placeholder, html body.body---login .container---element--login form textarea::placeholder {
+html body.body---register .container---element--register form input[type=text]::placeholder, html body.body---register .container---element--register form input[type=email]::placeholder, html body.body---register .container---element--register form input[type=password]::placeholder, html body.body---register .container---element--register form textarea::placeholder,
+html body.body---register .container---element--login form input[type=text]::placeholder,
+html body.body---register .container---element--login form input[type=email]::placeholder,
+html body.body---register .container---element--login form input[type=password]::placeholder,
+html body.body---register .container---element--login form textarea::placeholder, html body.body---login .container---element--register form input[type=text]::placeholder, html body.body---login .container---element--register form input[type=email]::placeholder, html body.body---login .container---element--register form input[type=password]::placeholder, html body.body---login .container---element--register form textarea::placeholder,
+html body.body---login .container---element--login form input[type=text]::placeholder,
+html body.body---login .container---element--login form input[type=email]::placeholder,
+html body.body---login .container---element--login form input[type=password]::placeholder,
+html body.body---login .container---element--login form textarea::placeholder {
   color: grey;
   transition: color 0.3s ease-in-out;
 }
-html body.body---login .container---element--login form input[type=text]::placeholder:hover, html body.body---login .container---element--login form input[type=email]::placeholder:hover, html body.body---login .container---element--login form input[type=password]::placeholder:hover, html body.body---login .container---element--login form textarea::placeholder:hover {
+html body.body---register .container---element--register form input[type=text]::placeholder:hover, html body.body---register .container---element--register form input[type=email]::placeholder:hover, html body.body---register .container---element--register form input[type=password]::placeholder:hover, html body.body---register .container---element--register form textarea::placeholder:hover,
+html body.body---register .container---element--login form input[type=text]::placeholder:hover,
+html body.body---register .container---element--login form input[type=email]::placeholder:hover,
+html body.body---register .container---element--login form input[type=password]::placeholder:hover,
+html body.body---register .container---element--login form textarea::placeholder:hover, html body.body---login .container---element--register form input[type=text]::placeholder:hover, html body.body---login .container---element--register form input[type=email]::placeholder:hover, html body.body---login .container---element--register form input[type=password]::placeholder:hover, html body.body---login .container---element--register form textarea::placeholder:hover,
+html body.body---login .container---element--login form input[type=text]::placeholder:hover,
+html body.body---login .container---element--login form input[type=email]::placeholder:hover,
+html body.body---login .container---element--login form input[type=password]::placeholder:hover,
+html body.body---login .container---element--login form textarea::placeholder:hover {
   color: black;
   font-weight: normal;
   letter-spacing: 0px;
 }
+html body.body---register .container---element--register form .login---input.validation-error,
+html body.body---register .container---element--login form .login---input.validation-error, html body.body---login .container---element--register form .login---input.validation-error,
 html body.body---login .container---element--login form .login---input.validation-error {
   border: 2px solid #e74c3c;
   background-color: #fdf2f2;
 }
+html body.body---register .container---element--register form .login---input.validation-error:focus,
+html body.body---register .container---element--login form .login---input.validation-error:focus, html body.body---login .container---element--register form .login---input.validation-error:focus,
 html body.body---login .container---element--login form .login---input.validation-error:focus {
   outline-color: #e74c3c;
   box-shadow: 0 0 5px rgba(231, 76, 60, 0.3);
 }
+html body.body---register .container---element--register form .login---input.validation-success,
+html body.body---register .container---element--login form .login---input.validation-success, html body.body---login .container---element--register form .login---input.validation-success,
 html body.body---login .container---element--login form .login---input.validation-success {
   border: 2px solid #27ae60;
   background-color: #f1f9f4;
   position: relative;
 }
+html body.body---register .container---element--register form .login---input.validation-success:focus,
+html body.body---register .container---element--login form .login---input.validation-success:focus, html body.body---login .container---element--register form .login---input.validation-success:focus,
 html body.body---login .container---element--login form .login---input.validation-success:focus {
   outline-color: #27ae60;
   box-shadow: 0 0 5px rgba(39, 174, 96, 0.3);
 }
-html body.body---login .container---element--login form .login---input:focus, html body.body---login .container---element--login form .login---input:focus-visible {
+html body.body---register .container---element--register form .login---input:focus, html body.body---register .container---element--register form .login---input:focus-visible,
+html body.body---register .container---element--login form .login---input:focus,
+html body.body---register .container---element--login form .login---input:focus-visible, html body.body---login .container---element--register form .login---input:focus, html body.body---login .container---element--register form .login---input:focus-visible,
+html body.body---login .container---element--login form .login---input:focus,
+html body.body---login .container---element--login form .login---input:focus-visible {
   border: solid 1px #ffef7a;
   outline: solid 1px #ffef7a;
   background: #9ddfff;
 }
+html body.body---register .container---element--register form .validation-error-message,
+html body.body---register .container---element--login form .validation-error-message, html body.body---login .container---element--register form .validation-error-message,
 html body.body---login .container---element--login form .validation-error-message {
   display: block;
   background: #ff946b;
@@ -176,6 +244,8 @@ html body.body---login .container---element--login form .validation-error-messag
   border-radius: 6px;
   animation: fadeIn 0.3s ease-in-out;
 }
+html body.body---register .container---element--register form .validation-success-message,
+html body.body---register .container---element--login form .validation-success-message, html body.body---login .container---element--register form .validation-success-message,
 html body.body---login .container---element--login form .validation-success-message {
   display: block;
   background: #d4edda;
@@ -188,6 +258,8 @@ html body.body---login .container---element--login form .validation-success-mess
   border-radius: 6px;
   animation: fadeIn 0.3s ease-in-out;
 }
+html body.body---register .container---element--register form .validation-success-icon,
+html body.body---register .container---element--login form .validation-success-icon, html body.body---login .container---element--register form .validation-success-icon,
 html body.body---login .container---element--login form .validation-success-icon {
   display: inline-block;
   position: absolute;
@@ -207,9 +279,13 @@ html body.body---login .container---element--login form .validation-success-icon
   z-index: 100;
   pointer-events: none;
 }
+html body.body---register .container---element--register form .validation-success-icon::after,
+html body.body---register .container---element--login form .validation-success-icon::after, html body.body---login .container---element--register form .validation-success-icon::after,
 html body.body---login .container---element--login form .validation-success-icon::after {
   content: "✓";
 }
+html body.body---register .container---element--register form [data-field-wrapper],
+html body.body---register .container---element--login form [data-field-wrapper], html body.body---login .container---element--register form [data-field-wrapper],
 html body.body---login .container---element--login form [data-field-wrapper] {
   position: relative !important;
   display: inline-block !important;
@@ -225,34 +301,40 @@ html body.body---login .container---element--login form [data-field-wrapper] {
     transform: translateY(0);
   }
 }
+html body.body---register .container---element--register form #registration,
+html body.body---register .container---element--login form #registration, html body.body---login .container---element--register form #registration,
 html body.body---login .container---element--login form #registration {
   display: block;
   font-size: 12px;
   text-align: center;
   margin-top: 12px;
 }
+html body.body---register .container---element--register form #registration a,
+html body.body---register .container---element--login form #registration a, html body.body---login .container---element--register form #registration a,
 html body.body---login .container---element--login form #registration a {
   color: gold;
   font-size: 11px;
   font-style: italic;
   transition: color 0.3s ease-in-out;
 }
+html body.body---register .container---element--register form #registration a:hover,
+html body.body---register .container---element--login form #registration a:hover, html body.body---login .container---element--register form #registration a:hover,
 html body.body---login .container---element--login form #registration a:hover {
   /* text-decoration: underline; */
   color: #ffffff;
 }
-html body.body---login footer {
+html body.body---register footer, html body.body---login footer {
   margin: 17px 0 0 0;
 }
-html body.body---login footer p {
+html body.body---register footer p, html body.body---login footer p {
   text-align: center;
 }
-html body.body---login footer p span a {
+html body.body---register footer p span a, html body.body---login footer p span a {
   color: gold;
   font-size: 12px;
   transition: color 0.3s ease-in-out;
 }
-html body.body---login footer p span a:hover {
+html body.body---register footer p span a:hover, html body.body---login footer p span a:hover {
   text-decoration: underline;
   color: #ffffff;
 }
