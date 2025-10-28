@@ -28,19 +28,36 @@ add_action('init', 'jt_register_job_application_cpt'); */
 // add_action('init', $labels);
 
 
-// redirect to custom login page from default 
-
+// redirect to custom login page from default (but allow POST requests for login processing)
 function jt_redirect_wp_login() {
-
   global $pagenow;
-  if ($pagenow === 'wp-login.php' && !is_user_logged_in()) {
-
-    wp_redirect(site_url('/login'));
-    
-    exit;
+  
+  // Only redirect GET requests, not POST (which are login attempts)
+  if ($pagenow === 'wp-login.php' && !is_user_logged_in() && $_SERVER['REQUEST_METHOD'] !== 'POST') {
+    // Don't redirect if it's a logout action
+    if (!isset($_GET['action']) || $_GET['action'] !== 'logout') {
+      wp_redirect(site_url('/login'));
+      exit;
+    }
   }
 }
 add_action('init', 'jt_redirect_wp_login');
+
+
+// Handle login failures and redirect back to custom login page
+function jt_login_failed() {
+  wp_redirect(site_url('/login?login=failed'));
+  exit;
+}
+add_action('wp_login_failed', 'jt_login_failed');
+
+
+// Redirect to custom login on logout
+function jt_logout_redirect() {
+  wp_redirect(site_url('/login?loggedout=true'));
+  exit;
+}
+add_action('wp_logout', 'jt_logout_redirect');
 
 // Add custom post type
 function jt_register_job_application_cpt() {
@@ -106,3 +123,34 @@ function jt_enqueue_styles() {
 }
 
 add_action( 'wp_enqueue_scripts', 'jt_enqueue_styles' );
+
+
+// Force show admin bar for logged-in users (with proper checks)
+add_filter('show_admin_bar', function($show) {
+  if (is_user_logged_in() && current_user_can('read')) {
+    return true;
+  }
+  return $show;
+}, 10);
+
+
+// Add theme support for various WordPress features
+function jt_theme_support() {
+  // Enable admin bar
+  add_theme_support('admin-bar');
+  
+  // Enable title tag support
+  add_theme_support('title-tag');
+}
+add_action('after_setup_theme', 'jt_theme_support');
+
+
+// Fix admin bar warnings by ensuring user meta exists
+function jt_fix_admin_bar_meta($user_id) {
+  // Ensure show_admin_bar_front meta exists for all users
+  if (get_user_meta($user_id, 'show_admin_bar_front', true) === '') {
+    update_user_meta($user_id, 'show_admin_bar_front', 'true');
+  }
+}
+add_action('user_register', 'jt_fix_admin_bar_meta');
+add_action('wp_login', 'jt_fix_admin_bar_meta');
