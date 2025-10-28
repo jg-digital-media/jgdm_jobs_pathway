@@ -3,7 +3,7 @@
    
     <h3>Login</h3>
 
-    <p id="registration">Not Registered?  <a href="http://localhost/jgdm_jobs_pathway/">Click here to Register</a></p>
+    <p id="registration">Not Registered?  <a href="http://localhost/jgdm_jobs_pathway/register">Click here to Register</a></p>
 
     <label for="username">Username: </label>
     <input type="text" name="username" class="login---input" id="username" placeholder="Enter your name...">

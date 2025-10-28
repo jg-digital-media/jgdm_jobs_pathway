@@ -2,7 +2,7 @@
  <form name="main_form_register" action="list-empty.php" method="post" id="" class="form form---register">
    
     <h3>Register (it's free)</h3>
-    <p id="registration">Already Registered?  <a href="login-screen.php">Click here to Login</a></p>
+    <p id="registration">Already Registered?  <a href="../">Click here to Login</a></p>
 
     <label for="username">Username: </label>
     <input type="text" name="username" class="login---input" id="username" placeholder="Enter your name...">
