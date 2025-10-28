@@ -1,4 +1,4 @@
-`Last Updated: 27-10-2025 - 16:57`
+`Last Updated: 28-10-2025 - 16:37`
 
 # Jobs Pathway
   + Jobs Pathway is a project in PHP and WordPress. Sign in and add details of jobs applied for so you can keep track of your way to your professional life with this app.
@@ -40,7 +40,7 @@ The following pages are assigned to templates in the `wp-content/themes/jobs_pat
 
 ## TODOs: 
 
-### (Tasks: `100` - Completed - `43`)
+### (Tasks: `90` - Completed - `45`)
 
 + `COMPLETED: 16-09-2025` - Wireframe and static interface planning for 'Job's Pathway App'
 + `COMPLETED: 16-09-2025` - Add a footer and header template part of the project
@@ -75,7 +75,7 @@ The following pages are assigned to templates in the `wp-content/themes/jobs_pat
 
   + `COMPLETED: 20-10-2025` - STAGE 2 - Build Custom Theme files
 	  + `COMPLETED: 20-10-2025` - index.php
-	  + `COMPLETED: 20-10-2025` - sreenshot.php
+	  + `COMPLETED: 20-10-2025` - screenshot.php
 	  + `COMPLETED: 20-10-2025` - style.css
 	  + `COMPLETED: 20-10-2025` - functions.php
 
@@ -102,7 +102,7 @@ The following pages are assigned to templates in the `wp-content/themes/jobs_pat
 
 	  + `COMPLETED: 27-10-2025 ` - adding a helper function to `functions.php`
       + `TODO: ` - Fill in messages for motivation helper function in `functions.php`
-	  + `TODO: ` - call it in a specific place in a PHP/WordPress template
+	  + `COMPLETED: 28-10-2025: ` - call it in a specific place in a PHP/WordPress template
 
   + `TODO: ` - STAGE 8 - Progress Tracking page
 
@@ -110,11 +110,11 @@ The following pages are assigned to templates in the `wp-content/themes/jobs_pat
 
     + `TODO: ` - add-job-form.php - Description text area has no hover transition of background colour (filename as per prototype)
 
-  + `TODO: ` - STAGE 9 - Styling via css and js from protyotype
+  + `COMPLETED: 28-10-2025` - STAGE 9 - Styling via css and js from protyotype
 
 	  + `TODO: ` - Use PHP to pull data from your job_application posts.
 
-+ `TODO: ` - Link logout page to WordPerss logout system (Logout)"
++ `TODO: ` - Link logout page to WordPerss logout system (Logout) `.logout-link`"
 + `COMPLETED: 27-10-2025` - Enqueue styles and scripts in `functions.php`
 + `TODO: ` - Sort `header.php` meta tags`.
 + `TODO: ` - Implement modal areas for `job-details.php`,`add-job-form.php`, `stats-modal.php`,`how-to.php`.
@@ -272,7 +272,7 @@ The following pages are assigned to templates in the `wp-content/themes/jobs_pat
 
 + I spent some time today sorting out the repository, local location and server and getting WordPress installed.  Development on the app can now begin again in earnest. `20-10-2025`
 
-### 2.0.1
+### `2.0.1`
 
 + This week, I'm working on finishing the app. Again, the scale of what I'm trying to build was slowly beginning to dawn on me. Even the job of copying code from the prototype was not a simple task, as you have to consider the hierarchy and how to make sure WordPress takes over correctly. That said, I am on much more solid ground with WordPress. Here's a summary of where I'm up as of today. (`27-10-2025`).
 
@@ -283,6 +283,18 @@ The following pages are assigned to templates in the `wp-content/themes/jobs_pat
   + Have verified that the random motivation messages with `jt_random_motivation()` method are indeed working. I have already built a full implementation of this feature into the app.
 
   + I haven't yet customised the login and logout features. I'll look into doing that, hopefully within the next day. I'm pleased to say I've made a tremendous amount of progress already. A lot more work is ahead of me, and I'm looking forward to the challenge.
+
+  ### `2.0.2`
+
+  + 2 things I've noticed today when trying to implement the login screens.  It's only when trying to implement a customised version of the WordPress login form did anything meaningful happen for me at all.  I tried a few implementations which don't "talk" to WordPress at all.
+
+  + The second thing is that I've ended up writing some bad HTML, which breaks the styling when I try to adapt it. I said WordPress is my area, and it is, but right now I'm at an impasse for the above reasons. 
+
+  + In the end, I decided to attempt the code again and lock in the changes so I could refine and debug where needed. I have been using AI to develop this. The truth is that the code I was trying (from consulting with ChatGPT) was too lightweight and wasn't connecting properly with WordPress' endpoints. (Sometimes AI makes mistakes)
+
+  + It took Cursor AI to have a few goes at my codebase before we got somewhere with logging in. And I do now have logging in sorted out for one user.  There's also registration to implement next, so I can test more user flows.  Logging out (without the WordPress admin area)  is still to be implemented as well. 
+
+  + I had thought and hoped that I'd be able to get this project done within a week.  That hope isn't over yet, and I'll keep working on it, but while today hasn't been a complete disaster, it also feels like a bit of a reality check for me. 
 
 ## User Flows
 
