@@ -1,5 +1,22 @@
+ <!-- customised wordpress login form -->
+ 
+ <?php
+    $args = array(
+        'echo' => true,
+        'redirect' => site_url('/dashboard'), // redirect after login
+        'form_id' => 'loginform-custom',
+        'label_username' => 'Username or Email',
+        'label_password' => 'Password',
+        'label_remember' => 'Remember Me',
+        'label_log_in' => 'Login >',
+        'remember' => true
+    );
+
+    wp_login_form($args);
+  ?>
+ 
  <!-- Form: login form -->
- <form name="main_form_login" action="dashboard/" method="post" id="" class="form form---login">
+ <form name="main_form_login" action="<?php site_url('dashboard/'); ?>" method="post" id="" class="form form---login">
    
     <h3>Login</h3>
 
