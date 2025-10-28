@@ -1,5 +1,5 @@
  <!-- Form: register form -->
- <form name="main_form_register" action="list-empty.php" method="post" id="" class="form form---register">
+ <form name="main_form_register" action="../dashboard/" method="post" id="" class="form form---register">
    
     <h3>Register (it's free)</h3>
     <p id="registration">Already Registered?  <a href="../">Click here to Login</a></p>
@@ -21,8 +21,5 @@
 
     <br><br>
     <input type="submit" value="Register >" class="button button---register">
-
-    
-   
 
 </form>
