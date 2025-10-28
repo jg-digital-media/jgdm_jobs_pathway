@@ -1,7 +1,7 @@
 <!-- <p>jobs-list-empty.php</p> -->
 
 <div class="username---and--logout">
-    <span>Welcome, <span class="display---username">username</span></span>
+    <span>Welcome, <span class="display---username"> <?php echo esc_html( $current_user->display_name ); ?></span></span>
     <a href="../" class="logout-link">(Logout)</a>
 </div>
 
