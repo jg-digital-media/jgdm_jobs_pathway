@@ -68,6 +68,7 @@ if ( is_user_logged_in() ) {
 } else {
 
     echo "<p>Please log in to see your dashboard. (page-dashboard.php)</p>";
+    echo "<p><a href=" . site_url('/') . ">Login</a></p>";
 }
 ?>
 
