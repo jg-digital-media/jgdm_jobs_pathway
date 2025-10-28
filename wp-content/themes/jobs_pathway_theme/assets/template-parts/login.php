@@ -1,39 +1,43 @@
- <!-- customised wordpress login form -->
- 
- <?php
-    $args = array(
-        'echo' => true,
-        'redirect' => site_url('/dashboard'), // redirect after login
-        'form_id' => 'loginform-custom',
-        'label_username' => 'Username or Email',
-        'label_password' => 'Password',
-        'label_remember' => 'Remember Me',
-        'label_log_in' => 'Login >',
-        'remember' => true
-    );
+<!-- customised wordpress login form -->
 
-    wp_login_form($args);
-  ?>
- 
- <!-- Form: login form -->
- <form name="main_form_login" action="<?php site_url('dashboard/'); ?>" method="post" id="" class="form form---login">
-   
-    <h3>Login</h3>
+<?php
 
-    <p id="registration">Not Registered?  <a href="http://localhost/jgdm_jobs_pathway/register">Click here to Register</a></p>
+// Check if there are any login errors or messages
+if (isset($_GET['login']) && $_GET['login'] == 'failed') {
+    echo '<p class="login-error" style="color: red; background: #ffe6e6; padding: 10px; border-radius: 5px;"><strong>Error:</strong> Invalid username or password. Please try again.</p>';
+}
 
-    <label for="username">Username: </label>
-    <input type="text" name="username" class="login---input" id="username" placeholder="Enter your name...">
+if (isset($_GET['login']) && $_GET['login'] == 'empty') {
+    echo '<p class="login-error" style="color: red; background: #ffe6e6; padding: 10px; border-radius: 5px;"><strong>Error:</strong> Username and password are required.</p>';
+}
 
-    <br>
-    <label for="email">Email: </label>
-    <input type="email" name="email" class="login---input" id="email" placeholder="Enter your email...">
+if (isset($_GET['loggedout']) && $_GET['loggedout'] == 'true') {
+    echo '<p class="login-success" style="color: green; background: #e6ffe6; padding: 10px; border-radius: 5px;">You have successfully logged out.</p>';
+}
+?>
 
-    <br>
-    <label for="password">Password: </label>
-    <input type="password"  name="password" id="password" class="login---input" placeholder="Enter your password...">
+<!-- Form: login form -->
+<form name="main_form_login" action="<?php echo wp_login_url(); ?>" method="post" id="loginform-custom" class="form form---login">
+  
+   <h3>Login</h3>
 
-    <br><br>
-    <input type="submit" value="Login >" class="button button---login">
+   <p id="registration">Not Registered?  <a href="<?php echo site_url('/register'); ?>">Click here to Register</a></p>
+
+   <label for="log">Username or Email: </label>
+   <input type="text" name="log" class="login---input" id="log" placeholder="Enter your username or email..." required>
+
+   <br>
+   <label for="pwd">Password: </label>
+   <input type="password" name="pwd" id="pwd" class="login---input" placeholder="Enter your password..." required>
+
+   <br>
+   <label for="rememberme">
+       <input type="checkbox" name="rememberme" id="rememberme" value="forever"> Remember Me
+   </label>
+
+   <input type="hidden" name="redirect_to" value="<?php echo site_url('/dashboard'); ?>">
+
+   <br><br>
+   <input type="submit" name="wp-submit" value="Login >" class="button button---login">
 
 </form>
