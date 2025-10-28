@@ -19,6 +19,7 @@ html {
         }
         
         // selectors for login and register pages
+        &.body---register,
         &.body---login {
 
             background: $body---bg;
@@ -29,6 +30,7 @@ html {
 
             header {
 
+                &.header---register--page,
                 &.header---login--page {
 
                     background: none;
@@ -52,6 +54,7 @@ html {
                 }
             }
 
+            .container---element--register,
             .container---element--login {
 
                 form {
