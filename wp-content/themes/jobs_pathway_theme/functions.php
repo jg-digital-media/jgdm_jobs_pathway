@@ -28,6 +28,20 @@ add_action('init', 'jt_register_job_application_cpt'); */
 // add_action('init', $labels);
 
 
+// redirect to custom login page from default 
+
+function jt_redirect_wp_login() {
+
+  global $pagenow;
+  if ($pagenow === 'wp-login.php' && !is_user_logged_in()) {
+
+    wp_redirect(site_url('/login'));
+    
+    exit;
+  }
+}
+add_action('init', 'jt_redirect_wp_login');
+
 // Add custom post type
 function jt_register_job_application_cpt() {
 
