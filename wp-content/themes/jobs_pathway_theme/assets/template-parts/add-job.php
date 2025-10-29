@@ -4,7 +4,15 @@
 
     <h3>Add a Situation/Job</h3> <a href="dashboard/">Back</a>
 
-    <form name="main_form_add_job" action="list.php" method="post" id="" class="form form---add--job">
+    <?php 
+
+        // custom post type
+        
+        //  echo do_shortcode('[acf_form post_id="new_post" post_title="true" post_type="job_application"]');
+
+    ?>
+
+    <!-- <form name="main_form_add_job" action="../dashboard/" method="post" id="" class="form form---add--job">
 
         <label for="company_name">Name of Company/Organisation: </label>
         <input type="text" name="company_name" class="login---input" id="company_name" placeholder="Enter your name...">
@@ -35,5 +43,7 @@
         <input type="submit" value="Submit" class="button button---login">
 
     </form>
+ -->
+
 
 </section>
