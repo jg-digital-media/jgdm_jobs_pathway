@@ -119,7 +119,13 @@ function jt_enqueue_styles() {
   wp_enqueue_style( 'style', get_stylesheet_uri() );
 
   // Scripts
-  wp_enqueue_script( 'main', get_stylesheet_directory_uri() . '/app.js' );
+  wp_enqueue_script( 'main', get_stylesheet_directory_uri() . '/app.js', array(), '1.0', true );
+  
+  // Localize script to pass AJAX URL and nonce
+  wp_localize_script( 'main', 'jobPathwayAjax', array(
+    'ajaxurl' => admin_url( 'admin-ajax.php' ),
+    'nonce' => wp_create_nonce( 'job_pathway_ajax_nonce' )
+  ));
 }
 
 add_action( 'wp_enqueue_scripts', 'jt_enqueue_styles' );
@@ -154,3 +160,76 @@ function jt_fix_admin_bar_meta($user_id) {
 }
 add_action('user_register', 'jt_fix_admin_bar_meta');
 add_action('wp_login', 'jt_fix_admin_bar_meta');
+
+
+// AJAX handler to update job application meta fields
+function jt_update_job_meta() {
+  
+  // Verify nonce
+  if (!isset($_POST['nonce']) || !wp_verify_nonce($_POST['nonce'], 'job_pathway_ajax_nonce')) {
+    wp_send_json_error(array('message' => 'Security check failed'));
+    return;
+  }
+  
+  // Check if user is logged in
+  if (!is_user_logged_in()) {
+    wp_send_json_error(array('message' => 'You must be logged in'));
+    return;
+  }
+  
+  // Get and validate parameters
+  $post_id = isset($_POST['post_id']) ? intval($_POST['post_id']) : 0;
+  $field_name = isset($_POST['field_name']) ? sanitize_text_field($_POST['field_name']) : '';
+  $value = isset($_POST['value']) ? intval($_POST['value']) : 0;
+  
+  if (!$post_id || !$field_name) {
+    wp_send_json_error(array('message' => 'Missing required parameters'));
+    return;
+  }
+  
+  // Verify the post exists and is a job_application
+  $post = get_post($post_id);
+  if (!$post || $post->post_type !== 'job_application') {
+    wp_send_json_error(array('message' => 'Invalid job application'));
+    return;
+  }
+  
+  // Verify the user owns this post
+  if ($post->post_author != get_current_user_id()) {
+    wp_send_json_error(array('message' => 'You do not have permission to edit this job application'));
+    return;
+  }
+  
+  // Allowed field names for security
+  $allowed_fields = array(
+    'application_sent',
+    'cv_sent',
+    'interview_secured',
+    'interview_attended',
+    'references_provided',
+    'got_job'
+  );
+  
+  if (!in_array($field_name, $allowed_fields)) {
+    wp_send_json_error(array('message' => 'Invalid field name'));
+    return;
+  }
+  
+  // Update the meta field
+  $updated = update_post_meta($post_id, $field_name, $value);
+  
+  if ($updated !== false) {
+    wp_send_json_success(array(
+      'message' => 'Field updated successfully',
+      'post_id' => $post_id,
+      'field_name' => $field_name,
+      'value' => $value
+    ));
+  } else {
+    wp_send_json_error(array('message' => 'Failed to update field'));
+  }
+}
+
+// Register AJAX handlers for both logged in and logged out users
+add_action('wp_ajax_update_job_meta', 'jt_update_job_meta');
+add_action('wp_ajax_nopriv_update_job_meta', 'jt_update_job_meta');
