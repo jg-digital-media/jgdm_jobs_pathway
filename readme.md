@@ -1,4 +1,4 @@
-`Last Updated: 29-10-2025 - 16:04`
+`Last Updated: 29-10-2025 - 17:22`
 
 # Jobs Pathway
   + Jobs Pathway is a project in PHP and WordPress. Sign in and add details of jobs applied for so you can keep track of your way to your professional life with this app.
@@ -40,7 +40,7 @@ The following pages are assigned to templates in the `wp-content/themes/jobs_pat
 
 ## TODOs: 
 
-### (Tasks: `99` - Completed - `50`)
+### (Tasks: `99` - Completed - `51`)
 
 + `COMPLETED: 16-09-2025` - Wireframe and static interface planning for 'Job's Pathway App'
 + `COMPLETED: 16-09-2025` - Add a footer and header template part of the project
@@ -97,7 +97,7 @@ The following pages are assigned to templates in the `wp-content/themes/jobs_pat
 + `COMPLETED: 28-10-2025 ` - STAGE 5 — Create a Front-End Dashboard Template  
 + `COMPLETED: 27-10-2025` - In WordPress → Pages → Add New → call it Dashboard, and assign the "Job Dashboard" template. `page-dashboard.php`
 
-+ `TODO: ` - STAGE 6 - Add a Front-end "Add Job" Form
++ ``COMPLETED: 28-10-2025 ` - STAGE 6 - Add a Front-end "Add Job" Form
 + `TODO: ` - Add contact detail field to add job form
 + `TODO: ` - CV/Resume on dashboard page has no custom field on CPT
 + `TODO: ` - Add background colour on hover for all form inputs `/add-job`
