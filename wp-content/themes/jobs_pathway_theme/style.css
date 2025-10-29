@@ -2,7 +2,7 @@
 /* head.scss */
 /*
 
-Last Updated: 28-10-2025 - 14:05
+Last Updated: 29-10-2025 - 16:06
 */
 * {
   padding: 0;
@@ -130,10 +130,24 @@ html body.body---register .container---element--register form h3,
 html body.body---register .container---element--login form h3, html body.body---login .container---element--register form h3,
 html body.body---login .container---element--login form h3 {
   font-size: 16pt;
-  margin: 4px 0;
+  margin: 7px 0;
   text-align: center;
   color: #98cbff;
   color: #ffef7a;
+}
+html body.body---register .container---element--register form h4,
+html body.body---register .container---element--login form h4, html body.body---login .container---element--register form h4,
+html body.body---login .container---element--login form h4 {
+  text-align: center;
+  /* color: #3737fd; */
+  /* color: #ffef7a; */
+  color: #004a00;
+  border: dashed 2px #00bb00;
+  background: #9bf99b;
+  padding: 8px;
+  letter-spacing: 0px;
+  font-size: 12px;
+  font-weight: normal;
 }
 html body.body---register .container---element--register form label,
 html body.body---register .container---element--login form label, html body.body---login .container---element--register form label,
@@ -141,6 +155,24 @@ html body.body---login .container---element--login form label {
   display: block;
   width: 180px;
   margin: 20px 0;
+  font-weight: bold;
+  font-size: 16px;
+}
+html body.body---register .container---element--register form label#remembermelabel,
+html body.body---register .container---element--login form label#remembermelabel, html body.body---login .container---element--register form label#remembermelabel,
+html body.body---login .container---element--login form label#remembermelabel {
+  font-size: 12px;
+  font-weight: normal;
+}
+html body.body---register .container---element--register form label #rememberme,
+html body.body---register .container---element--login form label #rememberme, html body.body---login .container---element--register form label #rememberme,
+html body.body---login .container---element--login form label #rememberme {
+  /* height: auto; */
+  height: 25px;
+  width: 25px;
+  vertical-align: middle;
+  margin: 5px;
+  padding: 0 15px;
 }
 html body.body---register .container---element--register form input[type=text], html body.body---register .container---element--register form input[type=email], html body.body---register .container---element--register form input[type=password], html body.body---register .container---element--register form textarea,
 html body.body---register .container---element--login form input[type=text],
