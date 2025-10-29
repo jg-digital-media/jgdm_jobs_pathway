@@ -1,4 +1,4 @@
-`Last Updated: 29-10-2025 - 10:27`
+`Last Updated: 29-10-2025 - 15:43`
 
 # Jobs Pathway
   + Jobs Pathway is a project in PHP and WordPress. Sign in and add details of jobs applied for so you can keep track of your way to your professional life with this app.
@@ -40,7 +40,7 @@ The following pages are assigned to templates in the `wp-content/themes/jobs_pat
 
 ## TODOs: 
 
-### (Tasks: `94` - Completed - `50`)
+### (Tasks: `99` - Completed - `50`)
 
 + `COMPLETED: 16-09-2025` - Wireframe and static interface planning for 'Job's Pathway App'
 + `COMPLETED: 16-09-2025` - Add a footer and header template part of the project
@@ -98,6 +98,10 @@ The following pages are assigned to templates in the `wp-content/themes/jobs_pat
 + `COMPLETED: 27-10-2025` - In WordPress → Pages → Add New → call it Dashboard, and assign the "Job Dashboard" template. `page-dashboard.php`
 
 + `TODO: ` - STAGE 6 - Add a Front-end "Add Job" Form
++ `TODO: ` - Add contact detail field to add job form
++ `TODO: ` - CV/Resume on dashboard page has no custom field on CPT
++ `TODO: ` - Add background colour on hover for all form inputs `/add-job`
++ `TODO: ` - add-job-form.php - Description text area has no hover transition of background colour (filename as per prototype) `/add-job`
 + `TODO: ` - use the ACF Frontend Form Feature to create job application tracking details for a logged in user
 + `COMPLETED: 27-10-2025` - Auto assign posts to logged in user - `functions.php`
 
@@ -111,7 +115,6 @@ The following pages are assigned to templates in the `wp-content/themes/jobs_pat
 
     + `TODO: ` - Delete Jobs - button - users should be offered the chance to confirm their choice to delete all jobs.
 
-    + `TODO: ` - add-job-form.php - Description text area has no hover transition of background colour (filename as per prototype)
 
   + `COMPLETED: 28-10-2025` - STAGE 9 - Styling via css and js from protyotype
 
@@ -121,6 +124,7 @@ The following pages are assigned to templates in the `wp-content/themes/jobs_pat
 + `TODO: ` - Use custom made registration form with prototyped front end error messaging.
 + `TODO: ` - Remove inline styling of login and logout out error messages. Classes: -  `.login-error` `.login-success.` Slug: `/login/`.
 + `TODO: ` - Remove inline styling of registration error messages. Classes: -  `.registration-error` `.registration-success.` Slug: `/login/`.
++ `TODO: ` - `login-handler` and `register-handler` are empty and to be ignored for now.
 + `TODO: ` - Sort `header.php` meta tags`.
 + `TODO: ` - Implement modal areas for `job-details.php`,`add-job-form.php`, `stats-modal.php`,`how-to.php`.
 + `TODO: ` - modal styles
@@ -136,6 +140,7 @@ The following pages are assigned to templates in the `wp-content/themes/jobs_pat
 + `TODO: ` - Reduce lines of code in Sass files where possible
   + `TODO: ` - May need to fill table with classes to get the desired effect.
 + `TODO: ` - Add responsiveness to Job list table - `list.php` and `list-empty.php` (filenames as per prototype)
+  + `TODO: ` - Implement overflow-x scrolling on table for smaller screens
 + `TODO: ` - Actions column - `list.php`  Might be useful as a mechanism to edit job profiles 
   + `TODO: ` - Consider Deleting Actions Column
 + `TODO: ` - `motivation---message`- load a different message as its text content whenever the user loads the page.
@@ -301,9 +306,15 @@ The following pages are assigned to templates in the `wp-content/themes/jobs_pat
 
 ### `2.0.3`
 
+  + After a day of grind and uncertainty, yesterday today was a much more of a success which progress n finishing the regsitrayion and authentication workflows and adding and persisting job application data to the database.
+
   + A simple method for this that will log out the user natively so users don't need to interact with the official WordPress admin bar. `<?php echo wp_logout_url( site_url('/login') ); ?>`
  
   + This means right now we have a way to log registered users in and out of the app natively - using the WordPress authentication system.
+
+  + AI fixed a number of things that I simply didn't spot. Chiefly there was a redirect issue that I soimply didn't spot.  Looking for a registration route but that's not requited when eople are already on the register page so this generated an infinite redirect loop.
+
+  + After that I focused my attention on adding job application data to the database; handling empty states and content states to the dashboard and persisting the data to the database. I got thrpugh more than I was expecting to.. using Ajax and the WordPress database to persist changes to job status tracking. Which means I can add Ajax to the tech stack to this project.
 
 ## User Flows
 
