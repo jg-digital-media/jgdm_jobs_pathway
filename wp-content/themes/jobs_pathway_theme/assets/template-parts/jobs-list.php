@@ -2,7 +2,7 @@
 
 <div class="username---and--logout">
     <span>Welcome, <span class="display---username">username</span></span>
-    <a href="../" class="logout-link">(Logout)</a>
+    <a href="<?php echo wp_logout_url( site_url('/login') ); ?>" class="logout-link">(Logout)</a>
 </div>
 
 <nav class="top---banner--container">
