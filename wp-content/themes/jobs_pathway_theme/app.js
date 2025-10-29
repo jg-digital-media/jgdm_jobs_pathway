@@ -1,5 +1,5 @@
 // connection check - app.js
-console.log("app.js connected - 22-09-2025 - 10:02");
+console.log("app.js connected - 29-10-2025 - 12:34");
 
 // Wait for DOM to be fully loaded
 document.addEventListener('DOMContentLoaded', function() {
@@ -23,6 +23,15 @@ document.addEventListener('DOMContentLoaded', function() {
                 } else {
                     parentTd.classList.remove('stage---completed');
                 }
+            }
+            
+            // Save checkbox state to database via AJAX
+            const postId = this.getAttribute('data-post-id');
+            const fieldName = this.getAttribute('data-field');
+            const isChecked = this.checked ? 1 : 0;
+            
+            if (postId && fieldName) {
+                saveCheckboxState(postId, fieldName, isChecked);
             }
         });
         
@@ -397,4 +406,36 @@ function clearValidationErrors(form) {
     
     errorFields.forEach(field => field.classList.remove('validation-error'));
     errorMessages.forEach(message => message.remove());
+}
+
+// Function to save checkbox state via AJAX
+function saveCheckboxState(postId, fieldName, value) {
+    console.log('Saving checkbox state:', postId, fieldName, value);
+    
+    // Create FormData object
+    const formData = new FormData();
+    formData.append('action', 'update_job_meta');
+    formData.append('post_id', postId);
+    formData.append('field_name', fieldName);
+    formData.append('value', value);
+    formData.append('nonce', jobPathwayAjax.nonce);
+    
+    // Send AJAX request
+    fetch(jobPathwayAjax.ajaxurl, {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            console.log('Checkbox state saved successfully:', data);
+        } else {
+            console.error('Error saving checkbox state:', data);
+            alert('Error saving changes. Please try again.');
+        }
+    })
+    .catch(error => {
+        console.error('AJAX error:', error);
+        alert('Error saving changes. Please check your connection.');
+    });
 }
