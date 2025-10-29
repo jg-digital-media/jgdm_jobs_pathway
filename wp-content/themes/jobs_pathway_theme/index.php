@@ -48,6 +48,18 @@
 
 </head>
 
+<?php
+
+    // if user is logged in, send to dashboard page
+
+    if (is_user_logged_in()) {
+        wp_redirect(site_url('/dashboard'));
+        exit;
+    }
+
+
+?>
+
 <?php get_header(); ?>
 
 <body>
@@ -55,7 +67,7 @@
     <?php 
     
         //echo "<h1>Jobs Pathway App </h1>";
-        //echo "<p>(jobs_pathway_theme - index.php)</p>";        
+        //echo "<p>(jobs_pathway_theme - index.php)</p>";  
 
     ?>
 
