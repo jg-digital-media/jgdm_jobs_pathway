@@ -56,7 +56,7 @@ function initializeFormValidation() {
 }
 
 function setupRegisterValidation(form) {
-    const passwordField = form.querySelector('#password');
+    const passwordField = form.querySelector('#userpass');
     const confirmPasswordField = form.querySelector('#confirm_password');
     const usernameField = form.querySelector('#username');
     const emailField = form.querySelector('#email');
