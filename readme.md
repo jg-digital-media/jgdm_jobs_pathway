@@ -1,4 +1,4 @@
-`Last Updated: 29-10-2025 - 15:43`
+`Last Updated: 29-10-2025 - 16:04`
 
 # Jobs Pathway
   + Jobs Pathway is a project in PHP and WordPress. Sign in and add details of jobs applied for so you can keep track of your way to your professional life with this app.
@@ -306,15 +306,17 @@ The following pages are assigned to templates in the `wp-content/themes/jobs_pat
 
 ### `2.0.3`
 
-  + After a day of grind and uncertainty, yesterday today was a much more of a success which progress n finishing the regsitrayion and authentication workflows and adding and persisting job application data to the database.
+  + After a day of grind and uncertainty, yesterday today was a much more of a success which progress in finishing the registration and authentication workflows and adding and persisting job application data to the database.
 
-  + A simple method for this that will log out the user natively so users don't need to interact with the official WordPress admin bar. `<?php echo wp_logout_url( site_url('/login') ); ?>`
+  + Sorting out logout functionality was a case of using a simple method to log out the user natively, so users don't need to interact with the official WordPress admin bar. `<?php echo wp_logout_url( site_url('/login') ); ?>
  
   + This means right now we have a way to log registered users in and out of the app natively - using the WordPress authentication system.
 
-  + AI fixed a number of things that I simply didn't spot. Chiefly there was a redirect issue that I soimply didn't spot.  Looking for a registration route but that's not requited when eople are already on the register page so this generated an infinite redirect loop.
+  + AI helped me fix several issues that I hadn’t noticed myself. The main one was a redirect problem — it kept looking for a registration route even when users were already on the registration page, which caused an infinite redirect loop.
 
-  + After that I focused my attention on adding job application data to the database; handling empty states and content states to the dashboard and persisting the data to the database. I got thrpugh more than I was expecting to.. using Ajax and the WordPress database to persist changes to job status tracking. Which means I can add Ajax to the tech stack to this project.
+  + After that, I focused my attention on adding job application data to the database; handling dashboard states where the list is empty, when it has data; and persisting the data to the database. I got through more than I was expecting to today.. Including using Ajax and the WordPress database to persist changes to job status tracking via checkboxes. Which means I can add Ajax to the tech stack for this project.
+
+  + 2 more big things to come that will require major development.  Editable job profile data for each job application, and a way to provide progress feedback to the user via a stats page.
 
 ## User Flows
 
