@@ -28,24 +28,27 @@ if ( is_user_logged_in() ) {
 
             <h2>Keep track of your way to your professional life</h2>
 
-            <!-- Login Status Debug Info 
-            <div style="background: #e6ffe6; padding: 15px; margin: 20px 0; border-radius: 5px; border: 2px solid #4CAF50;">
-                <h3>✅ Login Status: LOGGED IN</h3>
-                <p><strong>Username:</strong> <?php echo $current_user->user_login; ?></p>
-                <p><strong>Display Name:</strong> <?php echo $current_user->display_name; ?></p>
-                <p><strong>Email:</strong> <?php echo $current_user->user_email; ?></p>
-                <p><strong>User ID:</strong> <?php echo $current_user->ID; ?></p>
-                <p><strong>Admin Bar:</strong> <?php echo is_admin_bar_showing() ? 'Enabled' : 'Disabled'; ?></p>
-                <p><a href="<?php echo wp_logout_url(site_url('/login')); ?>" style="color: #d32f2f;">Logout</a></p>
-            </div>-->
-
         </header>
 
         <main>
 
-            <p class="filename">list-empty.php</p>
+            <?php 
+            // Show success message if job was added
+            if (isset($_GET['job_added']) && $_GET['job_added'] == 'success') {
+                echo '<p class="job-success" style="color: green; background: #e6ffe6; padding: 15px; border-radius: 5px; margin: 20px; text-align: center;"><strong>Success!</strong> Job application added successfully!</p>';
+            }
+            ?>
 
-            <?php require "assets/template-parts/jobs-list-empty.php"; ?>
+            <?php 
+            // Check if user has any jobs
+            if ($jobs->have_posts()) {
+                // User has jobs - show the jobs list with data
+                require "assets/template-parts/jobs-list-with-data.php";
+            } else {
+                // No jobs - show empty state
+                require "assets/template-parts/jobs-list-empty.php";
+            }
+            ?>
 
         </main>
     </body>
