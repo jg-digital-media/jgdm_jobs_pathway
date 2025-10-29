@@ -1,4 +1,4 @@
-`Last Updated: 28-10-2025 - 16:37`
+`Last Updated: 29-10-2025 - 10:27`
 
 # Jobs Pathway
   + Jobs Pathway is a project in PHP and WordPress. Sign in and add details of jobs applied for so you can keep track of your way to your professional life with this app.
@@ -40,7 +40,7 @@ The following pages are assigned to templates in the `wp-content/themes/jobs_pat
 
 ## TODOs: 
 
-### (Tasks: `90` - Completed - `45`)
+### (Tasks: `94` - Completed - `50`)
 
 + `COMPLETED: 16-09-2025` - Wireframe and static interface planning for 'Job's Pathway App'
 + `COMPLETED: 16-09-2025` - Add a footer and header template part of the project
@@ -89,14 +89,17 @@ The following pages are assigned to templates in the `wp-content/themes/jobs_pat
 	
 	  + `COMPLETED: 27-10-2025` - Then set "Location → Post Type is equal to Job Application."
 
-  + `TODO: ` - STAGE 5 — Create a Front-End Dashboard Template            
++ `COMPLETED: 28-10-2025 ` - Link logout page to WordPress logout system (Logout) `.logout-link`"
++ `COMPLETED: 27-10-2025 ` - Enqueue styles and scripts in `functions.php`
++ `COMPLETED: 28-10-2025 ` - Fix bug on login pages preventing link to registration page from working `/login/` & `index.php`
++ `COMPLETED: 28-10-2025 ` - Welcome user to the app and then invite to register `register.php`.
++ `COMPLETED: 28-10-2025 ` - Style register and login buttons `register.php` and `login.php`
++ `COMPLETED: 28-10-2025 ` - STAGE 5 — Create a Front-End Dashboard Template  
++ `COMPLETED: 27-10-2025` - In WordPress → Pages → Add New → call it Dashboard, and assign the "Job Dashboard" template. `page-dashboard.php`
 
-	  + `TODO: ` - page-dashboard.php
-	  + `COMPLETED: 27-10-2025` - In WordPress → Pages → Add New → call it Dashboard, and assign the "Job Dashboard" template.
-
-  + `TODO: ` - STAGE 6 - Add a Front-end "Add Job" Form
-	  + `TODO: ` - use the ACF Frontend Form Feature
-	  + `COMPLETED: 27-10-2025` - Auto assign posts to logged in user
++ `TODO: ` - STAGE 6 - Add a Front-end "Add Job" Form
++ `TODO: ` - use the ACF Frontend Form Feature to create job application tracking details for a logged in user
++ `COMPLETED: 27-10-2025` - Auto assign posts to logged in user - `functions.php`
 
   + `TODO: ` - STAGE 7 — Motivational Messages
 
@@ -114,8 +117,10 @@ The following pages are assigned to templates in the `wp-content/themes/jobs_pat
 
 	  + `TODO: ` - Use PHP to pull data from your job_application posts.
 
-+ `TODO: ` - Link logout page to WordPerss logout system (Logout) `.logout-link`"
-+ `COMPLETED: 27-10-2025` - Enqueue styles and scripts in `functions.php`
++ `TODO: ` - Use custom made login form with prototyped front end error messaging.
++ `TODO: ` - Use custom made registration form with prototyped front end error messaging.
++ `TODO: ` - Remove inline styling of login and logout out error messages. Classes: -  `.login-error` `.login-success.` Slug: `/login/`.
++ `TODO: ` - Remove inline styling of registration error messages. Classes: -  `.registration-error` `.registration-success.` Slug: `/login/`.
 + `TODO: ` - Sort `header.php` meta tags`.
 + `TODO: ` - Implement modal areas for `job-details.php`,`add-job-form.php`, `stats-modal.php`,`how-to.php`.
 + `TODO: ` - modal styles
@@ -140,8 +145,6 @@ The following pages are assigned to templates in the `wp-content/themes/jobs_pat
 + `TODO: ` - Add a "How to use" template file/page
 + `TODO: ` - style "how to use" page
 + `TODO: ` - Delete job or jobs from the list page via the stats page/modal - `button button---delete--jobs`
-+ `TODO: ` - Welcome user to the app and then invite to register `register.php`.
-+ `TODO: ` - Style register and login buttons `register.php` and `login.php`
 + `TODO: ` - input elements "do not have an autocomplete attribute" - add autocomplete="off" to all input elements
 + `TODO: ` - Progress Stats Button an #id `btn---progress--stats`
 + `TODO: ` - How to Use Button an #id `btn---how--to`
@@ -284,7 +287,7 @@ The following pages are assigned to templates in the `wp-content/themes/jobs_pat
 
   + I haven't yet customised the login and logout features. I'll look into doing that, hopefully within the next day. I'm pleased to say I've made a tremendous amount of progress already. A lot more work is ahead of me, and I'm looking forward to the challenge.
 
-  ### `2.0.2`
+### `2.0.2`
 
   + 2 things I've noticed today when trying to implement the login screens.  It's only when trying to implement a customised version of the WordPress login form did anything meaningful happen for me at all.  I tried a few implementations which don't "talk" to WordPress at all.
 
@@ -295,6 +298,12 @@ The following pages are assigned to templates in the `wp-content/themes/jobs_pat
   + It took Cursor AI to have a few goes at my codebase before we got somewhere with logging in. And I do now have logging in sorted out for one user.  There's also registration to implement next, so I can test more user flows.  Logging out (without the WordPress admin area)  is still to be implemented as well. 
 
   + I had thought and hoped that I'd be able to get this project done within a week.  That hope isn't over yet, and I'll keep working on it, but while today hasn't been a complete disaster, it also feels like a bit of a reality check for me. 
+
+### `2.0.3`
+
+  + A simple method for this that will log out the user natively so users don't need to interact with the official WordPress admin bar. `<?php echo wp_logout_url( site_url('/login') ); ?>`
+ 
+  + This means right now we have a way to log registered users in and out of the app natively - using the WordPress authentication system.
 
 ## User Flows
 
