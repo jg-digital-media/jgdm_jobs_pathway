@@ -80,10 +80,24 @@ html {
                     h3 {
 
                         font-size: 16pt;
-                        margin: 4px 0;
+                        margin: 7px 0;
                         text-align: center;
                         color: $text---col--tertiary-list;
                         color: #ffef7a
+                    }
+
+                    h4 {
+
+                        text-align: center;
+                        /* color: #3737fd; */
+                        /* color: #ffef7a; */
+                        color: #004a00;
+                        border: dashed 2px #00bb00;
+                        background: #9bf99b;
+                        padding: 8px;
+                        letter-spacing: 0px;
+                        font-size: 12px;
+                        font-weight: normal;
                     }
 
                     label {
@@ -91,6 +105,24 @@ html {
                         display: block;
                         width: 180px;
                         margin: 20px 0;
+                        font-weight: bold;
+                        font-size: 16px;
+
+                        &#remembermelabel {
+
+                            font-size: 12px;
+                            font-weight: normal;
+                        }
+
+                        #rememberme {
+
+                            /* height: auto; */
+                            height: 25px;
+                            width: 25px;
+                            vertical-align: middle;
+                            margin: 5px;
+                            padding: 0 15px;
+                        }
                     }
 
                     input[type="text"], input[type="email"], input[type="password"], textarea {

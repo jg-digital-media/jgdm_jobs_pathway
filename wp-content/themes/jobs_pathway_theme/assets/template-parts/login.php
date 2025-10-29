@@ -19,7 +19,9 @@ if (isset($_GET['loggedout']) && $_GET['loggedout'] == 'true') {
 <!-- Form: login form -->
 <form name="main_form_login" action="<?php echo wp_login_url(); ?>" method="post" id="loginform-custom" class="form form---login">
   
-   <h3>Login</h3>
+   <h3>Welcome Back!</h3>
+
+   <h4> Please login to return to your listed job applications.</h4>
 
    <p id="registration">Not Registered?  <a href="<?php echo site_url('/register'); ?>">Click here to Register</a></p>
 
@@ -31,8 +33,8 @@ if (isset($_GET['loggedout']) && $_GET['loggedout'] == 'true') {
    <input type="password" name="pwd" id="pwd" class="login---input" placeholder="Enter your password..." required>
 
    <br>
-   <label for="rememberme">
-       <input type="checkbox" name="rememberme" id="rememberme" value="forever"> Remember Me
+   <label for="rememberme" id="remembermelabel">
+       <input type="checkbox" name="rememberme" id="rememberme" value="forever"> Keep me logged in!
    </label>
 
    <input type="hidden" name="redirect_to" value="<?php echo site_url('/dashboard'); ?>">
