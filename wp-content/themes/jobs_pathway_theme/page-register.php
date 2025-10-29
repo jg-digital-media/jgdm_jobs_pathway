@@ -20,11 +20,6 @@
         exit;
     }
 
-    if (!is_user_logged_in()) {
-        wp_redirect(site_url('/login'));
-        exit;
-    }
-
 ?>
 
 
@@ -33,50 +28,73 @@
 
 <?php 
 
+    // Empty variables for form validation messages
+    $registration_message = '';
+    $registration_error = '';
+
     if ($_POST && isset($_POST['main_form_register'])) {
 
-        $userdata = array(
+        // Verify nonce for security
+        if (!isset($_POST['register_nonce']) || !wp_verify_nonce($_POST['register_nonce'], 'user_registration')) {
+            $registration_error = 'Security verification failed. Please try again.';
+        }
+        // Check if passwords match
+        elseif ($_POST['userpass'] !== $_POST['confirm_password']) {
+            $registration_error = 'Passwords do not match. Please try again.';
+        }
+        // Check password length
+        elseif (strlen($_POST['userpass']) < 6) {
+            $registration_error = 'Password must be at least 6 characters long.';
+        }
+        else {
+            // Create user
+            $userdata = array(
+                'user_login' => sanitize_user($_POST['username']),
+                'user_email' => sanitize_email($_POST['email']),
+                'user_pass'  => $_POST['userpass'],
+                'role' => 'subscriber'
+            );
 
-            'username' => sanitize_user($_POST['username']),
-            'email' => sanitize_email($_POST['email']),
-            'userpass'  => $_POST['userpass'],
-        );
+            $user_id = wp_insert_user($userdata);
 
-        $user_id = wp_insert_user($userdata);
-
-    if (!is_wp_error($user_id)) {
-
-        echo '<p class="success">Account created successfully. <a href="' . site_url('/login') . '">Login here</a>.</p>';
-
-    } else {
-
-        echo '<p class="error">' . $user_id->get_error_message() . '</p>';
+            if (!is_wp_error($user_id)) {
+                $registration_message = 'Account created successfully!';
+            } else {
+                $registration_error = $user_id->get_error_message();
+            }
+        }
     }
-
-}
 
 ?>
 
-<body>
+<body class="body---register">
 
-    <p>page-register.php</p>
+    <header class="header---register--page">
 
-    <body class="body---register">
+        <h1> Jobs Pathway App <?php //echo $website_title ?> </h1>
 
-        <header class="header---register--page">
+        <h2>Keep track of your way to your professional life</h2>
 
-            <h1> Jobs Pathway App <?php //echo $website_title ?> </h1>
+    </header>
 
-            <h2>Keep track of your way to your professional life</h2>
+    <section class="container---element--register">
 
-        </header>
+        <?php 
+        // Display success message
+        if (!empty($registration_message)) {
+            echo '<p class="registration-success" style="color: green; background: #e6ffe6; padding: 15px; border-radius: 5px; margin: 20px 0;"><strong>Success!</strong> ' . $registration_message . '</p>';
+        }
+        
+        // Display error message
+        if (!empty($registration_error)) {
+            echo '<p class="registration-error" style="color: red; background: #ffe6e6; padding: 15px; border-radius: 5px; margin: 20px 0;"><strong>Error:</strong> ' . $registration_error . '</p>';
+        }
+        ?>
 
-        <section class="container---element--register">
+        <?php require "assets/template-parts/register.php"; ?>
 
-            <?php require "assets/template-parts/register.php"; ?>
+    </section>
 
-        </section>
-
-    </body>
+</body>
 
 <?php get_footer() ?>
