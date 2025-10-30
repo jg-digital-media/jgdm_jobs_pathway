@@ -955,7 +955,15 @@ html {
                                     font-size: 13px;
                                 }
 
+                                
+
                             }
+                            
+                            // job profile edit mode 
+                                .edit-mode {
+
+                                    border: solid 1px #4486ff;
+                                }
 
                             a {
 
@@ -1007,6 +1015,7 @@ html {
                 margin: 6px auto;
 
 
+                #btn-toggle-edit, 
                 a.button---job--edit {
 
                     // extend common button styles
@@ -1021,6 +1030,7 @@ html {
                     width: 120px;
                     /* color: red; */
                     text-decoration: none;
+                    cursor: pointer;
                     
                     transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
 
