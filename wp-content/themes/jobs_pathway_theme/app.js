@@ -1,5 +1,5 @@
 // connection check - app.js
-console.log("app.js connected - 29-10-2025 - 12:34");
+console.log("app.js connected - 30-10-2025 - 15:45 - Inline Edit Enabled");
 
 // Wait for DOM to be fully loaded
 document.addEventListener('DOMContentLoaded', function() {
@@ -438,4 +438,197 @@ function saveCheckboxState(postId, fieldName, value) {
         console.error('AJAX error:', error);
         alert('Error saving changes. Please check your connection.');
     });
+}
+
+// Job Profile Edit/Save Toggle Functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const toggleButton = document.getElementById('btn-toggle-edit');
+    
+    if (toggleButton) {
+        toggleButton.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            const currentMode = this.getAttribute('data-mode');
+            const postId = this.getAttribute('data-post-id');
+            
+            if (currentMode === 'view') {
+                // Switch to edit mode
+                switchToEditMode(this);
+            } else {
+                // Save and switch back to view mode
+                saveJobProfileChanges(this, postId);
+            }
+        });
+    }
+});
+
+function switchToEditMode(button) {
+    // Hide all view-mode elements
+    document.querySelectorAll('.view-mode').forEach(el => {
+        el.style.display = 'none';
+    });
+    
+    // Show all edit-mode inputs
+    document.querySelectorAll('.edit-mode').forEach(el => {
+        el.style.display = 'block';
+    });
+    
+    // Change button text and mode
+    button.textContent = 'Save';
+    button.setAttribute('data-mode', 'edit');
+    // button.style.background = '#4CAF50';
+    // button.style.background = '#4486ff;';
+    
+    console.log('Switched to edit mode');
+}
+
+function switchToViewMode(button) {
+    // Hide all edit-mode inputs
+    document.querySelectorAll('.edit-mode').forEach(el => {
+        el.style.display = 'none';
+    });
+    
+    // Show all view-mode elements
+    document.querySelectorAll('.view-mode').forEach(el => {
+        el.style.display = 'block';
+    });
+    
+    // Change button text and mode
+    button.textContent = 'Edit';
+    button.setAttribute('data-mode', 'view');
+    button.style.background = '';
+    
+    console.log('Switched to view mode');
+}
+
+function saveJobProfileChanges(button, postId) {
+    console.log('Saving job profile changes for post:', postId);
+    
+    // Disable button while saving
+    button.disabled = true;
+    button.textContent = 'Saving...';
+    
+    // Collect all field values
+    const fields = {};
+    document.querySelectorAll('.job-edit-input').forEach(input => {
+        const fieldName = input.getAttribute('data-field');
+        fields[fieldName] = input.value;
+    });
+    
+    console.log('Fields to save:', fields);
+    
+    // Create FormData
+    const formData = new FormData();
+    formData.append('action', 'update_job_profile');
+    formData.append('post_id', postId);
+    formData.append('fields', JSON.stringify(fields));
+    formData.append('nonce', jobPathwayAjax.nonce);
+    
+    // Send AJAX request
+    fetch(jobPathwayAjax.ajaxurl, {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            console.log('Job profile saved successfully:', data);
+            
+            // Update view-mode displays with new values
+            updateViewModeDisplays(fields);
+            
+            // Show success message
+            showStatusMessage('Changes saved successfully!', 'success');
+            
+            // Switch back to view mode
+            switchToViewMode(button);
+            button.disabled = false;
+        } else {
+            console.error('Error saving job profile:', data);
+            showStatusMessage('Error saving changes: ' + (data.data ? data.data.message : 'Unknown error'), 'error');
+            button.disabled = false;
+            button.textContent = 'Save';
+        }
+    })
+    .catch(error => {
+        console.error('AJAX error:', error);
+        showStatusMessage('Error saving changes. Please check your connection.', 'error');
+        button.disabled = false;
+        button.textContent = 'Save';
+    });
+}
+
+function updateViewModeDisplays(fields) {
+    // Update company name
+    const companySpan = document.querySelector('tr:nth-child(1) .view-mode');
+    if (companySpan && fields.company_name) {
+        companySpan.textContent = fields.company_name || 'Not provided';
+    }
+    
+    // Update job title
+    const jobTitleSpan = document.querySelector('tr:nth-child(2) .view-mode');
+    if (jobTitleSpan && fields.job_title) {
+        jobTitleSpan.textContent = fields.job_title || 'Not provided';
+    }
+    
+    // Update salary
+    const salarySpan = document.querySelector('tr:nth-child(3) .view-mode');
+    if (salarySpan && fields.salary !== undefined) {
+        salarySpan.textContent = fields.salary || 'Not specified';
+    }
+    
+    // Update location
+    const locationSpan = document.querySelector('tr:nth-child(4) .view-mode');
+    if (locationSpan && fields.location) {
+        locationSpan.textContent = fields.location || 'Not provided';
+    }
+    
+    // Update contact person
+    const contactPersonSpan = document.querySelector('tr:nth-child(5) .view-mode');
+    if (contactPersonSpan && fields.contact_person !== undefined) {
+        contactPersonSpan.textContent = fields.contact_person || 'Not provided';
+    }
+    
+    // Update contact details
+    const contactDetailsSpan = document.querySelector('tr:nth-child(6) .view-mode');
+    if (contactDetailsSpan && fields.contact_details !== undefined) {
+        contactDetailsSpan.textContent = fields.contact_details || 'Not provided';
+    }
+    
+    // Update description
+    const descriptionDiv = document.querySelector('#job---personal--notes .view-mode');
+    if (descriptionDiv) {
+        if (fields.description && fields.description.trim()) {
+            // Convert line breaks to paragraphs (simple version)
+            const paragraphs = fields.description.split('\n\n').map(p => {
+                return '<p>' + p.replace(/\n/g, '<br>') + '</p>';
+            }).join('');
+            descriptionDiv.innerHTML = paragraphs;
+        } else {
+            descriptionDiv.innerHTML = '<p>No description provided.</p>';
+        }
+    }
+}
+
+function showStatusMessage(message, type) {
+    const messageDiv = document.getElementById('job-profile-status-message');
+    if (messageDiv) {
+        messageDiv.textContent = message;
+        messageDiv.style.display = 'block';
+        
+        if (type === 'success') {
+            messageDiv.style.background = '#e6ffe6';
+            messageDiv.style.color = '#4CAF50';
+            messageDiv.style.border = '1px solid #4CAF50';
+        } else {
+            messageDiv.style.background = '#ffe6e6';
+            messageDiv.style.color = '#f44336';
+            messageDiv.style.border = '1px solid #f44336';
+        }
+        
+        // Auto-hide after 3 seconds
+        setTimeout(() => {
+            messageDiv.style.display = 'none';
+        }, 3000);
+    }
 }
