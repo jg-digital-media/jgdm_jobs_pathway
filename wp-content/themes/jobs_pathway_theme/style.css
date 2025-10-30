@@ -2,7 +2,7 @@
 /* head.scss */
 /*
 
-Last Updated: 29-10-2025 - 16:06
+Last Updated: 31-10-2025 - 16:46
 */
 * {
   padding: 0;
@@ -10,10 +10,12 @@ Last Updated: 29-10-2025 - 16:06
 }
 
 /* config.scss */
+html body.body---job--details .section---job--edit #btn-toggle-edit,
 html body.body---job--details .section---job--edit a.button---job--edit, html body.body---list main .section---jobs--list--container table tbody tr td:nth-child(2) a, html body.body---list main .section---add--situation-container a, html body.body---list main .top---banner--container .app---navigation li a {
   background: #4486ff;
   color: #98cbff;
 }
+html body.body---job--details .section---job--edit #btn-toggle-edit:hover,
 html body.body---job--details .section---job--edit a.button---job--edit:hover, html body.body---list main .section---jobs--list--container table tbody tr td:nth-child(2) a:hover, html body.body---list main .section---add--situation-container a:hover, html body.body---list main .top---banner--container .app---navigation li a:hover {
   color: #ffffff;
 }
@@ -755,6 +757,9 @@ html body.body---job--details .job---profile---container tbody tr td#job---perso
   margin-top: 3px;
   font-size: 13px;
 }
+html body.body---job--details .job---profile---container tbody tr td .edit-mode {
+  border: solid 1px #4486ff;
+}
 html body.body---job--details .job---profile---container tbody tr td a {
   color: #4486ff;
   transition: color 0.3s ease-in-out;
@@ -765,6 +770,7 @@ html body.body---job--details .job---profile---container tbody tr td a:hover {
 html body.body---job--details .job---profile---container tbody tr td:nth-child(1) {
   font-weight: bold;
   font-size: 14pt;
+  padding: 10px;
 }
 html body.body---job--details .job---profile---container tbody tr #job---personal--notes {
   font-weight: normal;
@@ -783,6 +789,7 @@ html body.body---job--details .section---job--edit {
   /* width: 152px; */
   margin: 6px auto;
 }
+html body.body---job--details .section---job--edit #btn-toggle-edit,
 html body.body---job--details .section---job--edit a.button---job--edit {
   /* padding: 0 6px 0 0; */
   display: block;
@@ -793,8 +800,10 @@ html body.body---job--details .section---job--edit a.button---job--edit {
   width: 120px;
   /* color: red; */
   text-decoration: none;
+  cursor: pointer;
   transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
 }
+html body.body---job--details .section---job--edit #btn-toggle-edit:hover,
 html body.body---job--details .section---job--edit a.button---job--edit:hover {
   /* background: $button---bg--hover-list; */
   color: #ffffff;
