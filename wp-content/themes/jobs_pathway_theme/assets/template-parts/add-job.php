@@ -23,7 +23,11 @@
 
         <br>
         <label for="contact_person">Contact Person: </label>
-        <input type="text"  name="contact_person" id="contact_person" class="login---input" placeholder="Name of Contact Person...">
+        <input type="text"  name="contact_person" id="contact_person" class="login---input" placeholder="Name of Contact Person...">  
+        
+        <br>
+        <label for="contact_details">Contact Information: </label>
+        <input type="text"  name="contact_details" id="contact_details" class="login---input" placeholder="Details of Contact Person...">
 
         <br><br>
 
