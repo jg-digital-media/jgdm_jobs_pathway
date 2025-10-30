@@ -52,7 +52,8 @@
                 $location = get_post_meta($post_id, 'location', true);
                 $contact_person = get_post_meta($post_id, 'contact_person', true);
                 $contact_details = get_post_meta($post_id, 'contact_details', true);
-                $description = get_the_content();
+                // $description = get_the_content();
+                $description = get_post_meta($post_id, 'description', true);
                 
                 // Get boolean tracking fields
                 $application_sent = get_post_meta($post_id, 'application_sent', true);
