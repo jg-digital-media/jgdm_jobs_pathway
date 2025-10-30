@@ -54,6 +54,11 @@
     <td>True/False</td>
   </tr>
   <tr>
+    <td>CV/Resume Sent</td>
+    <td>cvresume_sent</td>
+    <td>True/False</td>
+  </tr>
+  <tr>
     <td>Interview Secured</td>
     <td>interview_secured</td>
     <td>True/False</td>
