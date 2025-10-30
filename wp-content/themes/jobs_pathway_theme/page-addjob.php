@@ -44,6 +44,7 @@ if ($_POST && isset($_POST['add_job_form'])) {
             update_post_meta($post_id, 'salary', sanitize_text_field($_POST['salary']));
             update_post_meta($post_id, 'location', sanitize_text_field($_POST['location']));
             update_post_meta($post_id, 'contact_person', sanitize_text_field($_POST['contact_person']));
+            update_post_meta($post_id, 'contact_details', sanitize_text_field($_POST['contact_details']));
             
             // Initialize boolean fields to false (0)
             update_post_meta($post_id, 'application_sent', 0);
