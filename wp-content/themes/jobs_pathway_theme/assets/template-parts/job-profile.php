@@ -1,6 +1,12 @@
 
 <!-- Progress Stats Modal Goes Here -->
 
+<?php 
+// Debug: Check if variables are set
+echo '<!-- DEBUG: Company Name: ' . (isset($company_name) ? $company_name : 'NOT SET') . ' -->';
+echo '<!-- DEBUG: Job Title: ' . (isset($job_title) ? $job_title : 'NOT SET') . ' -->';
+echo '<!-- DEBUG: Post ID: ' . (isset($post_id) ? $post_id : 'NOT SET') . ' -->';
+?>
 
 <table class = "job---profile---container">
       
@@ -12,27 +18,27 @@
     <tbody>
         <tr>
             <td>Company Name:</td>
-            <td>Company name here!</td>
+            <td><?php echo $company_name ? esc_html($company_name) : 'Not provided'; ?></td>
         </tr>
         <tr>
             <td>Job Title:</td>
-            <td>Assistant Web Designer! <!-- Value goes here! --></td>
+            <td><?php echo $job_title ? esc_html($job_title) : 'Not provided'; ?></td>
         </tr>
         <tr>
             <td>Salary Details:</td>
-            <td>&pound;12,000<!-- Value goes here -->!</td>
+            <td><?php echo $salary ? esc_html($salary) : 'Not specified'; ?></td>
         </tr>
         <tr>
             <td>Job Location:</td>
-            <td>Durham <!-- Value goes here! --></td>
+            <td><?php echo $location ? esc_html($location) : 'Not provided'; ?></td>
         </tr>
         <tr>
             <td>Contact Person:</td>
-            <td>Jim <!-- Value goes here! --></td>
+            <td><?php echo $contact_person ? esc_html($contact_person) : 'Not provided'; ?></td>
         </tr>
         <tr>
             <td>Contact Details:</td>
-            <td>0123456789   <a href="mailto:contact_person@email.com">contact_person@email.com</a></td>
+            <td><?php echo $contact_details ? esc_html($contact_details) : 'Not provided'; ?></td>
         </tr>
 
         <tr>
@@ -41,8 +47,11 @@
                 <h4>Description:</h4>
                 
                 <div>
-                    <p>Details go here. Decribe what the job role involves; the skills you need to have... why you wanted to apply for the job</p>
-
+                    <?php if ($description): ?>
+                        <?php echo wpautop($description); ?>
+                    <?php else: ?>
+                        <p>No description provided.</p>
+                    <?php endif; ?>
                 </div>
             </td>
         </tr>
