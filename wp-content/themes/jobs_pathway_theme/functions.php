@@ -248,3 +248,106 @@ function jt_update_job_meta() {
 // Register AJAX handlers for both logged in and logged out users
 add_action('wp_ajax_update_job_meta', 'jt_update_job_meta');
 add_action('wp_ajax_nopriv_update_job_meta', 'jt_update_job_meta');
+
+
+// AJAX handler to update entire job profile (all fields at once)
+function jt_update_job_profile() {
+  
+  // Verify nonce
+  if (!isset($_POST['nonce']) || !wp_verify_nonce($_POST['nonce'], 'job_pathway_ajax_nonce')) {
+    wp_send_json_error(array('message' => 'Security check failed'));
+    return;
+  }
+  
+  // Check if user is logged in
+  if (!is_user_logged_in()) {
+    wp_send_json_error(array('message' => 'You must be logged in'));
+    return;
+  }
+  
+  // Get and validate parameters
+  $post_id = isset($_POST['post_id']) ? intval($_POST['post_id']) : 0;
+  $fields_json = isset($_POST['fields']) ? $_POST['fields'] : '';
+  
+  if (!$post_id || empty($fields_json)) {
+    wp_send_json_error(array('message' => 'Missing required parameters'));
+    return;
+  }
+  
+  // Decode fields
+  $fields = json_decode(stripslashes($fields_json), true);
+  if (!is_array($fields)) {
+    wp_send_json_error(array('message' => 'Invalid fields data'));
+    return;
+  }
+  
+  // Verify the post exists and is a job_application
+  $post = get_post($post_id);
+  if (!$post || $post->post_type !== 'job_application') {
+    wp_send_json_error(array('message' => 'Invalid job application'));
+    return;
+  }
+  
+  // Verify the user owns this post
+  if ($post->post_author != get_current_user_id()) {
+    wp_send_json_error(array('message' => 'You do not have permission to edit this job application'));
+    return;
+  }
+  
+  // Allowed field names for security
+  $allowed_fields = array(
+    'company_name',
+    'job_title',
+    'salary',
+    'location',
+    'contact_person',
+    'contact_details',
+    'description'
+  );
+  
+  $updated_count = 0;
+  $errors = array();
+  
+  // Update each field
+  foreach ($fields as $field_name => $field_value) {
+    if (in_array($field_name, $allowed_fields)) {
+      
+      // Handle description separately (post content)
+      if ($field_name === 'description') {
+        $update_result = wp_update_post(array(
+          'ID' => $post_id,
+          'post_content' => sanitize_textarea_field($field_value)
+        ));
+        
+        if (!is_wp_error($update_result)) {
+          $updated_count++;
+        } else {
+          $errors[] = 'Failed to update description';
+        }
+      } else {
+        // Update meta field
+        $updated = update_post_meta($post_id, $field_name, sanitize_text_field($field_value));
+        if ($updated !== false) {
+          $updated_count++;
+        }
+      }
+    }
+  }
+  
+  if (count($errors) > 0) {
+    wp_send_json_error(array(
+      'message' => 'Some fields failed to update',
+      'errors' => $errors,
+      'updated_count' => $updated_count
+    ));
+  } else {
+    wp_send_json_success(array(
+      'message' => 'Job profile updated successfully',
+      'post_id' => $post_id,
+      'updated_count' => $updated_count
+    ));
+  }
+}
+
+add_action('wp_ajax_update_job_profile', 'jt_update_job_profile');
+add_action('wp_ajax_nopriv_update_job_profile', 'jt_update_job_profile');
