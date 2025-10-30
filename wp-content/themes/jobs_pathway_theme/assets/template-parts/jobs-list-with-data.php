@@ -79,7 +79,7 @@
                         <br><small>💰 <?php echo esc_html($salary); ?></small>
                     <?php endif; ?>
 
-                    <a href="job-info/">Open</a>
+                    <a href="<?php echo get_permalink($post_id); ?>">Open</a>
                 </td>
                 <td id="j<?php echo $job_counter; ?>s2" class="<?php echo $application_sent ? 'stage---completed' : ''; ?>">
                     <input type="checkbox" 
