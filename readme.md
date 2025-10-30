@@ -1,4 +1,4 @@
-`Last Updated: 29-10-2025 - 17:22`
+`Last Updated: 30-10-2025 - 16:46`
 
 # Jobs Pathway
   + Jobs Pathway is a project in PHP and WordPress. Sign in and add details of jobs applied for so you can keep track of your way to your professional life with this app.
@@ -327,6 +327,16 @@ The following pages are assigned to templates in the `wp-content/themes/jobs_pat
   + After that, I focused my attention on adding job application data to the database; handling dashboard states where the list is empty, when it has data; and persisting the data to the database. I got through more than I was expecting to today.. Including using Ajax and the WordPress database to persist changes to job status tracking via checkboxes. Which means I can add Ajax to the tech stack for this project.
 
   + 2 more big things to come that will require major development.  Editable job profile data for each job application, and a way to provide progress feedback to the user via a stats page.
+
+  ### `2.0.4`
+
+  + The main success today is getting toggling between read only and edit modes of Job application profiles. A major app feature. It needs some UX refinement later, but it's functional and ready.
+
+  + I learned a couple of things about my current method of project development. First, when you're coding with AI, it's not a case of telling the model, "do this" and expecting magic to happen the way you want it. You still have to have an understanding of good prompting and the code that you want to generate.
+
+  + I probably could have done more to prototype the design when I was in that stage. For example, I could have easily simulated the switch between read-only and edit mode for the job profile templates, which may have helped with some chat prompts to the Claude AI model. Sometimes AI makes assumptions about what features you want built. This can be a hindrance as much as it can be a benefit.
+
+  + Once the progress stats dashboard is completed, it'll be a case of having a good look at the UX, social sharing tags and markup to get the whole app fit for release.
 
 ## User Flows
 
