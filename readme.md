@@ -28,6 +28,7 @@ The following pages are assigned to templates in the `wp-content/themes/jobs_pat
 + Add Job - assigned to `page-addjob.php` "Job Dashboard" template `add-job/`
 + How To - assigned to `page-howto.php` "How To" template `how-to/`
 + Job Stats - assigned to `page-jobstats.php` "Job Stats" template `job-stats/`
++ Job Info Page - assigned to `single-job_application.php` "Job Stats" template `job-info/`
 
 ### Plugins Used
 
@@ -40,7 +41,7 @@ The following pages are assigned to templates in the `wp-content/themes/jobs_pat
 
 ## TODOs: 
 
-### (Tasks: `99` - Completed - `51`)
+### (Tasks: `107` - Completed - `54`)
 
 + `COMPLETED: 16-09-2025` - Wireframe and static interface planning for 'Job's Pathway App'
 + `COMPLETED: 16-09-2025` - Add a footer and header template part of the project
@@ -97,9 +98,20 @@ The following pages are assigned to templates in the `wp-content/themes/jobs_pat
 + `COMPLETED: 28-10-2025 ` - STAGE 5 — Create a Front-End Dashboard Template  
 + `COMPLETED: 27-10-2025` - In WordPress → Pages → Add New → call it Dashboard, and assign the "Job Dashboard" template. `page-dashboard.php`
 
-+ ``COMPLETED: 28-10-2025 ` - STAGE 6 - Add a Front-end "Add Job" Form
-+ `TODO: ` - Add contact detail field to add job form
-+ `TODO: ` - CV/Resume on dashboard page has no custom field on CPT
++ `COMPLETED: 28-10-2025 ` - STAGE 6 - Add a Front-end "Add Job" Form
+
++ `COMPLETED: 30-10-2025` - CV/Resume on dashboard page has no custom field on CPT
++ `COMPLETED: 30-10-2025` - Add contact detail field to add job form
++ `TODO: ` - Implement progess stats dashboard page for logged in user `/job-stats/`
++ `TODO: ` - Page dashboard - remove job details from "job details" column. The idea being a page will be accessed that has this info.
++ `TODO: ` - Page dashboard - remove edit link from actions Column. Consider renaminf actions column to delete
++ `COMPLETED: 30-10-2025` - Page dashboard - implement delete button in actions column
++ `TODO: ` - Page dashboard - implement edit button in actions column
++ `TODO: ` - Single Job page -  Style input elements in edit state to improve UX
++ `TODO: ` - Style "Back to Dashboard" button - `/add-job/`
++ `TODO: ` - add job form - all fields should be required - Add message `/add-job/`
++ `TODO: ` - Use custom made login form with prototyped front end error messaging.
++ `TODO: ` - Use custom made registration form with prototyped front end error messaging.
 + `TODO: ` - Add background colour on hover for all form inputs `/add-job`
 + `TODO: ` - add-job-form.php - Description text area has no hover transition of background colour (filename as per prototype) `/add-job`
 + `TODO: ` - use the ACF Frontend Form Feature to create job application tracking details for a logged in user
@@ -120,8 +132,6 @@ The following pages are assigned to templates in the `wp-content/themes/jobs_pat
 
 	  + `TODO: ` - Use PHP to pull data from your job_application posts.
 
-+ `TODO: ` - Use custom made login form with prototyped front end error messaging.
-+ `TODO: ` - Use custom made registration form with prototyped front end error messaging.
 + `TODO: ` - Remove inline styling of login and logout out error messages. Classes: -  `.login-error` `.login-success.` Slug: `/login/`.
 + `TODO: ` - Remove inline styling of registration error messages. Classes: -  `.registration-error` `.registration-success.` Slug: `/login/`.
 + `TODO: ` - `login-handler` and `register-handler` are empty and to be ignored for now.
