@@ -70,7 +70,14 @@ function jt_register_job_application_cpt() {
         ],
 
         'public' => true,
+        'publicly_queryable' => true,
+        'show_ui' => true,
+        'show_in_menu' => true,
+        'query_var' => true,
+        'rewrite' => ['slug' => 'job-application', 'with_front' => false],
+        'capability_type' => 'post',
         'has_archive' => true,
+        'hierarchical' => false,
         'menu_icon' => 'dashicons-portfolio',
         'supports' => ['title', 'editor', 'author'],
         'show_in_rest' => true, // allows Gutenberg / REST API
@@ -78,6 +85,14 @@ function jt_register_job_application_cpt() {
 }
 
 add_action('init', 'jt_register_job_application_cpt');
+
+
+// Flush rewrite rules on theme activation (only once)
+function jt_rewrite_flush() {
+    jt_register_job_application_cpt();
+    flush_rewrite_rules();
+}
+register_activation_hook( __FILE__, 'jt_rewrite_flush' );
 
 
 // Auto assign new job application posts to the logged in user
