@@ -8,7 +8,9 @@ echo '<!-- DEBUG: Job Title: ' . (isset($job_title) ? $job_title : 'NOT SET') . 
 echo '<!-- DEBUG: Post ID: ' . (isset($post_id) ? $post_id : 'NOT SET') . ' -->';
 ?>
 
-<table class = "job---profile---container">
+<div id="job-profile-status-message" style="display: none; margin: 20px 0; padding: 15px; border-radius: 5px; text-align: center;"></div>
+
+<table class="job---profile---container" id="job-profile-table">
       
     <thead>
         <tr>
@@ -18,27 +20,45 @@ echo '<!-- DEBUG: Post ID: ' . (isset($post_id) ? $post_id : 'NOT SET') . ' -->'
     <tbody>
         <tr>
             <td>Company Name:</td>
-            <td><?php echo $company_name ? esc_html($company_name) : 'Not provided'; ?></td>
+            <td>
+                <span class="view-mode"><?php echo $company_name ? esc_html($company_name) : 'Not provided'; ?></span>
+                <input type="text" class="edit-mode job-edit-input" style="display: none; width: 100%;" data-field="company_name" value="<?php echo esc_attr($company_name); ?>">
+            </td>
         </tr>
         <tr>
             <td>Job Title:</td>
-            <td><?php echo $job_title ? esc_html($job_title) : 'Not provided'; ?></td>
+            <td>
+                <span class="view-mode"><?php echo $job_title ? esc_html($job_title) : 'Not provided'; ?></span>
+                <input type="text" class="edit-mode job-edit-input" style="display: none; width: 100%;" data-field="job_title" value="<?php echo esc_attr($job_title); ?>">
+            </td>
         </tr>
         <tr>
             <td>Salary Details:</td>
-            <td><?php echo $salary ? esc_html($salary) : 'Not specified'; ?></td>
+            <td>
+                <span class="view-mode"><?php echo $salary ? esc_html($salary) : 'Not specified'; ?></span>
+                <input type="text" class="edit-mode job-edit-input" style="display: none; width: 100%;" data-field="salary" value="<?php echo esc_attr($salary); ?>">
+            </td>
         </tr>
         <tr>
             <td>Job Location:</td>
-            <td><?php echo $location ? esc_html($location) : 'Not provided'; ?></td>
+            <td>
+                <span class="view-mode"><?php echo $location ? esc_html($location) : 'Not provided'; ?></span>
+                <input type="text" class="edit-mode job-edit-input" style="display: none; width: 100%;" data-field="location" value="<?php echo esc_attr($location); ?>">
+            </td>
         </tr>
         <tr>
             <td>Contact Person:</td>
-            <td><?php echo $contact_person ? esc_html($contact_person) : 'Not provided'; ?></td>
+            <td>
+                <span class="view-mode"><?php echo $contact_person ? esc_html($contact_person) : 'Not provided'; ?></span>
+                <input type="text" class="edit-mode job-edit-input" style="display: none; width: 100%;" data-field="contact_person" value="<?php echo esc_attr($contact_person); ?>">
+            </td>
         </tr>
         <tr>
             <td>Contact Details:</td>
-            <td><?php echo $contact_details ? esc_html($contact_details) : 'Not provided'; ?></td>
+            <td>
+                <span class="view-mode"><?php echo $contact_details ? esc_html($contact_details) : 'Not provided'; ?></span>
+                <input type="text" class="edit-mode job-edit-input" style="display: none; width: 100%;" data-field="contact_details" value="<?php echo esc_attr($contact_details); ?>">
+            </td>
         </tr>
 
         <tr>
@@ -46,13 +66,14 @@ echo '<!-- DEBUG: Post ID: ' . (isset($post_id) ? $post_id : 'NOT SET') . ' -->'
                 
                 <h4>Description:</h4>
                 
-                <div>
+                <div class="view-mode">
                     <?php if ($description): ?>
                         <?php echo wpautop($description); ?>
                     <?php else: ?>
                         <p>No description provided.</p>
                     <?php endif; ?>
                 </div>
+                <textarea class="edit-mode job-edit-input" style="display: none; width: 100%; min-height: 150px; padding: 10px;" data-field="deqscription"><?php echo esc_textarea($description); ?></textarea>
             </td>
         </tr>
 
@@ -62,6 +83,8 @@ echo '<!-- DEBUG: Post ID: ' . (isset($post_id) ? $post_id : 'NOT SET') . ' -->'
 
 <section class="section---job--edit">
 
-    <a href="list.php" class="button button---job--edit">Edit</a>
+    <a id="btn-toggle-edit" class="button button---job--edit" data-post-id="<?php echo $post_id; ?>" data-mode="view">Edit</a>
 
 </section>
+
+<input type="hidden" id="job-post-id" value="<?php echo $post_id; ?>">
