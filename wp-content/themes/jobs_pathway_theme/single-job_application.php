@@ -31,21 +31,40 @@
 
             <!-- <h3>Job/Situation Details...</h3> -->
 
-            <a href="dashboard/">Back</a>
+            <a href="<?php echo site_url('/dashboard'); ?>">Back</a>
 
-            <!-- <p><strong>Company:</strong> <?php the_field('company_name'); ?></p>
-            <p><strong>Salary:</strong> <?php the_field('salary'); ?></p>
-            <p><strong>Location:</strong> <?php the_field('location'); ?></p>
-            <p><strong>Contact:</strong> <?php the_field('contact_person'); ?></p>
-            <p><strong>Description:</strong> <?php the_field('description'); ?></p>
+            <?php 
 
-            <p><strong>Status:</strong>
-
-                <?php echo get_field('application_sent') ? 'Application Sent ✅' : ''; ?>
-                <?php echo get_field('interview_attended') ? 'Interview Done 🎤' : ''; ?>
-                <?php echo get_field('got_job') ? 'Got the Job! 🎉' : ''; ?>
-
-            </p> -->
+            // DEBUG CODE: Check if we're on the right template
+            echo '<!-- DEBUG: Post Type: ' . get_post_type() . ' -->';
+            echo '<!-- DEBUG: Is Single: ' . (is_single() ? 'YES' : 'NO') . ' -->';
+            
+            // Load the job application data
+            if (have_posts()) : 
+                while (have_posts()) : the_post(); 
+                
+                $post_id = get_the_ID();
+                
+                // Get all meta data from the custom post type
+                $company_name = get_post_meta($post_id, 'company_name', true);
+                $job_title = get_post_meta($post_id, 'job_title', true);
+                $salary = get_post_meta($post_id, 'salary', true);
+                $location = get_post_meta($post_id, 'location', true);
+                $contact_person = get_post_meta($post_id, 'contact_person', true);
+                $contact_details = get_post_meta($post_id, 'contact_details', true);
+                $description = get_the_content();
+                
+                // Get boolean tracking fields
+                $application_sent = get_post_meta($post_id, 'application_sent', true);
+                $cv_sent = get_post_meta($post_id, 'cv_sent', true);
+                $interview_secured = get_post_meta($post_id, 'interview_secured', true);
+                $interview_attended = get_post_meta($post_id, 'interview_attended', true);
+                $references_provided = get_post_meta($post_id, 'references_provided', true);
+                $got_job = get_post_meta($post_id, 'got_job', true);
+                
+                endwhile;
+            endif;
+            ?>
 
             <?php require "assets/template-parts/job-profile.php"; ?>
 
