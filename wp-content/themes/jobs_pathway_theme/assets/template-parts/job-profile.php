@@ -16,31 +16,32 @@
         </tr>
         <tr>
             <td>Job Title:</td>
-            <td>Value goes here!</td>
+            <td>Assistant Web Designer! <!-- Value goes here! --></td>
         </tr>
         <tr>
             <td>Salary Details:</td>
-            <td>Value goes here!</td>
+            <td>&pound;12,000<!-- Value goes here -->!</td>
         </tr>
         <tr>
             <td>Job Location:</td>
-            <td>Value goes here!</td>
+            <td>Durham <!-- Value goes here! --></td>
         </tr>
         <tr>
             <td>Contact Person:</td>
-            <td>Value goes here!</td>
+            <td>Jim <!-- Value goes here! --></td>
         </tr>
         <tr>
-            <td>Contact Person Email:</td>
-            <td><a href="mailto:contact_person@email.com">contact_person@email.com</a></td>
+            <td>Contact Details:</td>
+            <td>0123456789   <a href="mailto:contact_person@email.com">contact_person@email.com</a></td>
         </tr>
 
         <tr>
             <td colspan="2" id="job---personal--notes">
+                
                 <h4>Description:</h4>
                 
                 <div>
-                    <p>Details go here....</p>
+                    <p>Details go here. Decribe what the job role involves; the skills you need to have... why you wanted to apply for the job</p>
 
                 </div>
             </td>
