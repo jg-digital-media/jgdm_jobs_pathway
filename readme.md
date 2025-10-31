@@ -1,4 +1,4 @@
-`Last Updated: 30-10-2025 - 16:46`
+`Last Updated: 31-10-2025 - 16:44`
 
 # Jobs Pathway
   + Jobs Pathway is a project in PHP and WordPress. Sign in and add details of jobs applied for so you can keep track of your way to your professional life with this app.
@@ -180,7 +180,7 @@ The following pages are assigned to templates in the `wp-content/themes/jobs_pat
 [1.0.0](#100) | [1.0.1](#101) | [1.0.2](#102)
 
 ### WordPress Development
-[2.0.0](#200)
+[2.0.0](#200) | [2.0.1](#201) | [2.0.2](#202) | [2.0.3](#203) | [2.0.4](#204) | [2.0.5](#205)
 
 ### `0.0.1`
   
@@ -290,6 +290,8 @@ The following pages are assigned to templates in the `wp-content/themes/jobs_pat
 
 + I spent some time today sorting out the repository, local location and server and getting WordPress installed.  Development on the app can now begin again in earnest. `20-10-2025`
 
+[Back to Top](#development)
+
 ### `2.0.1`
 
 + This week, I'm working on finishing the app. Again, the scale of what I'm trying to build was slowly beginning to dawn on me. Even the job of copying code from the prototype was not a simple task, as you have to consider the hierarchy and how to make sure WordPress takes over correctly. That said, I am on much more solid ground with WordPress. Here's a summary of where I'm up as of today. (`27-10-2025`).
@@ -302,6 +304,8 @@ The following pages are assigned to templates in the `wp-content/themes/jobs_pat
 
   + I haven't yet customised the login and logout features. I'll look into doing that, hopefully within the next day. I'm pleased to say I've made a tremendous amount of progress already. A lot more work is ahead of me, and I'm looking forward to the challenge.
 
+[Back to Top](#development)
+
 ### `2.0.2`
 
   + 2 things I've noticed today when trying to implement the login screens.  It's only when trying to implement a customised version of the WordPress login form did anything meaningful happen for me at all.  I tried a few implementations which don't "talk" to WordPress at all.
@@ -313,6 +317,8 @@ The following pages are assigned to templates in the `wp-content/themes/jobs_pat
   + It took Cursor AI to have a few goes at my codebase before we got somewhere with logging in. And I do now have logging in sorted out for one user.  There's also registration to implement next, so I can test more user flows.  Logging out (without the WordPress admin area)  is still to be implemented as well. 
 
   + I had thought and hoped that I'd be able to get this project done within a week.  That hope isn't over yet, and I'll keep working on it, but while today hasn't been a complete disaster, it also feels like a bit of a reality check for me. 
+  
+[Back to Top](#development)
 
 ### `2.0.3`
 
@@ -327,6 +333,8 @@ The following pages are assigned to templates in the `wp-content/themes/jobs_pat
   + After that, I focused my attention on adding job application data to the database; handling dashboard states where the list is empty, when it has data; and persisting the data to the database. I got through more than I was expecting to today.. Including using Ajax and the WordPress database to persist changes to job status tracking via checkboxes. Which means I can add Ajax to the tech stack for this project.
 
   + 2 more big things to come that will require major development.  Editable job profile data for each job application, and a way to provide progress feedback to the user via a stats page.
+  
+[Back to Top](#development)
 
   ### `2.0.4`
 
@@ -337,6 +345,24 @@ The following pages are assigned to templates in the `wp-content/themes/jobs_pat
   + I probably could have done more to prototype the design when I was in that stage. For example, I could have easily simulated the switch between read-only and edit mode for the job profile templates, which may have helped with some chat prompts to the Claude AI model. Sometimes AI makes assumptions about what features you want built. This can be a hindrance as much as it can be a benefit.
 
   + Once the progress stats dashboard is completed, it'll be a case of having a good look at the UX, social sharing tags and markup to get the whole app fit for release.
+  
+[Back to Top](#development)
+
+### `2.0.5`
+
+Definitely some major challenges today collaborating with the AI becasue it simply didn't understand the brief over a few prompts. AI can make mistakes. Collaborate with it like it's a coding partner. Fix each other's mistakes.
+
++ I'm very pleased to have accomplished the building stage of my job application app. I have absolutely no doubt more enhancements and functionality will come. But the work to make it fit for public release starts next week!
+
++ I think at this point I've finished the main nuts and bolts of the development of the application.  Things work as they should.  What i've accomplished today is the progress page which now fully calculates the number of jobs applied for by a given user, and the percentage progress of stages of the job application process.
+
++ Users can also reset the stats by deleting all details of job applications if they need to do that for whatever reason.
+
++ That means the application is now fully working.  People can register.  People can log in and log out.  People can add details of jobs they are applying for. People can tick off when they have completed each stage of the job application process in real time. They can make any edits to individual jobs that they need to, and these changes all persist within the WordPress ecosystem.
+
++ These are all huge achievements that I am proud of. Even if it did take AI to help me out, it's all part of the learning process. It's now up to me to study the UX, the code and the markup to make it fit for public release. And I'm looking forward to doing that in the next week.  `31-10-2025`
+
+[Back to Top](#development)
 
 ## User Flows
 
