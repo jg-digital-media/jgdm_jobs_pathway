@@ -73,7 +73,7 @@ echo '<!-- DEBUG: Post ID: ' . (isset($post_id) ? $post_id : 'NOT SET') . ' -->'
                         <p>No description provided.</p>
                     <?php endif; ?>
                 </div>
-                <textarea class="edit-mode job-edit-input" style="display: none; width: 100%; min-height: 150px; padding: 10px;" data-field="deqscription"><?php echo esc_textarea($description); ?></textarea>
+                <textarea class="edit-mode job-edit-input" style="display: none; width: 100%; min-height: 150px; padding: 10px;" data-field="description"><?php echo esc_textarea($description); ?></textarea>
             </td>
         </tr>
 
