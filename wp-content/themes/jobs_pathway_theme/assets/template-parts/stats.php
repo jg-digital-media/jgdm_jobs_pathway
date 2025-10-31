@@ -3,6 +3,42 @@
  
 <h3>Your Progress</h3>
 
+
+<?php
+
+    // Fetch all the user’s job applications
+    $jobs = get_posts([
+        'post_type' => 'job_application',
+        'author'    => get_current_user_id(),
+        'posts_per_page' => -1
+    ]);
+
+    $total = count($jobs);
+
+    $stages = [
+        'application_sent' => 0,
+        'cv_sent'        => 0,
+        'interview_secured' => 0,
+        'interview_attended' => 0,
+        'references' => 0,
+        'got_job'          => 0,
+    ];
+
+  
+    foreach ($jobs as $job) {
+
+        foreach ($stages as $key => &$value) {
+
+             if (get_field($key, $job->ID)) $value++;
+        }
+    }
+
+    function jt_percent($count, $total) {
+        return $total ? round(($count / $total) * 100, 1) : 0;
+    }
+
+?>
+
 <main>   
 
     <a href="dashboard/">back</a>
@@ -12,32 +48,25 @@
 <table class="job---profile--container">
     <thead> 
         <tr>
-            <th colspan="2">Active Job Searches (<span id="active-jobs-count">6</span>)</th>
+            <th colspan="2">Active Job Searches (<span id="active-jobs-count"><?= $total ?> <!-- 6 --></span>)</th>
         </tr>
     </thead>
     <tbody>
+
+        <?php foreach ($stages as $stage => $count): ?>
         <tr>
-            <td>Applications Sent:</td>
-            <td><span>1</span>/<span class="jobs---applied" id="js_applications---count">6</span> (<span class="progress---percentage">16.7%</span>)</td>
+            <td><?= ucwords(str_replace('_', ' ', $stage)); ?>:</td>
+            <td>
+                <span><?= $count; ?></span>/<span><?= $total; ?></span>
+                (<span><?= jt_percent($count, $total); ?>%</span>)
+            </td>
         </tr>
-        <tr>
-            <td>CV/Resume Updated</td>
-            <td><span>1</span>/<span class="jobs---applied" id="js_cv---count">6</span> (<span class="progress---percentage">16.7%</span>)</td>
-        </tr>
-        <tr>
-            <td>Interview Secured</td>
-            <td><span>1</span>/<span class="jobs---applied" id="js_interview---count">6</span> (<span class="progress---percentage">16.7%</span>)</td>
-        </tr>
-        <tr>
-            <td>Interview Attended</td>
-            <td><span>1</span>/<span class="jobs---applied" id="js_interview---attended--count">6</span> (<span class="progress---percentage">16.7%</span>)</td>
-        </tr>
-        <tr>
-            <td>References</td>
-            <td><span>1</span>/<span class="jobs---applied" id="js_references--count">6</span> (<span class="progress---percentage">16.7%</span>)</td>
-        </tr>
+      <?php endforeach; ?>
 
     </tbody>
+
+    <?php if ($stages['got_job'] > 0): ?>
+
     <tfoot id="in--work--msg">       
         <tr>
             <td colspan="2">
@@ -47,6 +76,8 @@
             </td>
         </tr>  
     </tfoot>    
+
+    <?php endif; ?>
 
 </table>
 
