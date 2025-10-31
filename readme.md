@@ -1,4 +1,4 @@
-`Last Updated: 31-10-2025 - 16:44`
+`Last Updated: 31-10-2025 - 16:55`
 
 # Jobs Pathway
   + Jobs Pathway is a project in PHP and WordPress. Sign in and add details of jobs applied for so you can keep track of your way to your professional life with this app.
@@ -41,7 +41,7 @@ The following pages are assigned to templates in the `wp-content/themes/jobs_pat
 
 ## TODOs: 
 
-### (Tasks: `107` - Completed - `54`)
+### (Tasks: `107` - Completed - `56`)
 
 + `COMPLETED: 16-09-2025` - Wireframe and static interface planning for 'Job's Pathway App'
 + `COMPLETED: 16-09-2025` - Add a footer and header template part of the project
@@ -90,22 +90,23 @@ The following pages are assigned to templates in the `wp-content/themes/jobs_pat
 	
 	  + `COMPLETED: 27-10-2025` - Then set "Location → Post Type is equal to Job Application."
 
-+ `COMPLETED: 28-10-2025 ` - Link logout page to WordPress logout system (Logout) `.logout-link`"
-+ `COMPLETED: 27-10-2025 ` - Enqueue styles and scripts in `functions.php`
-+ `COMPLETED: 28-10-2025 ` - Fix bug on login pages preventing link to registration page from working `/login/` & `index.php`
-+ `COMPLETED: 28-10-2025 ` - Welcome user to the app and then invite to register `register.php`.
-+ `COMPLETED: 28-10-2025 ` - Style register and login buttons `register.php` and `login.php`
-+ `COMPLETED: 28-10-2025 ` - STAGE 5 — Create a Front-End Dashboard Template  
++ `COMPLETED: 27-10-2025` - Enqueue styles and scripts in `functions.php`
++ `COMPLETED: 27-10-2025` - Auto assign posts to logged in user - `functions.php`
++ `COMPLETED: 28-10-2025` - Link logout page to WordPress logout system (Logout) `.logout-link`"
++ `COMPLETED: 28-10-2025` - Fix bug on login pages preventing link to registration page from working `/login/` & `index.php`
++ `COMPLETED: 28-10-2025` - Welcome user to the app and then invite to register `register.php`.
++ `COMPLETED: 28-10-2025` - Style register and login buttons `register.php` and `login.php`
++ `COMPLETED: 28-10-2025` - STAGE 5 — Create a Front-End Dashboard Template  
 + `COMPLETED: 27-10-2025` - In WordPress → Pages → Add New → call it Dashboard, and assign the "Job Dashboard" template. `page-dashboard.php`
-
++ `COMPLETED: 28-10-2025` - STAGE 9 - Styling via css and js from protyotype
 + `COMPLETED: 28-10-2025 ` - STAGE 6 - Add a Front-end "Add Job" Form
-
-+ `COMPLETED: 30-10-2025` - CV/Resume on dashboard page has no custom field on CPT
-+ `COMPLETED: 30-10-2025` - Add contact detail field to add job form
-+ `TODO: ` - Implement progess stats dashboard page for logged in user `/job-stats/`
-+ `TODO: ` - Page dashboard - remove job details from "job details" column. The idea being a page will be accessed that has this info.
-+ `TODO: ` - Page dashboard - remove edit link from actions Column. Consider renaminf actions column to delete
++ `COMPLETED: 30-10-2025 ` - CV/Resume on dashboard page has no custom field on CPT
++ `COMPLETED: 30-10-2025 ` - Add contact detail field to add job form
 + `COMPLETED: 30-10-2025` - Page dashboard - implement delete button in actions column
++ `COMPLETED: 31-10-2025 ` - Implement progess stats dashboard page for logged in user `/job-stats/`
++ `COMPLETED: 31-10-2025 ` - Delete Jobs - button - users should be offered the chance to confirm their choice to delete all jobs.
++ `TODO: ` - Page dashboard - remove job details from "job details" column. The idea being a page will be accessed that has this info.
++ `TODO: ` - Page dashboard - remove edit link from actions Column. Consider renaming actions column to delete
 + `TODO: ` - Page dashboard - implement edit button in actions column
 + `TODO: ` - Single Job page -  Style input elements in edit state to improve UX
 + `TODO: ` - Style "Back to Dashboard" button - `/add-job/`
@@ -115,9 +116,7 @@ The following pages are assigned to templates in the `wp-content/themes/jobs_pat
 + `TODO: ` - Add background colour on hover for all form inputs `/add-job`
 + `TODO: ` - add-job-form.php - Description text area has no hover transition of background colour (filename as per prototype) `/add-job`
 + `TODO: ` - use the ACF Frontend Form Feature to create job application tracking details for a logged in user
-+ `COMPLETED: 27-10-2025` - Auto assign posts to logged in user - `functions.php`
-
-  + `TODO: ` - STAGE 7 — Motivational Messages
++ `TODO: ` - STAGE 7 — Motivational Messages
 
 	  + `COMPLETED: 27-10-2025 ` - adding a helper function to `functions.php`
       + `TODO: ` - Fill in messages for motivation helper function in `functions.php`
@@ -125,13 +124,7 @@ The following pages are assigned to templates in the `wp-content/themes/jobs_pat
 
   + `TODO: ` - STAGE 8 - Progress Tracking page
 
-    + `TODO: ` - Delete Jobs - button - users should be offered the chance to confirm their choice to delete all jobs.
-
-
-  + `COMPLETED: 28-10-2025` - STAGE 9 - Styling via css and js from protyotype
-
 	  + `TODO: ` - Use PHP to pull data from your job_application posts.
-
 + `TODO: ` - Remove inline styling of login and logout out error messages. Classes: -  `.login-error` `.login-success.` Slug: `/login/`.
 + `TODO: ` - Remove inline styling of registration error messages. Classes: -  `.registration-error` `.registration-success.` Slug: `/login/`.
 + `TODO: ` - `login-handler` and `register-handler` are empty and to be ignored for now.
