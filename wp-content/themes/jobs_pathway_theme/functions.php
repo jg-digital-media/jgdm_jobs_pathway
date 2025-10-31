@@ -347,3 +347,64 @@ function jt_update_job_profile() {
 
 add_action('wp_ajax_update_job_profile', 'jt_update_job_profile');
 add_action('wp_ajax_nopriv_update_job_profile', 'jt_update_job_profile');
+
+
+// AJAX handler to delete all jobs for current user
+function jt_delete_all_user_jobs() {
+  
+  // Verify nonce
+  if (!isset($_POST['nonce']) || !wp_verify_nonce($_POST['nonce'], 'job_pathway_ajax_nonce')) {
+    wp_send_json_error(array('message' => 'Security check failed'));
+    return;
+  }
+  
+  // Check if user is logged in
+  if (!is_user_logged_in()) {
+    wp_send_json_error(array('message' => 'You must be logged in'));
+    return;
+  }
+  
+  $current_user_id = get_current_user_id();
+  
+  // Get all job applications for the current user
+  $args = array(
+    'post_type' => 'job_application',
+    'author' => $current_user_id,
+    'posts_per_page' => -1,
+    'post_status' => 'publish'
+  );
+  
+  $user_jobs = get_posts($args);
+  
+  if (empty($user_jobs)) {
+    wp_send_json_error(array('message' => 'No jobs found to delete'));
+    return;
+  }
+  
+  $deleted_count = 0;
+  $failed_count = 0;
+  
+  // Delete each job
+  foreach ($user_jobs as $job) {
+    $deleted = wp_trash_post($job->ID);
+    if ($deleted) {
+      $deleted_count++;
+    } else {
+      $failed_count++;
+    }
+  }
+  
+  if ($deleted_count > 0) {
+    wp_send_json_success(array(
+      'message' => "Successfully deleted {$deleted_count} job(s)",
+      'deleted_count' => $deleted_count,
+      'failed_count' => $failed_count,
+      'redirect_url' => site_url('/dashboard')
+    ));
+  } else {
+    wp_send_json_error(array('message' => 'Failed to delete jobs'));
+  }
+}
+
+add_action('wp_ajax_delete_all_user_jobs', 'jt_delete_all_user_jobs');
+add_action('wp_ajax_nopriv_delete_all_user_jobs', 'jt_delete_all_user_jobs');
