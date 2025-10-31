@@ -16,12 +16,12 @@
     $total = count($jobs);
 
     $stages = [
-        'application_sent' => 0,
-        'cv_sent'        => 0,
-        'interview_secured' => 0,
+        'application_sent'   => 0,
+        'cv_sent'            => 0,
+        'interview_secured'  => 0,
         'interview_attended' => 0,
-        'references' => 0,
-        'got_job'          => 0,
+        'references'         => 0,
+        'got_job'            => 0,
     ];
 
   
