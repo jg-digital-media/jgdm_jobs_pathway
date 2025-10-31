@@ -60,7 +60,7 @@
                 $cv_sent = get_post_meta($post_id, 'cv_sent', true);
                 $interview_secured = get_post_meta($post_id, 'interview_secured', true);
                 $interview_attended = get_post_meta($post_id, 'interview_attended', true);
-                $references_provided = get_post_meta($post_id, 'references_provided', true);
+                $references_provided = get_post_meta($post_id, 'references', true);
                 $got_job = get_post_meta($post_id, 'got_job', true);
                 
                 endwhile;

@@ -64,7 +64,7 @@
                 $cv_sent = get_post_meta($post_id, 'cv_sent', true);
                 $interview_secured = get_post_meta($post_id, 'interview_secured', true);
                 $interview_attended = get_post_meta($post_id, 'interview_attended', true);
-                $references_provided = get_post_meta($post_id, 'references_provided', true);
+                $references_provided = get_post_meta($post_id, 'references', true);
                 $got_job = get_post_meta($post_id, 'got_job', true);
             ?>
             <tr data-job-id="<?php echo $post_id; ?>">
@@ -121,8 +121,8 @@
                     <input type="checkbox" 
                            class="stage---completed--checkbox" 
                            id="chkbox---j<?php echo $job_counter; ?>s6" 
-                           name="references_provided"
-                           data-field="references_provided"
+                           name="references"
+                           data-field="references"
                            data-post-id="<?php echo $post_id; ?>"
                            <?php checked($references_provided, 1); ?>>
                 </td>

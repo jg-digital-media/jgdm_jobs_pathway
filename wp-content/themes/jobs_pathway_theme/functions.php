@@ -221,7 +221,7 @@ function jt_update_job_meta() {
     'cv_sent',
     'interview_secured',
     'interview_attended',
-    'references_provided',
+    'references',
     'got_job'
   );
   
