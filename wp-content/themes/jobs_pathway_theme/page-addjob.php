@@ -29,7 +29,7 @@ if ($_POST && isset($_POST['add_job_form'])) {
         // Create the job application post
         $post_data = array(
             'post_title'   => sanitize_text_field($_POST['job_title'] . ' at ' . $_POST['company_name']),
-            'post_content' => sanitize_textarea_field($_POST['description']),
+            'post_content' => '', // Leave empty, using custom field for description
             'post_type'    => 'job_application',
             'post_status'  => 'publish',
             'post_author'  => get_current_user_id()
@@ -45,13 +45,14 @@ if ($_POST && isset($_POST['add_job_form'])) {
             update_post_meta($post_id, 'location', sanitize_text_field($_POST['location']));
             update_post_meta($post_id, 'contact_person', sanitize_text_field($_POST['contact_person']));
             update_post_meta($post_id, 'contact_details', sanitize_text_field($_POST['contact_details']));
+            update_post_meta($post_id, 'description', sanitize_textarea_field($_POST['description']));
             
             // Initialize boolean fields to false (0)
             update_post_meta($post_id, 'application_sent', 0);
             update_post_meta($post_id, 'cv_sent', 0);
             update_post_meta($post_id, 'interview_secured', 0);
             update_post_meta($post_id, 'interview_attended', 0);
-            update_post_meta($post_id, 'references_provided', 0);
+            update_post_meta($post_id, 'references', 0);
             update_post_meta($post_id, 'got_job', 0);
             
             // Success - redirect to dashboard
