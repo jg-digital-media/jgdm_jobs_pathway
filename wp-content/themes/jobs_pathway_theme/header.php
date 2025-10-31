@@ -90,9 +90,6 @@
 
         <title> <?php echo $website_title ?></title>
 
-        <!-- Main Stylesheet -->
-        <link rel="stylesheet" type="text/css" href="style.css">
+        <?php wp_head(); ?>
 
     </head>
-
-    <?php wp_head(); ?>
