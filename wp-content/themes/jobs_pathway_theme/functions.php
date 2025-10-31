@@ -312,20 +312,16 @@ function jt_update_job_profile() {
   foreach ($fields as $field_name => $field_value) {
     if (in_array($field_name, $allowed_fields)) {
       
-      // Handle description separately (post content)
+      // Handle description with textarea sanitization, but still as meta field
       if ($field_name === 'description') {
-        $update_result = wp_update_post(array(
-          'ID' => $post_id,
-          'post_content' => sanitize_textarea_field($field_value)
-        ));
-        
-        if (!is_wp_error($update_result)) {
+        $updated = update_post_meta($post_id, $field_name, sanitize_textarea_field($field_value));
+        if ($updated !== false) {
           $updated_count++;
         } else {
           $errors[] = 'Failed to update description';
         }
       } else {
-        // Update meta field
+        // Update other meta fields with text sanitization
         $updated = update_post_meta($post_id, $field_name, sanitize_text_field($field_value));
         if ($updated !== false) {
           $updated_count++;
