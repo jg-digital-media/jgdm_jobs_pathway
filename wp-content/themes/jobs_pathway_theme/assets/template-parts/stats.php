@@ -83,6 +83,18 @@
 
 <section class="section---delete--jobs">
 
-    <a href="dashboard/" class="button button---delete--jobs">Delete Jobs</a>
+    <a id="btn-delete-all-jobs" class="button button---delete--jobs">Delete Jobs</a>
         
 </section>
+
+<!-- Custom Delete Confirmation Modal -->
+<div id="delete-confirm-modal" class="modal-overlay" style="display: none;">
+    <div class="modal-content">
+        <h3>Confirm Deletion</h3>
+        <p>Are you sure you want to delete your current list of jobs? This cannot be undone.</p>
+        <div class="modal-actions">
+            <button id="btn-confirm-delete" class="button button---confirm">Yes, Delete</button>
+            <button id="btn-cancel-delete" class="button button---cancel">Cancel</button>
+        </div>
+    </div>
+</div>

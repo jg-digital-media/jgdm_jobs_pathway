@@ -632,3 +632,110 @@ function showStatusMessage(message, type) {
         }, 3000);
     }
 }
+
+// Delete All Jobs Functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const deleteButton = document.getElementById('btn-delete-all-jobs');
+    const modal = document.getElementById('delete-confirm-modal');
+    const confirmButton = document.getElementById('btn-confirm-delete');
+    const cancelButton = document.getElementById('btn-cancel-delete');
+    
+    // Open modal when delete button is clicked
+    if (deleteButton) {
+        deleteButton.addEventListener('click', function(e) {
+            e.preventDefault();
+            if (modal) {
+                modal.style.display = 'flex';
+            }
+        });
+    }
+    
+    // Close modal when cancel button is clicked
+    if (cancelButton) {
+        cancelButton.addEventListener('click', function(e) {
+            e.preventDefault();
+            if (modal) {
+                modal.style.display = 'none';
+            }
+        });
+    }
+    
+    // Close modal when clicking outside the modal content
+    if (modal) {
+        modal.addEventListener('click', function(e) {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+    }
+    
+    // Handle deletion when confirm button is clicked
+    if (confirmButton && deleteButton) {
+        confirmButton.addEventListener('click', function(e) {
+            e.preventDefault();
+            deleteAllJobs();
+        });
+    }
+});
+
+function deleteAllJobs() {
+    console.log('Deleting all jobs for current user');
+    
+    const confirmButton = document.getElementById('btn-confirm-delete');
+    const modal = document.getElementById('delete-confirm-modal');
+    
+    // Disable button and show loading state
+    if (confirmButton) {
+        confirmButton.disabled = true;
+        confirmButton.textContent = 'Deleting...';
+    }
+    
+    // Create FormData
+    const formData = new FormData();
+    formData.append('action', 'delete_all_user_jobs');
+    formData.append('nonce', jobPathwayAjax.nonce);
+    
+    // Send AJAX request
+    fetch(jobPathwayAjax.ajaxurl, {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            console.log('All jobs deleted successfully:', data);
+            
+            // Close modal
+            if (modal) {
+                modal.style.display = 'none';
+            }
+            
+            // Show success message briefly
+            showStatusMessage('All jobs deleted successfully! Redirecting...', 'success');
+            
+            // Redirect to dashboard after a brief delay
+            setTimeout(() => {
+                window.location.href = data.data.redirect_url || '/dashboard';
+            }, 1500);
+        } else {
+            console.error('Error deleting jobs:', data);
+            showStatusMessage('Error deleting jobs: ' + (data.data ? data.data.message : 'Unknown error'), 'error');
+            
+            // Re-enable button
+            if (confirmButton) {
+                confirmButton.disabled = false;
+                confirmButton.textContent = 'Yes, Delete';
+            }
+        }
+    })
+    .catch(error => {
+        console.error('AJAX error:', error);
+        showStatusMessage('Error deleting jobs. Please check your connection.', 'error');
+        
+        // Re-enable button
+        if (confirmButton) {
+            confirmButton.disabled = false;
+            confirmButton.textContent = 'Yes, Delete';
+        }
+    });
+}
