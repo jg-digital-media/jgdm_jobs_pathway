@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /* head.scss */
 /*
-    Last Updated: 31-10-2025 - 16:56
+    Last Updated: 03-11-2025 - 16:15
 */
 /*
     Theme Name: JGDM Jobs Pathway App
@@ -570,6 +570,8 @@ html body.body---list main .section---jobs--list--container table thead tr:first
   border-top: solid 1px black;
 }
 html body.body---list main .section---jobs--list--container table tbody tr {
+  /* height: 55px; */
+  min-height: 55px;
   height: 55px;
 }
 html body.body---list main .section---jobs--list--container table tbody tr td {
@@ -607,6 +609,10 @@ html body.body---list main .section---jobs--list--container table tbody tr td:nt
   border-radius: 8px;
   transition: 0.3s ease-in-out;
 }
+html body.body---list main .section---jobs--list--container table tbody tr td:nth-child(2) strong {
+  font-size: 12px;
+  color: #4e4e4e;
+}
 html body.body---list main .section---jobs--list--container table tbody tr td:nth-child(1):hover,
 html body.body---list main .section---jobs--list--container table tbody tr td:nth-child(2):hover {
   background: none;
@@ -624,6 +630,18 @@ html body.body---add--job main a {
 html body.body---add--job main a:hover {
   color: #0e43b5;
 }
+html body.body---add--job main .section---add--situation-container aside {
+  display: block;
+  margin: 34px 0 0 0;
+  text-align: center;
+}
+html body.body---add--job main .section---add--situation-container aside p {
+  text-align: center;
+}
+html body.body---add--job main .section---add--situation-container aside p span {
+  font-size: 12px;
+  color: gray;
+}
 html body.body---add--job .section---add--situation-container {
   margin-top: 20px;
 }
@@ -632,6 +650,7 @@ html body.body---add--job .section---add--situation-container h3 {
 }
 html body.body---add--job .section---add--situation-container .form---add--job {
   /* border: solid 1px yellow; */
+  border: solid 1px darkgray;
   margin: 10px auto;
   width: 400px;
   padding: 8px;
@@ -677,7 +696,8 @@ html body.body---add--job .section---add--situation-container .form---add--job i
   padding: 3px 7px;
 }
 html body.body---add--job .section---add--situation-container .form---add--job textarea {
-  border: solid 1px red;
+  /* border: solid 1px red; */
+  border: solid 1px darkgray;
   padding: 3px 7px;
   width: 95%;
   border-radius: 6px;
@@ -745,7 +765,8 @@ html body.body---job--details .job---profile---container th {
   font-size: 15pt;
 }
 html body.body---job--details .job---profile---container tbody tr {
-  height: 55px;
+  /* height: 55px; */
+  height: 35px;
   transition: background 0.3s ease-in-out;
 }
 html body.body---job--details .job---profile---container tbody tr:hover {
@@ -775,6 +796,34 @@ html body.body---job--details .job---profile---container tbody tr td#job---perso
 }
 html body.body---job--details .job---profile---container tbody tr td .edit-mode {
   border: solid 1px #4486ff;
+}
+html body.body---job--details .job---profile---container tbody tr td .edit-mode.job-edit-input {
+  display: none;
+  padding: 3px 0;
+  width: 95%;
+  transition: background 0.3s;
+}
+html body.body---job--details .job---profile---container tbody tr td .edit-mode.job-edit-input:hover {
+  background: #abd8ff;
+}
+html body.body---job--details .job---profile---container tbody tr td .edit-mode.job-edit-input:focus {
+  background: #abd8ff;
+}
+html body.body---job--details .job---profile---container tbody tr td .edit-mode.job-edit-textarea {
+  display: none;
+  width: auto;
+  height: auto;
+  padding: 3px 0;
+  margin: 0 auto;
+  width: 100%;
+  height: 68px;
+  /* width: 100%;  */
+  /* min-height: 150px; */
+  padding: 0px;
+  transition: background 0.3s;
+}
+html body.body---job--details .job---profile---container tbody tr td .edit-mode.job-edit-textarea:hover {
+  background: #abd8ff;
 }
 html body.body---job--details .job---profile---container tbody tr td a {
   color: #4486ff;
