@@ -42,7 +42,7 @@
         <input type="checkbox" name="rememberme" id="rememberme" value="forever"> Keep me logged in!
     </label>
 
-    <input type="hidden" name="redirect_to" value="<?php echo site_url('/dashboard'); ?>">
+    <input type="hidden" name="redirect_to" value="<?php echo site_url('/dashboard?loggedin=true'); ?>">
 
     <br><br>
     <input type="submit" name="wp-submit" value="Login >" class="button button---login">
