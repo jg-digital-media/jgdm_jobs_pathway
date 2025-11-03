@@ -1,5 +1,5 @@
 // connection check - app.js
-console.log("app.js connected - 30-10-2025 - 15:45 - Inline Edit Enabled");
+console.log("app.js connected - 03-11-2025 - 10:32");
 
 // Wait for DOM to be fully loaded
 document.addEventListener('DOMContentLoaded', function() {
@@ -508,14 +508,15 @@ function saveJobProfileChanges(button, postId) {
     button.disabled = true;
     button.textContent = 'Saving...';
     
-    // Collect all field values
+    // Collect all field values (includes text inputs and textareas)
     const fields = {};
-    document.querySelectorAll('.job-edit-input').forEach(input => {
+    document.querySelectorAll('.job-edit-input, .job-edit-textarea').forEach(input => {
         const fieldName = input.getAttribute('data-field');
         fields[fieldName] = input.value;
+        console.log(`Collected field: ${fieldName} = "${input.value}"`);
     });
     
-    console.log('Fields to save:', fields);
+    console.log('All fields to save:', fields);
     
     // Create FormData
     const formData = new FormData();
@@ -598,14 +599,15 @@ function updateViewModeDisplays(fields) {
     // Update description
     const descriptionDiv = document.querySelector('#job---personal--notes .view-mode');
     if (descriptionDiv) {
-        if (fields.description && fields.description.trim()) {
+        if (fields.description !== undefined && fields.description.trim() !== '') {
+
             // Convert line breaks to paragraphs (simple version)
             const paragraphs = fields.description.split('\n\n').map(p => {
                 return '<p>' + p.replace(/\n/g, '<br>') + '</p>';
             }).join('');
             descriptionDiv.innerHTML = paragraphs;
         } else {
-            descriptionDiv.innerHTML = '<p>No description provided.</p>';
+            descriptionDiv.innerHTML = '<p>No description was provided. Add a description here and click "Save" to confirm.</p>';
         }
     }
 }
