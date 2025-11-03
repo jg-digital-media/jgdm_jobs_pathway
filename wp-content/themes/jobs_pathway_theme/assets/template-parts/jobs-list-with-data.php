@@ -76,14 +76,7 @@
             <tr data-job-id="<?php echo $post_id; ?>">
                 <td><?php echo $job_counter; ?></td>
                 <td>
-                    <strong><?php echo esc_html($job_title); ?></strong><br>
-                    <small><?php echo esc_html($company_name); ?></small><br>
-                    <?php if ($location): ?>
-                        <small>📍 <?php echo esc_html($location); ?></small>
-                    <?php endif; ?>
-                    <?php if ($salary): ?>
-                        <br><small>💰 <?php echo esc_html($salary); ?></small>
-                    <?php endif; ?>
+                    <strong><?php echo esc_html($job_title); ?></strong><br>  
 
                     <a href="<?php echo get_permalink($post_id); ?>">Open</a>
                 </td>
