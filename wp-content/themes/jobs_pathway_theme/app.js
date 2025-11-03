@@ -1,5 +1,5 @@
 // connection check - app.js
-console.log("app.js connected - 03-11-2025 - 10:32");
+console.log("app.js connected - 03-11-2025 - 15:45");
 
 // Wait for DOM to be fully loaded
 document.addEventListener('DOMContentLoaded', function() {
@@ -184,9 +184,15 @@ function setupRegisterValidation(form) {
 }
 
 function setupLoginValidation(form) {
-    const usernameField = form.querySelector('#username');
-    const emailField = form.querySelector('#email');
-    const passwordField = form.querySelector('#password');
+    // WordPress login form uses 'log' for username and 'pwd' for password
+    const usernameField = form.querySelector('#log');
+    const passwordField = form.querySelector('#pwd');
+    
+    // Only validate if fields exist (WordPress login form)
+    if (!usernameField || !passwordField) {
+        console.log('Login form fields not found, skipping validation');
+        return;
+    }
     
     // Form submission validation
     form.addEventListener('submit', function(e) {
@@ -195,15 +201,8 @@ function setupLoginValidation(form) {
         // Clear previous error messages
         clearValidationErrors(form);
         
-        // Validate username
-        if (!validateRequired(usernameField, 'Username is required')) {
-            isValid = false;
-        }
-        
-        // Validate email
-        if (!validateRequired(emailField, 'Email is required')) {
-            isValid = false;
-        } else if (!validateEmail(emailField, 'Please enter a valid email address')) {
+        // Validate username/email
+        if (!validateRequired(usernameField, 'Username or email is required')) {
             isValid = false;
         }
         
@@ -220,6 +219,11 @@ function setupLoginValidation(form) {
 
 // Validation helper functions
 function validateRequired(field, message) {
+    // Check if field exists first
+    if (!field) {
+        return true; // Skip validation if field doesn't exist
+    }
+    
     if (!field.value.trim()) {
         showFieldError(field, message);
         removeFieldSuccess(field);
@@ -231,6 +235,11 @@ function validateRequired(field, message) {
 }
 
 function validateMinLength(field, minLength, message) {
+    // Check if field exists first
+    if (!field) {
+        return true; // Skip validation if field doesn't exist
+    }
+    
     if (field.value.trim().length < minLength) {
         showFieldError(field, message);
         removeFieldSuccess(field);
@@ -242,6 +251,11 @@ function validateMinLength(field, minLength, message) {
 }
 
 function validateEmail(field, message) {
+    // Check if field exists first
+    if (!field) {
+        return true; // Skip validation if field doesn't exist
+    }
+    
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(field.value.trim())) {
         showFieldError(field, message);
