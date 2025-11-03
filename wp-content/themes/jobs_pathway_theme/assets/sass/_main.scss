@@ -628,6 +628,8 @@ html {
 
                             tr {
 
+                                /* height: 55px; */
+                                min-height: 55px;
                                 height: 55px;
 
                                 td {
@@ -686,6 +688,13 @@ html {
                                         transition: .3s ease-in-out;
                                        
                                     }
+
+                                    strong {
+
+                                        font-size: 12px;
+                                        color: #4e4e4e;
+                                    }
+
                                 }
 
                                 // No hover effect on the first two columns
