@@ -1,4 +1,4 @@
-`Last Updated: 03-11-2025 - 15:44`
+`Last Updated: 03-11-2025 - 16:14`
 
 # Jobs Pathway
   + Jobs Pathway is a project in PHP and WordPress. Sign in and add details of jobs applied for so you can keep track of your way to your professional life with this app.
@@ -41,7 +41,7 @@ The following pages are assigned to templates in the `wp-content/themes/jobs_pat
 
 ## TODOs: 
 
-### (Tasks: `115` - Completed - `73`)
+### (Tasks: `116` - Completed - `73`)
 
 + `COMPLETED: 16-09-2025` - Wireframe and static interface planning for 'Job's Pathway App'
 + `COMPLETED: 16-09-2025` - Add a footer and header template part of the project
@@ -126,6 +126,7 @@ The following pages are assigned to templates in the `wp-content/themes/jobs_pat
   5. `COMPLETED: 03-11-2025  ` - "Tooltip" activated to show the user that the changes have been saved!
   6. `TODO: ` More graceful transition for successs tooltip `job-profile-status-message`
 
++ `TODO: ` - "welcome jonniegrieve" - blue style on username to match buttons - colour scheme
 + `TODO: ` - Extend style pattern on "back" link `single-job_application.php`
 + `TODO: ` - Remove inline styling of registration error messages. Classes: -  `.registration-error` `.registration-success.` Slug: `/login/`.
 + `TODO: ` - Page dashboard - Style the "delete" button in actions column
@@ -180,7 +181,7 @@ The following pages are assigned to templates in the `wp-content/themes/jobs_pat
 [1.0.0](#100) | [1.0.1](#101) | [1.0.2](#102)
 
 ### WordPress Development
-[2.0.0](#200) | [2.0.1](#201) | [2.0.2](#202) | [2.0.3](#203) | [2.0.4](#204) | [2.0.5](#205)
+[2.0.0](#200) | [2.0.1](#201) | [2.0.2](#202) | [2.0.3](#203) | [2.0.4](#204) | [2.0.5](#205)| [2.0.6](#206)
 
 ### `0.0.1`
   
@@ -360,7 +361,13 @@ Definitely some major challenges today collaborating with the AI becasue it simp
 
 + That means the application is now fully working.  People can register.  People can log in and log out.  People can add details of jobs they are applying for. People can tick off when they have completed each stage of the job application process in real time. They can make any edits to individual jobs that they need to, and these changes all persist within the WordPress ecosystem.
 
-+ These are all huge achievements that I am proud of. Even if it did take AI to help me out, it's all part of the learning process. It's now up to me to study the UX, the code and the markup to make it fit for public release. And I'm looking forward to doing that in the next week.  `31-10-2025`
++ These are all huge achievements that I am proud of. Even if it did take AI to help me out, it's all part of the learning process. It's now up to me to study the UX, the code and the markup to make it fit for public release. And I'm looking forward to doing that in the next week. `31-10-2025`
+
+[Back to Top](#development)
+
+### `2.0.6`
+
++ Today I managed to enhance the login and logout UX experience and implemented better form validation handling. `03-11-2025`
 
 [Back to Top](#development)
 
