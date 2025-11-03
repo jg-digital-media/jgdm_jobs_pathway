@@ -3,6 +3,12 @@
 <div class="username---and--logout">
     <span>Welcome, <span class="display---username"> <?php echo esc_html( $current_user->display_name ); ?></span></span>
     <a href="<?php echo wp_logout_url( site_url('/login') ); ?>" class="logout-link">(Logout)</a>
+
+    <?php if (isset($_GET['loggedin']) && $_GET['loggedin'] == 'true') {
+        echo '<p class="login-success-dashboard" style="color: green; background: #e6ffe6; padding: 10px; border-radius: 5px; text-align: center;"><strong>Success!</strong> You have successfully logged in.</p>';
+        }
+    ?>
+
 </div>
 
 <nav class="top---banner--container">
