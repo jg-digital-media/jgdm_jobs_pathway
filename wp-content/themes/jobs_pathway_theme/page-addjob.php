@@ -21,9 +21,10 @@ if ($_POST && isset($_POST['add_job_form'])) {
     if (!isset($_POST['add_job_nonce']) || !wp_verify_nonce($_POST['add_job_nonce'], 'add_job_action')) {
         $job_error_message = 'Security verification failed. Please try again.';
     }
+
     // Validate required fields
     elseif (empty($_POST['company_name']) || empty($_POST['job_title']) || empty($_POST['location'])) {
-        $job_error_message = 'Please fill in all required fields.';
+        $job_error_message = 'Please fill in all required fields. (Check <strong>Job Title</strong>, <strong>Company Name</strong> or <strong>Job Location</strong> fields).';
     }
     else {
         // Create the job application post
@@ -77,6 +78,7 @@ if ($_POST && isset($_POST['add_job_form'])) {
     <main>
 
         <?php 
+
         // Display error message if present
         if (!empty($job_error_message)) {
             echo '<p class="job-error" style="color: red; background: #ffe6e6; padding: 15px; border-radius: 5px; margin: 20px; text-align: center;"><strong>Error:</strong> ' . $job_error_message . '</p>';
