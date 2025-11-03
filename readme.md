@@ -1,4 +1,4 @@
-`Last Updated: 31-10-2025 - 16:55`
+`Last Updated: 03-11-2025 - 15:44`
 
 # Jobs Pathway
   + Jobs Pathway is a project in PHP and WordPress. Sign in and add details of jobs applied for so you can keep track of your way to your professional life with this app.
@@ -41,7 +41,7 @@ The following pages are assigned to templates in the `wp-content/themes/jobs_pat
 
 ## TODOs: 
 
-### (Tasks: `107` - Completed - `56`)
+### (Tasks: `115` - Completed - `73`)
 
 + `COMPLETED: 16-09-2025` - Wireframe and static interface planning for 'Job's Pathway App'
 + `COMPLETED: 16-09-2025` - Add a footer and header template part of the project
@@ -105,41 +105,47 @@ The following pages are assigned to templates in the `wp-content/themes/jobs_pat
 + `COMPLETED: 30-10-2025` - Page dashboard - implement delete button in actions column
 + `COMPLETED: 31-10-2025 ` - Implement progess stats dashboard page for logged in user `/job-stats/`
 + `COMPLETED: 31-10-2025 ` - Delete Jobs - button - users should be offered the chance to confirm their choice to delete all jobs.
-+ `TODO: ` - Page dashboard - remove job details from "job details" column. The idea being a page will be accessed that has this info.
-+ `TODO: ` - Page dashboard - remove edit link from actions Column. Consider renaming actions column to delete
-+ `TODO: ` - Page dashboard - implement edit button in actions column
-+ `TODO: ` - Single Job page -  Style input elements in edit state to improve UX
-+ `TODO: ` - Style "Back to Dashboard" button - `/add-job/`
-+ `TODO: ` - add job form - all fields should be required - Add message `/add-job/`
-+ `TODO: ` - Use custom made login form with prototyped front end error messaging.
-+ `TODO: ` - Use custom made registration form with prototyped front end error messaging.
++ `COMPLETED: 03-11-2025 ` - Remove inline styling of login and logout out error messages. Classes: -  `.login-error` `.login-success.` Slug: `/login/`.
++ `COMPLETED: 03-11-2025 ` - Page dashboard template has no login confirmation message.
++ `COMPLETED: 03-11-2025 ` - Page dashboard - remove job details from "job details" column. The idea being a page will be accessed that has this info.
+  + `COMPLETED: 03-11-2025 ` - Keep job title in column above the button "open" for now.
++ `COMPLETED: 03-11-2025 ` - Page dashboard - remove edit link from actions Column. 
++ `COMPLETED: 03-11-2025 ` - Single Job page -  Style input elements in edit state to improve UX
++ `COMPLETED: 03-11-2025 ` - Persist the changes to checkboxes and table cell backgrounds
++ `COMPLETED: 03-11-2025 ` - Style input fields of job application details when in edit state `single-job_application.php`
++ `COMPLETED: 03-11-2025 ` - Use custom made login form with prototyped front end error messaging.
++ `COMPLETED: 03-11-2025 ` - Use custom made registration form with prototyped front end error messaging.
++ `COMPLETED: 03-11-2025 ` - `Error saving job profile: {success: false, data: {…}}` Error occurs when attempting to "save" when no changes have been made.
++ `COMPLETED: 03-11-2025 ` - add job form - Some fields should be required - Add message to check for Job Totle, company name and location `/add-job/`
++ `COMPLETED: 03-11-2025 ` - use the ACF Frontend Form Feature to create job application tracking details for a logged in user
++ `COMPLETED: 03-11-2025  ` - Implement Edit functionality for `job-details.php` (filename as per prototype).
+  1. `COMPLETED: 03-11-2025  ` - Edit button will switch fields to an editable state where values can be changed.
+  2. `COMPLETED: 03-11-2025  ` - `button---job--edit` - Change text content from "Edit" to Saved" when  button is clicked.
+  3. `COMPLETED: 03-11-2025  ` - At this point, the edit button text content will change from "Edit" to "Save"
+  4. `COMPLETED: 03-11-2025  ` - Save button will save the changes to the database and change text content back to "Edit"
+  5. `COMPLETED: 03-11-2025  ` - "Tooltip" activated to show the user that the changes have been saved!
+  6. `TODO: ` More graceful transition for successs tooltip `job-profile-status-message`
+
++ `TODO: ` - Extend style pattern on "back" link `single-job_application.php`
++ `TODO: ` - Remove inline styling of registration error messages. Classes: -  `.registration-error` `.registration-success.` Slug: `/login/`.
++ `TODO: ` - Page dashboard - Style the "delete" button in actions column
++ `TODO: ` - Style "Back to Dashboard" button - 
+  + `TODO: ` -  `single-job_application.php`
+  + `TODO: ` -  `/add-job/`
+  + `TODO: ` -  `page-howto.php`
+  + `TODO: ` -  `page-jobstats.php`
+
++ `TODO: ` - Page dashboard Consider renaming "Actions" column to "Delete"
 + `TODO: ` - Add background colour on hover for all form inputs `/add-job`
 + `TODO: ` - add-job-form.php - Description text area has no hover transition of background colour (filename as per prototype) `/add-job`
-+ `TODO: ` - use the ACF Frontend Form Feature to create job application tracking details for a logged in user
 + `TODO: ` - STAGE 7 — Motivational Messages
-
-	  + `COMPLETED: 27-10-2025 ` - adding a helper function to `functions.php`
-      + `TODO: ` - Fill in messages for motivation helper function in `functions.php`
-	  + `COMPLETED: 28-10-2025: ` - call it in a specific place in a PHP/WordPress template
-
-  + `TODO: ` - STAGE 8 - Progress Tracking page
-
-	  + `TODO: ` - Use PHP to pull data from your job_application posts.
-+ `TODO: ` - Remove inline styling of login and logout out error messages. Classes: -  `.login-error` `.login-success.` Slug: `/login/`.
-+ `TODO: ` - Remove inline styling of registration error messages. Classes: -  `.registration-error` `.registration-success.` Slug: `/login/`.
 + `TODO: ` - `login-handler` and `register-handler` are empty and to be ignored for now.
 + `TODO: ` - Sort `header.php` meta tags`.
 + `TODO: ` - Implement modal areas for `job-details.php`,`add-job-form.php`, `stats-modal.php`,`how-to.php`.
 + `TODO: ` - modal styles
 + `TODO: ` - Create and style "how to use" page
 + `TODO: ` - "Your Progress" could be "Progress Stats for [username]" slug: `/jobs-stats/`
-+ `TODO: ` - Implement Edit functionality for `job-details.php` (filename as per prototype).
-  1. `TODO: ` - Edit button will switch fields to an editable state where values can be changed.
-  2. `TODO: ` - `button---job--edit` - Change text content from "Edit" to Saved" when  button is clicked.
-  3. `TODO: `  At this point, the edit button text content will change from "Edit" to "Save"
-  4. `TODO: `  Save button will save the changes to the database and change text content back to "Edit"
-  5. `TODO: `  "Tooltip" activated to show the user that the changes have been saved!
-+ `TODO: ` - Persist the changes to checkboxes and table cell backgrounds
++ `TODO: ` - You're in work! Congratulations! Add Party Emoji `stats-modal.php`
 + `TODO: ` - Reduce lines of code in Sass files where possible
   + `TODO: ` - May need to fill table with classes to get the desired effect.
 + `TODO: ` - Add responsiveness to Job list table - `list.php` and `list-empty.php` (filenames as per prototype)
@@ -161,6 +167,7 @@ The following pages are assigned to templates in the `wp-content/themes/jobs_pat
 + `TODO: ` - Fade out custom validation messages after going out of element focus
 + `TODO: ` - Remove filenames and .filename class and selector from project at the appropriate time.
 + `TODO: ` - Require stronger passwords for the app - e.g. at least 8 characters (include special characters, uppercase, lowercase, numbers)
++ `TODO: ` - Add copy to explain how to use the app. `page-howto.php`
 
 [Back to Top](#sections)
 
