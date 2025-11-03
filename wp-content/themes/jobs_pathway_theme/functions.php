@@ -51,6 +51,21 @@ function jt_login_failed() {
 }
 add_action('wp_login_failed', 'jt_login_failed');
 
+// Handle authentication errors and redirect with error message
+function jt_authenticate_username_password( $user, $username, $password ) {
+  // Only handle when there's actual login attempt
+  if ( ! empty( $username ) && ! empty( $password ) ) {
+    // If authentication fails, redirect to custom login with error
+    if ( is_wp_error( $user ) ) {
+      // Remove default authentication to prevent redirect to wp-login.php
+      remove_action('authenticate', 'wp_authenticate_username_password', 20);
+      return $user;
+    }
+  }
+  return $user;
+}
+add_filter('authenticate', 'jt_authenticate_username_password', 30, 3);
+
 
 // Redirect to custom login on logout
 function jt_logout_redirect() {
