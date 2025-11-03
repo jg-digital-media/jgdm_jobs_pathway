@@ -30,6 +30,7 @@
 
     // Empty variables for form validation messages
     $registration_message = '';
+    $login_message = '';
     $registration_error = '';
 
     if ($_POST && isset($_POST['main_form_register'])) {
@@ -80,7 +81,14 @@
     <section class="container---element--register">
 
         <?php 
-        // Display success message
+
+
+        // Display success message (login)
+        if (!empty($login_message)) {
+            echo '<p class="login-success" style="color: green; background: #e6ffe6; padding: 15px; border-radius: 5px; margin: 20px 0;"><strong>Success!</strong> ' . $login_message . '</p>';
+        }
+
+        // Display success message (register)
         if (!empty($registration_message)) {
             echo '<p class="registration-success" style="color: green; background: #e6ffe6; padding: 15px; border-radius: 5px; margin: 20px 0;"><strong>Success!</strong> ' . $registration_message . '</p>';
         }
