@@ -53,7 +53,7 @@
     // if user is logged in, send to dashboard page
 
     if (is_user_logged_in()) {
-        wp_redirect(site_url('/dashboard'));
+        wp_redirect(site_url('/dashboard?loggedin=true'));
         exit;
     }
 
