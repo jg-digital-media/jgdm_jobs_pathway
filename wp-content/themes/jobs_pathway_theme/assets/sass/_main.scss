@@ -925,7 +925,8 @@ html {
                 tbody {
                     tr {
 
-                        height: 55px;
+                        /* height: 55px; */
+                        height: 35px;
                         transition: background 0.3s ease-in-out;                   
 
                         &:hover {
@@ -975,20 +976,43 @@ html {
 
                                     &.job-edit-input {
 
+                                        display: none;
                                         padding: 3px 0;
+                                        width: 95%;
+
+                                        transition: background .3s;
+
+                                        &:hover {
+
+                                            background: #abd8ff;
+                                            
+                                        }
+
+                                        &:focus {
+
+                                            background: #abd8ff;
+                                        }
 
                                     }
 
                                     &.job-edit-textarea {
 
+                                        display: none;                                         
                                         width: auto;
                                         height: auto;
                                         padding: 3px 0;
+                                        margin: 0 auto;
                                         width: 100%;
                                         height: 68px;
-                                        display: none; 
                                         /* width: 100%;  */
                                         /* min-height: 150px; */ padding: 0px;
+
+                                        transition: background .3s;
+
+                                        &:hover {
+
+                                            background: #abd8ff;
+                                        }
                                     }
 
                                 }

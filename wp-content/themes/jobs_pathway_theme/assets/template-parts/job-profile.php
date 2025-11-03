@@ -22,42 +22,42 @@ echo '<!-- DEBUG: Post ID: ' . (isset($post_id) ? $post_id : 'NOT SET') . ' -->'
             <td>Company Name:</td>
             <td>
                 <span class="view-mode"><?php echo $company_name ? esc_html($company_name) : 'Not provided'; ?></span>
-                <input type="text" class="edit-mode job-edit-input" style="display: none; width: 100%;" data-field="company_name" value="<?php echo esc_attr($company_name); ?>">
+                <input type="text" class="edit-mode job-edit-input" data-field="company_name" value="<?php echo esc_attr($company_name); ?>">
             </td>
         </tr>
         <tr>
             <td>Job Title:</td>
             <td>
                 <span class="view-mode"><?php echo $job_title ? esc_html($job_title) : 'Not provided'; ?></span>
-                <input type="text" class="edit-mode job-edit-input" style="display: none; width: 100%;" data-field="job_title" value="<?php echo esc_attr($job_title); ?>">
+                <input type="text" class="edit-mode job-edit-input" data-field="job_title" value="<?php echo esc_attr($job_title); ?>">
             </td>
         </tr>
         <tr>
             <td>Salary Details:</td>
             <td>
                 <span class="view-mode"><?php echo $salary ? esc_html($salary) : 'Not specified'; ?></span>
-                <input type="text" class="edit-mode job-edit-input" style="display: none; width: 100%;" data-field="salary" value="<?php echo esc_attr($salary); ?>">
+                <input type="text" class="edit-mode job-edit-input" data-field="salary" value="<?php echo esc_attr($salary); ?>">
             </td>
         </tr>
         <tr>
             <td>Job Location:</td>
             <td>
                 <span class="view-mode"><?php echo $location ? esc_html($location) : 'Not provided'; ?></span>
-                <input type="text" class="edit-mode job-edit-input" style="display: none; width: 100%;" data-field="location" value="<?php echo esc_attr($location); ?>">
+                <input type="text" class="edit-mode job-edit-input" data-field="location" value="<?php echo esc_attr($location); ?>">
             </td>
         </tr>
         <tr>
             <td>Contact Person:</td>
             <td>
                 <span class="view-mode"><?php echo $contact_person ? esc_html($contact_person) : 'Not provided'; ?></span>
-                <input type="text" class="edit-mode job-edit-input" style="display: none; width: 100%;" data-field="contact_person" value="<?php echo esc_attr($contact_person); ?>">
+                <input type="text" class="edit-mode job-edit-input" data-field="contact_person" value="<?php echo esc_attr($contact_person); ?>">
             </td>
         </tr>
         <tr>
             <td>Contact Details:</td>
             <td>
                 <span class="view-mode"><?php echo $contact_details ? esc_html($contact_details) : 'Not provided'; ?></span>
-                <input type="text" class="edit-mode job-edit-input" style="display: none; width: 100%;" data-field="contact_details" value="<?php echo esc_attr($contact_details); ?>">
+                <input type="text" class="edit-mode job-edit-input" data-field="contact_details" value="<?php echo esc_attr($contact_details); ?>">
             </td>
         </tr>
 
