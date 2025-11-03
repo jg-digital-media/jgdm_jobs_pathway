@@ -744,6 +744,33 @@ html {
                         color: $url---col--primary-hover-list;
                     }
                 }
+
+                .section---add--situation-container {
+
+                    aside {
+
+                        display: block;
+                        margin: 34px 0 0 0;
+
+                        text-align: center;
+
+                        p {
+
+                            text-align: center;
+
+                            span {
+
+                                font-size: 12px;
+                                color: gray;
+                            }
+                        }
+                    }
+
+                    form {
+
+
+                    }
+                }
                 
             }
 
@@ -759,6 +786,7 @@ html {
                 .form---add--job {
 
                     /* border: solid 1px yellow; */
+                    border: solid 1px darkgray;
                     margin: 10px auto;
                     width: 400px;
                     padding: 8px;
@@ -819,7 +847,9 @@ html {
 
                     textarea {
                         
-                        border: solid 1px red;
+                        /* border: solid 1px red; */
+                        
+                        border: solid 1px darkgray;
                         padding: 3px 7px;
                         width: 95%;
                         border-radius: 6px;

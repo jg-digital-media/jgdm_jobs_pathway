@@ -4,14 +4,20 @@
 
     <h3>Add a Situation/Job</h3> <a href="<?php echo site_url('/dashboard'); ?>">Back to Dashboard</a>
 
+    <aside>
+        
+        <p>Add details of a job application. <span>(all fields are required)</span></p>
+
+    </aside>
+
     <form name="main_form_add_job" action="<?php echo esc_url($_SERVER['REQUEST_URI']); ?>" method="post" id="add-job-form" class="form form---add--job">
 
         <label for="company_name">Name of Company/Organisation: </label>
-        <input type="text" name="company_name" class="login---input" id="company_name" placeholder="Enter company name..." required>
+        <input type="text" name="company_name" class="login---input" id="company_name" placeholder="Enter company name...">
 
         <br>
         <label for="job_title">Job Title: </label>
-        <input type="text" name="job_title" class="login---input" id="job_title" placeholder="Enter the Job Title..." required>
+        <input type="text" name="job_title" class="login---input" id="job_title" placeholder="Enter the Job Title...">
 
         <br>
         <label for="salary">Salary: </label>
@@ -19,7 +25,7 @@
 
         <br>
         <label for="location">Location: </label>
-        <input type="text" name="location" class="login---input" id="location" placeholder="Where this job is based..." required>
+        <input type="text" name="location" class="login---input" id="location" placeholder="Where this job is based...">
 
         <br>
         <label for="contact_person">Contact Person: </label>

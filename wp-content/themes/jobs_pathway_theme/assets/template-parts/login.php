@@ -31,11 +31,11 @@
     <p id="registration">Not Registered?  <a href="<?php echo site_url('/register'); ?>">Click here to Register</a></p>
 
     <label for="log">Username or Email: </label>
-    <input type="text" name="log" class="login---input" id="log" placeholder="Enter your username or email..." required>
+    <input type="text" name="log" class="login---input" id="log" placeholder="Enter your username or email...">
 
     <br>
     <label for="pwd">Password: </label>
-    <input type="password" name="pwd" id="pwd" class="login---input" placeholder="Enter your password..." required>
+    <input type="password" name="pwd" id="pwd" class="login---input" placeholder="Enter your password...">
 
     <br>
     <label for="rememberme" id="remembermelabel">
