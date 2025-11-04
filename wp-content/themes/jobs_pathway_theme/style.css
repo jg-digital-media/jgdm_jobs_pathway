@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /* head.scss */
 /*
-    Last Updated: 03-11-2025 - 16:15
+    Last Updated: 04-11-2025 - 17:19
 */
 /*
     Theme Name: JGDM Jobs Pathway App
@@ -30,6 +30,7 @@ html body.body---job--details .section---job--edit #btn-toggle-edit,
 html body.body---job--details .section---job--edit a.button---job--edit, html body.body---list main .section---jobs--list--container table tbody tr td:nth-child(2) a, html body.body---list main .section---add--situation-container a, html body.body---list main .top---banner--container .app---navigation li a {
   background: #4486ff;
   color: #98cbff;
+  font-size: 14px;
 }
 html body.body---job--details .section---job--edit #btn-toggle-edit:hover,
 html body.body---job--details .section---job--edit a.button---job--edit:hover, html body.body---list main .section---jobs--list--container table tbody tr td:nth-child(2) a:hover, html body.body---list main .section---add--situation-container a:hover, html body.body---list main .top---banner--container .app---navigation li a:hover {
@@ -45,6 +46,25 @@ html body.body---job--stats .section---delete--jobs a.button---delete--jobs:hove
   color: #ffffff;
 }
 
+html body.body---howto main a.button---back, html body.body---job--stats a.button---back, html body.body---job--details .job---profile---container tbody tr td .button---back, html body.body---job--details main .button---back, html body.body---add--job main .section---add--situation-container .button---back, html body.body---add--job main .button---back {
+  background: #4486ff;
+  color: #98cbff;
+  /* display: inline-block; */
+  display: block;
+  margin: 15px auto;
+  /* background: white; */
+  text-align: center;
+  width: 120px;
+  border-radius: 5px;
+  padding: 6px;
+  text-decoration: none;
+  /* box-shadow: #adacac 2px 2px 2px 0px; */
+  transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+html body.body---howto main a.button---back:hover, html body.body---job--stats a.button---back:hover, html body.body---job--details .job---profile---container tbody tr td .button---back:hover, html body.body---job--details main .button---back:hover, html body.body---add--job main .button---back:hover {
+  color: #ffffff;
+  box-shadow: #adacac 2px 2px 3px 1px;
+}
 html body.body---register .container---element--register form .button,
 html body.body---register .container---element--login form .button, html body.body---login .container---element--register form .button,
 html body.body---login .container---element--login form .button {
@@ -402,10 +422,20 @@ html body.body---add--job header h2, html body.body---list header h2, html body.
   font-size: 24px;
 }
 html body.body---add--job footer, html body.body---list footer, html body.body---howto footer, html body.body---job--details footer, html body.body---job--stats footer {
-  margin: 17px 0 0 0;
+  margin: 20px 0 0 0;
+  font-size: 12px;
 }
 html body.body---add--job footer p, html body.body---list footer p, html body.body---howto footer p, html body.body---job--details footer p, html body.body---job--stats footer p {
   text-align: center;
+}
+html body.body---add--job footer p a, html body.body---list footer p a, html body.body---howto footer p a, html body.body---job--details footer p a, html body.body---job--stats footer p a {
+  color: #4486ff;
+  /* font-size: 12px; */
+  transition: color 0.3s ease-in-out;
+}
+html body.body---add--job footer p a:hover, html body.body---list footer p a:hover, html body.body---howto footer p a:hover, html body.body---job--details footer p a:hover, html body.body---job--stats footer p a:hover {
+  text-decoration: underline;
+  color: #0e43b5;
 }
 html body.body---add--job footer p span a, html body.body---list footer p span a, html body.body---howto footer p span a, html body.body---job--details footer p span a, html body.body---job--stats footer p span a {
   color: #4486ff;
@@ -443,15 +473,24 @@ html body.body---list main .filename {
 html body.body---list main a {
   display: inline-block;
   /* color: #272626; */
+  /* color: $url---col--primary-list; */
+  /* color: $button---col--list; */
+  /* color: #4486ff; */
   color: #4486ff;
   transition: color 0.3s ease-in-out;
   /* width: 100%; */
   text-align: center;
   font-size: 12px;
+  padding: 6px;
+  width: 45px;
+  font-weight: bold;
+  border-radius: 8px;
+  text-decoration: none;
 }
 html body.body---list main a:hover {
   /* color: blue; */
   color: #0e43b5;
+  /* color: $button---col--hover-list; */
 }
 html body.body---list main a#add---job--url {
   display: inline;
@@ -469,6 +508,9 @@ html body.body---list main .username---and--logout span {
 }
 html body.body---list main .username---and--logout span span {
   color: #5c5c5c;
+}
+html body.body---list main .username---and--logout span .display---username {
+  color: #4486ff;
 }
 html body.body---list main .username---and--logout span a.logout-link {
   color: #4486ff;
@@ -578,13 +620,13 @@ html body.body---list main .section---jobs--list--container table tbody tr td {
   text-align: center;
   transition: background 0.3s ease-in-out;
 }
+html body.body---list main .section---jobs--list--container table tbody tr td:hover {
+  background: #dbdbdb;
+}
 html body.body---list main .section---jobs--list--container table tbody tr td input.stage---completed--checkbox {
   content: "";
   height: 28px;
   width: 28px;
-}
-html body.body---list main .section---jobs--list--container table tbody tr td:hover {
-  background: #dbdbdb;
 }
 html body.body---list main .section---jobs--list--container table tbody tr td.stage---completed {
   background: #72ff72;
@@ -593,10 +635,6 @@ html body.body---list main .section---jobs--list--container table tbody tr td.st
 }
 html body.body---list main .section---jobs--list--container table tbody tr td.stage---completed:hover {
   background: #3af43a;
-}
-html body.body---list main .section---jobs--list--container table tbody tr td a#add---job--url {
-  display: block;
-  margin-top: 10px;
 }
 html body.body---list main .section---jobs--list--container table tbody tr td:nth-child(2) a {
   text-decoration: none;
@@ -607,6 +645,7 @@ html body.body---list main .section---jobs--list--container table tbody tr td:nt
   display: block;
   margin: 3px auto;
   border-radius: 8px;
+  font-size: 12px;
   transition: 0.3s ease-in-out;
 }
 html body.body---list main .section---jobs--list--container table tbody tr td:nth-child(2) strong {
@@ -616,6 +655,43 @@ html body.body---list main .section---jobs--list--container table tbody tr td:nt
 html body.body---list main .section---jobs--list--container table tbody tr td:nth-child(1):hover,
 html body.body---list main .section---jobs--list--container table tbody tr td:nth-child(2):hover {
   background: none;
+}
+html body.body---list main .section---jobs--list--container table tbody tr td a#add---job--url {
+  display: block;
+  margin-top: 10px;
+  margin: 14px auto;
+  width: 112px;
+  padding: 7px;
+  border-radius: 6px;
+  background: #4486ff;
+  color: #98cbff;
+  transition: color 0.3s;
+}
+html body.body---list main .section---jobs--list--container table tbody tr td a#add---job--url:hover {
+  color: #fff;
+}
+html body.body---list main .section---jobs--list--container table tbody tr td .button---job--delete {
+  /* @extend %button---action--delete; */
+  content: "del";
+  text-decoration: none;
+  /* font-size: 12px; */
+  font-weight: bold;
+  padding: 4px;
+  width: 57px;
+  display: block;
+  margin: 3px auto;
+  border-radius: 8px;
+  font-size: 12px;
+  transition: 0.3s ease-in-out;
+  background: #4486ff;
+  background: #f95757;
+  /* color: $button---col--list; */
+  /* font-size: 14px; */
+  color: #630202;
+}
+html body.body---list main .section---jobs--list--container table tbody tr td .button---job--delete:hover {
+  color: #ffffff;
+  color: #9e0b0b;
 }
 html body.body---add--job main h3,
 html body.body---add--job main h3 + a {
