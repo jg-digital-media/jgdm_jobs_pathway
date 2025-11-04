@@ -1,8 +1,9 @@
 
 <!-- Progress Stats Modal Goes Here -->
- 
-<h3>Your Progress</h3>
 
+<a href="<?php echo site_url('/dashboard'); ?>" class="button---back">Back to Dashboard</a>
+
+<h3>Your Progress</h3>
 
 <?php
 
@@ -38,12 +39,6 @@
     }
 
 ?>
-
-<main>   
-
-    <a href="dashboard/">back</a>
-    
-</main>
 
 <table class="job---profile--container">
     <thead> 

@@ -745,7 +745,16 @@ html {
                     }
                 }
 
+                
+                    
+
                 .section---add--situation-container {
+
+                    .button---back {
+
+                        @extend %button---dashboard;
+                        
+                    }
 
                     aside {
 
@@ -934,6 +943,7 @@ html {
                         color: $url---col--primary-hover-list;
                     }
                 }
+
             }
 
             .job---profile---container {
@@ -1059,7 +1069,11 @@ html {
                                 }
                             }
 
-                            
+                            .button---back {
+
+                                @extend %button---dashboard;
+
+                            }
 
                         }
 
@@ -1154,6 +1168,11 @@ html {
 
                     color: $url---col--primary-hover-list;
                 }
+            }
+
+            a.button---back {
+
+                @extend %button---dashboard;
             }
 
             .job---profile--container {
@@ -1343,8 +1362,13 @@ html {
                         color: $url---col--primary-hover-list;
                     }
                 }
-            }
 
+                a.button---back {
+
+                    @extend %button---dashboard;
+                }
+
+            }
 
             section.section---howto {
 
@@ -1355,12 +1379,11 @@ html {
                 color: #700404;
             }
 
-
         }
 
         // TODO: modal styles
-
     }
+
 }
 
 // modal styles

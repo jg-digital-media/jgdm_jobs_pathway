@@ -10,9 +10,9 @@ $website_description = "Keep track of your way to your professional life";
 
 <?php get_header(); ?>
 
-<h3>Your Progress</h3>
+<!-- <h3>Your Progress</h3> -->
 
-<?php echo "<p>page-jobstats.php</p>"; ?>
+<?php //echo "<p>page-jobstats.php</p>"; ?>
 
     <body class="body---job--stats">
 
@@ -28,7 +28,7 @@ $website_description = "Keep track of your way to your professional life";
 
             <h3 class="filename">stats-modal.php</h3>
 
-            <!-- <a href="list.php">back</a> -->
+            <!-- <a href="list.php" class="button---back">Back to Dashboard</a> -->
 
             <p><?php require "assets/template-parts/stats.php"; ?> </p>
 

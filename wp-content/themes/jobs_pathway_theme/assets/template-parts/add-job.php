@@ -2,7 +2,10 @@
 
 <section class="section---add--situation-container">
 
-    <h3>Add a Situation/Job</h3> <a href="<?php echo site_url('/dashboard'); ?>">Back to Dashboard</a>
+    
+    <a href="<?php echo site_url('/dashboard'); ?>" class="button---back">Back to Dashboard</a>
+    
+    <h3>Add a Situation/Job</h3> 
 
     <aside>
         

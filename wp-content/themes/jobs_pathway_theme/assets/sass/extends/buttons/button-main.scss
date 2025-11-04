@@ -21,3 +21,29 @@
         color: $button---col--hover-list;        
     }
 }
+
+%button---dashboard {
+
+    background: $button---bg--list;
+    color: $button---col--list;
+
+    /* display: inline-block; */
+    display: block;
+    margin: 15px auto;
+    /* background: white; */
+    text-align: center;
+    width: 120px;
+    border-radius: 5px;
+    padding: 6px;
+    text-decoration: none;
+    /* box-shadow: #adacac 2px 2px 2px 0px; */
+
+    transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    
+    &:hover {       
+        
+        color: $button---col--hover-list;  
+        box-shadow: #adacac 2px 2px 3px 1px;
+    }
+
+}
