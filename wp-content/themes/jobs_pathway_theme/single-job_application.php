@@ -31,7 +31,7 @@
 
             <!-- <h3>Job/Situation Details...</h3> -->
 
-            <a href="<?php echo site_url('/dashboard'); ?>">Back</a>
+            <a href="<?php echo site_url('/dashboard'); ?>" class="button---back">Back to Dashboard</a>
 
             <?php 
 
