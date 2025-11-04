@@ -358,11 +358,26 @@ html {
 
             footer {
 
-                margin: 17px 0 0 0;
+                margin: 20px 0 0 0;
+                font-size: 12px;
 
                 p {
 
                     text-align: center;
+
+                    a {
+
+                        color: $url---col--primary-list;
+                        /* font-size: 12px; */
+
+                        transition: color 0.3s ease-in-out;
+
+                        &:hover {
+
+                            text-decoration: underline;
+                            color: $url---col--primary-hover-list;
+                        }
+                    }
 
                     span {
 
@@ -432,17 +447,29 @@ html {
 
                     display: inline-block;
                     /* color: #272626; */
+                    /* color: $url---col--primary-list; */
+                    /* color: $button---col--list; */
+                    /* color: #4486ff; */
                     color: $url---col--primary-list;
                     transition: color 0.3s ease-in-out;
                     /* width: 100%; */
                     text-align: center;
                     font-size: 12px;
+                    padding: 6px;
+                    width: 45px;
+                    font-weight: bold;
+                    border-radius: 8px;
+                    text-decoration: none;
 
                     &:hover {
 
                         /* color: blue; */
                         color: $url---col--primary-hover-list;
+                        /* color: $button---col--hover-list; */
                     }
+
+                    // 
+                    //@extend %button---list--page;
 
                 }
 
@@ -660,6 +687,12 @@ html {
 
                                             background: lighten($border---stage--completed, 9%);
                                         }
+
+                                        a.button---job--delete {
+
+                                            @extend %button---action--delete;
+                                        }
+
                                     }
 
                                     // a link to add a job - empty list state
@@ -667,6 +700,19 @@ html {
 
                                         display: block;
                                         margin-top: 10px;
+                                        margin: 14px auto;
+                                        width: 112px;
+                                        padding: 7px;
+                                        border-radius: 6px;
+                                        background: #4486ff;
+                                        color: #98cbff;
+
+                                        transition:  color .3s;
+
+                                        &:hover {
+
+                                            color: #fff;                          
+                                        }
                                     }
                                 }
 
@@ -684,6 +730,7 @@ html {
                                         display: block;
                                         margin: 3px auto;
                                         border-radius: 8px;
+                                        font-size: 12px;
                                         
                                         transition: .3s ease-in-out;
                                        

@@ -135,7 +135,7 @@
                            <?php checked($got_job, 1); ?>>
                 </td>
                 <td>                    
-                    <a href="<?php echo get_delete_post_link($post_id); ?>" onclick="return confirm('Are you sure you want to delete this job application?');">Delete</a>
+                    <a href="<?php echo get_delete_post_link($post_id); ?>" class="button---job--delete">Delete</a>
                 </td>
             </tr>
             <?php 

@@ -2,6 +2,7 @@
 
     background: $button---bg--list;
     color: $button---col--list;
+    font-size: 14px;
 
     &:hover {
 
@@ -44,6 +45,30 @@
         
         color: $button---col--hover-list;  
         box-shadow: #adacac 2px 2px 3px 1px;
+    }
+
+    %button---action--delete {
+
+        text-decoration: none;
+        /* font-size: 12px; */
+        font-weight: bold;
+        padding: 4px;
+        width: 57px;
+        display: block;
+        margin: 3px auto;
+        border-radius: 8px;
+        font-size: 12px;
+        
+        transition: .3s ease-in-out;
+
+        background: $button---bg--list;
+        color: $button---col--list;
+        font-size: 14px;
+        
+        &:hover {
+
+            color: $button---col--hover-list;        
+        }
     }
 
 }
