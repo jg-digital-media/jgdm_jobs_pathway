@@ -497,6 +497,11 @@ html {
                             color: lighten(black, 36%);
                         }
 
+                        .display---username {
+
+                            color: #4486ff;
+                        }
+
                         a.logout-link {
 
                             color: $url---col--primary-list;
@@ -622,8 +627,6 @@ html {
                         border: solid 2px $border---col--list;
                         border-radius: 6px;
 
-
-
                         thead {
                             
                             border-bottom: solid 1px #8b8b8b;
@@ -664,16 +667,17 @@ html {
                                     text-align: center;
                                     transition: background 0.3s ease-in-out;
 
+                                    
+                                    &:hover {
+
+                                        background: lighten($banner---bg--list, 3%);
+                                    }
+
                                     input.stage---completed--checkbox {
 
                                         content: "";
                                         height: 28px;
                                         width: 28px;
-                                    }
-
-                                    &:hover {
-
-                                        background: lighten($banner---bg--list, 3%);
                                     }
 
                                     &.stage---completed {
@@ -686,34 +690,10 @@ html {
                                         &:hover {
 
                                             background: lighten($border---stage--completed, 9%);
-                                        }
+                                        }                                        
 
-                                        a.button---job--delete {
-
-                                            @extend %button---action--delete;
-                                        }
-
-                                    }
-
-                                    // a link to add a job - empty list state
-                                    a#add---job--url {
-
-                                        display: block;
-                                        margin-top: 10px;
-                                        margin: 14px auto;
-                                        width: 112px;
-                                        padding: 7px;
-                                        border-radius: 6px;
-                                        background: #4486ff;
-                                        color: #98cbff;
-
-                                        transition:  color .3s;
-
-                                        &:hover {
-
-                                            color: #fff;                          
-                                        }
-                                    }
+                                    }                                   
+                                    
                                 }
 
                                 td:nth-child(2) {
@@ -754,17 +734,73 @@ html {
                                     }
 
                                 }
+
+                                td {
+
+                                    // a link to add a job - empty list state
+                                    a#add---job--url {
+
+                                        display: block;
+                                        margin-top: 10px;
+                                        margin: 14px auto;
+                                        width: 112px;
+                                        padding: 7px;
+                                        border-radius: 6px;
+                                        background: #4486ff;
+                                        color: #98cbff;
+
+                                        transition:  color .3s;
+
+                                        &:hover {
+
+                                            color: #fff;                          
+                                        }
+
+                                         
+                                    }   
+                                    
+                                    .button---job--delete {
+
+                                            /* @extend %button---action--delete; */
+                                            content: "del";
+                                            text-decoration: none;
+                                            /* font-size: 12px; */
+                                            font-weight: bold;
+                                            padding: 4px;
+                                            width: 57px;
+                                            display: block;
+                                            margin: 3px auto;
+                                            border-radius: 8px;
+                                            font-size: 12px;
+                                            
+                                            transition: .3s ease-in-out;
+
+                                            background: $button---bg--list;
+                                            background: #f95757;
+                                            /* color: $button---col--list; */
+                                            /* font-size: 14px; */
+                                            color: #630202;
+
+                                            &:hover {
+
+                                                color: $button---col--hover-list;   
+                                                color: #9e0b0b;     
+                                            }
+
+                                        }                    
+                                   
+                                }
                                 
                             }
-
-                           
-
                             
                         }
                         
                     }
+
                 }
-            }            
+
+            }     
+
         }
 
         // .body---add--job styles
@@ -790,10 +826,13 @@ html {
 
                         color: $url---col--primary-hover-list;
                     }
-                }
-
+                }    
                 
-                    
+                .button---back {
+
+                        @extend %button---dashboard;
+                        
+                    }                    
 
                 .section---add--situation-container {
 
@@ -977,6 +1016,13 @@ html {
                     font-size: 12px;
                     font-style: italic;
                 }
+
+                .button---back {
+
+                        @extend %button---dashboard;
+                        
+                    }
+
 
                 a {
 
