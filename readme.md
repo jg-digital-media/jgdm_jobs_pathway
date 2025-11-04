@@ -1,4 +1,4 @@
-`Last Updated: 03-11-2025 - 15:53`
+`Last Updated: 04-11-2025 - 17:18`
 
 # Jobs Pathway
   + Jobs Pathway is a project in PHP and WordPress. Sign in and add details of jobs applied for so you can keep track of your way to your professional life with this app.
@@ -41,7 +41,7 @@ The following pages are assigned to templates in the `wp-content/themes/jobs_pat
 
 ## TODOs: 
 
-### (Tasks: `118` - Completed - `82`)
+### (Tasks: `120` - Completed - `82`)
 
 + `COMPLETED: 16-09-2025` - Wireframe and static interface planning for 'Job's Pathway App'
 + `COMPLETED: 16-09-2025` - Add a footer and header template part of the project
@@ -134,22 +134,25 @@ The following pages are assigned to templates in the `wp-content/themes/jobs_pat
   + `COMPLETED: 04-11-2025 ` -  `/add-job/`
   + `COMPLETED: 04-11-2025 ` -  `page-howto.php`
   + `COMPLETED: 04-11-2025 ` -  `page-jobstats.php`
-
-+ `TODO: ` - loggedin flag  should only be present directly after user logs in. No redirects using the flag. `/?loggedin=true`
 + `COMPLETED: 04-11-2025 ` - Page dashboard Consider renaming "Actions" column to "Delete"
++ `COMPLETED: 04-11-2025 ` - Back-end password validation required - Check for the correct password `now dealt with via WordPress`
+
+
++ `TODO: ` - Modify hover colour for delete button `#ffd6d6`  line 784 `.button---job--delete:hover`
++ `TODO: ` - loggedin flag  should only be present directly after user logs in. No redirects using the flag. `/?loggedin=true`
 + `TODO: ` - Add background colour on hover for all form inputs `/add-job`
 + `TODO: ` - Page dashboard - Style the "delete" button in actions column
 + `TODO: ` - add-job-form.php - Description text area has no hover transition of background colour (filename as per prototype) `/add-job`
 + `TODO: ` - STAGE 7 — Motivational Messages
-+ `TODO: ` - `login-handler` and `register-handler` are empty and to be ignored for now.
++ `TODO: ` - `login-handler` and `register-handler` are empty and should be ignored for the interim.
 + `TODO: ` - Sort `header.php` meta tags and social media sharing previews.
-+ `TODO: ` - modal styles
 + `TODO: ` - Create and style "how to use" page
 + `TODO: ` - "Your Progress" could be "Progress Stats for [username]" slug: `/jobs-stats/`
 + `TODO: ` - You're in work! Congratulations! Add Party Emoji `stats-modal.php`
 + `TODO: ` - Reduce lines of code in Sass files where possible
   + `TODO: ` - May need to fill table with classes to get the desired effect.
 + `TODO: ` - Add responsiveness to Job list table - `list.php` and `list-empty.php` (filenames as per prototype)
++ `TODO: ` - Apply flexbox to `app---navigation`
   + `TODO: ` - Implement overflow-x scrolling on table for smaller screens
 + `TODO: ` - Actions column - `list.php`  Might be useful as a mechanism to edit job profiles 
   + `TODO: ` - Consider Deleting Actions Column
@@ -163,13 +166,14 @@ The following pages are assigned to templates in the `wp-content/themes/jobs_pat
 + `TODO: ` - input elements "do not have an autocomplete attribute" - add autocomplete="off" to all input elements
 + `TODO: ` - Progress Stats Button an #id `btn---progress--stats`
 + `TODO: ` - How to Use Button an #id `btn---how--to`
-+ `TODO: ` - Back-end password validation required - Check for the correct password
+
 + `TODO: ` - Customise validation and success error messages in app.js
 + `TODO: ` - Fade out custom validation messages after going out of element focus
 + `TODO: ` - Remove filenames and .filename class and selector from project at the appropriate time.
 + `TODO: ` - Require stronger passwords for the app - e.g. at least 8 characters (include special characters, uppercase, lowercase, numbers)
 + `TODO: ` - Add copy to explain how to use the app. `page-howto.php`
 + `TODO: ` - Implement modal areas for `job-details.php`,`add-job-form.php`, `stats-modal.php`,`how-to.php`.
++ `TODO: ` - modal styles
 + `TODO: ` - Future UX Feature: Tooltip, showing the job title and ID applied for above that row's (Open) button
 
 [Back to Top](#sections)
@@ -183,7 +187,7 @@ The following pages are assigned to templates in the `wp-content/themes/jobs_pat
 [1.0.0](#100) | [1.0.1](#101) | [1.0.2](#102)
 
 ### WordPress Development
-[2.0.0](#200) | [2.0.1](#201) | [2.0.2](#202) | [2.0.3](#203) | [2.0.4](#204) | [2.0.5](#205)| [2.0.6](#206)
+[2.0.0](#200) | [2.0.1](#201) | [2.0.2](#202) | [2.0.3](#203) | [2.0.4](#204) | [2.0.5](#205) | [2.0.6](#206)| [2.0.7](#207)
 
 ### `0.0.1`
   
@@ -371,7 +375,13 @@ Definitely some major challenges today collaborating with the AI becasue it simp
 
 + Today I managed to enhance the login and logout UX experience and implemented better form validation handling. `03-11-2025`
 
+[Back to Top](#development)
+
 ### `2.0.7`
+
++ Today has been a little distruptive due to other thing sgetting in the way.  I was able to concentre on getting the colour scheme and application buttons sorted out though and some other enhancements.
+
++ This sounds less challenging it was.  I still need to have a proper look at the CSS and extend rules.  The idea was to have one extend diretive for the colours and multiple directives for other styles. Some of them wouldn't be selected by CSS which I'm guessing was due to cascading conflicts with my existing CSS.
 
 [Back to Top](#development)
 
