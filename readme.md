@@ -1,4 +1,4 @@
-`Last Updated: 03-11-2025 - 16:14`
+`Last Updated: 03-11-2025 - 15:53`
 
 # Jobs Pathway
   + Jobs Pathway is a project in PHP and WordPress. Sign in and add details of jobs applied for so you can keep track of your way to your professional life with this app.
@@ -41,7 +41,7 @@ The following pages are assigned to templates in the `wp-content/themes/jobs_pat
 
 ## TODOs: 
 
-### (Tasks: `116` - Completed - `73`)
+### (Tasks: `118` - Completed - `82`)
 
 + `COMPLETED: 16-09-2025` - Wireframe and static interface planning for 'Job's Pathway App'
 + `COMPLETED: 16-09-2025` - Add a footer and header template part of the project
@@ -126,23 +126,23 @@ The following pages are assigned to templates in the `wp-content/themes/jobs_pat
   5. `COMPLETED: 03-11-2025  ` - "Tooltip" activated to show the user that the changes have been saved!
   6. `TODO: ` More graceful transition for successs tooltip `job-profile-status-message`
 
-+ `TODO: ` - "welcome jonniegrieve" - blue style on username to match buttons - colour scheme
-+ `TODO: ` - Extend style pattern on "back" link `single-job_application.php`
-+ `TODO: ` - Remove inline styling of registration error messages. Classes: -  `.registration-error` `.registration-success.` Slug: `/login/`.
-+ `TODO: ` - Page dashboard - Style the "delete" button in actions column
-+ `TODO: ` - Style "Back to Dashboard" button - 
-  + `TODO: ` -  `single-job_application.php`
-  + `TODO: ` -  `/add-job/`
-  + `TODO: ` -  `page-howto.php`
-  + `TODO: ` -  `page-jobstats.php`
++ `COMPLETED: 04-11-2025 ` - "welcome jonniegrieve" - blue style on username to match buttons - colour scheme
++ `COMPLETED: 04-11-2025 ` - Extend style pattern on "back" link `single-job_application.php`
++ `COMPLETED: 04-11-2025 ` - Remove inline styling of registration error messages. Classes: -  `.registration-error` `.registration-success.` Slug: `/login/`.
++ `COMPLETED: 04-11-2025 ` - Style "Back to Dashboard" button - 
+  + `COMPLETED: 04-11-2025 ` -  `single-job_application.php`
+  + `COMPLETED: 04-11-2025 ` -  `/add-job/`
+  + `COMPLETED: 04-11-2025 ` -  `page-howto.php`
+  + `COMPLETED: 04-11-2025 ` -  `page-jobstats.php`
 
-+ `TODO: ` - Page dashboard Consider renaming "Actions" column to "Delete"
++ `TODO: ` - loggedin flag  should only be present directly after user logs in. No redirects using the flag. `/?loggedin=true`
++ `COMPLETED: 04-11-2025 ` - Page dashboard Consider renaming "Actions" column to "Delete"
 + `TODO: ` - Add background colour on hover for all form inputs `/add-job`
++ `TODO: ` - Page dashboard - Style the "delete" button in actions column
 + `TODO: ` - add-job-form.php - Description text area has no hover transition of background colour (filename as per prototype) `/add-job`
 + `TODO: ` - STAGE 7 — Motivational Messages
 + `TODO: ` - `login-handler` and `register-handler` are empty and to be ignored for now.
-+ `TODO: ` - Sort `header.php` meta tags`.
-+ `TODO: ` - Implement modal areas for `job-details.php`,`add-job-form.php`, `stats-modal.php`,`how-to.php`.
++ `TODO: ` - Sort `header.php` meta tags and social media sharing previews.
 + `TODO: ` - modal styles
 + `TODO: ` - Create and style "how to use" page
 + `TODO: ` - "Your Progress" could be "Progress Stats for [username]" slug: `/jobs-stats/`
@@ -169,6 +169,8 @@ The following pages are assigned to templates in the `wp-content/themes/jobs_pat
 + `TODO: ` - Remove filenames and .filename class and selector from project at the appropriate time.
 + `TODO: ` - Require stronger passwords for the app - e.g. at least 8 characters (include special characters, uppercase, lowercase, numbers)
 + `TODO: ` - Add copy to explain how to use the app. `page-howto.php`
++ `TODO: ` - Implement modal areas for `job-details.php`,`add-job-form.php`, `stats-modal.php`,`how-to.php`.
++ `TODO: ` - Future UX Feature: Tooltip, showing the job title and ID applied for above that row's (Open) button
 
 [Back to Top](#sections)
 
@@ -368,6 +370,8 @@ Definitely some major challenges today collaborating with the AI becasue it simp
 ### `2.0.6`
 
 + Today I managed to enhance the login and logout UX experience and implemented better form validation handling. `03-11-2025`
+
+### `2.0.7`
 
 [Back to Top](#development)
 
