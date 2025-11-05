@@ -66,7 +66,7 @@
         <tr>
             <td colspan="2">
 
-                <p>You're in work! Congratulations! <span id="in--work--tick"></span></p>
+                <p>You're in work! Congratulations! <span id="in--work--tick">🎉</span></p>
 
             </td>
         </tr>  
