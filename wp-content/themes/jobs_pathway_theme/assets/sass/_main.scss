@@ -784,7 +784,13 @@ html {
                                             &:hover {
 
                                                 color: $button---col--hover-list;   
-                                                color: #9e0b0b;     
+                                                color: #9e0b0b;    
+                                                background: lighten(#f95757, 6%);
+                                            }
+
+                                            &:focus {
+
+                                                color: white;
                                             }
 
                                         }                    
