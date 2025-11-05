@@ -922,6 +922,11 @@ html {
 
                         transition: background 0.3s ease-in-out;
 
+                        &:hover {
+
+                            background: #9ddfff;
+                        }
+
                         &::placeholder {
 
                             color: rgb(188, 57, 57);
