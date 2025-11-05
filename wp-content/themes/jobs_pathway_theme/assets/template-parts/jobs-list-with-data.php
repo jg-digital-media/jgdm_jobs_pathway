@@ -1,7 +1,7 @@
 <!-- Jobs List with Data from Database -->
 
 <div class="username---and--logout">
-    <span>Welcome, <span class="display---username"> <?php echo esc_html( $current_user->display_name ); ?></span></span>
+    <span>Welcome, <span class="display---username"> <?php echo esc_html( $current_user->display_name ); ?></span>
     <a href="<?php echo wp_logout_url( site_url('/login') ); ?>" class="logout-link">(Logout)</a>
 
     <?php if (isset($_GET['loggedin']) && $_GET['loggedin'] == 'true') {

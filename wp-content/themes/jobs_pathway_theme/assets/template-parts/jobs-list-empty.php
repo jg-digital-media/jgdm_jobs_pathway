@@ -1,7 +1,7 @@
 <!-- <p>jobs-list-empty.php</p> -->
 
 <div class="username---and--logout">
-    <span>Welcome, <span class="display---username"> <?php echo esc_html( $current_user->display_name ); ?></span></span>
+    <span>Welcome, <span class="display---username"> <?php echo esc_html( $current_user->display_name ); ?></span>
     <a href="<?php echo wp_logout_url( site_url('/login') ); ?>" class="logout-link">(Logout)</a>
 
     <?php if (isset($_GET['loggedin']) && $_GET['loggedin'] == 'true') { 
@@ -57,7 +57,10 @@
         </thead>
         <tbody>
             <tr>
-                <td colspan="9">No Jobs Listed. Add a Job now to get started. <a href="add-job/" id="add---job--url">Add a Situation</a></td>
+                <td colspan="9">
+
+                    <div class="dashboard---no--jobs">There are no jobs listed yet. Add a Job now to get started. <a href="add-job/" id="add---job--url">Add a Situation</a>
+                </td>
             </tr>
         </tbody>
     </table>
