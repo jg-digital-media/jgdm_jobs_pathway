@@ -912,8 +912,8 @@ html {
                     input {
 
                         padding: 3px;
-                        border: solid 1px red;
-                        border: solid 1px darkgray;
+                        /* border: solid 1px red; */
+                        /* border: solid 1px darkgray; */
                         border: solid 1px $border---col--list;
                         border-radius: 6px;
                         margin: 25px 0;
@@ -952,7 +952,14 @@ html {
                         border: solid 1px darkgray;
                         padding: 3px 7px;
                         width: 95%;
-                        border-radius: 6px;
+                        border-radius: 6px;                        
+
+                        transition: background 0.3s ease-in-out;
+
+                        &:hover {
+
+                            background: #9ddfff;                        
+                        }
 
                         &::placeholder {
 
