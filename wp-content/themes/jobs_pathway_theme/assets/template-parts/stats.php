@@ -3,7 +3,7 @@
 
 <a href="<?php echo site_url('/dashboard'); ?>" class="button---back">Back to Dashboard</a>
 
-<h3>Your Progress</h3>
+<h3>Progress stats for <span><em><?php echo esc_html( $current_user->display_name ); ?></em></span></h3>
 
 <?php
 
