@@ -1,4 +1,4 @@
-`Last Updated: 04-11-2025 - 17:18`
+`Last Updated: 05-11-2025 - 15:22`
 
 # Jobs Pathway
   + Jobs Pathway is a project in PHP and WordPress. Sign in and add details of jobs applied for so you can keep track of your way to your professional life with this app.
@@ -41,7 +41,7 @@ The following pages are assigned to templates in the `wp-content/themes/jobs_pat
 
 ## TODOs: 
 
-### (Tasks: `120` - Completed - `82`)
+### (Tasks: `124` - Completed - `93`)
 
 + `COMPLETED: 16-09-2025` - Wireframe and static interface planning for 'Job's Pathway App'
 + `COMPLETED: 16-09-2025` - Add a footer and header template part of the project
@@ -136,45 +136,47 @@ The following pages are assigned to templates in the `wp-content/themes/jobs_pat
   + `COMPLETED: 04-11-2025 ` -  `page-jobstats.php`
 + `COMPLETED: 04-11-2025 ` - Page dashboard Consider renaming "Actions" column to "Delete"
 + `COMPLETED: 04-11-2025 ` - Back-end password validation required - Check for the correct password `now dealt with via WordPress`
++ `COMPLETED: 05-11-2025 ` - Add background colour on hover for all form inputs `/add-job`
++ `COMPLETED: 05-11-2025 ` - Page dashboard - Style the "delete" button in actions column
++ `COMPLETED: 05-11-2025 ` - Description text area has no hover transition of background colour (filename as per prototype) `/add-job` `add-job-form.php`
++ `COMPLETED: 05-11-2025 ` - Modify hover colour for delete button `#ffd6d6`  line 784 `.button---job--delete:hover`
++ `COMPLETED: 05-11-2025 ` - Style Motivational Messages on dashboard - `#motivation---message`
++ `COMPLETED: 05-11-2025 ` - "Your Progress" could be "Progress Stats for [username]" slug: `/jobs-stats/`
++ `COMPLETED: 05-11-2025 ` - You're in work! Congratulations! Add Party Emoji `stats-modal.php`
++ `COMPLETED: 05-11-2025 ` - Apply flexbox to `app---navigation` on medium responsive breakpoint
++ `COMPLETED: 05-11-2025 ` - Consider Deleting Actions Column
++ `COMPLETED: 05-11-2025 ` - `motivation---message`- load a different message as its text content whenever the user loads the page.
 
-
-+ `TODO: ` - Modify hover colour for delete button `#ffd6d6`  line 784 `.button---job--delete:hover`
-+ `TODO: ` - loggedin flag  should only be present directly after user logs in. No redirects using the flag. `/?loggedin=true`
-+ `TODO: ` - Add background colour on hover for all form inputs `/add-job`
-+ `TODO: ` - Page dashboard - Style the "delete" button in actions column
-+ `TODO: ` - add-job-form.php - Description text area has no hover transition of background colour (filename as per prototype) `/add-job`
-+ `TODO: ` - STAGE 7 — Motivational Messages
-+ `TODO: ` - `login-handler` and `register-handler` are empty and should be ignored for the interim.
-+ `TODO: ` - Sort `header.php` meta tags and social media sharing previews.
 + `TODO: ` - Create and style "how to use" page
-+ `TODO: ` - "Your Progress" could be "Progress Stats for [username]" slug: `/jobs-stats/`
-+ `TODO: ` - You're in work! Congratulations! Add Party Emoji `stats-modal.php`
++ `TODO: ` - Add copy "How to use" template file/page `how-to.php`
++ `TODO: ` - loggedin flag  should only be present directly after user logs in. No redirects using the flag. `/?loggedin=true`
++ `TODO: ` - `login-handler.php` and `register-handler.php` are empty and should be ignored for the interim.
++ `TODO: ` - Sort `header.php` meta tags and social media sharing previews.
 + `TODO: ` - Reduce lines of code in Sass files where possible
-  + `TODO: ` - May need to fill table with classes to get the desired effect.
+  + `TODO: ` - May need to fill the dashboard table with classes to get the desired effect.
 + `TODO: ` - Add responsiveness to Job list table - `list.php` and `list-empty.php` (filenames as per prototype)
-+ `TODO: ` - Apply flexbox to `app---navigation`
-  + `TODO: ` - Implement overflow-x scrolling on table for smaller screens
++ `TODO: ` - Implement overflow-x scrolling on table for smaller screens
 + `TODO: ` - Actions column - `list.php`  Might be useful as a mechanism to edit job profiles 
-  + `TODO: ` - Consider Deleting Actions Column
-+ `TODO: ` - `motivation---message`- load a different message as its text content whenever the user loads the page.
++ `TODO: ` - Add the final motivation messages on the dashboard page `motivation---message`
 + `TODO: ` - Add a favicon
 + `TODO: ` - Swap out mini logo in `top---banner--container`
-+ `TODO: ` - Add copy "How to use" template file/page `how-to.php`
 + `TODO: ` - Add a "How to use" template file/page
 + `TODO: ` - style "how to use" page
 + `TODO: ` - Delete job or jobs from the list page via the stats page/modal - `button button---delete--jobs`
 + `TODO: ` - input elements "do not have an autocomplete attribute" - add autocomplete="off" to all input elements
-+ `TODO: ` - Progress Stats Button an #id `btn---progress--stats`
-+ `TODO: ` - How to Use Button an #id `btn---how--to`
-
++ `TODO: ` - Give "Progress Stats" Button an #id `btn---progress--stats`
++ `TODO: ` - Give "How to Use Button" an #id `btn---how--to`
 + `TODO: ` - Customise validation and success error messages in app.js
 + `TODO: ` - Fade out custom validation messages after going out of element focus
 + `TODO: ` - Remove filenames and .filename class and selector from project at the appropriate time.
-+ `TODO: ` - Require stronger passwords for the app - e.g. at least 8 characters (include special characters, uppercase, lowercase, numbers)
++ `TODO: ` - Future UX Feature: Require stronger passwords for the app - e.g. at least 8 characters (include special characters, uppercase, lowercase, numbers)
 + `TODO: ` - Add copy to explain how to use the app. `page-howto.php`
 + `TODO: ` - Implement modal areas for `job-details.php`,`add-job-form.php`, `stats-modal.php`,`how-to.php`.
 + `TODO: ` - modal styles
 + `TODO: ` - Future UX Feature: Tooltip, showing the job title and ID applied for above that row's (Open) button
++ `TODO: ` - Future UX Feature: Require stronger passwords for the app - e.g. at least 8 characters (include special characters, uppercase, lowercase, numbers)
++ `TODO: ` - Emoji styles have no effect - `img.emoji` in `in--work--tick`
++ `TODO: ` - Delete buttons for each row should have a confirmation modal
 
 [Back to Top](#sections)
 
