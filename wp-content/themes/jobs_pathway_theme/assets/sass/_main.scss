@@ -579,9 +579,17 @@ html {
                         #motivation---message {
 
                             padding: 0px 5px;
-                            color: $text---col--secondary-list;
+                            /* color: #676676; */
+                            color: #720000;
+                            font-size: 14px;
+                            font-weight: bold;
                             /* background: #ffffb9; */
                             /* border-radius: 7px; */
+                            /* display: inline-block; */
+                            position: relative;
+                            /* right: 0; */
+                            /* width: 100%; */
+                            /* min-width: 533px; */
                         }
 
                     }
@@ -692,7 +700,15 @@ html {
                                             background: lighten($border---stage--completed, 9%);
                                         }                                        
 
-                                    }                                   
+                                    }  
+                                    
+                                    .dashboard---no--jobs {
+
+                                        font-weight: bold;
+                                        /* text-align: right; */
+                                        color: #4486ff;
+                                        margin: 10px auto;
+                                    }
                                     
                                 }
 
@@ -785,6 +801,7 @@ html {
 
                                                 color: $button---col--hover-list;   
                                                 color: #9e0b0b;    
+                                                color: #ffd6d6;
                                                 background: lighten(#f95757, 6%);
                                             }
 
@@ -1414,6 +1431,25 @@ html {
                                 background: #98ff98;
                                 color: #056705;
                                 font-weight: bold;
+
+                                .in--work--tick {
+
+                                    img.emoji {
+
+                                        display: inline !important;
+                                        /* border: none !important; */
+                                        /* box-shadow: none !important; */
+                                        /* height: 1em !important; */
+                                        width: 4em !important;
+                                        margin: 0 0.07em !important;
+                                        /* vertical-align: -0.1em !important; */
+                                        background: none !important;
+                                        padding: 0 !important;
+                                        font-size: 27px !important;
+                                        vertical-align: middle;
+                                    }
+
+                                }
                             }
                         }
                     }
