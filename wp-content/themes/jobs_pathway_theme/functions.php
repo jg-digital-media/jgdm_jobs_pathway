@@ -130,12 +130,21 @@ function jt_random_motivation() {
 
   $messages = [
     
-    "Add code to template where you need it.",
-    "Message 1.",
-    "Message 2.",
-    "Message 3.",
-    "Message 4.",
-    "Message 5.",
+    "Keep up the good work — every step counts!",
+    "Stay positive, the right job is waiting for you.",
+    "Each application gets you closer to your goal.",
+    "Believe in yourself — you've got this!",
+    "Persistence always pays off",
+    "Your effort today builds your future tomorrow.",
+    "Don't lose hope — progress is happening.",
+    "Every interview is experience gained.",
+    "Great opportunities are just around the corner",
+    "Stay focused — your breakthrough will come.",
+    "Hard work and patience lead to success.",
+    "Remember: rejection is redirection.",
+    "You're capable, determined, and on the right path.",
+    "Small wins add up to big results.",
+    "Keep going — your next 'yes' could be just one more try away.",
   ];
 
   return $messages[array_rand($messages)];
