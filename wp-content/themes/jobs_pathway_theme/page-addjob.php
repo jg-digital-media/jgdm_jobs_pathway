@@ -15,7 +15,29 @@ if (!is_user_logged_in()) {
 $job_added_message = '';
 $job_error_message = '';
 
+// Preserve form values for re-display if validation fails
+$form_values = array(
+    'company_name' => '',
+    'job_title' => '',
+    'salary' => '',
+    'location' => '',
+    'contact_person' => '',
+    'contact_details' => '',
+    'description' => ''
+);
+
 if ($_POST && isset($_POST['add_job_form'])) {
+    
+    // Save submitted values
+    $form_values = array(
+        'company_name' => isset($_POST['company_name']) ? sanitize_text_field($_POST['company_name']) : '',
+        'job_title' => isset($_POST['job_title']) ? sanitize_text_field($_POST['job_title']) : '',
+        'salary' => isset($_POST['salary']) ? sanitize_text_field($_POST['salary']) : '',
+        'location' => isset($_POST['location']) ? sanitize_text_field($_POST['location']) : '',
+        'contact_person' => isset($_POST['contact_person']) ? sanitize_text_field($_POST['contact_person']) : '',
+        'contact_details' => isset($_POST['contact_details']) ? sanitize_text_field($_POST['contact_details']) : '',
+        'description' => isset($_POST['description']) ? sanitize_textarea_field($_POST['description']) : ''
+    );
     
     // Verify nonce for security
     if (!isset($_POST['add_job_nonce']) || !wp_verify_nonce($_POST['add_job_nonce'], 'add_job_action')) {
