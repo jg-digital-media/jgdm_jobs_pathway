@@ -17,9 +17,9 @@
 
     <ul class="app---navigation">
         <li>
-            <a href="job-stats/">Progress Stats</a></li> 
+            <a href="job-stats/" id="btn---progress--stats">Progress Stats</a></li>
         <li>
-            <a href="how-to/">How to Use!</a>
+            <a href="how-to/" id="btn---how--to">How to Use!</a>
         </li>
     </ul>
 
