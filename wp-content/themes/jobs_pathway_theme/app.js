@@ -1,5 +1,5 @@
 // connection check - app.js
-console.log("app.js connected - 06-11-2025 - 15:24");
+console.log("app.js connected - 06-11-2025 - 15:44");
 
 // Wait for DOM to be fully loaded
 document.addEventListener('DOMContentLoaded', function() {
@@ -442,7 +442,7 @@ function showFieldSuccess(field, message = '') {
     if (!fieldWrapper) {
         fieldWrapper = document.createElement('div');
         fieldWrapper.setAttribute('data-field-wrapper', field.id);
-        fieldWrapper.style.cssText = 'position: relative; display: inline-block; width: 100%;';
+        fieldWrapper.style.cssText = 'position: relative; display: inline-block;';
         
         // Wrap the field
         field.parentNode.insertBefore(fieldWrapper, field);
