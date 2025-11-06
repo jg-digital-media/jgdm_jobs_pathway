@@ -1,4 +1,4 @@
-`Last Updated: 06-11-2025 - 13:49`
+`Last Updated: 06-11-2025 - 17:10`
 
 # Jobs Pathway
   + Jobs Pathway is a project in PHP and WordPress. Sign in and add details of jobs applied for so you can keep track of your way to your professional life with this app.
@@ -41,7 +41,7 @@ The following pages are assigned to templates in the `wp-content/themes/jobs_pat
 
 ## TODOs: 
 
-### (Tasks: `127` - Completed - `106`)
+### (Tasks: `129` - Completed - `107`)
 
 + `COMPLETED: 16-09-2025` - Wireframe and static interface planning for 'Job's Pathway App'
 + `COMPLETED: 16-09-2025` - Add a footer and header template part of the project
@@ -160,19 +160,21 @@ The following pages are assigned to templates in the `wp-content/themes/jobs_pat
 + `COMPLETED: 06-11-2025 ` - Give "Progress Stats" Button an #id `btn---progress--stats`
 + `COMPLETED: 06-11-2025 ` - Sort `header.php` meta tags and social media sharing previews.
 + `COMPLETED: 06-11-2025 ` - Give "How to Use Button" an #id `btn---how--to`
++ `COMPLETED: 06-11-2025 ` - Add the final motivation messages on the dashboard page `motivation---message`
++ `TODO: ` - **Bug:** Editing incorrectly reports text input fields not saved when the textarea is not edited.
++ `TODO: ` - Customise validation and success error messages in app.js
++ `TODO: ` - Reduce lines of code in Sass files where possible
+  + `TODO: ` - May need to fill the dashboard table with classes to get the desired effect.
 + `TODO: ` - Create and style "how to use" page
 + `TODO: ` - Add copy "How to use" template file/page `how-to.php`
 + `TODO: ` - Add copy to explain how to use the app. `page-howto.php`
 + `TODO: ` - Add a "How to use" template file/page
 + `TODO: ` - Style "how to use" page
-+ `TODO: ` - `login-handler.php` and `register-handler.php` are empty and should be ignored for the interim.
-+ `TODO: ` - Reduce lines of code in Sass files where possible
-  + `TODO: ` - May need to fill the dashboard table with classes to get the desired effect.
-+ `TODO: ` - Add the final motivation messages on the dashboard page `motivation---message`
-+ `TODO: ` - Swap out mini logo in `top---banner--container`
-+ `TODO: ` - input elements "do not have an autocomplete attribute" - add autocomplete="off" to all input elements
-+ `TODO: ` - Customise validation and success error messages in app.js
 + `TODO: ` - Remove filenames and .filename class and selector from project at the appropriate time.
++ `TODO: ` - Study and clean up the markup templates, `functions.php` and app.js to make them readable and maintainable.
++ `TODO: ` - Upload templates to the web server and test them.
++ `TODO: ` - `login-handler.php` and `register-handler.php` are empty and should be ignored for the interim.
++ `TODO: ` - Swap out mini logo in `top---banner--container`
 + `TODO: ` - **Future UX Feature:** Fade out custom validation messages after going out of element focus
 + `TODO: ` - **Future UX Feature:** Require stronger passwords for the app - e.g. at least 8 characters (include special characters, uppercase, lowercase, numbers)
 + `TODO: ` - **Future UX Feature:** Implement modal areas for `job-details.php`,`add-job-form.php`, `stats-modal.php`,`how-to.php`.
@@ -192,7 +194,7 @@ The following pages are assigned to templates in the `wp-content/themes/jobs_pat
 [1.0.0](#100) | [1.0.1](#101) | [1.0.2](#102)
 
 ### WordPress Development
-[2.0.0](#200) | [2.0.1](#201) | [2.0.2](#202) | [2.0.3](#203) | [2.0.4](#204) | [2.0.5](#205) | [2.0.6](#206)| [2.0.7](#207) | [2.0.8](#208)
+[2.0.0](#200) | [2.0.1](#201) | [2.0.2](#202) | [2.0.3](#203) | [2.0.4](#204) | [2.0.5](#205) | [2.0.6](#206)| [2.0.7](#207) | [2.0.8](#208) | [2.0.9](#209)
 
 ### `0.0.1`
   
@@ -388,9 +390,21 @@ Definitely some major challenges today collaborating with the AI becasue it simp
 
 + This sounds less challenging it was.  I still need to have a proper look at the CSS and extend rules.  The idea was to have one extend diretive for the colours and multiple directives for other styles. Some of them wouldn't be selected by CSS which I'm guessing was due to cascading conflicts with my existing CSS.
 
+[Back to Top](#development)
+
 ### `2.0.8`
 
 + More work today in the process of making the Jobs Pathway App fit for release to the web. I am seeing light at the end of the tunnel which will hopefully be reached by the end of friday. 
+
+[Back to Top](#development)
+
+### `2.0.9`
+
++ As I write this today, I've made at least 36 commits to the project in a single day. I've summarised some of the details below.
+
++ These include further visual enhancements, bug fixes and general improvements, including the addition of front-end form validation for the input form for adding a new job.
+
++ Whether or not I'll actually release the project to the web tomorrow, I still don't know. But it will be made ready to.
 
 [Back to Top](#development)
 
