@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /* head.scss */
 /*
-    Last Updated: 04-11-2025 - 17:19
+    Last Updated: 06-11-2025 - 17:09
 */
 /*
     Theme Name: JGDM Jobs Pathway App
@@ -27,13 +27,13 @@
 
 /* config.scss */
 html body.body---job--details .section---job--edit #btn-toggle-edit,
-html body.body---job--details .section---job--edit a.button---job--edit, html body.body---list main .section---jobs--list--container table tbody tr td:nth-child(2) a, html body.body---list main .section---add--situation-container a, html body.body---list main .top---banner--container .app---navigation li a {
+html body.body---job--details .section---job--edit a.button---job--edit, html body.body---list main .section---jobs--list--container table.table---jobs--list tbody tr td:nth-child(2) a, html body.body---list main .section---add--situation-container a, html body.body---list main .top---banner--container .app---navigation li a {
   background: #4486ff;
   color: #98cbff;
   font-size: 14px;
 }
 html body.body---job--details .section---job--edit #btn-toggle-edit:hover,
-html body.body---job--details .section---job--edit a.button---job--edit:hover, html body.body---list main .section---jobs--list--container table tbody tr td:nth-child(2) a:hover, html body.body---list main .section---add--situation-container a:hover, html body.body---list main .top---banner--container .app---navigation li a:hover {
+html body.body---job--details .section---job--edit a.button---job--edit:hover, html body.body---list main .section---jobs--list--container table.table---jobs--list tbody tr td:nth-child(2) a:hover, html body.body---list main .section---add--situation-container a:hover, html body.body---list main .top---banner--container .app---navigation li a:hover {
   color: #ffffff;
 }
 
@@ -394,10 +394,19 @@ html body.body---login .container---element--login form #registration a:hover {
   color: #ffffff;
 }
 html body.body---register footer, html body.body---login footer {
-  margin: 17px 0 0 0;
+  margin: 25px 0 0 0;
+  font-size: 12px;
 }
 html body.body---register footer p, html body.body---login footer p {
   text-align: center;
+}
+html body.body---register footer p a, html body.body---login footer p a {
+  color: gold;
+  transition: color 0.3s ease-in-out;
+}
+html body.body---register footer p a:hover, html body.body---login footer p a:hover {
+  text-decoration: underline;
+  color: #ffffff;
 }
 html body.body---register footer p span a, html body.body---login footer p span a {
   color: gold;
@@ -515,7 +524,7 @@ html body.body---list main .username---and--logout span .display---username {
 html body.body---list main .username---and--logout span a.logout-link {
   color: #4486ff;
   transition: color 0.3s ease-in-out;
-  width: 100%;
+  /* width: 100%; */
   text-align: center;
   vertical-align: middle;
   font-size: 11px;
@@ -523,6 +532,17 @@ html body.body---list main .username---and--logout span a.logout-link {
 html body.body---list main .username---and--logout span a.logout-link:hover {
   /* color: blue; */
   color: #0e43b5;
+}
+html body.body---list main .username---and--logout span .login-success-dashboard {
+  display: inline-block;
+  color: green;
+  background: #e6ffe6;
+  padding: 6px;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: normal;
+  font-size: 14px;
+  border: #b0d7b0 solid 1px;
 }
 html body.body---list main .top---banner--container {
   display: flex;
@@ -537,9 +557,23 @@ html body.body---list main .top---banner--container {
   border-radius: 6px;
   width: 95%;
 }
+@media (max-width: 720px) {
+  html body.body---list main .top---banner--container {
+    display: block;
+  }
+}
 html body.body---list main .top---banner--container #jobs---pathway--logo {
   width: 45px;
   height: 45px;
+}
+@media (max-width: 720px) {
+  html body.body---list main .top---banner--container #jobs---pathway--logo {
+    display: block;
+    margin: 2px auto;
+  }
+}
+html body.body---list main .top---banner--container .app---navigation {
+  width: auto;
 }
 html body.body---list main .top---banner--container .app---navigation li {
   display: inline-block;
@@ -557,15 +591,37 @@ html body.body---list main .top---banner--container .app---navigation li a {
 html body.body---list main .top---banner--container .app---navigation li a:hover {
   color: #ffffff;
 }
+@media (max-width: 720px) {
+  html body.body---list main .top---banner--container .app---navigation {
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+  }
+}
 html body.body---list main .top---banner--container #motivation---message--container {
   /* background: $banner---bg--list;  */
   width: 60%;
 }
 html body.body---list main .top---banner--container #motivation---message--container #motivation---message {
   padding: 0px 5px;
-  color: #676676;
+  /* color: #676676; */
+  color: #720000;
+  font-size: 14px;
+  font-weight: bold;
   /* background: #ffffb9; */
   /* border-radius: 7px; */
+  /* display: inline-block; */
+  position: relative;
+  /* right: 0; */
+  /* width: 100%; */
+  /* min-width: 533px; */
+}
+@media (max-width: 720px) {
+  html body.body---list main .top---banner--container #motivation---message--container #motivation---message {
+    text-align: center;
+    margin: 14px auto;
+  }
 }
 html body.body---list main .section---add--situation-container {
   /* display: block; */
@@ -589,20 +645,31 @@ html body.body---list main .section---jobs--list--container {
   margin: 10px auto;
   border-radius: 6px;
 }
-html body.body---list main .section---jobs--list--container table {
+@media (max-width: 720px) {
+  html body.body---list main .section---jobs--list--container {
+    overflow-x: scroll;
+    width: 95%;
+  }
+}
+html body.body---list main .section---jobs--list--container table.table---jobs--list {
   width: 100%;
   background: #d3d3d3;
   border: solid 2px darkgray;
   border-radius: 6px;
 }
-html body.body---list main .section---jobs--list--container table thead {
+@media (max-width: 720px) {
+  html body.body---list main .section---jobs--list--container table.table---jobs--list {
+    width: 150%;
+  }
+}
+html body.body---list main .section---jobs--list--container table.table---jobs--list thead {
   border-bottom: solid 1px #8b8b8b;
   /* font-size: 17px; */
 }
-html body.body---list main .section---jobs--list--container table thead tr th {
+html body.body---list main .section---jobs--list--container table.table---jobs--list thead tr th {
   /* border-bottom: soid 1px yellow; */
 }
-html body.body---list main .section---jobs--list--container table thead tr:first-child {
+html body.body---list main .section---jobs--list--container table.table---jobs--list thead tr:first-child {
   content: "";
   /* background: navajowhite; */
   height: 36px;
@@ -611,32 +678,38 @@ html body.body---list main .section---jobs--list--container table thead tr:first
   width: 100%;
   border-top: solid 1px black;
 }
-html body.body---list main .section---jobs--list--container table tbody tr {
+html body.body---list main .section---jobs--list--container table.table---jobs--list tbody tr {
   /* height: 55px; */
   min-height: 55px;
   height: 55px;
 }
-html body.body---list main .section---jobs--list--container table tbody tr td {
+html body.body---list main .section---jobs--list--container table.table---jobs--list tbody tr td {
   text-align: center;
   transition: background 0.3s ease-in-out;
 }
-html body.body---list main .section---jobs--list--container table tbody tr td:hover {
+html body.body---list main .section---jobs--list--container table.table---jobs--list tbody tr td:hover {
   background: #dbdbdb;
 }
-html body.body---list main .section---jobs--list--container table tbody tr td input.stage---completed--checkbox {
+html body.body---list main .section---jobs--list--container table.table---jobs--list tbody tr td input.stage---completed--checkbox {
   content: "";
   height: 28px;
   width: 28px;
 }
-html body.body---list main .section---jobs--list--container table tbody tr td.stage---completed {
+html body.body---list main .section---jobs--list--container table.table---jobs--list tbody tr td.stage---completed {
   background: #72ff72;
   border: solid #0ff10f 1px;
   transition: background 0.3s ease-in-out;
 }
-html body.body---list main .section---jobs--list--container table tbody tr td.stage---completed:hover {
+html body.body---list main .section---jobs--list--container table.table---jobs--list tbody tr td.stage---completed:hover {
   background: #3af43a;
 }
-html body.body---list main .section---jobs--list--container table tbody tr td:nth-child(2) a {
+html body.body---list main .section---jobs--list--container table.table---jobs--list tbody tr td .dashboard---no--jobs {
+  font-weight: bold;
+  /* text-align: right; */
+  color: #4486ff;
+  margin: 10px auto;
+}
+html body.body---list main .section---jobs--list--container table.table---jobs--list tbody tr td:nth-child(2) a {
   text-decoration: none;
   /* font-size: 12px; */
   font-weight: bold;
@@ -648,15 +721,15 @@ html body.body---list main .section---jobs--list--container table tbody tr td:nt
   font-size: 12px;
   transition: 0.3s ease-in-out;
 }
-html body.body---list main .section---jobs--list--container table tbody tr td:nth-child(2) strong {
+html body.body---list main .section---jobs--list--container table.table---jobs--list tbody tr td:nth-child(2) strong {
   font-size: 12px;
   color: #4e4e4e;
 }
-html body.body---list main .section---jobs--list--container table tbody tr td:nth-child(1):hover,
-html body.body---list main .section---jobs--list--container table tbody tr td:nth-child(2):hover {
+html body.body---list main .section---jobs--list--container table.table---jobs--list tbody tr td:nth-child(1):hover,
+html body.body---list main .section---jobs--list--container table.table---jobs--list tbody tr td:nth-child(2):hover {
   background: none;
 }
-html body.body---list main .section---jobs--list--container table tbody tr td a#add---job--url {
+html body.body---list main .section---jobs--list--container table.table---jobs--list tbody tr td a#add---job--url {
   display: block;
   margin-top: 10px;
   margin: 14px auto;
@@ -667,10 +740,10 @@ html body.body---list main .section---jobs--list--container table tbody tr td a#
   color: #98cbff;
   transition: color 0.3s;
 }
-html body.body---list main .section---jobs--list--container table tbody tr td a#add---job--url:hover {
+html body.body---list main .section---jobs--list--container table.table---jobs--list tbody tr td a#add---job--url:hover {
   color: #fff;
 }
-html body.body---list main .section---jobs--list--container table tbody tr td .button---job--delete {
+html body.body---list main .section---jobs--list--container table.table---jobs--list tbody tr td .button---job--delete {
   /* @extend %button---action--delete; */
   content: "del";
   text-decoration: none;
@@ -682,6 +755,7 @@ html body.body---list main .section---jobs--list--container table tbody tr td .b
   margin: 3px auto;
   border-radius: 8px;
   font-size: 12px;
+  cursor: pointer;
   transition: 0.3s ease-in-out;
   background: #4486ff;
   background: #f95757;
@@ -689,9 +763,14 @@ html body.body---list main .section---jobs--list--container table tbody tr td .b
   /* font-size: 14px; */
   color: #630202;
 }
-html body.body---list main .section---jobs--list--container table tbody tr td .button---job--delete:hover {
+html body.body---list main .section---jobs--list--container table.table---jobs--list tbody tr td .button---job--delete:hover {
   color: #ffffff;
   color: #9e0b0b;
+  color: #ffd6d6;
+  background: #fa7575;
+}
+html body.body---list main .section---jobs--list--container table.table---jobs--list tbody tr td .button---job--delete:focus {
+  color: white;
 }
 html body.body---add--job main h3,
 html body.body---add--job main h3 + a {
@@ -750,39 +829,50 @@ html body.body---add--job .section---add--situation-container .form---add--job l
 }
 html body.body---add--job .section---add--situation-container .form---add--job input {
   padding: 3px;
-  border: solid 1px red;
-  border: solid 1px darkgray;
+  /* border: solid 1px red; */
+  /* border: solid 1px darkgray; */
   border: solid 1px darkgray;
   border-radius: 6px;
   margin: 25px 0;
-  padding: 3px 7px;
+  padding: 4px 7px;
   height: 25px;
   transition: background 0.3s ease-in-out;
+}
+html body.body---add--job .section---add--situation-container .form---add--job input:hover {
+  background: #9ddfff;
 }
 html body.body---add--job .section---add--situation-container .form---add--job input::placeholder {
   color: rgb(188, 57, 57);
   font-family: "Arial", sans-serif;
   margin: 25px 0;
-  padding: 3px 7px;
+  /* padding: 3px 7px;  */
 }
 html body.body---add--job .section---add--situation-container .form---add--job input:focus-visible {
   /* border: solid 1px blue; */
   outline: solid 1px blue;
   background: #9ddfff;
-  padding: 3px 7px;
+  /* padding: 3px 7px;  */
 }
 html body.body---add--job .section---add--situation-container .form---add--job textarea {
   /* border: solid 1px red; */
+  display: block;
+  margin: 0 auto;
   border: solid 1px darkgray;
-  padding: 3px 7px;
-  width: 95%;
+  padding: 8px 8px;
+  width: 90%;
   border-radius: 6px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  transition: background 0.3s ease-in-out;
+}
+html body.body---add--job .section---add--situation-container .form---add--job textarea:hover {
+  background: #9ddfff;
 }
 html body.body---add--job .section---add--situation-container .form---add--job textarea::placeholder {
   color: rgb(188, 57, 57);
   font-family: "Arial", sans-serif;
   /* padding: 3px 7px; */
-  padding: 3px 7px;
+  /* padding: 3px 7px; */
+  margin: 0px;
   transition: background 0.3s ease-in-out;
 }
 html body.body---add--job .section---add--situation-container .form---add--job textarea:focus-visible {
@@ -808,6 +898,42 @@ html body.body---add--job .section---add--situation-container .form---add--job .
 html body.body---add--job .section---add--situation-container .form---add--job .button---login:hover {
   /* background: $button---bg--hover-list; */
   color: #ffffff;
+  background: #4486ff;
+}
+html body.body---add--job .section---add--situation-container .form---add--job .add-job-input.validation-error,
+html body.body---add--job .section---add--situation-container .form---add--job .add-job-textarea.validation-error {
+  border: 2px solid #f44336 !important;
+  background: #ffe6e6 !important;
+}
+html body.body---add--job .section---add--situation-container .form---add--job .add-job-input.validation-success,
+html body.body---add--job .section---add--situation-container .form---add--job .add-job-textarea.validation-success {
+  border: 2px solid #4CAF50 !important;
+  background: #e6ffe6 !important;
+}
+html body.body---add--job .section---add--situation-container .form---add--job .validation-error-message {
+  color: #f44336;
+  background: #ffe6e6;
+  padding: 8px 10px;
+  border-radius: 4px;
+  font-size: 13px;
+  margin: 5px 0;
+  display: block;
+  border-left: 3px solid #f44336;
+}
+html body.body---add--job .section---add--situation-container .form---add--job .validation-success-message {
+  color: #4CAF50;
+  background: #e6ffe6;
+  padding: 8px 10px;
+  border-radius: 4px;
+  font-size: 13px;
+  margin: 5px 0;
+  display: block;
+  border-left: 3px solid #4CAF50;
+}
+html body.body---add--job .section---add--situation-container .form---add--job label .required {
+  color: #f44336;
+  font-weight: bold;
+  margin-left: 3px;
 }
 html body.body---job--details main h3,
 html body.body---job--details main h3 + a {
@@ -1046,6 +1172,19 @@ html body.body---job--stats .job---profile--container tfoot#in--work--msg tr td 
   color: #056705;
   font-weight: bold;
 }
+html body.body---job--stats .job---profile--container tfoot#in--work--msg tr td p .in--work--tick img.emoji {
+  display: inline !important;
+  /* border: none !important; */
+  /* box-shadow: none !important; */
+  /* height: 1em !important; */
+  width: 4em !important;
+  margin: 0 0.07em !important;
+  /* vertical-align: -0.1em !important; */
+  background: none !important;
+  padding: 0 !important;
+  font-size: 27px !important;
+  vertical-align: middle;
+}
 html body.body---job--stats .section---delete--jobs {
   text-align: center;
 }
@@ -1079,7 +1218,35 @@ html body.body---howto section.section---howto {
   text-align: center;
   font-weight: bold;
   font-size: 15pt;
+}
+html body.body---howto section.section---howto .article---howto h4 {
+  font-size: 18pt;
+  margin: 0px;
   color: #700404;
+}
+html body.body---howto section.section---howto .article---howto #content---howto {
+  display: block;
+  margin: 10px auto;
+  width: 50%;
+  line-height: 1.9;
+  font-size: 12pt;
+  padding: 8px;
+  border-radius: 6px;
+  background: #dddddd;
+  border: solid 1px #cccccc;
+  text-align: left;
+}
+@media screen and (max-width: 720px) {
+  html body.body---howto section.section---howto .article---howto #content---howto {
+    width: 75%;
+  }
+}
+html body.body---howto section.section---howto .article---howto #content---howto ul {
+  text-align: left;
+}
+html body.body---howto section.section---howto .article---howto #content---howto ul li {
+  list-style: none;
+  margin: 10px 0;
 }
 
 .modal-overlay {
@@ -1117,6 +1284,9 @@ html body.body---howto section.section---howto {
   color: #666;
   font-size: 16px;
   line-height: 1.5;
+}
+.modal-content p#delete-single-job-message {
+  text-align: center;
 }
 
 .modal-actions {
