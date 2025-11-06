@@ -45,12 +45,12 @@
             <h2>Keep track of your way to your professional life</h2>
 
             <!-- Debug Info -->
-            <div style="background: #f0f0f0; padding: 10px; margin: 10px 0; border-radius: 5px; font-size: 12px;">
+            <!-- <div style="background: #f0f0f0; padding: 10px; margin: 10px 0; border-radius: 5px; font-size: 12px;">
                 <strong>Debug Info:</strong> 
                 Login Form Active | 
                 WordPress Login URL: <?php echo wp_login_url(); ?> |
                 Form Method: POST
-            </div>
+            </div> -->
 
         </header>
 
