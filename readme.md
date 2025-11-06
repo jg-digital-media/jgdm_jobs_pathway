@@ -1,4 +1,4 @@
-`Last Updated: 05-11-2025 - 15:22`
+`Last Updated: 05-11-2025 - 16:14`
 
 # Jobs Pathway
   + Jobs Pathway is a project in PHP and WordPress. Sign in and add details of jobs applied for so you can keep track of your way to your professional life with this app.
@@ -41,7 +41,7 @@ The following pages are assigned to templates in the `wp-content/themes/jobs_pat
 
 ## TODOs: 
 
-### (Tasks: `124` - Completed - `93`)
+### (Tasks: `127` - Completed - `93`)
 
 + `COMPLETED: 16-09-2025` - Wireframe and static interface planning for 'Job's Pathway App'
 + `COMPLETED: 16-09-2025` - Add a footer and header template part of the project
@@ -147,9 +147,13 @@ The following pages are assigned to templates in the `wp-content/themes/jobs_pat
 + `COMPLETED: 05-11-2025 ` - Consider Deleting Actions Column
 + `COMPLETED: 05-11-2025 ` - `motivation---message`- load a different message as its text content whenever the user loads the page.
 
++ `TODO: ` - loggedin flag  should only be present directly after user logs in. No redirects using the flag. `/?loggedin=true`
++ `TODO: ` - modify success message on logged in flag `login-success-dashboard`
++ `TODO: ` - modify success message on login screen directly after log out message.
++ `TODO: ` - Delete buttons for each row should have a confirmation modal
 + `TODO: ` - Create and style "how to use" page
 + `TODO: ` - Add copy "How to use" template file/page `how-to.php`
-+ `TODO: ` - loggedin flag  should only be present directly after user logs in. No redirects using the flag. `/?loggedin=true`
++ `TODO: ` - Change link states on footer for login and registration screens.
 + `TODO: ` - `login-handler.php` and `register-handler.php` are empty and should be ignored for the interim.
 + `TODO: ` - Sort `header.php` meta tags and social media sharing previews.
 + `TODO: ` - Reduce lines of code in Sass files where possible
@@ -160,8 +164,9 @@ The following pages are assigned to templates in the `wp-content/themes/jobs_pat
 + `TODO: ` - Add the final motivation messages on the dashboard page `motivation---message`
 + `TODO: ` - Add a favicon
 + `TODO: ` - Swap out mini logo in `top---banner--container`
++ `TODO: ` - Add copy to explain how to use the app. `page-howto.php`
 + `TODO: ` - Add a "How to use" template file/page
-+ `TODO: ` - style "how to use" page
++ `TODO: ` - Style "how to use" page
 + `TODO: ` - Delete job or jobs from the list page via the stats page/modal - `button button---delete--jobs`
 + `TODO: ` - input elements "do not have an autocomplete attribute" - add autocomplete="off" to all input elements
 + `TODO: ` - Give "Progress Stats" Button an #id `btn---progress--stats`
@@ -170,13 +175,11 @@ The following pages are assigned to templates in the `wp-content/themes/jobs_pat
 + `TODO: ` - Fade out custom validation messages after going out of element focus
 + `TODO: ` - Remove filenames and .filename class and selector from project at the appropriate time.
 + `TODO: ` - Future UX Feature: Require stronger passwords for the app - e.g. at least 8 characters (include special characters, uppercase, lowercase, numbers)
-+ `TODO: ` - Add copy to explain how to use the app. `page-howto.php`
-+ `TODO: ` - Implement modal areas for `job-details.php`,`add-job-form.php`, `stats-modal.php`,`how-to.php`.
++ `TODO: ` - Future UX Feature: Implement modal areas for `job-details.php`,`add-job-form.php`, `stats-modal.php`,`how-to.php`.
 + `TODO: ` - modal styles
 + `TODO: ` - Future UX Feature: Tooltip, showing the job title and ID applied for above that row's (Open) button
 + `TODO: ` - Future UX Feature: Require stronger passwords for the app - e.g. at least 8 characters (include special characters, uppercase, lowercase, numbers)
 + `TODO: ` - Emoji styles have no effect - `img.emoji` in `in--work--tick`
-+ `TODO: ` - Delete buttons for each row should have a confirmation modal
 
 [Back to Top](#sections)
 
@@ -189,7 +192,7 @@ The following pages are assigned to templates in the `wp-content/themes/jobs_pat
 [1.0.0](#100) | [1.0.1](#101) | [1.0.2](#102)
 
 ### WordPress Development
-[2.0.0](#200) | [2.0.1](#201) | [2.0.2](#202) | [2.0.3](#203) | [2.0.4](#204) | [2.0.5](#205) | [2.0.6](#206)| [2.0.7](#207)
+[2.0.0](#200) | [2.0.1](#201) | [2.0.2](#202) | [2.0.3](#203) | [2.0.4](#204) | [2.0.5](#205) | [2.0.6](#206)| [2.0.7](#207) | [2.0.8](#208)
 
 ### `0.0.1`
   
@@ -384,6 +387,10 @@ Definitely some major challenges today collaborating with the AI becasue it simp
 + Today has been a little distruptive due to other thing sgetting in the way.  I was able to concentre on getting the colour scheme and application buttons sorted out though and some other enhancements.
 
 + This sounds less challenging it was.  I still need to have a proper look at the CSS and extend rules.  The idea was to have one extend diretive for the colours and multiple directives for other styles. Some of them wouldn't be selected by CSS which I'm guessing was due to cascading conflicts with my existing CSS.
+
+### `2.0.8`
+
++ Today
 
 [Back to Top](#development)
 
