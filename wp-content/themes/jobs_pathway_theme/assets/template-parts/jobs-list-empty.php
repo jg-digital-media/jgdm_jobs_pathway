@@ -52,7 +52,7 @@
                 <th>Interview Attended</th>
                 <th>References</th>
                 <th>Got the Job!!!</th>
-                <th>Actions</th>
+                <th>Delete (?)</th>
             </tr>
         </thead>
         <tbody>
