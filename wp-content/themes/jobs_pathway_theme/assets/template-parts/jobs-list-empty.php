@@ -40,8 +40,7 @@
 
 <section class="section---jobs--list--container">
 
-
-    <table>
+    <table class="table---jobs--list">
         <thead>
             <tr>
                 <th>ID</th>
@@ -64,6 +63,5 @@
             </tr>
         </tbody>
     </table>
-
 
 </section>

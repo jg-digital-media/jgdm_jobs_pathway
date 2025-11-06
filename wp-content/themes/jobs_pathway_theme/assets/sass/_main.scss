@@ -688,12 +688,24 @@ html {
                     margin: 10px auto;
                     border-radius: 6px;
 
-                    table {
+                    @media (max-width: $breakpoint---md) {
+
+                        overflow-x: scroll;
+                        width: 95%;
+                    }
+
+                    table.table---jobs--list {
 
                         width: 100%;
                         background: $banner---bg--list;
                         border: solid 2px $border---col--list;
                         border-radius: 6px;
+
+                        @media (max-width: $breakpoint---md) {
+
+                            width: 150%;
+                            
+                        }
 
                         thead {
                             
