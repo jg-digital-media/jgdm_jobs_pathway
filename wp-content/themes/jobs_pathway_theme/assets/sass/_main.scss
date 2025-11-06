@@ -1104,6 +1104,52 @@ html {
                         }
 
                     }
+
+                    // Form validation styles
+                    .add-job-input,
+                    .add-job-textarea {
+
+                        &.validation-error {
+                            border: 2px solid #f44336 !important;
+                            background: #ffe6e6 !important;
+                        }
+
+                        &.validation-success {
+                            border: 2px solid #4CAF50 !important;
+                            background: #e6ffe6 !important;
+                        }
+                    }
+
+                    .validation-error-message {
+                        color: #f44336;
+                        background: #ffe6e6;
+                        padding: 8px 10px;
+                        border-radius: 4px;
+                        font-size: 13px;
+                        margin: 5px 0;
+                        display: block;
+                        border-left: 3px solid #f44336;
+                    }
+
+                    .validation-success-message {
+                        color: #4CAF50;
+                        background: #e6ffe6;
+                        padding: 8px 10px;
+                        border-radius: 4px;
+                        font-size: 13px;
+                        margin: 5px 0;
+                        display: block;
+                        border-left: 3px solid #4CAF50;
+                    }
+
+                    label {
+
+                        .required {
+                            color: #f44336;
+                            font-weight: bold;
+                            margin-left: 3px;
+                        }
+                    }
                 }
 
             }  
