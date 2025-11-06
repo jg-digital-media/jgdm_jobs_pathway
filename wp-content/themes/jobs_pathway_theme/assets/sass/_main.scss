@@ -1001,7 +1001,7 @@ html {
                         border: solid 1px $border---col--list;
                         border-radius: 6px;
                         margin: 25px 0;
-                        padding: 3px 7px; 
+                        padding: 4px 7px; 
                         height: 25px;
 
                         transition: background 0.3s ease-in-out;
@@ -1016,7 +1016,7 @@ html {
                             color: rgb(188, 57, 57);
                             font-family: $font---placeholder;
                             margin: 25px 0;
-                            padding: 3px 7px; 
+                            /* padding: 3px 7px;  */
 
                         }
 
@@ -1025,18 +1025,20 @@ html {
                             /* border: solid 1px blue; */
                             outline: solid 1px blue;
                             background: #9ddfff;
-                            padding: 3px 7px; 
+                            /* padding: 3px 7px;  */
                         }
                     }
 
                     textarea {
                         
                         /* border: solid 1px red; */
-                        
+                        display: block;
+                        margin: 0 auto;
                         border: solid 1px darkgray;
-                        padding: 3px 7px;
-                        width: 95%;
-                        border-radius: 6px;                        
+                        padding: 8px 8px;
+                        width: 90%;
+                        border-radius: 6px;       
+                        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;                 
 
                         transition: background 0.3s ease-in-out;
 
@@ -1050,7 +1052,8 @@ html {
                             color: rgb(188, 57, 57);
                             font-family: $font---placeholder;
                             /* padding: 3px 7px; */ 
-                            padding: 3px 7px;
+                            /* padding: 3px 7px; */
+                            margin: 0px;
 
                             transition: background 0.3s ease-in-out;
 
@@ -1085,6 +1088,7 @@ html {
 
                             /* background: $button---bg--hover-list; */
                             color: $button---col--hover-list;
+                            background: #4486ff;
                         }
 
                     }
