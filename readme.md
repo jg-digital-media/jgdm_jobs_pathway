@@ -1,4 +1,4 @@
-`Last Updated: 05-11-2025 - 16:14`
+`Last Updated: 06-11-2025 - 13:49`
 
 # Jobs Pathway
   + Jobs Pathway is a project in PHP and WordPress. Sign in and add details of jobs applied for so you can keep track of your way to your professional life with this app.
@@ -41,7 +41,7 @@ The following pages are assigned to templates in the `wp-content/themes/jobs_pat
 
 ## TODOs: 
 
-### (Tasks: `127` - Completed - `93`)
+### (Tasks: `127` - Completed - `106`)
 
 + `COMPLETED: 16-09-2025` - Wireframe and static interface planning for 'Job's Pathway App'
 + `COMPLETED: 16-09-2025` - Add a footer and header template part of the project
@@ -147,39 +147,39 @@ The following pages are assigned to templates in the `wp-content/themes/jobs_pat
 + `COMPLETED: 05-11-2025 ` - Consider Deleting Actions Column
 + `COMPLETED: 05-11-2025 ` - `motivation---message`- load a different message as its text content whenever the user loads the page.
 
-+ `TODO: ` - loggedin flag  should only be present directly after user logs in. No redirects using the flag. `/?loggedin=true`
-+ `TODO: ` - modify success message on logged in flag `login-success-dashboard`
-+ `TODO: ` - modify success message on login screen directly after log out message.
-+ `TODO: ` - Delete buttons for each row should have a confirmation modal
++ `COMPLETED: 06-11-2025 ` - loggedin flag  should only be present directly after user logs in. No redirects using the flag. `/?loggedin=true`
++ `COMPLETED: 06-11-2025 ` - modify success message on logged in flag `login-success-dashboard`
++ `COMPLETED: 06-11-2025 ` - modify success message on login screen directly after log out message.
++ `COMPLETED: 06-11-2025 ` - Delete buttons for each row should have a confirmation modal
++ `COMPLETED: 06-11-2025 ` - Change link states on footer for login and registration screens.
++ `COMPLETED: 06-11-2025 ` - Add responsiveness to Job list table - `list.php` and `list-empty.php` (filenames as per prototype)
++ `COMPLETED: 06-11-2025 ` - Implement overflow-x scrolling on table for smaller screens
++ `COMPLETED: 06-11-2025 ` - Actions column - `list.php`  Might be useful as a mechanism to edit job profiles
++ `COMPLETED: 06-11-2025 ` - Delete job or jobs from the list page via the stats page/modal - `button button---delete--jobs`
++ `COMPLETED: 06-11-2025 ` - Add a favicon
++ `COMPLETED: 06-11-2025 ` - Give "Progress Stats" Button an #id `btn---progress--stats`
++ `COMPLETED: 06-11-2025 ` - Sort `header.php` meta tags and social media sharing previews.
++ `COMPLETED: 06-11-2025 ` - Give "How to Use Button" an #id `btn---how--to`
 + `TODO: ` - Create and style "how to use" page
 + `TODO: ` - Add copy "How to use" template file/page `how-to.php`
-+ `TODO: ` - Change link states on footer for login and registration screens.
-+ `TODO: ` - `login-handler.php` and `register-handler.php` are empty and should be ignored for the interim.
-+ `TODO: ` - Sort `header.php` meta tags and social media sharing previews.
-+ `TODO: ` - Reduce lines of code in Sass files where possible
-  + `TODO: ` - May need to fill the dashboard table with classes to get the desired effect.
-+ `TODO: ` - Add responsiveness to Job list table - `list.php` and `list-empty.php` (filenames as per prototype)
-+ `TODO: ` - Implement overflow-x scrolling on table for smaller screens
-+ `TODO: ` - Actions column - `list.php`  Might be useful as a mechanism to edit job profiles 
-+ `TODO: ` - Add the final motivation messages on the dashboard page `motivation---message`
-+ `TODO: ` - Add a favicon
-+ `TODO: ` - Swap out mini logo in `top---banner--container`
 + `TODO: ` - Add copy to explain how to use the app. `page-howto.php`
 + `TODO: ` - Add a "How to use" template file/page
 + `TODO: ` - Style "how to use" page
-+ `TODO: ` - Delete job or jobs from the list page via the stats page/modal - `button button---delete--jobs`
++ `TODO: ` - `login-handler.php` and `register-handler.php` are empty and should be ignored for the interim.
++ `TODO: ` - Reduce lines of code in Sass files where possible
+  + `TODO: ` - May need to fill the dashboard table with classes to get the desired effect.
++ `TODO: ` - Add the final motivation messages on the dashboard page `motivation---message`
++ `TODO: ` - Swap out mini logo in `top---banner--container`
 + `TODO: ` - input elements "do not have an autocomplete attribute" - add autocomplete="off" to all input elements
-+ `TODO: ` - Give "Progress Stats" Button an #id `btn---progress--stats`
-+ `TODO: ` - Give "How to Use Button" an #id `btn---how--to`
 + `TODO: ` - Customise validation and success error messages in app.js
-+ `TODO: ` - Fade out custom validation messages after going out of element focus
 + `TODO: ` - Remove filenames and .filename class and selector from project at the appropriate time.
-+ `TODO: ` - Future UX Feature: Require stronger passwords for the app - e.g. at least 8 characters (include special characters, uppercase, lowercase, numbers)
-+ `TODO: ` - Future UX Feature: Implement modal areas for `job-details.php`,`add-job-form.php`, `stats-modal.php`,`how-to.php`.
++ `TODO: ` - **Future UX Feature:** Fade out custom validation messages after going out of element focus
++ `TODO: ` - **Future UX Feature:** Require stronger passwords for the app - e.g. at least 8 characters (include special characters, uppercase, lowercase, numbers)
++ `TODO: ` - **Future UX Feature:** Implement modal areas for `job-details.php`,`add-job-form.php`, `stats-modal.php`,`how-to.php`.
 + `TODO: ` - modal styles
-+ `TODO: ` - Future UX Feature: Tooltip, showing the job title and ID applied for above that row's (Open) button
-+ `TODO: ` - Future UX Feature: Require stronger passwords for the app - e.g. at least 8 characters (include special characters, uppercase, lowercase, numbers)
-+ `TODO: ` - Emoji styles have no effect - `img.emoji` in `in--work--tick`
++ `TODO: ` - **Future UX Feature:** Tooltip, showing the job title and ID applied for above that row's (Open) button
++ `TODO: ` - **Future UX Feature:** Login check that an email address is not linked to the users account
++ `TODO: ` - **Bug:** Emoji styles have no effect - `img.emoji` in `in--work--tick`
 
 [Back to Top](#sections)
 
@@ -390,7 +390,7 @@ Definitely some major challenges today collaborating with the AI becasue it simp
 
 ### `2.0.8`
 
-+ Today
++ More work today in the process of making the Jobs Pathway App fit for release to the web. I am seeing light at the end of the tunnel which will hopefully be reached by the end of friday. 
 
 [Back to Top](#development)
 
