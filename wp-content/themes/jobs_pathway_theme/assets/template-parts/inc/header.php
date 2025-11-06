@@ -2,6 +2,7 @@
 
     // website title
     $website_title = "Jobs Pathway";
+    
     $website_description = "Keep track of your way to your professional life";
     $website_keywords = "Jobs Pathway, Jobs, Pathway, Jobs Tracker, Job Tracker, Job Tracking, Job Tracking System";
 
@@ -12,7 +13,7 @@
     $page_url = "";
     $page_icon = "";
 
-    $page_image = "";
+    $page_image = "";  */
 
     // Google Fonts
     // $google_font = "";
@@ -60,11 +61,8 @@
         <link rel="canonical" href="<?php echo $page_url; ?>">
 
         <!-- Favicon -->  
-        <link rel="icon" href="" />
+        <link rel="icon" href="favicon.png" />
 
-        <title> <?php echo $website_title ?></title>
-
-        <!-- Main Stylesheet -->
-        <link rel="stylesheet" type="text/css" href="style.css">
+        <title> <?php echo $website_title ?> </title>
 
     </head>

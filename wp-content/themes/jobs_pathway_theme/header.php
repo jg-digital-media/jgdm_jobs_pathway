@@ -1,7 +1,8 @@
 <?php 
 
     // website title
-    $website_title = "Jobs Pathway";
+    // $website_title = "Jobs Pathway";
+    
     $website_description = "Keep track of your way to your professional life";
     $website_keywords = "Jobs Pathway, Jobs, Pathway, Jobs Tracker, Job Tracker, Job Tracking, Job Tracking System";
 
@@ -9,10 +10,24 @@
     $page_description = "Keep track of your way to your professional life.";
     $page_keywords = "";
     $page_title = "Jobs Pathway";
-    $page_url = "https://projects.jonniegrieve.co.uk/jobs_pathway/";
-    $page_icon = "favicon.png";
+    $page_url = "";
+    $page_icon = "";
 
-    $page_image = "https://projects.jonniegrieve.co.uk/jobs_pathway/assets/BrowserPreview.png";
+    $page_image = "";  
+
+    // Google Fonts
+    // $google_font = "";
+
+    // Facebook Variables
+    // $facebook_title = $page_title;
+    // $facebook_description = $page_description;
+    // $facebook_share_img = $page_image;
+
+    // Twitter Variables
+    // $twitter_title = $page_title;
+    // $twitter_description = $page_description;
+    // $twitter_share_img = $page_image;
+    // $twitter_card = "jgdm_jobs_pathway";
 
 ?>
 
@@ -64,8 +79,6 @@
 
         <!-- Favicon -->  
         <link rel="icon" href="favicon.png" type="image/x-icon">
-
-        <title> <?php echo $website_title ?> </title>
 
         <?php wp_head(); ?>
 
