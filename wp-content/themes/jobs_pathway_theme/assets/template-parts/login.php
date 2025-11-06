@@ -7,11 +7,26 @@
 
 <!-- Form: login form -->
 <form name="main_form_login" action="<?php echo wp_login_url(); ?>" method="post" id="loginform-custom" class="form form---login">
-  
-    <h3>Welcome Back!</h3>
-   
-    <?php
 
+    <?php 
+        if (isset($_GET['loggedout']) && $_GET['loggedout'] == 'true') {
+            echo '<p class="login-success" style="color: green; background: #e6ffe6; padding: 10px; border-radius: 5px; text-align: center;"><strong>Success!</strong> You are now logged out.</p>';
+        }
+
+    ?>
+  
+    <?php if (isset($_GET['loggedout']) && $_GET['loggedout'] == 'true') { ?>            
+        
+        <h3>Come Back Soon! 👋</h3>
+
+    <?php } else { ?>   
+
+        <h3>Welcome Back!</h3>
+        <h4>Please login to return to your listed job applications.</h4>   
+   
+    <?php } ?>
+
+   <?php 
         // Check if there are any login errors or messages
         if (isset($_GET['login']) && $_GET['login'] == 'failed') {
             echo '<p class="login-error" style="color: red; background: #ffe6e6; padding: 10px; border-radius: 5px;"><strong>Error:</strong> Invalid username or password. Please try again.</p>';
@@ -21,12 +36,9 @@
             echo '<p class="login-error" style="color: red; background: #ffe6e6; padding: 10px; border-radius: 5px;"><strong>Error:</strong> Username and password are required.</p>';
         }
 
-        if (isset($_GET['loggedout']) && $_GET['loggedout'] == 'true') {
-            echo '<p class="login-success" style="color: green; background: #e6ffe6; padding: 10px; border-radius: 5px; text-align: center;">You have successfully logged out. <br /><br /> Login to return to your listed job applications.</p>';
-        }
     ?>
 
-    <h4> Please login to return to your listed job applications.</h4>
+    
 
     <p id="registration">Not Registered?  <a href="<?php echo site_url('/register'); ?>">Click here to Register</a></p>
 
