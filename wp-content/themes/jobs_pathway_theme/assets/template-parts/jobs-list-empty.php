@@ -5,7 +5,7 @@
     <a href="<?php echo wp_logout_url( site_url('/login') ); ?>" class="logout-link">(Logout)</a>
 
     <?php if (isset($_GET['loggedin']) && $_GET['loggedin'] == 'true') { 
-        echo '<p class="login-success-dashboard" style="display: inline-block; color: green; background: #e6ffe6; padding: 10px; border-radius: 5px; text-align: center;"<strong>Success!</strong> You have successfully logged in.</p>';
+        echo '<p class="login-success-dashboard"><strong>Success!</strong> You are now logged in.</p>';
         }
     ?>
 
