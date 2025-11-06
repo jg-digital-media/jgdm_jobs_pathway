@@ -1,5 +1,5 @@
 // connection check - app.js
-console.log("app.js connected - 03-11-2025 - 15:45");
+console.log("app.js connected - 06-11-2025 - 15:45");
 
 // Wait for DOM to be fully loaded
 document.addEventListener('DOMContentLoaded', function() {
@@ -693,6 +693,130 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
+// Delete Single Job Functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const deleteButtons = document.querySelectorAll('.button---single--job--delete');
+    const modal = document.getElementById('delete-single-job-modal');
+    const confirmButton = document.getElementById('btn-confirm-single-delete');
+    const cancelButton = document.getElementById('btn-cancel-single-delete');
+    const messageElement = document.getElementById('delete-single-job-message');
+    
+    let currentJobId = null;
+    let currentJobTitle = '';
+    let currentCompanyName = '';
+    
+    // Add click handlers to all delete buttons
+    deleteButtons.forEach(button => {
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            // Get job data from button attributes
+            currentJobId = this.getAttribute('data-job-id');
+            currentJobTitle = this.getAttribute('data-job-title');
+            currentCompanyName = this.getAttribute('data-company-name');
+            
+            // Update modal message with job details
+            if (messageElement) {
+                messageElement.innerHTML = `Really delete this job? <strong>"${currentJobTitle} at ${currentCompanyName}"</strong>`;
+            }
+            
+            // Show modal
+            if (modal) {
+                modal.style.display = 'flex';
+            }
+        });
+    });
+    
+    // Close modal when cancel button is clicked
+    if (cancelButton) {
+        cancelButton.addEventListener('click', function(e) {
+            e.preventDefault();
+            if (modal) {
+                modal.style.display = 'none';
+                currentJobId = null;
+            }
+        });
+    }
+    
+    // Close modal when clicking outside
+    if (modal) {
+        modal.addEventListener('click', function(e) {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+                currentJobId = null;
+            }
+        });
+    }
+    
+    // Handle deletion when confirm button is clicked
+    if (confirmButton) {
+        confirmButton.addEventListener('click', function(e) {
+            e.preventDefault();
+            if (currentJobId) {
+                deleteSingleJob(currentJobId);
+            }
+        });
+    }
+});
+
+function deleteSingleJob(jobId) {
+    console.log('Deleting job:', jobId);
+    
+    const confirmButton = document.getElementById('btn-confirm-single-delete');
+    const modal = document.getElementById('delete-single-job-modal');
+    
+    // Disable button and show loading state
+    if (confirmButton) {
+        confirmButton.disabled = true;
+        confirmButton.textContent = 'Deleting...';
+    }
+    
+    // Create FormData
+    const formData = new FormData();
+    formData.append('action', 'delete_single_job');
+    formData.append('post_id', jobId);
+    formData.append('nonce', jobPathwayAjax.nonce);
+    
+    // Send AJAX request
+    fetch(jobPathwayAjax.ajaxurl, {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            console.log('Job deleted successfully:', data);
+            
+            // Close modal
+            if (modal) {
+                modal.style.display = 'none';
+            }
+            
+            // Reload page to update the list
+            window.location.reload();
+        } else {
+            console.error('Error deleting job:', data);
+            alert('Error deleting job: ' + (data.data ? data.data.message : 'Unknown error'));
+            
+            // Re-enable button
+            if (confirmButton) {
+                confirmButton.disabled = false;
+                confirmButton.textContent = 'Yes, Delete';
+            }
+        }
+    })
+    .catch(error => {
+        console.error('AJAX error:', error);
+        alert('Error deleting job. Please check your connection.');
+        
+        // Re-enable button
+        if (confirmButton) {
+            confirmButton.disabled = false;
+            confirmButton.textContent = 'Yes, Delete';
+        }
+    });
+}
 
 function deleteAllJobs() {
     console.log('Deleting all jobs for current user');

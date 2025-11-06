@@ -834,6 +834,7 @@ html {
                                             margin: 3px auto;
                                             border-radius: 8px;
                                             font-size: 12px;
+                                            cursor: pointer;
                                             
                                             transition: .3s ease-in-out;
 
@@ -1497,6 +1498,7 @@ html {
 
                                 }
                             }
+                            
                         }
                     }
                 }
@@ -1661,6 +1663,13 @@ html {
   color: #666;
   font-size: 16px;
   line-height: 1.5;
+
+  &#delete-single-job-message {
+    
+    text-align: center;   
+
+  }
+
 }
 
 .modal-actions {

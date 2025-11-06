@@ -423,3 +423,56 @@ function jt_delete_all_user_jobs() {
 
 add_action('wp_ajax_delete_all_user_jobs', 'jt_delete_all_user_jobs');
 add_action('wp_ajax_nopriv_delete_all_user_jobs', 'jt_delete_all_user_jobs');
+
+
+// AJAX handler to delete a single job
+function jt_delete_single_job() {
+  
+  // Verify nonce
+  if (!isset($_POST['nonce']) || !wp_verify_nonce($_POST['nonce'], 'job_pathway_ajax_nonce')) {
+    wp_send_json_error(array('message' => 'Security check failed'));
+    return;
+  }
+  
+  // Check if user is logged in
+  if (!is_user_logged_in()) {
+    wp_send_json_error(array('message' => 'You must be logged in'));
+    return;
+  }
+  
+  // Get and validate post ID
+  $post_id = isset($_POST['post_id']) ? intval($_POST['post_id']) : 0;
+  
+  if (!$post_id) {
+    wp_send_json_error(array('message' => 'Missing post ID'));
+    return;
+  }
+  
+  // Verify the post exists and is a job_application
+  $post = get_post($post_id);
+  if (!$post || $post->post_type !== 'job_application') {
+    wp_send_json_error(array('message' => 'Invalid job application'));
+    return;
+  }
+  
+  // Verify the user owns this post
+  if ($post->post_author != get_current_user_id()) {
+    wp_send_json_error(array('message' => 'You do not have permission to delete this job application'));
+    return;
+  }
+  
+  // Delete the post (move to trash)
+  $deleted = wp_trash_post($post_id);
+  
+  if ($deleted) {
+    wp_send_json_success(array(
+      'message' => 'Job deleted successfully',
+      'post_id' => $post_id
+    ));
+  } else {
+    wp_send_json_error(array('message' => 'Failed to delete job'));
+  }
+}
+
+add_action('wp_ajax_delete_single_job', 'jt_delete_single_job');
+add_action('wp_ajax_nopriv_delete_single_job', 'jt_delete_single_job');
