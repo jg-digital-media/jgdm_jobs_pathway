@@ -50,7 +50,7 @@
                 <th>Interview Attended</th>
                 <th>References</th>
                 <th>Got the Job!!!</th>
-                <th>Delete</th>
+                <th>Actions</th>
             </tr>
         </thead>
         <tbody>
@@ -135,7 +135,12 @@
                            <?php checked($got_job, 1); ?>>
                 </td>
                 <td>                    
-                    <a href="<?php echo get_delete_post_link($post_id); ?>" class="button---job--delete">Delete</a>
+                    <a class="button---job--delete button---single--job--delete" 
+                            data-job-id="<?php echo $post_id; ?>"
+                            data-job-title="<?php echo esc_attr($job_title); ?>"
+                            data-company-name="<?php echo esc_attr($company_name); ?>">
+                        Delete
+                    </a>
                 </td>
             </tr>
             <?php 
@@ -147,4 +152,16 @@
     </table>
 
 </section>
+
+<!-- Custom Delete Single Job Confirmation Modal -->
+<div id="delete-single-job-modal" class="modal-overlay" style="display: none;">
+    <div class="modal-content">
+        <h3>Confirm Deletion</h3>
+        <p id="delete-single-job-message">Are you sure you want to delete this job?</p>
+        <div class="modal-actions">
+            <button id="btn-confirm-single-delete" class="button button---confirm">Yes, Delete</button>
+            <button id="btn-cancel-single-delete" class="button button---cancel">Cancel</button>
+        </div>
+    </div>
+</div>
 
