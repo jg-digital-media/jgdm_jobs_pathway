@@ -1,16 +1,22 @@
 <?php
 
-/* Template Name: Register Template */
+    /* Template Name: Register Template */
+
+    // website title
+    $website_title = "Jobs Pathway";
+    $website_description = "Keep track of your way to your professional life";
+    $website_keywords = "Jobs Pathway, Jobs, Pathway, Jobs Tracker, Job Tracker, Job Tracking, Job Tracking System";
+
+    // Meta Variables
+    $page_description = "Keep track of your way to your professional life.";
+    $page_keywords = "";
+    $page_title = "Jobs Pathway";
+    $page_url = "https://projects.jonniegrieve.co.uk/jobs_pathway/";
+    $page_icon = "favicon.png";
+
+    $page_image = "https://projects.jonniegrieve.co.uk/jobs_pathway/";
 
 ?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>    
-
-    <title>JGDM Jobs Pathway App</title>
-
-</head>
 
 <?php
 
