@@ -299,11 +299,25 @@ html {
 
             footer {
 
-                margin: 17px 0 0 0;
+                margin: 25px 0 0 0;
+                font-size: 12px;
 
                 p {
 
                     text-align: center;
+
+                    a {
+
+                        color: $url---col--primary;  
+                        
+                        transition: color 0.3s ease-in-out;
+
+                        &:hover {
+
+                            text-decoration: underline;
+                            color: $url---col--primary-hover;
+                        }
+                    }
 
                     span {
 
