@@ -1,5 +1,5 @@
 // connection check - app.js
-console.log("app.js connected - 06-11-2025 - 15:45");
+console.log("app.js connected - 06-11-2025 - 15:24");
 
 // Wait for DOM to be fully loaded
 document.addEventListener('DOMContentLoaded', function() {
@@ -48,6 +48,9 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Call function: Form validation functionality
     initializeFormValidation();
+    
+    // Call function: Add Job form validation
+    initializeAddJobValidation();
 });
 
 // Form validation functions
@@ -62,6 +65,94 @@ function initializeFormValidation() {
     if (loginForm) {
         setupLoginValidation(loginForm);
     }
+}
+
+// Add Job form validation
+function initializeAddJobValidation() {
+    const addJobForm = document.getElementById('add-job-form');
+    
+    if (!addJobForm) {
+        return;
+    }
+    
+    setupAddJobValidation(addJobForm);
+}
+
+function setupAddJobValidation(form) {
+    const companyNameField = form.querySelector('#company_name');
+    const jobTitleField = form.querySelector('#job_title');
+    const locationField = form.querySelector('#location');
+    const salaryField = form.querySelector('#salary');
+    const contactPersonField = form.querySelector('#contact_person');
+    const contactDetailsField = form.querySelector('#contact_details');
+    const descriptionField = form.querySelector('#description');
+    
+    // Validation on blur for required fields
+    if (companyNameField) {
+        companyNameField.addEventListener('blur', function() {
+            if (this.value.trim()) {
+                validateRequired(this, 'Company name is required');
+            } else {
+                removeFieldSuccess(this);
+                removeFieldError(this);
+            }
+        });
+    }
+    
+    if (jobTitleField) {
+        jobTitleField.addEventListener('blur', function() {
+            if (this.value.trim()) {
+                validateRequired(this, 'Job title is required');
+            } else {
+                removeFieldSuccess(this);
+                removeFieldError(this);
+            }
+        });
+    }
+    
+    if (locationField) {
+        locationField.addEventListener('blur', function() {
+            if (this.value.trim()) {
+                validateRequired(this, 'Location is required');
+            } else {
+                removeFieldSuccess(this);
+                removeFieldError(this);
+            }
+        });
+    }
+    
+    // Form submission validation
+    form.addEventListener('submit', function(e) {
+        let isValid = true;
+        
+        // Clear previous error messages
+        clearValidationErrors(form);
+        
+        console.log('Add job form validation started');
+        
+        // Validate company name
+        if (!validateRequired(companyNameField, 'Company name is required')) {
+            console.log('Company name validation failed');
+            isValid = false;
+        }
+        
+        // Validate job title
+        if (!validateRequired(jobTitleField, 'Job title is required')) {
+            console.log('Job title validation failed');
+            isValid = false;
+        }
+        
+        // Validate location
+        if (!validateRequired(locationField, 'Location is required')) {
+            console.log('Location validation failed');
+            isValid = false;
+        }
+        
+        if (!isValid) {
+            e.preventDefault();
+            console.log('Form submission prevented due to validation errors');
+        }
+    });
 }
 
 function setupRegisterValidation(form) {
