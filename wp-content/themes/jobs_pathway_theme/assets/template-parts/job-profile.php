@@ -1,15 +1,10 @@
 
 <!-- Progress Stats Modal Goes Here -->
 
-<?php 
-// Debug: Check if variables are set
-echo '<!-- DEBUG: Company Name: ' . (isset($company_name) ? $company_name : 'NOT SET') . ' -->';
-echo '<!-- DEBUG: Job Title: ' . (isset($job_title) ? $job_title : 'NOT SET') . ' -->';
-echo '<!-- DEBUG: Post ID: ' . (isset($post_id) ? $post_id : 'NOT SET') . ' -->';
-?>
-
+<!-- Job Profile Status Messages -->
 <div id="job-profile-status-message" style="display: none; margin: 20px 0; padding: 15px; border-radius: 5px; text-align: center;"></div>
 
+<!-- Table of existing job application details -->
 <table class="job---profile---container" id="job-profile-table">
       
     <thead>
@@ -17,6 +12,7 @@ echo '<!-- DEBUG: Post ID: ' . (isset($post_id) ? $post_id : 'NOT SET') . ' -->'
             <th colspan="2">Job Details</th>
         </tr>
     </thead>
+
     <tbody>
         <tr>
             <td>Company Name:</td>
@@ -60,7 +56,6 @@ echo '<!-- DEBUG: Post ID: ' . (isset($post_id) ? $post_id : 'NOT SET') . ' -->'
                 <input type="text" class="edit-mode job-edit-input" style="display: none;" data-field="contact_details" value="<?php echo esc_attr($contact_details); ?>">
             </td>
         </tr>
-
         <tr>
             <td colspan="2" id="job---personal--notes">
                 

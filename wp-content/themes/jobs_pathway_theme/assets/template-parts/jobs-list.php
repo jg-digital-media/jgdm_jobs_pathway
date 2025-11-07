@@ -1,5 +1,3 @@
-<!-- <p>jobs-list.php</p> -->
-
 <div class="username---and--logout">
     <span>Welcome, <span class="display---username">username</span></span>
     <a href="<?php echo wp_logout_url( site_url('/login') ); ?>" class="logout-link">(Logout)</a>
@@ -32,8 +30,6 @@
 </section>
 
 <section class="section---jobs--list--container">
-
-
     <table>
         <thead>
             <tr>

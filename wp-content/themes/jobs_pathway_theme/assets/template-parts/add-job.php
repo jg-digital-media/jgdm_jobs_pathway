@@ -1,7 +1,5 @@
- <!-- Form: add job -->
-
+<!-- Form: main_form_add_job -->
 <section class="section---add--situation-container">
-
     
     <a href="<?php echo site_url('/dashboard'); ?>" class="button---back">Back to Dashboard</a>
     

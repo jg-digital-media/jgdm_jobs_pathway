@@ -1,14 +1,10 @@
-<!-- customised wordpress login form -->
-
-<?php
-
-
-?>
-
 <!-- Form: login form -->
 <form name="main_form_login" action="<?php echo wp_login_url(); ?>" method="post" id="loginform-custom" class="form form---login">
 
+    
     <?php 
+
+        // Successful logout message
         if (isset($_GET['loggedout']) && $_GET['loggedout'] == 'true') {
             echo '<p class="login-success" style="color: green; background: #e6ffe6; padding: 10px; border-radius: 5px; text-align: center;"><strong>Success!</strong> You are now logged out.</p>';
         }
@@ -27,6 +23,7 @@
     <?php } ?>
 
    <?php 
+
         // Check if there are any login errors or messages
         if (isset($_GET['login']) && $_GET['login'] == 'failed') {
             echo '<p class="login-error" style="color: red; background: #ffe6e6; padding: 10px; border-radius: 5px;"><strong>Error:</strong> Invalid username or password. Please try again.</p>';
@@ -36,9 +33,7 @@
             echo '<p class="login-error" style="color: red; background: #ffe6e6; padding: 10px; border-radius: 5px;"><strong>Error:</strong> Username and password are required.</p>';
         }
 
-    ?>
-
-    
+    ?>    
 
     <p id="registration">Not Registered?  <a href="<?php echo site_url('/register'); ?>">Click here to Register</a></p>
 

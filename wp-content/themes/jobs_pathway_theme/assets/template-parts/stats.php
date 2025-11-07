@@ -1,6 +1,4 @@
-
 <!-- Progress Stats Modal Goes Here -->
-
 <a href="<?php echo site_url('/dashboard'); ?>" class="button---back">Back to Dashboard</a>
 
 <h3>Progress stats for <span><em><?php echo esc_html( $current_user->display_name ); ?></em></span></h3>
@@ -24,7 +22,6 @@
         'references'         => 0,
         'got_job'            => 0,
     ];
-
   
     foreach ($jobs as $job) {
 
@@ -35,6 +32,7 @@
     }
 
     function jt_percent($count, $total) {
+
         return $total ? round(($count / $total) * 100, 1) : 0;
     }
 
@@ -84,9 +82,13 @@
 
 <!-- Custom Delete Confirmation Modal -->
 <div id="delete-confirm-modal" class="modal-overlay" style="display: none;">
+
     <div class="modal-content">
+
         <h3>Confirm Deletion</h3>
+
         <p>Are you sure you want to delete your current list of jobs? This cannot be undone.</p>
+
         <div class="modal-actions">
             <button id="btn-confirm-delete" class="button button---confirm">Yes, Delete</button>
             <button id="btn-cancel-delete" class="button button---cancel">Cancel</button>

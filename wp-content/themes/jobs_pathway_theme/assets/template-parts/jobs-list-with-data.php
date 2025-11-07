@@ -1,5 +1,4 @@
-<!-- Jobs List with Data from Database -->
-
+<!-- Empty State: Dashboard Jobs List -->
 <div class="username---and--logout">
     <span>Welcome, <span class="display---username"> <?php echo esc_html( $current_user->display_name ); ?></span>
     <a href="<?php echo wp_logout_url( site_url('/login') ); ?>" class="logout-link">(Logout)</a>
@@ -54,26 +53,31 @@
             </tr>
         </thead>
         <tbody>
+
             <?php 
-            $job_counter = 1;
-            while ($jobs->have_posts()) : $jobs->the_post(); 
-                $post_id = get_the_ID();
-                
-                // Get all meta data
-                $company_name = get_post_meta($post_id, 'company_name', true);
-                $job_title = get_post_meta($post_id, 'job_title', true);
-                $salary = get_post_meta($post_id, 'salary', true);
-                $location = get_post_meta($post_id, 'location', true);
-                
-                // Get boolean fields (defaults to 0/false if not set)
-                $application_sent = get_post_meta($post_id, 'application_sent', true);
-                $cv_sent = get_post_meta($post_id, 'cv_sent', true);
-                $interview_secured = get_post_meta($post_id, 'interview_secured', true);
-                $interview_attended = get_post_meta($post_id, 'interview_attended', true);
-                $references_provided = get_post_meta($post_id, 'references', true);
-                $got_job = get_post_meta($post_id, 'got_job', true);
+                $job_counter = 1;
+
+                while ($jobs->have_posts()) : $jobs->the_post(); 
+
+                    $post_id = get_the_ID();
+                    
+                    // Get all Custom Post Type meta data
+                    $company_name = get_post_meta($post_id, 'company_name', true);
+                    $job_title = get_post_meta($post_id, 'job_title', true);
+                    $salary = get_post_meta($post_id, 'salary', true);
+                    $location = get_post_meta($post_id, 'location', true);
+                    
+                    // Get Boolean fields (defaults to 0/false if not set)
+                    $application_sent = get_post_meta($post_id, 'application_sent', true);
+                    $cv_sent = get_post_meta($post_id, 'cv_sent', true);
+                    $interview_secured = get_post_meta($post_id, 'interview_secured', true);
+                    $interview_attended = get_post_meta($post_id, 'interview_attended', true);
+                    $references_provided = get_post_meta($post_id, 'references', true);
+                    $got_job = get_post_meta($post_id, 'got_job', true);
             ?>
+
             <tr data-job-id="<?php echo $post_id; ?>">
+
                 <td><?php echo $job_counter; ?></td>
                 <td>
                     <strong><?php echo esc_html($job_title); ?></strong><br>  
@@ -82,57 +86,57 @@
                 </td>
                 <td id="j<?php echo $job_counter; ?>s2" class="<?php echo $application_sent ? 'stage---completed' : ''; ?>">
                     <input type="checkbox" 
-                           class="stage---completed--checkbox" 
-                           id="chkbox---j<?php echo $job_counter; ?>s2" 
-                           name="application_sent"
-                           data-field="application_sent"
-                           data-post-id="<?php echo $post_id; ?>"
-                           <?php checked($application_sent, 1); ?>>
+                        class="stage---completed--checkbox" 
+                        id="chkbox---j<?php echo $job_counter; ?>s2" 
+                        name="application_sent"
+                        data-field="application_sent"
+                        data-post-id="<?php echo $post_id; ?>"
+                        <?php checked($application_sent, 1); ?>>
                 </td>
                 <td id="j<?php echo $job_counter; ?>s3" class="<?php echo $cv_sent ? 'stage---completed' : ''; ?>">
                     <input type="checkbox" 
-                           class="stage---completed--checkbox" 
-                           id="chkbox---j<?php echo $job_counter; ?>s3" 
-                           name="cv_sent"
-                           data-field="cv_sent"
-                           data-post-id="<?php echo $post_id; ?>"
-                           <?php checked($cv_sent, 1); ?>>
+                        class="stage---completed--checkbox" 
+                        id="chkbox---j<?php echo $job_counter; ?>s3" 
+                        name="cv_sent"
+                        data-field="cv_sent"
+                        data-post-id="<?php echo $post_id; ?>"
+                        <?php checked($cv_sent, 1); ?>>
                 </td>
                 <td id="j<?php echo $job_counter; ?>s4" class="<?php echo $interview_secured ? 'stage---completed' : ''; ?>">
                     <input type="checkbox" 
-                           class="stage---completed--checkbox" 
-                           id="chkbox---j<?php echo $job_counter; ?>s4" 
-                           name="interview_secured"
-                           data-field="interview_secured"
-                           data-post-id="<?php echo $post_id; ?>"
-                           <?php checked($interview_secured, 1); ?>>
+                        class="stage---completed--checkbox" 
+                        id="chkbox---j<?php echo $job_counter; ?>s4" 
+                        name="interview_secured"
+                        data-field="interview_secured"
+                        data-post-id="<?php echo $post_id; ?>"
+                        <?php checked($interview_secured, 1); ?>>
                 </td>
                 <td id="j<?php echo $job_counter; ?>s5" class="<?php echo $interview_attended ? 'stage---completed' : ''; ?>">
                     <input type="checkbox" 
-                           class="stage---completed--checkbox" 
-                           id="chkbox---j<?php echo $job_counter; ?>s5" 
-                           name="interview_attended"
-                           data-field="interview_attended"
-                           data-post-id="<?php echo $post_id; ?>"
-                           <?php checked($interview_attended, 1); ?>>
+                        class="stage---completed--checkbox" 
+                        id="chkbox---j<?php echo $job_counter; ?>s5" 
+                        name="interview_attended"
+                        data-field="interview_attended"
+                        data-post-id="<?php echo $post_id; ?>"
+                        <?php checked($interview_attended, 1); ?>>
                 </td>
                 <td id="j<?php echo $job_counter; ?>s6" class="<?php echo $references_provided ? 'stage---completed' : ''; ?>">
                     <input type="checkbox" 
-                           class="stage---completed--checkbox" 
-                           id="chkbox---j<?php echo $job_counter; ?>s6" 
-                           name="references"
-                           data-field="references"
-                           data-post-id="<?php echo $post_id; ?>"
-                           <?php checked($references_provided, 1); ?>>
+                        class="stage---completed--checkbox" 
+                        id="chkbox---j<?php echo $job_counter; ?>s6" 
+                        name="references"
+                        data-field="references"
+                        data-post-id="<?php echo $post_id; ?>"
+                        <?php checked($references_provided, 1); ?>>
                 </td>
                 <td id="j<?php echo $job_counter; ?>s7" class="<?php echo $got_job ? 'stage---completed' : ''; ?>">
                     <input type="checkbox" 
-                           class="stage---completed--checkbox" 
-                           id="chkbox---j<?php echo $job_counter; ?>s7" 
-                           name="got_job"
-                           data-field="got_job"
-                           data-post-id="<?php echo $post_id; ?>"
-                           <?php checked($got_job, 1); ?>>
+                        class="stage---completed--checkbox" 
+                        id="chkbox---j<?php echo $job_counter; ?>s7" 
+                        name="got_job"
+                        data-field="got_job"
+                        data-post-id="<?php echo $post_id; ?>"
+                        <?php checked($got_job, 1); ?>>
                 </td>
                 <td>                    
                     <a class="button---job--delete button---single--job--delete" 
@@ -143,22 +147,29 @@
                     </a>
                 </td>
             </tr>
+
             <?php 
-            $job_counter++;
-            endwhile; 
-            wp_reset_postdata(); 
+                $job_counter++;
+                endwhile; 
+                wp_reset_postdata(); 
             ?>
+
         </tbody>
+
     </table>
 
 </section>
 
 <!-- Custom Delete Single Job Confirmation Modal -->
 <div id="delete-single-job-modal" class="modal-overlay" style="display: none;">
+
     <div class="modal-content">
         <h3>Confirm Deletion</h3>
+
         <p id="delete-single-job-message">Are you sure you want to delete this job?</p>
+
         <div class="modal-actions">
+
             <button id="btn-confirm-single-delete" class="button button---confirm">Yes, Delete</button>
             <button id="btn-cancel-single-delete" class="button button---cancel">Cancel</button>
         </div>
