@@ -1,4 +1,4 @@
-`Last Updated: 07-11-2025 - 13:24
+`Last Updated: 07-11-2025 - 16:01
 
 # Jobs Pathway
   + Jobs Pathway is a project in PHP and WordPress. Sign in and add details of jobs applied for so you can keep track of your way to your professional life with this app.
@@ -184,6 +184,8 @@ The following pages are assigned to templates in the `wp-content/themes/jobs_pat
 + `TODO: ` - **Future UX Feature:** Tooltip, showing the job title and ID applied for above that row's (Open) button
 + `TODO: ` - **Future UX Feature:** Login check that an email address is not linked to the users account
 + `TODO: ` - **Bug:** Emoji styles have no effect - `img.emoji` in `in--work--tick`
++ `TODO: ` - **Bug:** Adding a Job Title field does not have its own custom field. That's a potential oversight. Job Title becomes part of a CPT instance - e.g. "Web Designer at PixelForge Digital."
++ 
 
 [Back to Top](#sections)
 
@@ -196,7 +198,7 @@ The following pages are assigned to templates in the `wp-content/themes/jobs_pat
 [1.0.0](#100) | [1.0.1](#101) | [1.0.2](#102)
 
 ### WordPress Development
-[2.0.0](#200) | [2.0.1](#201) | [2.0.2](#202) | [2.0.3](#203) | [2.0.4](#204) | [2.0.5](#205) | [2.0.6](#206)| [2.0.7](#207) | [2.0.8](#208) | [2.0.9](#209)
+[2.0.0](#200) | [2.0.1](#201) | [2.0.2](#202) | [2.0.3](#203) | [2.0.4](#204) | [2.0.5](#205) | [2.0.6](#206)| [2.0.7](#207) | [2.0.8](#208) | [2.0.9](#209) | [2.0.10](#210)
 
 ### `0.0.1`
   
@@ -407,6 +409,18 @@ Definitely some major challenges today collaborating with the AI becasue it simp
 + These include further visual enhancements, bug fixes and general improvements, including the addition of front-end form validation for the input form for adding a new job.
 
 + Whether or not I'll actually release the project to the web tomorrow, I still don't know. But it will be made ready to.
+
+[Back to Top](#development)
+
+### `2.0.10`
+
++ So... I don't think I'm going to meet my goal of releasing the project today (Friday 07-11-2025). But to be honest, I expected that would be the case. Now, I think I've done all I can to make it fit for initial release, which I've been talking about all week.  But there are fun and games happening on the server when I try and upload the files to its online location.  That's one challenge.
+
++ The second challenge was one last little feature to develop. Or... something that became a feature. There was a bug that developed in the project that reported changes to job profile data are not saved, when in fact they are being saved. "Error saving changes: Some fields failed to update". This has happened because, for whatever reason, AJAX lets go fields that are not updated every time the save button is clicked, but not the single textarea element. It's treating an unedited textarea like its own attempt to save an edit.
+
++ The attempt around this was to introduce a "Cancel" button to go alongside the Toggling button that switches between states.  Now, the cancel button has a window reload line in it to make sure that the edit state doesn't hold any edits to the data that were not saved, so users really can start again if they need to. 
+
++ Oh... and the challenge I talked about in the first point above?  I hadn't recreated the Pages, Post Types and assigned templates to them.  Indeed.  There's always something obvious that I forget when I'm migrating a WordPress Project.  `07-11-2025`
 
 [Back to Top](#development)
 
