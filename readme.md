@@ -1,4 +1,4 @@
-`Last Updated: 06-11-2025 - 17:10`
+`Last Updated: 07-11-2025 - 10:33
 
 # Jobs Pathway
   + Jobs Pathway is a project in PHP and WordPress. Sign in and add details of jobs applied for so you can keep track of your way to your professional life with this app.
@@ -41,7 +41,7 @@ The following pages are assigned to templates in the `wp-content/themes/jobs_pat
 
 ## TODOs: 
 
-### (Tasks: `129` - Completed - `107`)
+### (Tasks: `129` - Completed - `113`)
 
 + `COMPLETED: 16-09-2025` - Wireframe and static interface planning for 'Job's Pathway App'
 + `COMPLETED: 16-09-2025` - Add a footer and header template part of the project
@@ -165,12 +165,12 @@ The following pages are assigned to templates in the `wp-content/themes/jobs_pat
 + `TODO: ` - Customise validation and success error messages in app.js
 + `TODO: ` - Reduce lines of code in Sass files where possible
   + `TODO: ` - May need to fill the dashboard table with classes to get the desired effect.
-+ `TODO: ` - Create and style "how to use" page
-+ `TODO: ` - Add copy "How to use" template file/page `how-to.php`
-+ `TODO: ` - Add copy to explain how to use the app. `page-howto.php`
-+ `TODO: ` - Add a "How to use" template file/page
-+ `TODO: ` - Style "how to use" page
-+ `TODO: ` - Remove filenames and .filename class and selector from project at the appropriate time.
++ `COMPLETED: 07-11-2025 ` - Create and style "how to use" page
++ `COMPLETED: 07-11-2025 ` - Add copy "How to use" template file/page `how-to.php`
++ `COMPLETED: 07-11-2025 ` - Add copy to explain how to use the app. `page-howto.php`
++ `COMPLETED: 07-11-2025 ` - Add a "How to use" template file/page
++ `COMPLETED: 07-11-2025 ` - Style "how to use" page
++ `COMPLETED: 07-11-2025 ` - Remove filenames and .filename class and selector from project at the appropriate time.
 + `TODO: ` - Study and clean up the markup templates, `functions.php` and app.js to make them readable and maintainable.
 + `TODO: ` - Upload templates to the web server and test them.
 + `TODO: ` - `login-handler.php` and `register-handler.php` are empty and should be ignored for the interim.
