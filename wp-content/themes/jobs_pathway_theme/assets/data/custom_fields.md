@@ -18,21 +18,36 @@
     <td>Company Name</td>
     <td>company_name</td>
     <td>Text</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Job Title</td>
+    <td>company_name</td>
+    <td>Text</td>
+    <td></td>
+    <td></td>
   </tr>
   <tr>
     <td>Salary</td>
     <td>salary</td>
     <td>Text</td>
+    <td></td>
+    <td></td>
   </tr>
   <tr>
     <td>Location</td>
     <td>location</td>
     <td>Text</td>
+    <td></td>
+    <td></td>
   </tr>
   <tr>
     <td>Contact Person</td>
     <td>contact_person</td>
     <td>Text</td>
+    <td></td>
+    <td></td>
   </tr>
   <tr>
     <td>Contact Details</td>
@@ -52,31 +67,43 @@
     <td>Application Sent</td>
     <td>application_sent</td>
     <td>True/False</td>
+    <td></td>
+    <td></td>
   </tr>
   <tr>
     <td>CV/Resume Sent</td>
     <td>cvresume_sent</td>
     <td>True/False</td>
+    <td></td>
+    <td></td>
   </tr>
   <tr>
     <td>Interview Secured</td>
     <td>interview_secured</td>
     <td>True/False</td>
+    <td></td>
+    <td></td>
   </tr>
   <tr>
     <td>Interview Attended</td>
     <td>interview_attended</td>
     <td>True/False</td>
+    <td></td>
+    <td></td>
   </tr>
   <tr>
     <td>References</td>
     <td>references</td>
     <td>True/False</td>
+    <td></td>
+    <td></td>
   </tr>
   <tr>
     <td>Got the Job</td>
     <td>got_job</td>
     <td>True/False</td>
+    <td></td>
+    <td></td>
 </table>
 
 </body>
