@@ -8,299 +8,17 @@ html {
         font-family: $font---main;
         font-size: $font---size--md;
 
-        main {
+        &.home {
 
-            .filename {
+            background: #373737;
 
-                color: darkgray;
-                font-size: 12px;
-                font-style: italic;
-            }
-        }
-        
-        // selectors for login and register pages
-        &.body---register,
-        &.body---login {
-
-            background: $body---bg;
             
-            /* background: #393838; */
-            color: $text---col--primary;
-            font-family: $font---main;
-
-            header {
-
-                &.header---register--page,
-                &.header---login--page {
-
-                    background: none;
-                    margin: 65pt 0 7px 0px;
-
-                    h1, h2 {
-
-                        text-align: center;
-                    }
-
-                    h1 {
-
-                        font-size: 12px;
-                        text-align: center;
-                    }
-
-                    h2 {
-
-                        font-size: 10px;
-                    }
-                }
-            }
-
-            .container---element--register,
-            .container---element--login {
-
-                form {
-
-                    display: block;
-                    margin: 2px auto;
-                    width: 400px;
-                    padding: 8px;
-                    border: solid 1px #d3c2c2;
-                    border-radius: 4px;
-                    /* background: #585858; */
-                    box-shadow: none;
-
-                    transition: box-shadow 0.3s ease-in-out;
-
-                    &:hover {
-
-                        /* box-shadow: white 0 0 0 0; */
-                        /* box-shadow: #ffdc78 0 0px 5px 1px; */
-                        box-shadow: white 0 0px 5px 1px;
-                    }
-
-                    h3 {
-
-                        font-size: 16pt;
-                        margin: 7px 0;
-                        text-align: center;
-                        color: $text---col--tertiary-list;
-                        color: #ffef7a
-                    }
-
-                    h4 {
-
-                        text-align: center;
-                        /* color: #3737fd; */
-                        /* color: #ffef7a; */
-                        color: #004a00;
-                        border: dashed 2px #00bb00;
-                        background: #9bf99b;
-                        padding: 8px;
-                        letter-spacing: 0px;
-                        font-size: 12px;
-                        font-weight: normal;
-                    }
-
-                    label {
-
-                        display: block;
-                        width: 180px;
-                        margin: 20px 0;
-                        font-weight: bold;
-                        font-size: 16px;
-
-                        &#remembermelabel {
-
-                            font-size: 12px;
-                            font-weight: normal;
-                        }
-
-                        #rememberme {
-
-                            /* height: auto; */
-                            height: 25px;
-                            width: 25px;
-                            vertical-align: middle;
-                            margin: 5px;
-                            padding: 0 15px;
-                        }
-                    }
-
-                    input[type="text"], input[type="email"], input[type="password"], textarea {
-
-                        display: inline-block;  
-                        /* background: none; */
-                        /* vertical-align: middle; */
-                        /* width: 249px; */
-                        margin: 0px 0px;
-                        padding: 7px;
-                        border-radius: 6px;
-
-                        transition: background 0.3s ease-in-out;
-
-                        &:hover {
-
-                            background: lightblue;
-                        }
-
-                        &::placeholder {
-
-                            color: grey;
-
-                            transition: color 0.3s ease-in-out;
-
-                            &:hover {
-
-                                color: black;
-                                font-weight: normal;
-                                letter-spacing: 0px;
-                            }
-                        }
-                    }
-
-                    .login---input { 
-
-                        @extend %form-input-login;
-                        
-                        // Validation error styles
-                        &.validation-error {
-                            border: 2px solid #e74c3c;
-                            background-color: #fdf2f2;
-                            
-                            &:focus {
-                                outline-color: #e74c3c;
-                                box-shadow: 0 0 5px rgba(231, 76, 60, 0.3);
-                            }
-                        }
-                        
-                        // Validation success styles
-                        &.validation-success {
-                            border: 2px solid #27ae60;
-                            background-color: #f1f9f4;
-                            position: relative;
-                            
-                            &:focus {
-                                outline-color: #27ae60;
-                                box-shadow: 0 0 5px rgba(39, 174, 96, 0.3);
-                            }
-                        }
-
-                        &:focus,
-                        &:focus-visible {
-
-                            border: solid 1px #ffef7a;
-                            outline: solid 1px #ffef7a;
-                            background: #9ddfff;
-                        }
-
-                    }
-
-                    .button {
-
-                        @extend %button-form-main;
-                    }
-                    
-                    // Validation error message styles
-                    .validation-error-message {
-
-                        display: block; 
-                        background: #ff946b;
-                        color: #5a0808; 
-                        border: 2px dotted red;
-                        font-size: 12px; 
-                        font-style: italic; 
-                        margin: 4px 6px; 
-                        padding: 5px 5px;
-                        border-radius: 6px;
-
-                        animation: fadeIn 0.3s ease-in-out;
-                    }
-                    
-                    // Validation success message styles
-                    .validation-success-message {
-                        display: block;
-                        background: #d4edda;
-                        color: #155724;
-                        border: 2px solid #27ae60;
-                        font-size: 12px;
-                        font-style: italic;
-                        margin: 4px 6px;
-                        padding: 5px 5px;
-                        border-radius: 6px;
-                        animation: fadeIn 0.3s ease-in-out;
-                    }
-                    
-                    // Success tick icon
-                    .validation-success-icon {
-                        display: inline-block;
-                        position: absolute;
-                        right: 10px;
-                        top: 50%;
-                        transform: translateY(-50%);
-                        width: 20px;
-                        height: 20px;
-                        background-color: #27ae60;
-                        border-radius: 50%;
-                        color: white;
-                        text-align: center;
-                        line-height: 20px;
-                        font-size: 14px;
-                        font-weight: bold;
-                        animation: fadeIn 0.3s ease-in-out;
-                        z-index: 100;
-                        pointer-events: none;
-                        
-                        &::after {
-                            content: '✓';
-                        }
-                    }
-                    
-                    // Field wrapper for positioning icons
-                    [data-field-wrapper] {
-                        position: relative !important;
-                        display: inline-block !important;
-                        width: 100% !important;
-                    }
-                    
-                    @keyframes fadeIn {
-                        from {
-                            opacity: 0;
-                            transform: translateY(-5px);
-                        }
-                        to {
-                            opacity: 1;
-                            transform: translateY(0);
-                        }
-                    }
-
-                    #registration {
-
-                        display: block;
-                        font-size: 12px;
-                        text-align: center;
-                        margin-top: 12px;
-
-                        a {
-
-                            color: $url---col--primary;
-                            font-size: 11px;
-                            font-style: italic;
-
-                            transition: color 0.3s ease-in-out;
-
-                            &:hover {
-
-                                /* text-decoration: underline; */
-                                color: $url---col--primary-hover;
-                            }
-                        }
-                    }
-                }
-            } 
 
             footer {
 
                 margin: 25px 0 0 0;
                 font-size: 12px;
+                color: white;
 
                 p {
 
@@ -337,7 +55,299 @@ html {
                     }
                 }
             }
+
         }
+
+        main {
+
+            .filename {
+
+                color: darkgray;
+                font-size: 12px;
+                font-style: italic;
+            }
+            
+            &.body---register,
+            &.body---login {
+
+                background: $body---bg;
+                
+                /* background: #393838; */
+                color: $text---col--primary;
+                font-family: $font---main;
+
+                header {
+
+                    &.header---register--page,
+                    &.header---login--page {
+
+                        background: none;
+                        margin: 65pt 0 7px 0px;
+
+                        h1, h2 {
+
+                            text-align: center;
+                        }
+
+                        h1 {
+
+                            font-size: 12px;
+                            text-align: center;
+                        }
+
+                        h2 {
+
+                            font-size: 10px;
+                        }
+                    }
+                }
+
+                .container---element--register,
+                .container---element--login {
+
+                    form {
+
+                        display: block;
+                        margin: 2px auto;
+                        width: 400px;
+                        padding: 8px;
+                        border: solid 1px #d3c2c2;
+                        border-radius: 4px;
+                        /* background: #585858; */
+                        box-shadow: none;
+
+                        transition: box-shadow 0.3s ease-in-out;
+
+                        &:hover {
+
+                            /* box-shadow: white 0 0 0 0; */
+                            /* box-shadow: #ffdc78 0 0px 5px 1px; */
+                            box-shadow: white 0 0px 5px 1px;
+                        }
+
+                        h3 {
+
+                            font-size: 16pt;
+                            margin: 7px 0;
+                            text-align: center;
+                            color: $text---col--tertiary-list;
+                            color: #ffef7a
+                        }
+
+                        h4 {
+
+                            text-align: center;
+                            /* color: #3737fd; */
+                            /* color: #ffef7a; */
+                            color: #004a00;
+                            border: dashed 2px #00bb00;
+                            background: #9bf99b;
+                            padding: 8px;
+                            letter-spacing: 0px;
+                            font-size: 12px;
+                            font-weight: normal;
+                        }
+
+                        label {
+
+                            display: block;
+                            width: 180px;
+                            margin: 20px 0;
+                            font-weight: bold;
+                            font-size: 16px;
+
+                            &#remembermelabel {
+
+                                font-size: 12px;
+                                font-weight: normal;
+                            }
+
+                            #rememberme {
+
+                                /* height: auto; */
+                                height: 25px;
+                                width: 25px;
+                                vertical-align: middle;
+                                margin: 5px;
+                                padding: 0 15px;
+                            }
+                        }
+
+                        input[type="text"], input[type="email"], input[type="password"], textarea {
+
+                            display: inline-block;  
+                            /* background: none; */
+                            /* vertical-align: middle; */
+                            /* width: 249px; */
+                            margin: 0px 0px;
+                            padding: 7px;
+                            border-radius: 6px;
+
+                            transition: background 0.3s ease-in-out;
+
+                            &:hover {
+
+                                background: lightblue;
+                            }
+
+                            &::placeholder {
+
+                                color: grey;
+
+                                transition: color 0.3s ease-in-out;
+
+                                &:hover {
+
+                                    color: black;
+                                    font-weight: normal;
+                                    letter-spacing: 0px;
+                                }
+                            }
+                        }
+
+                        .login---input { 
+
+                            @extend %form-input-login;
+                            
+                            // Validation error styles
+                            &.validation-error {
+                                border: 2px solid #e74c3c;
+                                background-color: #fdf2f2;
+                                
+                                &:focus {
+                                    outline-color: #e74c3c;
+                                    box-shadow: 0 0 5px rgba(231, 76, 60, 0.3);
+                                }
+                            }
+                            
+                            // Validation success styles
+                            &.validation-success {
+                                border: 2px solid #27ae60;
+                                background-color: #f1f9f4;
+                                position: relative;
+                                
+                                &:focus {
+                                    outline-color: #27ae60;
+                                    box-shadow: 0 0 5px rgba(39, 174, 96, 0.3);
+                                }
+                            }
+
+                            &:focus,
+                            &:focus-visible {
+
+                                border: solid 1px #ffef7a;
+                                outline: solid 1px #ffef7a;
+                                background: #9ddfff;
+                            }
+
+                        }
+
+                        .button {
+
+                            @extend %button-form-main;
+                        }
+                        
+                        // Validation error message styles
+                        .validation-error-message {
+
+                            display: block; 
+                            background: #ff946b;
+                            color: #5a0808; 
+                            border: 2px dotted red;
+                            font-size: 12px; 
+                            font-style: italic; 
+                            margin: 4px 6px; 
+                            padding: 5px 5px;
+                            border-radius: 6px;
+
+                            animation: fadeIn 0.3s ease-in-out;
+                        }
+                        
+                        // Validation success message styles
+                        .validation-success-message {
+                            display: block;
+                            background: #d4edda;
+                            color: #155724;
+                            border: 2px solid #27ae60;
+                            font-size: 12px;
+                            font-style: italic;
+                            margin: 4px 6px;
+                            padding: 5px 5px;
+                            border-radius: 6px;
+                            animation: fadeIn 0.3s ease-in-out;
+                        }
+                        
+                        // Success tick icon
+                        .validation-success-icon {
+                            display: inline-block;
+                            position: absolute;
+                            right: 10px;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            width: 20px;
+                            height: 20px;
+                            background-color: #27ae60;
+                            border-radius: 50%;
+                            color: white;
+                            text-align: center;
+                            line-height: 20px;
+                            font-size: 14px;
+                            font-weight: bold;
+                            animation: fadeIn 0.3s ease-in-out;
+                            z-index: 100;
+                            pointer-events: none;
+                            
+                            &::after {
+                                content: '✓';
+                            }
+                        }
+                        
+                        // Field wrapper for positioning icons
+                        [data-field-wrapper] {
+                            position: relative !important;
+                            display: inline-block !important;
+                            width: 100% !important;
+                        }
+                        
+                        @keyframes fadeIn {
+                            from {
+                                opacity: 0;
+                                transform: translateY(-5px);
+                            }
+                            to {
+                                opacity: 1;
+                                transform: translateY(0);
+                            }
+                        }
+
+                        #registration {
+
+                            display: block;
+                            font-size: 12px;
+                            text-align: center;
+                            margin-top: 12px;
+
+                            a {
+
+                                color: $url---col--primary;
+                                font-size: 11px;
+                                font-style: italic;
+
+                                transition: color 0.3s ease-in-out;
+
+                                &:hover {
+
+                                    /* text-decoration: underline; */
+                                    color: $url---col--primary-hover;
+                                }
+                            }
+                        }
+                    }
+                } 
+            }
+        }
+        
+        // selectors for login and register pages
 
         // Selectors for header and footer elements
         &.body---add--job,
@@ -1369,12 +1379,13 @@ html {
                     @extend %button---list--page;                   
                 
                     /* padding: 0 6px 0 0; */
-                    display: block;
+                    /* display: block; */
+                    display: inline-block;
                     /* padding: 0 6px 0 0; */
                     padding: 6px;
                     border-radius: 5px;
                     margin: 13px auto;
-                    width: 120px;
+                    width: 56px;
                     /* color: red; */
                     text-decoration: none;
                     cursor: pointer;
@@ -1387,6 +1398,37 @@ html {
                         color: $button---col--hover-list;
                     }
                     
+                }
+
+                .button---job--cancel {
+                    
+                    /* background: #9e9e9e; */
+                    background: #4486ff;
+                    color: white;
+                    padding: 6px;
+                    border: none;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    text-decoration: none;
+                    display: inline-block;
+                    margin-left: 10px;
+                    transition: background 0.3s ease;
+                    font-size: 14px;
+
+                    @extend %button---list--page;   
+
+                    &:hover {
+
+                        background: #757575;
+                        background: #ff8f8f;
+                    }
+
+                    &:disabled {
+
+                        /* background: #ccc; */
+                        background: #ff8f8f;
+                        cursor: not-allowed;
+                    }
                 }
             }
 
