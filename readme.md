@@ -1,4 +1,4 @@
-`Last Updated: 07-11-2025 - 16:01
+`Last Updated: 07-11-2025 - 16:03
 
 # Jobs Pathway
   + Jobs Pathway is a project in PHP and WordPress. Sign in and add details of jobs applied for so you can keep track of your way to your professional life with this app.
@@ -41,7 +41,7 @@ The following pages are assigned to templates in the `wp-content/themes/jobs_pat
 
 ## TODOs: 
 
-### (Tasks: `130` - Completed - `116`)
+### (Tasks: `132` - Completed - `116`)
 
 + `COMPLETED: 16-09-2025` - Wireframe and static interface planning for 'Job's Pathway App'
 + `COMPLETED: 16-09-2025` - Add a footer and header template part of the project
@@ -185,7 +185,7 @@ The following pages are assigned to templates in the `wp-content/themes/jobs_pat
 + `TODO: ` - **Future UX Feature:** Login check that an email address is not linked to the users account
 + `TODO: ` - **Bug:** Emoji styles have no effect - `img.emoji` in `in--work--tick`
 + `TODO: ` - **Bug:** Adding a Job Title field does not have its own custom field. That's a potential oversight. Job Title becomes part of a CPT instance - e.g. "Web Designer at PixelForge Digital."
-+ 
++ `TODO: ` - study and modify `app.js` script file.
 
 [Back to Top](#sections)
 
