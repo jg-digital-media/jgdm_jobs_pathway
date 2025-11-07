@@ -24,20 +24,9 @@
 
 <?php get_header(); ?>
 
-<body>
+<body class="home">
 
-    <?php 
-    
-        //echo "<h1>Jobs Pathway App </h1>";
-        //echo "<p>(jobs_pathway_theme - index.php)</p>";  
-
-    ?>
-
-    <!-- <p class="motivation"><?php echo jt_random_motivation(); ?></p> -->
-
-    <!-- <p>index.php</p> -->
-
-    <body class="body---login">
+    <main class="body---login">
 
         <header class="header---login--page">
 
@@ -52,6 +41,7 @@
             <?php require "assets/template-parts/login.php"; ?>
 
         </section>
-    </body>
+
+    </main>
 
 <?php get_footer() ?>

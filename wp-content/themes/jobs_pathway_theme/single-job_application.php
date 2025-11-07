@@ -1,44 +1,29 @@
-
 <?php
 
     $website_title = "Jobs Pathway";
     $website_description = "Keep track of your way to your professional life"; 
     
     /* Template Name: Job Details Page */ 
-    ?>
+?>
 
 <?php get_header(); ?>
 
-    <body class="body---job--details">
+<body class="body---job--details">
 
-        <header>
+    <header>
 
-            <h1> <?php echo $website_title ?> </h1>
+        <h1> <?php echo $website_title ?> </h1>
 
-            <h2>Keep track of your way to your professional life</h2>
+        <h2>Keep track of your way to your professional life</h2>
 
-        </header>
+    </header>
 
-        <main>
+    <main>
 
-            <!-- <h3 class="filename">job-details.php</h3> -->
+        <a href="<?php echo site_url('/dashboard'); ?>" class="button---back">Back to Dashboard</a>
 
-            <!--  <a href="list.php">back</a> -->
-
-            <!-- <h1><?php the_title(); ?></h1> -->
-
-            <!-- <h3 class="filename">single-job_application.php</h3> -->
-
-            <!-- <h3>Job/Situation Details...</h3> -->
-
-            <a href="<?php echo site_url('/dashboard'); ?>" class="button---back">Back to Dashboard</a>
-
-            <?php 
-
-            // DEBUG CODE: Check if we're on the right template
-            echo '<!-- DEBUG: Post Type: ' . get_post_type() . ' -->';
-            echo '<!-- DEBUG: Is Single: ' . (is_single() ? 'YES' : 'NO') . ' -->';
-            
+        <?php 
+        
             // Load the job application data
             if (have_posts()) : 
                 while (have_posts()) : the_post(); 
@@ -65,10 +50,10 @@
                 
                 endwhile;
             endif;
-            ?>
+        ?>
 
-            <?php require "assets/template-parts/job-profile.php"; ?>
+        <?php require "assets/template-parts/job-profile.php"; ?>
 
-        </main>
+    </main>
 
 <?php get_footer(); ?>

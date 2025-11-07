@@ -1,88 +1,65 @@
 <?php
 
-$website_title = "Jobs Pathway";
-$website_description = "Keep track of your way to your professional life";
+    $website_title = "Jobs Pathway";
+    $website_description = "Keep track of your way to your professional life";
 
-/* Template Name: Job Dashboard */
-?>
+    /* Template Name: Job Dashboard */
 
-<?php 
+    // Redirect user if not logged in
+    if ( !is_user_logged_in() ) {
+        wp_redirect( site_url('/login') );
+        exit;
+    }
 
-// Redirect non-logged-in users to login page
-if ( ! is_user_logged_in() ) {
-    wp_redirect( site_url('/login') );
-    exit;
-}
 
-get_header();
+    // Get the logged in user details from WordPress
+    $current_user = wp_get_current_user();
 
-$current_user = wp_get_current_user();
+    $args = [
+        'post_type' => 'job_application',
+        'author' => $current_user->ID
+    ];
 
-$args = [
-    'post_type' => 'job_application',
-    'author' => $current_user->ID
-];
-
-$jobs = new WP_Query($args);
+    $jobs = new WP_Query($args);
 
 ?>
 
-    <body class="body---list">
+<?php get_header(); ?>
 
-        <header>
+<body class="body---list">
 
-            <h1> <?php echo $website_title ?> </h1>
+    <header>
 
-            <h2>Keep track of your way to your professional life</h2>
+        <h1> <?php echo $website_title ?> </h1>
 
-        </header>
+        <h2>Keep track of your way to your professional life</h2>
 
-        <main>
+    </header>
 
-            <?php 
+    <main>
 
-                // Show success message if job was added
-                if (isset($_GET['job_added']) && $_GET['job_added'] == 'success') {
-                    echo '<p class="job-success" style="color: green; background: #e6ffe6; padding: 15px; border-radius: 5px; margin: 20px; text-align: center;"><strong>Success!</strong> Job application added successfully!</p>';
-                }
-            ?>
+        <?php 
 
-            <?php 
+            // Show success message if job was added
+            if (isset($_GET['job_added']) && $_GET['job_added'] == 'success') {
+                echo '<p class="job-success" style="color: green; background: #e6ffe6; padding: 15px; border-radius: 5px; margin: 20px; text-align: center;"><strong>Success!</strong> Job application added successfully!</p>';
+            }
+        ?>
 
-                // Check if user has any jobs
-                if ($jobs->have_posts()) {
+        <?php 
 
-                    // User has jobs - show the jobs list with data
-                    require "assets/template-parts/jobs-list-with-data.php";
-                } else {
+            // Check if user has any jobs
+            if ($jobs->have_posts()) {
 
-                    // No jobs - show empty state
-                    require "assets/template-parts/jobs-list-empty.php";
-                }
-            ?>
+                // User has jobs - show the jobs list with data
+                require "assets/template-parts/jobs-list-with-data.php";
+            } else {
 
-        </main>
-    </body>
+                // No jobs - show empty state
+                require "assets/template-parts/jobs-list-empty.php";
+            }
+        ?>
 
-        <!-- <table>
-            <tr>
-                <th>Job Title</th>
-                <th>Company</th>
-                <th>Application Sent</th>
-                <th>Interview</th>
-                <th>Got Job?</th>
-            </tr>
-
-            <?php while ($jobs->have_posts()) : $jobs->the_post(); ?>
-            <tr>
-                <td><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></td>
-                <td><?php the_field('company_name'); ?></td>
-                <td><?php echo get_field('application_sent') ? '✅' : '❌'; ?></td>
-                <td><?php echo get_field('interview_attended') ? '✅' : '—'; ?></td>
-                <td><?php echo get_field('got_job') ? '🎉' : '—'; ?></td>
-            </tr>
-            <?php endwhile; wp_reset_postdata(); ?>
-        </table> -->
-
-
+    </main>
+    
 <?php get_footer(); ?>

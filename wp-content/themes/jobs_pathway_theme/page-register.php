@@ -1,7 +1,5 @@
 <?php
 
-    /* Template Name: Register Template */
-
     // website title
     $website_title = "Jobs Pathway";
     $website_description = "Keep track of your way to your professional life";
@@ -16,11 +14,13 @@
 
     $page_image = "https://projects.jonniegrieve.co.uk/jobs_pathway/";
 
+    
+    /* Template Name: Register Template */
 ?>
 
 <?php
 
-    // if user is logged in, send to dashboard page
+    // Send to dashboard page when Registration is processed
     if (is_user_logged_in()) {
         wp_redirect(site_url('/dashboard'));
         exit;
@@ -52,6 +52,7 @@
             $registration_error = 'Password must be at least 6 characters long.';
         }
         else {
+
             // Create user
             $userdata = array(
                 'user_login' => sanitize_user($_POST['username']),
@@ -72,41 +73,42 @@
 
 ?>
 
-<body class="body---register">
+<body class="home">
 
-    <header class="header---register--page">
+    <main class="body---register">
 
-        <h1> Jobs Pathway App <?php //echo $website_title ?> </h1>
+        <header class="header---register--page">
 
-        <h2>Keep track of your way to your professional life</h2>
+            <h1> Jobs Pathway App </h1>
 
-    </header>
+            <h2> Keep track of your way to your professional life </h2>
 
-    <section class="container---element--register">
+        </header>
 
-        <?php 
+        <section class="container---element--register">
 
+            <?php 
 
-        // Display success message (login)
-        if (!empty($login_message)) {
-            echo '<p class="login-success" style="color: green; background: #e6ffe6; padding: 15px; border-radius: 5px; margin: 20px 0;"><strong>Success!</strong> ' . $login_message . '</p>';
-        }
+                // Display success message (login)
+                if (!empty($login_message)) {
+                    echo '<p class="login-success" style="color: green; background: #e6ffe6; padding: 15px; border-radius: 5px; margin: 20px 0;"><strong>Success!</strong> ' . $login_message . '</p>';
+                }
 
-        // Display success message (register)
-        if (!empty($registration_message)) {
-            echo '<p class="registration-success" style="color: green; background: #e6ffe6; padding: 15px; border-radius: 5px; margin: 20px 0;"><strong>Success!</strong> ' . $registration_message . '</p>';
-        }
-        
-        // Display error message
-        if (!empty($registration_error)) {
-            echo '<p class="registration-error" style="color: red; background: #ffe6e6; padding: 15px; border-radius: 5px; margin: 20px 0;"><strong>Error:</strong> ' . $registration_error . '</p>';
-        }
-        ?>
+                // Display success message (register)
+                if (!empty($registration_message)) {
+                    echo '<p class="registration-success" style="color: green; background: #e6ffe6; padding: 15px; border-radius: 5px; margin: 20px 0;"><strong>Success!</strong> ' . $registration_message . '</p>';
+                }
+                
+                // Display error message
+                if (!empty($registration_error)) {
+                    echo '<p class="registration-error" style="color: red; background: #ffe6e6; padding: 15px; border-radius: 5px; margin: 20px 0;"><strong>Error:</strong> ' . $registration_error . '</p>';
+                }
+            ?>
 
-        <?php require "assets/template-parts/register.php"; ?>
+            <?php require "assets/template-parts/register.php"; ?>
 
-    </section>
+        </section>
 
-</body>
+    </main>
 
 <?php get_footer() ?>

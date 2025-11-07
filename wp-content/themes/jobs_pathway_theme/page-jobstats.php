@@ -1,37 +1,27 @@
-
-<!-- Progress Stats Modal Goes Here --> 
 <?php 
 
-$website_title = "Jobs Pathway";
-$website_description = "Keep track of your way to your professional life";
+    $website_title = "Jobs Pathway";
+    $website_description = "Keep track of your way to your professional life";
 
-/* Template Name: Job Stats Page */
+    /* Template Name: Job Stats Page */
 ?>
 
 <?php get_header(); ?>
 
-<!-- <h3>Your Progress</h3> -->
+<body class="body---job--stats">
 
-<?php //echo "<p>page-jobstats.php</p>"; ?>
+    <header>
 
-    <body class="body---job--stats">
+        <h1> <?php echo $website_title ?> </h1>
 
-        <header>
+        <h2>Keep track of your way to your professional life</h2>
 
-            <h1> <?php echo $website_title ?> </h1>
+    </header>
 
-            <h2>Keep track of your way to your professional life</h2>
+    <main>
 
-        </header>
+        <p><?php require "assets/template-parts/stats.php"; ?> </p>
 
-        <main>
-
-            <!-- <h3 class="filename">stats-modal.php</h3> -->
-
-            <!-- <a href="list.php" class="button---back">Back to Dashboard</a> -->
-
-            <p><?php require "assets/template-parts/stats.php"; ?> </p>
-
-        </main>
+    </main>
        
 <?php get_footer(); ?>

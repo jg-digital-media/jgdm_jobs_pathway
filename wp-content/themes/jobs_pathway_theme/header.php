@@ -14,21 +14,7 @@
     $page_icon = "";
 
     $page_image = "";  
-
-    // Google Fonts
-    // $google_font = "";
-
-    // Facebook Variables
-    // $facebook_title = $page_title;
-    // $facebook_description = $page_description;
-    // $facebook_share_img = $page_image;
-
-    // Twitter Variables
-    // $twitter_title = $page_title;
-    // $twitter_description = $page_description;
-    // $twitter_share_img = $page_image;
-    // $twitter_card = "jgdm_jobs_pathway";
-
+    
 ?>
 
 <!DOCTYPE html>
