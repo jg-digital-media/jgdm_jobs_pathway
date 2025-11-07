@@ -35,7 +35,7 @@
 
     <!-- <p class="motivation"><?php echo jt_random_motivation(); ?></p> -->
 
-    <p>index.php</p>
+    <!-- <p>index.php</p> -->
 
     <body class="body---login">
 

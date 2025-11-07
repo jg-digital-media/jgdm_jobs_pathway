@@ -27,7 +27,7 @@
 
             <!-- <h1><?php the_title(); ?></h1> -->
 
-            <h3 class="filename">single-job_application.php</h3>
+            <!-- <h3 class="filename">single-job_application.php</h3> -->
 
             <!-- <h3>Job/Situation Details...</h3> -->
 

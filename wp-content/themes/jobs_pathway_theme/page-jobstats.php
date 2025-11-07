@@ -26,7 +26,7 @@ $website_description = "Keep track of your way to your professional life";
 
         <main>
 
-            <h3 class="filename">stats-modal.php</h3>
+            <!-- <h3 class="filename">stats-modal.php</h3> -->
 
             <!-- <a href="list.php" class="button---back">Back to Dashboard</a> -->
 

@@ -21,7 +21,7 @@ $website_description = "Keep track of your way to your professional life";
 
         <main>
 
-            <h3 class="filename">page-howto.php</h3>
+            <!-- <h3 class="filename">page-howto.php</h3> -->
 
             <a href="dashboard/" class="button---back">Back to Dashboard</a>
 

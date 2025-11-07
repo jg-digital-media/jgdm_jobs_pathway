@@ -39,7 +39,7 @@
 
     ?>
     
-    <p>page-login.php</p>
+    <!-- <p>page-login.php</p> -->
 
     <!-- <p class="motivation"><?php echo jt_random_motivation(); ?></p> -->
 
