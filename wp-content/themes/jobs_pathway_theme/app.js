@@ -1,5 +1,5 @@
 // connection check - app.js
-console.log("app.js connected - 06-11-2025 - 15:44");
+console.log("app.js connected - 07-11-2025 - 13:00");
 
 // Wait for DOM to be fully loaded
 document.addEventListener('DOMContentLoaded', function() {
@@ -548,6 +548,7 @@ function saveCheckboxState(postId, fieldName, value) {
 // Job Profile Edit/Save Toggle Functionality
 document.addEventListener('DOMContentLoaded', function() {
     const toggleButton = document.getElementById('btn-toggle-edit');
+    const cancelButton = document.getElementById('btn-cancel-edit');
     
     if (toggleButton) {
         toggleButton.addEventListener('click', function(e) {
@@ -558,16 +559,26 @@ document.addEventListener('DOMContentLoaded', function() {
             
             if (currentMode === 'view') {
                 // Switch to edit mode
-                switchToEditMode(this);
+                switchToEditMode(this, cancelButton);
             } else {
                 // Save and switch back to view mode
-                saveJobProfileChanges(this, postId);
+                saveJobProfileChanges(this, postId, cancelButton);
             }
+        });
+    }
+    
+    // Cancel button - switches back to view mode without saving
+    if (cancelButton) {
+        cancelButton.addEventListener('click', function(e) {
+            e.preventDefault();
+            switchToViewMode(toggleButton, cancelButton);
+            
+                window.location.reload();
         });
     }
 });
 
-function switchToEditMode(button) {
+function switchToEditMode(button, cancelButton) {
     // Hide all view-mode elements
     document.querySelectorAll('.view-mode').forEach(el => {
         el.style.display = 'none';
@@ -581,13 +592,16 @@ function switchToEditMode(button) {
     // Change button text and mode
     button.textContent = 'Save';
     button.setAttribute('data-mode', 'edit');
-    // button.style.background = '#4CAF50';
-    // button.style.background = '#4486ff;';
+    
+    // Enable cancel button
+    if (cancelButton) {
+        cancelButton.disabled = false;
+    }
     
     console.log('Switched to edit mode');
 }
 
-function switchToViewMode(button) {
+function switchToViewMode(button, cancelButton) {
     // Hide all edit-mode inputs
     document.querySelectorAll('.edit-mode').forEach(el => {
         el.style.display = 'none';
@@ -603,15 +617,23 @@ function switchToViewMode(button) {
     button.setAttribute('data-mode', 'view');
     button.style.background = '';
     
+    // Disable cancel button
+    if (cancelButton) {
+        cancelButton.disabled = true;
+    }
+    
     console.log('Switched to view mode');
 }
 
-function saveJobProfileChanges(button, postId) {
+function saveJobProfileChanges(button, postId, cancelButton) {
     console.log('Saving job profile changes for post:', postId);
     
-    // Disable button while saving
+    // Disable buttons while saving
     button.disabled = true;
     button.textContent = 'Saving...';
+    if (cancelButton) {
+        cancelButton.disabled = true;
+    }
     
     // Collect all field values (includes text inputs and textareas)
     const fields = {};
@@ -647,13 +669,19 @@ function saveJobProfileChanges(button, postId) {
             showStatusMessage('Changes saved successfully!', 'success');
             
             // Switch back to view mode
-            switchToViewMode(button);
+            switchToViewMode(button, cancelButton);
             button.disabled = false;
+            if (cancelButton) {
+                cancelButton.disabled = false;                
+            }
         } else {
             console.error('Error saving job profile:', data);
             showStatusMessage('Error saving changes: ' + (data.data ? data.data.message : 'Unknown error'), 'error');
             button.disabled = false;
             button.textContent = 'Save';
+            if (cancelButton) {
+                cancelButton.disabled = false;
+            }
         }
     })
     .catch(error => {
@@ -661,6 +689,10 @@ function saveJobProfileChanges(button, postId) {
         showStatusMessage('Error saving changes. Please check your connection.', 'error');
         button.disabled = false;
         button.textContent = 'Save';
+        if (cancelButton) {
+            cancelButton.disabled = false;
+            
+        }
     });
 }
 

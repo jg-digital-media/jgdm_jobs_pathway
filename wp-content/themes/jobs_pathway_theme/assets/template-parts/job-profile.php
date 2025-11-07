@@ -79,6 +79,7 @@
 <section class="section---job--edit">
 
     <a id="btn-toggle-edit" class="button button---job--edit" data-post-id="<?php echo $post_id; ?>" data-mode="view">Edit</a>
+    <button id="btn-cancel-edit" class="button button---job--cancel" disabled>Cancel</button>
 
 </section>
 
