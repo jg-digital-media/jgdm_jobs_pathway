@@ -1,4 +1,4 @@
-`Last Updated: 07-11-2025 - 10:33
+`Last Updated: 07-11-2025 - 13:24
 
 # Jobs Pathway
   + Jobs Pathway is a project in PHP and WordPress. Sign in and add details of jobs applied for so you can keep track of your way to your professional life with this app.
@@ -41,7 +41,7 @@ The following pages are assigned to templates in the `wp-content/themes/jobs_pat
 
 ## TODOs: 
 
-### (Tasks: `129` - Completed - `113`)
+### (Tasks: `130` - Completed - `116`)
 
 + `COMPLETED: 16-09-2025` - Wireframe and static interface planning for 'Job's Pathway App'
 + `COMPLETED: 16-09-2025` - Add a footer and header template part of the project
@@ -119,12 +119,12 @@ The following pages are assigned to templates in the `wp-content/themes/jobs_pat
 + `COMPLETED: 03-11-2025 ` - add job form - Some fields should be required - Add message to check for Job Totle, company name and location `/add-job/`
 + `COMPLETED: 03-11-2025 ` - use the ACF Frontend Form Feature to create job application tracking details for a logged in user
 + `COMPLETED: 03-11-2025  ` - Implement Edit functionality for `job-details.php` (filename as per prototype).
-  1. `COMPLETED: 03-11-2025  ` - Edit button will switch fields to an editable state where values can be changed.
-  2. `COMPLETED: 03-11-2025  ` - `button---job--edit` - Change text content from "Edit" to Saved" when  button is clicked.
-  3. `COMPLETED: 03-11-2025  ` - At this point, the edit button text content will change from "Edit" to "Save"
-  4. `COMPLETED: 03-11-2025  ` - Save button will save the changes to the database and change text content back to "Edit"
-  5. `COMPLETED: 03-11-2025  ` - "Tooltip" activated to show the user that the changes have been saved!
-  6. `TODO: ` More graceful transition for successs tooltip `job-profile-status-message`
+  1. `COMPLETED: 03-11-2025 ` - Edit button will switch fields to an editable state where values can be changed.
+  2. `COMPLETED: 03-11-2025 ` - `button---job--edit` - Change text content from "Edit" to Saved" when  button is clicked.
+  3. `COMPLETED: 03-11-2025 ` - At this point, the edit button text content will change from "Edit" to "Save"
+  4. `COMPLETED: 03-11-2025 ` - Save button will save the changes to the database and change text content back to "Edit"
+  5. `COMPLETED: 03-11-2025 ` - "Tooltip" activated to show the user that the changes have been saved!
+  6. `COMPLETED: 07-11-2025 ` - More graceful transition for successs tooltip `job-profile-status-message`
 
 + `COMPLETED: 04-11-2025 ` - "welcome jonniegrieve" - blue style on username to match buttons - colour scheme
 + `COMPLETED: 04-11-2025 ` - Extend style pattern on "back" link `single-job_application.php`
@@ -161,24 +161,26 @@ The following pages are assigned to templates in the `wp-content/themes/jobs_pat
 + `COMPLETED: 06-11-2025 ` - Sort `header.php` meta tags and social media sharing previews.
 + `COMPLETED: 06-11-2025 ` - Give "How to Use Button" an #id `btn---how--to`
 + `COMPLETED: 06-11-2025 ` - Add the final motivation messages on the dashboard page `motivation---message`
-+ `TODO: ` - **Bug:** Editing incorrectly reports text input fields not saved when the textarea is not edited.
-+ `TODO: ` - Customise validation and success error messages in app.js
-+ `TODO: ` - Reduce lines of code in Sass files where possible
-  + `TODO: ` - May need to fill the dashboard table with classes to get the desired effect.
 + `COMPLETED: 07-11-2025 ` - Create and style "how to use" page
 + `COMPLETED: 07-11-2025 ` - Add copy "How to use" template file/page `how-to.php`
 + `COMPLETED: 07-11-2025 ` - Add copy to explain how to use the app. `page-howto.php`
 + `COMPLETED: 07-11-2025 ` - Add a "How to use" template file/page
 + `COMPLETED: 07-11-2025 ` - Style "how to use" page
 + `COMPLETED: 07-11-2025 ` - Remove filenames and .filename class and selector from project at the appropriate time.
-+ `TODO: ` - Study and clean up the markup templates, `functions.php` and app.js to make them readable and maintainable.
++ `COMPLETED: 07-11-2025 ` - Study and clean up the markup templates, `functions.php` and app.js to make them readable and maintainable.
++ `COMPLETED: 07-11-2025 ` - `login-handler.php` and `register-handler.php` are empty and should be ignored for the interim.
+
++ `TODO: ` - **Bug:** Editing incorrectly reports text input fields not saved when the textarea is not edited.
++ `TODO: ` - Customise validation and success error messages in app.js
++ `TODO: ` - Reduce lines of code in Sass files where possible
+  + `TODO: ` - May need to fill the dashboard table with classes to get the desired effect.
 + `TODO: ` - Upload templates to the web server and test them.
-+ `TODO: ` - `login-handler.php` and `register-handler.php` are empty and should be ignored for the interim.
++ `TODO: ` - Custom Modal Styles from CSS selector Format to Sass-ready and organise to Partial file. Fade out custom validation messages after going out of element focus
 + `TODO: ` - Swap out mini logo in `top---banner--container`
 + `TODO: ` - **Future UX Feature:** Fade out custom validation messages after going out of element focus
 + `TODO: ` - **Future UX Feature:** Require stronger passwords for the app - e.g. at least 8 characters (include special characters, uppercase, lowercase, numbers)
 + `TODO: ` - **Future UX Feature:** Implement modal areas for `job-details.php`,`add-job-form.php`, `stats-modal.php`,`how-to.php`.
-+ `TODO: ` - modal styles
+  + `TODO: ` - modal styles
 + `TODO: ` - **Future UX Feature:** Tooltip, showing the job title and ID applied for above that row's (Open) button
 + `TODO: ` - **Future UX Feature:** Login check that an email address is not linked to the users account
 + `TODO: ` - **Bug:** Emoji styles have no effect - `img.emoji` in `in--work--tick`
@@ -516,6 +518,36 @@ Login - View List State (empty) ----> Add Job Details ----> View Job Details Sta
 
 ## Deployment and Installation
 
-This project will be deployed to a server. Location TBC.
++ This project will be deployed to a server. Location TBC.
+
++ PHP Debugging
+
+```html
+
+<!-- Debug Info -->
+    <div style="background: #f0f0f0; padding: 10px; margin: 10px 0; border-radius: 5px; font-size: 12px;">
+        <strong>Debug Info:</strong> 
+        Login Form Active | 
+        WordPress Login URL: <?php echo wp_login_url(); ?> |
+        Form Method: POST
+    </div>
+```
+
+```php
+
+    // DEBUG CODE: Check if we're on the right template
+    echo '<!-- DEBUG: Post Type: ' . get_post_type() . ' -->';
+    echo '<!-- DEBUG: Is Single: ' . (is_single() ? 'YES' : 'NO') . ' -->';
+``` 
+
+```php
+
+<?php 
+
+    // Debug: Check if variables are set
+    echo '<!-- DEBUG: Company Name: ' . (isset($company_name) ? $company_name : 'NOT SET') . ' -->';
+    echo '<!-- DEBUG: Job Title: ' . (isset($job_title) ? $job_title : 'NOT SET') . ' -->';
+    echo '<!-- DEBUG: Post ID: ' . (isset($post_id) ? $post_id : 'NOT SET') . ' -->';
+```
 
 [Back to Top](#sections)
