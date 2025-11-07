@@ -1677,6 +1677,13 @@ html {
 
                         p {
 
+                            display: block;
+                            margin: 17px auto;
+                            width: 300px;
+                            text-align: center;
+                            line-height: normal;
+                            font-size: 13px;
+
                             
                         }
 
@@ -1688,6 +1695,38 @@ html {
 
                                 list-style: none;
                                 margin: 10px 0;
+                            }
+                        }
+
+                        dl {
+
+                            display: block;
+                            margin: 10px auto;
+                            width: 50%;
+                            line-height: 1.9;
+
+                            @media screen and (max-width: $breakpoint---md) {
+
+                                width: 75%;
+                            }
+
+                            dt {
+
+                                color: #700404;
+                                border-bottom: solid 3px #700404;
+                                margin-top: 10pt;
+
+                                strong {
+
+                                }
+                            }
+
+                            dt + dd {
+
+                                font-size: 12px;
+                                line-height: 2.3;
+                                background: #d7d7d7;
+                                padding: 7px;
                             }
                         }
                     }
