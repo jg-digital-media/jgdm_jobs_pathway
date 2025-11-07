@@ -485,3 +485,20 @@ function jt_delete_single_job() {
 
 add_action('wp_ajax_delete_single_job', 'jt_delete_single_job');
 add_action('wp_ajax_nopriv_delete_single_job', 'jt_delete_single_job');
+
+
+
+// remove wordpress admin bar for regular users
+function remove_admin_bar() {
+
+    if (!current_user_can('administrator') && !is_admin()) {
+
+        //show_admin_bar(false);
+        add_filter('show_admin_bar', '__return_false');
+    }
+
+    //show_admin_bar(false);
+
+}
+
+add_action('after_setup_theme', 'remove_admin_bar');
