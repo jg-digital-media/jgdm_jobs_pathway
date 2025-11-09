@@ -1,9 +1,9 @@
-`Last Updated: 07-11-2025 - 16:03
+`Last Updated: 09-11-2025 - 19:39
 
 # Jobs Pathway
   + Jobs Pathway is a project in PHP and WordPress. Sign in and add details of jobs applied for so you can keep track of your way to your professional life with this app.
     + App URL: https://projects.jonniegrieve.co.uk/jobs_pathway/
-    + Prototype URL: https://projects.jonniegrieve.co.uk/jobs_pathway/
+    + Prototype URL: https://projects.jonniegrieve.co.uk/jobs_pathway/prototype/
     + Repository URL: https://github.com/jg-digital-media/jgdm_jobs_pathway
 
 ## Sections 
