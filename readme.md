@@ -1,4 +1,4 @@
-`Last Updated: 10-11-2025 - 07:23
+`Last Updated: 10-11-2025 - 16:08
 
 # Jobs Pathway
   + Jobs Pathway is a project in PHP and WordPress. Sign in and add details of jobs applied for so you can keep track of your way to your professional life with this app.
@@ -198,7 +198,10 @@ The following pages are assigned to templates in the `wp-content/themes/jobs_pat
 [1.0.0](#100) | [1.0.1](#101) | [1.0.2](#102)
 
 ### WordPress Development
-[2.0.0](#200) | [2.0.1](#201) | [2.0.2](#202) | [2.0.3](#203) | [2.0.4](#204) | [2.0.5](#205) | [2.0.6](#206)| [2.0.7](#207) | [2.0.8](#208) | [2.0.9](#209) | [2.0.10](#210)
+[2.0.0](#200) | [2.0.1](#201) | [2.0.2](#202) | [2.0.3](#203) | [2.0.4](#204) | [2.0.5](#205) | [2.0.6](#206)| [2.0.7](#207) | [2.0.8](#208) | [2.0.9](#209) | [2.0.10](#210) | [2.0.11](#2011)
+
+### Public Release 
+[2.1.0](#210) 
 
 ### `0.0.1`
   
@@ -422,9 +425,17 @@ Definitely some major challenges today collaborating with the AI becasue it simp
 
 + Oh... and the challenge I talked about in the first point above?  I hadn't recreated the Pages, Post Types and assigned templates to them.  Indeed.  There's always something obvious that I forget when I'm migrating a WordPress Project.  `07-11-2025`
 
+[Back to Top](#development)
+
 ### `2.0.11`
 
 + Released as is for public viewing. `10-11-2025` Register now on https://projects.jonniegrieve.co.uk/jobs_pathway/dashboard/
+
+[Back to Top](#development)
+
+### `2.1.0`
+
++ Released the project today for public use.  Find it at https://projects.jonniegrieve.co.uk/jobs_pathway/  I hope everyone enjoys it and finds it useful. `10-11-2025`
 
 [Back to Top](#development)
 
