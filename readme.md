@@ -1,4 +1,4 @@
-`Last Updated: 09-11-2025 - 19:39
+`Last Updated: 10-11-2025 - 07:23
 
 # Jobs Pathway
   + Jobs Pathway is a project in PHP and WordPress. Sign in and add details of jobs applied for so you can keep track of your way to your professional life with this app.
@@ -421,6 +421,10 @@ Definitely some major challenges today collaborating with the AI becasue it simp
 + The attempt around this was to introduce a "Cancel" button to go alongside the Toggling button that switches between states.  Now, the cancel button has a window reload line in it to make sure that the edit state doesn't hold any edits to the data that were not saved, so users really can start again if they need to. 
 
 + Oh... and the challenge I talked about in the first point above?  I hadn't recreated the Pages, Post Types and assigned templates to them.  Indeed.  There's always something obvious that I forget when I'm migrating a WordPress Project.  `07-11-2025`
+
+### `2.0.11`
+
++ Released as is for public viewing. `10-11-2025` Register now on https://projects.jonniegrieve.co.uk/jobs_pathway/dashboard/
 
 [Back to Top](#development)
 
